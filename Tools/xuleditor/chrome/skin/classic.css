@@ -1,0 +1,145 @@
+tab.file {
+  list-style-image: url("chrome://qsos-xuled/skin/document-open_32.png");
+  -moz-border-radius: 6px 6px 0px 0px;
+  font-weight: bold;
+}
+
+tab.general {
+  list-style-image: url("chrome://qsos-xuled/skin/documentation.png");
+  -moz-border-radius: 6px 6px 0px 0px;
+  font-weight: bold;
+}
+
+tab.criteria {
+  list-style-image: url("chrome://qsos-xuled/skin/document-edit.png");
+  -moz-border-radius: 6px 6px 0px 0px;
+  font-weight: bold;
+}
+
+tab.chart {
+  list-style-image: url("chrome://qsos-xuled/skin/office-chart-pie.png");
+  -moz-border-radius: 6px 6px 0px 0px;
+  font-weight: bold;
+}
+
+tab.about {
+  list-style-image: url("chrome://qsos-xuled/skin/help-about.png");
+  -moz-border-radius: 6px 6px 0px 0px;
+  font-weight: bold;
+}
+
+button.newLocalFile {
+  list-style-image: url("chrome://qsos-xuled/skin/quickopen-file.png");
+  width: 200px;
+}
+
+button.newRemoteFile {
+  list-style-image: url("chrome://qsos-xuled/skin/preferences-web-browser-shortcuts.png");
+  width: 200px;
+}
+
+button.openLocalFile {
+  list-style-image: url("chrome://qsos-xuled/skin/document-open.png");
+  width: 200px;
+}
+
+button.openRemoteFile {
+  list-style-image: url("chrome://qsos-xuled/skin/document-open-remote.png");
+  width: 200px;
+}
+
+button.saveLocalFile {
+  list-style-image: url("chrome://qsos-xuled/skin/document-save.png");
+  width: 200px;
+}
+
+button.saveFileAs {
+  list-style-image: url("chrome://qsos-xuled/skin/document-save-as.png");
+  width: 200px;
+}
+
+button.saveRemoteFile {
+  list-style-image: url("chrome://qsos-xuled/skin/folder-sync.png");
+  width: 200px;
+}
+
+button.updateLocalFile {
+  list-style-image: url("chrome://qsos-xuled/skin/folder-downloads.png");
+  width: 200px;
+}
+
+button.updateRemoteFile {
+  list-style-image: url("chrome://qsos-xuled/skin/download.png");
+  width: 200px;
+}
+
+button.closeFile {
+  list-style-image: url("chrome://qsos-xuled/skin/document-close.png");
+  width: 200px;
+}
+
+button.exitApp {
+  list-style-image: url("chrome://qsos-xuled/skin/application-exit.png");
+  width: 200px;
+}
+
+button.addAuthor {
+  list-style-image: url("chrome://qsos-xuled/skin/list-add.png");
+}
+
+button.delAuthor {
+  list-style-image: url("chrome://qsos-xuled/skin/list-remove.png");
+/**
+ * text-align: baseline;
+ * vertical-align: left;
+ * This style doesn't seem to work. That's why we're adding spaces in editor.dtd to make icons look left aligned
+**/
+}
+
+div#aboutContent {
+
+}
+
+div#logo {
+  float: left;
+  width: 170px;
+  height: 58px;
+}
+
+div#title {
+/*   text-align: center; */
+  vertical-align: middle;
+  height: 58px;
+}
+
+.authorTable {
+  padding: 15px;
+}
+
+p.intro {
+  font-weight: bold;
+}  
+
+/* tab[selected="true"] {
+  color: #000066;
+  font-weight: bold;
+  -moz-border-radius: 6px 6px 0px 0px;
+} */
+
+treechildren::-moz-tree-row(selected) {
+  background-color: #FFFFAA;
+}
+
+treechildren::-moz-tree-cell-text(selected) {
+  color: #000000;
+}
+
+.link {
+    color: #0000ff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: #ff0000;
+}

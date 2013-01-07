@@ -1,0 +1,14 @@
+#!/bin/sh
+case ${1} in
+	debug)
+		rm -rf ~/.raphael.semeteys@atosorigin.com/
+		xulrunner-6.0 application.ini -console -jsconsole
+		;;
+	help)
+		echo "usage: xuleditor [debug]"
+		;;
+	*)
+		rm -rf ~/.raphael.semeteys@atosorigin.com/
+		xulrunner-6.0 application.ini -file ${1}
+		;;
+esac

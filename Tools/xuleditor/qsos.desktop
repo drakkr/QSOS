@@ -1,0 +1,6 @@
+[Desktop Entry]
+Comment=QSOS Evaluation
+Hidden=false
+MimeType=application/qsos
+Patterns=*.qsos
+Type=MimeType

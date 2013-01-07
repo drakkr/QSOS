@@ -1,0 +1,48 @@
+DESCRIPTION
+
+QSOS XUL Editor (xuleditor) - XUL/Javascript application to edit QSOS XML files
+
+PREREQUISITES
+
+QSOS XML mozilla-javascript library: Document.js (included in chrome/content/ folder)
+Mozilla Javascript
+Xulrunner 1.8+ OR Mozilla Firefox 1.5+
+
+INSTALLING ON XULRUNNER
+
+If not done yet, install xulrunner and register it (xulrunner --register-global).
+Unzip xuleditor-application-<version>.zip file where it fits you.
+
+On MacOS
+/Library/Frameworks/XUL.framework/xulrunner-bin --install-app /path/xuleditor-application-<version>.zip will generate an .app
+
+LAUNCHING ON LINUX
+
+./xuleditor [debug]
+or
+xulrunner application.ini
+
+LAUNCHING ON WINDOWS
+
+xuleditor.bat [debug]
+or
+xulrunner.exe application.ini
+
+INSTALLING IN FIREFOX
+
+Open the XPI file with Firefox and choose "Install".
+
+LAUNCHING IN FIREFOX
+
+Menu "Tools/QSOS Editor".
+
+STATUS
+
+QSOS XUL Editor is still under development.
+
+COPYRIGHT
+
+Copyright 2006, 2007 Atos Origin <raphael.semeteys@atosorigin.com>
+
+This library is free software; you can redistribute it
+and/or modify it under the terms of the GNU General Public License.

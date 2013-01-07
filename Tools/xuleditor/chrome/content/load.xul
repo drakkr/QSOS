@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://qsos-xuled/skin/classic.css" type="text/css"?>
+<!DOCTYPE dialog SYSTEM "chrome://qsos-xuled/locale/load.dtd">
+
+<dialog id="Load" title="&load;"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept,cancel" width="600px" height="500px"
+        ondialogaccept="return doOK();" onload="init();" flex="1">
+
+<script type="application/x-javascript" src="load.js"></script>
+
+<vbox flex = "1">
+  <tree id="evalTree" flex="1" ondblclick="checkLabel();">
+    <treecols>
+      <treecol id="name" width="300px" label="&evaluations;" primary="true" flex="1"/>
+      <treecol id="version" width="80px" label="&version;"/>
+      <treecol id="language" width="70px" label="&language;" hidden="true"/>		
+      <treecol id="repo" width="100px" label="&repo;" hidden="true"/>
+    </treecols>
+    <treechildren id="myTreechildren"/>
+  </tree>
+  <hbox>
+    <vbox>
+      <label value="&repo;"/>
+      <menulist id="listrepo" oncommand="updateList()">
+	<menupopup>
+	  <menuitem label="Master" value="master" selected="true"/>
+	  <menuitem label="Incoming" value="incoming" />
+	</menupopup>
+      </menulist>
+    </vbox>
+    <vbox>
+      <label value="&language;"/>
+      <menulist id="listlang" oncommand="updateList()">
+	<menupopup>
+	  <menuitem label="English" value="en" selected="true"/>
+	  <menuitem label="French" value="fr" />
+	</menupopup>
+      </menulist>  
+    </vbox>
+    <spacer flex="1"/>
+  </hbox>
+</vbox>
+
+</dialog>

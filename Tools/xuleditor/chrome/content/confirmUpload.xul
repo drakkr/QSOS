@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ *  Copyright (C) 2011-2012 Atos
+ *
+ *  Authors: Raphael Semeteys <raphael.semeteys@atos.net>
+ *           Timothée Ravier <travier@portaildulibre.fr>
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program; if not, write to the Free Software
+ *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ *
+ *
+ *  QSOS XUL Editor
+ *  confirmUpload.xul: confirm upload dialog interface file
+ *
+!-->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://qsos-xuled/skin/classic.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://qsos-xuled/locale/confirmUpload.dtd">
+
+<dialog id="confirmUpload" title="&remoteSave;"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+        buttons="accept,cancel" onload="init();" ondialogaccept="ok();"
+        ondialogcancel="cancel();">
+
+  <script type="application/x-javascript">
+  var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
+  var backend = prefManager.getCharPref("extensions.qsos-xuled.backend"); 
+  var register = backend + prefManager.getCharPref("extensions.qsos-xuled.register");   
+  var prefUser = prefManager.getCharPref("extensions.qsos-xuled.login");
+  var prefPass = prefManager.getCharPref("extensions.qsos-xuled.pass");
+  var mode = prefManager.getCharPref("extensions.qsos-xuled.mode");
+    
+  function init() {
+    document.getElementById("loginTextBox").value = prefUser;
+    document.getElementById("passTextBox").value = prefPass;
+  }
+
+  function ok() {
+    //Save preferences
+    prefManager.setCharPref("extensions.qsos-xuled.login", document.getElementById("loginTextBox").value);
+    prefManager.setCharPref("extensions.qsos-xuled.pass", document.getElementById("passTextBox").value);
+
+    window.arguments[0].login = document.getElementById("loginTextBox").value;
+    window.arguments[0].pass = document.getElementById("passTextBox").value;
+    self.close();
+  }
+
+  function cancel() {
+    window.arguments[0].err = true;
+    self.close();
+  }
+  
+  function navigate() {
+    if (mode == "ext") {
+      document
+	.getElementById("content")
+	.webNavigation
+	.loadURI(register, 0, null, null, null);
+    } else {
+      var uri = Components
+	.classes["@mozilla.org/network/simple-uri;1"]
+	.getService(Components.interfaces.nsIURI);
+
+      uri.spec = register;
+
+      Components
+	.classes["@mozilla.org/uriloader/external-protocol-service;1"]
+	.getService(Components.interfaces.nsIExternalProtocolService)
+	.loadUrl(uri);
+    }
+  }
+  </script>
+
+ <vbox>   
+    <groupbox>
+      <caption label="&auth;"/>
+      <separator class="groove-thin" orient="horizontal"/>
+      <label value="&introLogin;"/>
+      <separator class="groove-thin" orient="horizontal"/>
+      <grid>
+	<columns>
+	  <column flex="1"/>
+	  <column flex="1"/>
+	</columns>
+	<rows>
+	  <row>
+	    <label value="&login;"/>
+	    <textbox id="loginTextBox" value=""/>
+	  </row>
+	  <row>
+	    <label value="&pass;"/>
+	    <textbox id="passTextBox" type="password" value=""/>
+	  </row>
+	</rows>   
+      </grid>
+    </groupbox>
+    <separator class="groove-thin" orient="horizontal"/>   
+    <html:div>&introCreate;<html:span id="myLink" target="_blank" onclick="navigate()" class="link" >&backend;</html:span></html:div>
+    <separator class="groove-thin" orient="horizontal"/>
+  </vbox>
+
+</dialog>

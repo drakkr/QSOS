@@ -1,0 +1,99 @@
+<!--
+ **  Copyright (C) 2006-2013 Atos
+ **
+ **  Authors: Raphael Semeteys <raphael.semeteys@atos.net>
+ **           Timothée Ravier <timothee.romain.ravier@gmail.com>
+ **
+ **  This program is free software; you can redistribute it and/or modify
+ **  it under the terms of the GNU General Public License as published by
+ **  the Free Software Foundation; either version 2 of the License, or
+ **  (at your option) any later version.
+ **
+ **  This program is distributed in the hope that it will be useful,
+ **  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ **  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ **  GNU General Public License for more details.
+ **
+ **  You should have received a copy of the GNU General Public License
+ **  along with this program; if not, write to the Free Software
+ **  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+ **
+ **
+ **  QSOS XUL Editor
+ **  editor.dtd: french translations
+!-->
+
+<!ENTITY QSOSEditor "Editeur XUL QSOS">
+
+<!-- Tabs !-->
+<!ENTITY fileTab "  Fichier ">
+<!ENTITY generalTab "  Général ">
+<!ENTITY criteriaTab "  Critères ">
+<!ENTITY chartTab "  Graphe ">
+<!ENTITY aboutTab "  A propos ">
+
+<!-- File Tab !-->
+<!ENTITY newLocalFile "Template local">
+<!ENTITY newRemoteFile "Template distant">
+<!ENTITY openLocalFile "Evaluation locale">
+<!ENTITY openRemoteFile "Evaluation distante">
+<!ENTITY updateLocalFile  "Template local">
+<!ENTITY updateRemoteFile "Template distant">
+<!ENTITY saveFile "Enregistrer en local">
+<!ENTITY saveFileAs "Renommer en local">
+<!ENTITY saveRemoteFile "Enregistrer sur le serveur">
+<!ENTITY closeFile "Fermer l'évaluation">
+<!ENTITY exit "Quitter l'éditeur">
+<!ENTITY newButtons "Créez une nouvelle évaluation à partir d'un template :">
+<!ENTITY openButtons "Ouvrez une évaluation existante :">
+<!ENTITY updateButtons "Mettre à jour la structure de l'évaluation:">
+<!ENTITY saveButtons "Sauvergardez votre évaluation :">
+<!ENTITY endButtons "Terminer :">
+
+<!-- General Tab !-->
+<!ENTITY software "Logiciel">
+<!ENTITY softwareName "Nom">
+<!ENTITY release "Version">
+<!ENTITY sotwareFamily "Template de logiciel">
+<!ENTITY license "Licence">
+<!ENTITY softwareDescription "Description">
+<!ENTITY url "Site Web">
+<!ENTITY demoUrl "Site de démonstration">
+<!ENTITY authors "Auteurs :">
+<!ENTITY evaluation "Evaluation">
+<!ENTITY authorName "Nom">
+<!ENTITY authorEmail "Courriel">
+<!ENTITY addAuthorButton "    Ajouter  ">
+<!ENTITY delAuthorButton " Supprimer">
+
+<!-- Criteria Tab !-->
+<!ENTITY criteriaName "Critères">
+<!ENTITY expandTree "Exploser tout">
+<!ENTITY collapseTree "Tout aplatir">
+<!ENTITY criteriaDescription "Description">
+<!ENTITY score "Score">
+<!ENTITY score0 "Score 0">
+<!ENTITY score1 "Score 1">
+<!ENTITY score2 "Score 2">
+<!ENTITY comments "Commentaires">
+
+<!-- Chart Tab !-->
+
+<!-- About Tab !-->
+<!ENTITY xuleditorName "QSOS XUL Editor v2.0">
+<!ENTITY xuleditorLicense "Logiciel sous licence GNU Public License version 2 :">
+<!ENTITY xuleditorLicenseUrl "http://www.gnu.org/licenses/gpl-2.0.html">
+<!ENTITY currentQSOSVersion "Version actuelle de la méthode QSOS : 2.0">
+<!ENTITY supportedQSOSVersions "Formats QSOS supportés : 2.0, 1.x">
+<!ENTITY xuleditorCredits "Crédits">
+<!ENTITY xuleditorAuthors "Auteurs :">
+<!ENTITY xuleditorAuthorName1 "Raphael Semeteys">
+<!ENTITY xuleditorAuthorEmail1 "raphael.semeteys@atos.net">
+<!ENTITY xuleditorAuthorName2 "Timothée Ravier">
+<!ENTITY xuleditorAuthorEmail2 "timothee.romain.ravier@gmail.com">
+<!ENTITY iconsetAuthors "Icones réalisées par Oxygen Team (KDE) :">
+<!ENTITY iconsetUrl "http://www.oxygen-icons.org">
+<!ENTITY sourceCode "Code source disponible à l'adresse :">
+<!ENTITY sourceCodeUrl "http://savannah.nongnu.org/projects/qsos">
+<!ENTITY project "Informations complémentaires sur la méthode QSOS :">
+<!ENTITY projectUrl "http://www.qsos.org">

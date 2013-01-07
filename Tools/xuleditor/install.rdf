@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="urn:mozilla:install-manifest"
+                   em:id="xuleditor@qsos.org"
+                   em:version="1.1"
+                   em:type="2"
+                   em:name="QSOS XUL Editor"
+                   em:description="An editor for QSOS evaluations of open source software"
+                   em:creator="Raphael Semeteys"
+                   em:iconURL="chrome://qsos-xuled/content/logo32.png"
+                   em:homepageURL="http://www.qsos.org/"
+                   em:aboutURL="chrome://qsos-xuled/content/about.xul"
+                   em:updateURL="http://www.qsos.org/tools/xuleditor-update.rdf"
+                   em:updateKey="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCqlvMAqXWiSZtObPWpOfB/kC/dggpT2ZVSWGHxVlkpJK+YJHy5bTXOZurCz/yKi1e9EakSBhQrMERI7HQcK6PnQv71U/U/yZkgBPQG1ldScNoVcq+TXZyBA+16fivkWhS4rTh+7lk0AXVDMLQPmYr5cA03Wj6PAGOCZRABffqdpwIDAQAB">
+    <em:targetApplication RDF:resource="rdf:#$zNYy83"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$zNYy83"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="3.0"
+                   em:maxVersion="6.*" />
+</RDF:RDF>

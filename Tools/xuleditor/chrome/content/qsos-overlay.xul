@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE overlay SYSTEM "chrome://qsos-xuled/locale/qsos-overlay.dtd">
+
+<overlay id="qsos-overlay" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<script type="application/x-javascript" src="qsos-overlay.js"></script>
+
+	<menupopup id="menu_ToolsPopup">
+		<menuitem id="qsos-xuled"
+			  label="&qsos-xuled;" oncommand="window.openDialog('chrome://qsos-xuled/content/editor.xul','&qsos-xuled;', '_blank', 'chrome,dialog=no');"/>
+	</menupopup>
+</overlay>

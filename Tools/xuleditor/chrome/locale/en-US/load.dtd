@@ -1,0 +1,5 @@
+<!ENTITY load "Load remote file">
+<!ENTITY evaluations "Available evaluations">
+<!ENTITY version "Version">
+<!ENTITY language "Language">
+<!ENTITY repo "Repository">

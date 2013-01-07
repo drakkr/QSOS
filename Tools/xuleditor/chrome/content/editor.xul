@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://qsos-xuled/skin/classic.css" type="text/css"?>
+<!DOCTYPE window SYSTEM "chrome://qsos-xuled/locale/editor.dtd">
+<window id="QSOS" title="&QSOSEditor;" width="800px" height="600px"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        xmlns:html="http://www.w3.org/1999/xhtml" onload="init();" onclose="exit()">
+  <script type="application/x-javascript" src="Document.js"></script>
+  <script type="application/x-javascript" src="editor.js"></script> 
+  <script type="application/x-javascript" src="file.js"></script>
+  <script type="application/x-javascript" src="compatibility.js"></script>     
+  <script type="application/x-javascript" src="general.js"></script>
+  <script type="application/x-javascript" src="criteria.js"></script>
+  <script type="application/x-javascript" src="chart.js"></script>
+  <script type="application/x-javascript" src="about.js"></script>
+  <stringbundle id="properties" src="chrome://qsos-xuled/locale/editor.properties"/>
+  <tabbox id="tabBox" flex="1">
+    <tabs id="tabs">
+      <tab id="fileTab" class="file" label="&fileTab;"/>
+      <tab id="generalTab" class="general" label="&generalTab;"/>
+      <tab id="criteriaTab" class="criteria" label="&criteriaTab;"/>
+      <tab id="chartTab" class="chart" label="&chartTab;"/>
+      <tab id="aboutTab" class="about" label="&aboutTab;"/>
+    </tabs>
+    <tabpanels flex="1">
+      <tabpanel flex="1">
+        <vbox flex="1">
+          <hbox id="fileHBox" flex="1">
+            <vbox>
+                  <separator class="groove-thin" orient="horizontal"/>
+		  <html:p class="intro">&newButtons;</html:p>
+		  <hbox>
+		    <button id="newLocalFile" class="newLocalFile" label="&newLocalFile;" oncommand="newFileFromLocalTemplate();" orient="vertical"/>		  
+		    <button id="newRemoteFile" class="newRemoteFile" label="&newRemoteFile;" oncommand="newFileDialog();" orient="vertical"/>
+		  </hbox>
+		  <html:p class="intro">&openButtons;</html:p>
+		  <hbox>
+		    <button id="openFile" class="openLocalFile" label="&openLocalFile;" oncommand="openFile();" orient="vertical"/>
+		    <button id="openRemoteFile" class="openRemoteFile" label="&openRemoteFile;" oncommand="loadRemoteDialog();" orient="vertical"/>
+		  </hbox>
+		  <html:p class="intro">&updateButtons;</html:p>
+		  <hbox>
+		    <button id="updateLocalFile" class="updateLocalFile" label="&updateLocalFile;" oncommand="updateFromLocalTemplate();" orient="vertical"/>
+		    <button id="updateRemoteFile" class="updateRemoteFile" label="&updateRemoteFile;" oncommand="updateFileDialog();" orient="vertical"/>
+		  </hbox>		  
+		  <html:p class="intro">&saveButtons;</html:p>
+		  <hbox>
+		    <button id="saveFile" class="saveLocalFile" label="&saveFile;" oncommand="saveFile();" orient="vertical"/>
+		    <button id="saveRemoteFile" class="saveRemoteFile" label="&saveRemoteFile;" oncommand="saveRemote();" orient="vertical"/>		    
+		  </hbox>
+		  <hbox>
+		    <button id="saveFileAs" class="saveFileAs" label="&saveFileAs;" oncommand="saveFileAs();" orient="vertical"/>
+		  </hbox>
+                  <html:p class="intro">&endButtons;</html:p>
+		  <hbox>
+		    <button id="closeFile" class="closeFile" label="&closeFile;"  oncommand="checkCloseFile();" orient="vertical"/>		    
+		    <button id="exitApp" class="exitApp" label="&exit;"  oncommand="if (checkCloseFile() == true) exit();" orient="vertical"/>
+		  </hbox>
+            </vbox>
+          </hbox>
+        </vbox>
+      </tabpanel>
+      <tabpanel id="generalTabPanel">
+        <vbox flex="1">
+          <groupbox>
+            <caption id="caption"><label id="label" value="&software;"/></caption>
+            <vbox flex="1">
+              <box>
+                <vbox flex="1">
+                  <label control="f-software" value="&softwareName;"/><textbox id="f-software" oninput="changeAppName(this);"/>
+                  <label control="f-release" value="&release;"/><textbox id="f-release" oninput="changeRelease(this);"/>
+                  <label control="f-sotwarefamily" value="&sotwareFamily;"/><textbox id="f-sotwarefamily" oninput="changeSoftwareFamily(this);" readonly="true"/>
+                </vbox>
+                <vbox flex="1">
+                  <label control="f-url" value="&url;"/><textbox id="f-url" oninput="changeUrl(this);"/>
+                  <label control="f-demourl" value="&demoUrl;"/><textbox id="f-demourl" oninput="changeDemoUrl(this);"/>
+                  <label control="f-license" value="&license;"/>
+                  <menulist id="f-license" oncommand="changeLicense(this, this.selectedIndex);"><menupopup id="f-license-popup"/></menulist>
+                </vbox>
+              </box>
+                <label control="f-desc" value="&softwareDescription;"/><textbox id="f-desc" multiline="true" oninput="changeDesc(this);"/>
+            </vbox>
+          </groupbox>
+          <groupbox>
+            <caption><label value="&evaluation;"/></caption>
+            <hbox>
+              <vbox flex="1">
+                <label control="f-a-name" value="&authorName;"/><textbox id="f-a-name"/>
+                <label control="f-a-email" value="&authorEmail;"/><textbox id="f-a-email"/>
+              </vbox>
+              <vbox>
+                <separator class="groove-thin" orient="horizontal"/>
+                <button id="addAuthorButton" class="addAuthor" label="&addAuthorButton;" flex="1" oncommand="addAuthor();"/>
+                <button id="delAuthorButton" class="delAuthor" label="&delAuthorButton;" flex="1" oncommand="deleteAuthor();"/>
+                <separator class="groove-thin" orient="horizontal"/>
+              </vbox>
+              <vbox flex="1">
+                <label control="f-a-list" value="&authors;"/>
+                <listbox id="f-a-list" rows="5" onselect="changeAuthor(this.selectedItem);"></listbox>
+              </vbox>
+            </hbox>
+          </groupbox>
+        </vbox>
+      </tabpanel>
+      <tabpanel>
+        <vbox>
+          <tree id="criteriaTree" width="300px" hidecolumnpicker="true" onselect="treeselect(this);" flex="1">
+            <treecols>
+              <treecol id="name" label="&criteriaName;" primary="true" flex="1"/>
+            </treecols>
+          </tree>
+          <hbox>
+            <spacer flex="2"/>
+            <button id="tree-expand" label="&expandTree;" oncommand="expandTree('true');"/>
+            <spacer flex="1"/>
+            <button id="tree-collapse" label="&collapseTree;" oncommand="expandTree('false');"/>
+            <spacer flex="2"/>
+          </hbox>
+        </vbox>
+        <splitter/>
+        <vbox flex = "1">
+          <groupbox>
+            <caption><label value="&criteriaDescription;"/></caption>
+            <textbox id="f-c-desc" multiline="true" readonly="true" class="plain" style="background-color: transparent;"/>
+          </groupbox>
+          <groupbox id="f-g-score">
+            <caption><label value="&score;"/></caption>
+            <radiogroup id="f-c-score">
+              <radio id="f-c-desc0" label="&score0;" oncommand="changeScore(0);"/>
+              <radio id="f-c-desc1" label="&score1;" oncommand="changeScore(1);"/>
+              <radio id="f-c-desc2" label="&score2;" oncommand="changeScore(2);"/>
+            </radiogroup>
+          </groupbox>
+          <label control="f-c-comments" value="&comments;"/>
+          <textbox id="f-c-comments" multiline="true" rows="5" oninput="changeComments(this);"/>
+        </vbox>
+      </tabpanel>
+      <tabpanel>
+        <vbox id="chart-box" flex = "1">
+          <hbox id="chart-label" />
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="750px" height="500px">
+              <g id="chart"/>
+            </svg>
+        </vbox>
+      </tabpanel>
+      <tabpanel id="aboutTab">
+        <vbox flex="1">
+          <hbox>
+            <image src="chrome://qsos-xuled/content/logo-qsos.png" width="150" height="58"/>
+          </hbox>
+          <label value=""/>
+	  <html:p class="intro">&xuleditorName;</html:p>
+          <label value=""/>
+          <label value="&currentQSOSVersion;"/>
+          <label value="&supportedQSOSVersions;"/>	  
+          <label value=""/>
+          <hbox>
+            <label value="&project;"/>
+	    <html:span onclick="navigate('&projectUrl;')" class="link" >&projectUrl;</html:span>
+          </hbox>	  
+          <label value=""/>
+          <hbox>
+            <label value="&xuleditorLicense;"/>
+	    <html:span onclick="navigate('&xuleditorLicenseUrl;')" class="link" >&xuleditorLicenseUrl;</html:span>
+          </hbox>
+          <label value=""/>
+          <hbox>
+            <label value="&sourceCode;"/>
+	    <html:span onclick="navigate('&sourceCodeUrl;')" class="link" >&sourceCodeUrl;</html:span>
+          </hbox> 	  
+          <label value=""/>
+	  <html:p class="intro">&xuleditorCredits;</html:p>	 
+	  <label value=""/>
+          <label value="&xuleditorAuthors;"/>
+          <vbox>
+            <hbox>
+              <label value="     "/>
+              <label value="&xuleditorAuthorName1; (&xuleditorAuthorEmail1;)"/>
+            </hbox>
+            <hbox>
+              <label value="     "/>
+              <label value="&xuleditorAuthorName2; (&xuleditorAuthorEmail2;)"/>
+            </hbox>
+          </vbox>
+          <label value=""/>
+          <hbox>
+            <label value="&iconsetAuthors;"/> 
+	    <html:span onclick="navigate('&iconsetUrl;')" class="link" >&iconsetUrl;</html:span>
+          </hbox>         
+        </vbox>
+      </tabpanel>
+    </tabpanels>
+  </tabbox>
+</window>

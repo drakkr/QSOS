@@ -1,0 +1,89 @@
+Roadmap Outils QSOS
+
+TODO :
+-----
+
+[O3S Backend]
+- Upload : rejeter les évaluations incomplètes (score, header) ou trop peu commentées (à valider)
+
+[QSOS Editor]
+- Onglet "Criteria" : label "Comments" en gras
+- Backporter certains fonctionnalités développées par Tim ou les implementer : 
+-- Reverse engineering de template
+
+[Documentation]
+- Meta : versions françaises ET anglaises
+- Méthode :
+-- Finaliser/MAJ de la méthode
+- Guide(s) d'installation des outils QSOS (Installation guide(s) of QSOS tools)
+-- Editor : documenter l'installation en tant qu'application (xulrunner --install-app /path/to/xuleditor/) et idéalement créer des paquets !!
+-- O3S
+- Tutoriel QSOS (QSOS Starting Guide)
+-- Fusionner existant wiki
+-- Dérouler un exemple complet => article Linux Mag
+- Guide du mainteneur QSOS
+-- Impacts d'un changement de format XML QSOS (XSD, XSLT, outils)
+-- Impacts d'un changement des critères de maturité (fichiers XML de référence : criteria-maturity_*.xml, xslt ecternes et internes à l'éditeur, éventuellement templates bootstrap, méthode)
+-- Gestion des versions : de la méthode, du format QSOS
+- QSOS translation and localization guide (only in English)
+-- Translation of the method, xml files (criteria-maturity_*.xml, xslt)
+-- Translation of tools gui (o3s, editor)
+-- Add a new supporter language in tools (o3s, editor)
+-- Documentation : other guides, website
+-- Translate templates and evaluations (try to do some automation here? Google translate?)
+- FAQ, bonnes pratiques, astuces...
+-- Pbs fréquents : template->evaluation (erreurs, deux sections maturité, pbs avec mes métadonnées...), Remote Save (erreurs XSD, encodage, droits...)
+-- Réutilisant l'existant wiki sur comment concevoir uen grille
+-- Aspects légaux : les évaluations sont-elles libres ? Pas en tant que telles car le format est ouvert ? Mais au mois les exports générés le sont => à investiguer PAH Benjamin Jean.
+
+[Website]
+- cf. QSOS-Website.txt
+
+[Recurring annoying pbs]
+- Git errors : http://stackoverflow.com/questions/1918524/error-pushing-to-github-insufficient-permission-for-adding-an-object-to-reposi
+
+
+Changelog :
+----------
+
+[QSOS Formats]
+- XSD for QSOS format
+- Freemind XSD for templates
+
+[QSOS backend]
+- QSOS backend is now split in two
+-- Incoming: community sandbox opened to any registered user
+-- Master: QSOS certified evaluations and templates
+- Templates and evaluations can be uploaded to the backends, this requires authentication
+
+[QSOS Editor]
+- Remote Templates can be downloaded from the QSOS backend and used to create a new evaluation
+- Remote evaluations can be downloaded from the QSOS backends and opened by the editor
+- Evaluations can be send and saved in the remote QSOS backends, this requires authentication
+- Evaluations can be resynchronized with local or remote templates
+
+[03S]
+- 03S connects to a QSOS by configuration
+- Internationalization of GUI, icluding evaluations filtering on language
+- Evaluations can now be visualized in HTML and Freemind format
+- Comparisons can now be visualized on a QSOS Quadrant and also be exported to OpenDocument (ODS, ODP and ODT formats)
+
+
+Roadmap :
+--------
+
+[QSOS XML Format]
+- Add a "highlight" attribute [true|false] to the <comment/> tags
+-- Used to identified perticular comments to be included in ODP and ODT exports
+- Add a <source/> tag to <element/> to detail source(s) used to score the criteria
+- Impacts on both Editor and O3S
+- New XSD and XSLTs
+
+[O3S Backend]
+- Repositories could be navigated with language filters
+
+[O3S]
+- Implement the new QSOS format (ODP and ODT exports)
+
+[QSOS Editor]
+- Implement the new QSOS format

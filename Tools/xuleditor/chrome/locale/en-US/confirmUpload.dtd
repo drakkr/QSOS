@@ -1,0 +1,7 @@
+<!ENTITY auth "Authentication">
+<!ENTITY remoteSave "Save an evaluation in O3S backend">
+<!ENTITY introLogin "Please enter your O3S credentials.">
+<!ENTITY login "Login">
+<!ENTITY pass "Password">
+<!ENTITY introCreate "If you don't have any credentials, register on ">
+<!ENTITY backend "03S backend">

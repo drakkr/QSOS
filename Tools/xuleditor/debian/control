@@ -1,0 +1,17 @@
+Source: qsos-xuleditor
+Section: editors
+Priority: optional
+Maintainer: Gonéri Le Bouder <goneri.lebouder@atosorigin.com>
+Build-Depends: debhelper (>= 5)
+Build-Depends-Indep: docbook-to-man
+Standards-Version: 3.7.2
+
+Package: qsos-xuleditor
+Architecture: all
+Depends: ${shlibs:Depends}, ${misc:Depends}, xulrunner
+Description: a XUL based QSOS sheet editor
+ QSOS is a method, designed to qualify, select and compare free and
+ open source software in an objective, traceable and argued way.
+ It publicly available under the terms of the GNU Free Documentation License.
+ .
+ Sheets are published under GPLv2 in a XML file

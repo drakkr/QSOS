@@ -1,0 +1,9 @@
+Tools/o3s/app/freemind/
+Tools/o3s/app/images/*
+Tools/o3s/app/mindmap/*.mm
+Tools/o3s/app/odf/*
+Tools/o3s/backend/app/upload/*
+Tools/o3s/backend/incoming/*
+Tools/o3s/backend/master/*
+Tools/xuleditor/xuleditor-application-*.zip
+Tools/xuleditor/xuleditor-firefox-*.xpi

@@ -1,0 +1,6 @@
+content qsos-xuled  chrome/content/
+skin qsos-xuled  classic chrome/skin/
+overlay chrome://browser/content/browser.xul chrome://qsos-xuled/content/qsos-overlay.xul
+
+locale qsos-xuled en-US chrome/locale/en-US/
+locale qsos-xuled fr-FR chrome/locale/fr-FR/

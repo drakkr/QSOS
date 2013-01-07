@@ -1,0 +1,7 @@
+<!ENTITY auth "Authentification">
+<!ENTITY remoteSave "Enregister une évaluation sur 03S">
+<!ENTITY introLogin "Entrez les informations de connexion 03S.">
+<!ENTITY login "Login">
+<!ENTITY pass "Mot de passe">
+<!ENTITY introCreate "Si nécessaire, créez un compte sur le ">
+<!ENTITY backend "serveur 03S">
