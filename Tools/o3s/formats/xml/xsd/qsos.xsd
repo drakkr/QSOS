@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <xsd:element name="element">
+    <xsd:complexType>
+      <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+	<xsd:element name="desc" minOccurs="0" type="xsd:string"/>
+	<xsd:element name="comment" minOccurs="0" type="xsd:string"/>
+	<xsd:element name="desc0" minOccurs="0" type="xsd:string"/>
+	<xsd:element name="desc1" minOccurs="0" type="xsd:string"/>
+	<xsd:element name="desc2" minOccurs="0" type="xsd:string"/>
+	<xsd:element name="score" minOccurs="0" type="xsd:string"/>
+	<xsd:element name="element" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <!--Attributes-->
+      <xsd:attribute name="name" type="xsd:string" use='required'/>
+      <xsd:attribute name="title" type="xsd:string" use='required'/>
+    </xsd:complexType>
+  </xsd:element>
+  
+  <xsd:element name="document">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!--Start of header-->
+        <xsd:element name="header">
+          <xsd:complexType>
+            <xsd:sequence>
+              <!--Start of authors-->
+              <xsd:element name="authors">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <!--Start of author-->
+                    <xsd:element name="author" maxOccurs="unbounded">
+                      <xsd:complexType>
+			<xsd:choice>
+			  <xsd:sequence>
+			    <xsd:element name="name" type="xsd:string"/>
+			    <xsd:element name="email" type="xsd:string"/>
+			  </xsd:sequence>
+			  <xsd:sequence>
+			    <xsd:element name="email" type="xsd:string"/>
+			    <xsd:element name="name" type="xsd:string"/>
+			  </xsd:sequence>
+			</xsd:choice>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <!--End of author-->
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <!--End of authors-->
+              <!--Start of dates-->
+              <xsd:element name="dates">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="creation" type="xsd:string"/>
+                    <xsd:element name="validation" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <!--End of dates-->
+              <xsd:element name="appname" type="xsd:string"/>
+              <xsd:element name="desc" type="xsd:string"/>
+              <xsd:element name="release" type="xsd:string"/>
+              <xsd:element name="licenseid" type="xsd:string"/>
+              <xsd:element name="licensedesc" type="xsd:string"/>
+              <xsd:element name="url" type="xsd:string"/>
+              <xsd:element name="demourl" type="xsd:string"/>
+              <xsd:element name="language" type="xsd:string"/>
+              <xsd:element name="qsosappname" type="xsd:string"/>
+              <xsd:element name="qsosformat" type="xsd:string"/>
+              <xsd:element name="qsosspecificformat" type="xsd:string"/>
+              <xsd:element name="qsosappfamily" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <!--End of header-->
+        <!--Start of section-->
+        <xsd:element name="section" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="desc" minOccurs="0" type="xsd:string"/>
+	      <xsd:element ref='element' minOccurs="0" maxOccurs="unbounded"/>
+              <xsd:element name="comment" minOccurs="0" type="xsd:string"/>
+            </xsd:sequence>
+            <!--Attributes-->
+            <xsd:attribute name="name" type="xsd:string" use='required'/>
+            <xsd:attribute name="title" type="xsd:string" use='required'/>
+          </xsd:complexType>
+        </xsd:element>
+        <!--End of section-->
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <!--Fin de document-->
+</xsd:schema>

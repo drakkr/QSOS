@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+   <header>
+      <authors>
+         <author>
+            <name>Mylène Potiez</name>
+            <email>mylene.potiez@atosorigin.com</email>
+         </author>
+      </authors>
+      <dates>
+         <creation></creation>
+         <validation></validation>
+      </dates>
+      <appname>RServe</appname>
+      <desc></desc>
+      <release>0.6-3</release>
+      <licenseid>31</licenseid>
+      <licensedesc>GNU GPL</licensedesc>
+      <url>http://www.rforge.net/Rserve/</url>
+      <demourl></demourl>
+      <language>fr</language>
+      <qsosappname></qsosappname>
+      <qsosformat>1.0</qsosformat>
+      <qsosspecificformat></qsosspecificformat>
+      <qsosappfamily>Serveur R</qsosappfamily>
+   </header>
+   <section name="generic" title="Section générique">
+      <desc>Les critères génériques de l'évaluation Presto de QSOS</desc>
+      <element name="intrinsicdurability" title="Pérennité">
+         <desc>Pérennité</desc>
+         <element name="maturite" title="Maturité">
+            <desc></desc>
+            <desc0>Logiciel provenant d'un fork ou avec une forte probabilité de fork dans un futur proche.</desc0>
+            <desc1>Projet jeune (moins de 3 ans) ou connaissant des difficultés à stabiliser les versions de développement.</desc1>
+            <desc2>Projet stable ou ayant un bon historique de gestion de crise. Les nouvelles versions apportent de façon prépondérante de nouvelles fonctionnalités.</desc2>
+            <score>2</score>
+            <comment>2003/10/08	Rserve_0.3-0
+2011/01/17	Rserve 0.6-3</comment>
+         </element>
+         <element name="adoption1" title="Adoption">
+            <desc></desc>
+            <desc0>Usage détectable sur Internet sans véritable activité communautaire</desc0>
+            <desc1>Utilisation communautaire prépondérante</desc1>
+            <desc2>Nombreuse références industrielles</desc2>
+            <score>2</score>
+            <comment>9 projets cités utilisant RServe</comment>
+         </element>
+         <element name="developpement" title="Développement">
+            <desc></desc>
+            <desc0>Deux ou moins de deux développeurs clairement identifiés.</desc0>
+            <desc1>Équipe de développement réduite avec un turn-over important ou sans équipe de direction identifiée.</desc1>
+            <desc2>Équipe de développement structurée comportant plus de 5 développeurs actifs.</desc2>
+            <score>0</score>
+            <comment>un développeur : Simon Urbanek</comment>
+         </element>
+         <element name="activite" title="Activité">
+            <desc></desc>
+            <desc0>Très faible activité, que ce soit sur les résolutions de bugs, les releases, l'ajout de nouvelles fonctions ou sur les espaces communautaires (wiki, forum, mailing list...)</desc0>
+            <desc1>Activité détectable mais anarchique (pas feuille de route accessible facilement, pas de prévisions de nouvelles fonctionnalités ou de prévisions de nouvelles versions visible)</desc1>
+            <desc2>Activité importante et visible via la mise en place de feuilles de routes traçant les requêtes de nouvelles fonctionnalités et/ou les prévisions de sortie des nouvelles version</desc2>
+            <score>2</score>
+            <comment></comment>
+         </element>
+         <element name="strategicalindependence" title="Indépendance stratégique">
+            <desc0>Pas de stratégie détectable ou stratégie dictée par une société commerciale, un sponsor ou un individu unique.</desc0>
+            <desc1>Stratégie décidée par l'équipe de developpement.</desc1>
+            <desc2>Indépendance forte de l'équipe de développement, fort engagement du projet dans un processus de standardisation.</desc2>
+            <score>0</score>
+            <comment></comment>
+         </element>
+         <element name="copyrightowners" title="Détenteur des droits">
+            <desc0>Les droits sont détenus par quelques individus ou entités commerciales, facilitant le changement de licence</desc0>
+            <desc1>Les droits sont détenus par de nombreux individus de façon homogène, rendant le changement de licence très difficile</desc1>
+            <desc2>Les droits sont détenus par une entité légale, une fondation dans laquelle la communauté a confiance (ex: FSF, Apache, ObjectWeb)</desc2>
+            <score>0</score>
+            <comment></comment>
+         </element>
+         <element name="license" title="Licence">
+            <desc>Licence, à pondérer uniquement si le client désire un jour devenir propriétaire du code</desc>
+            <element name="permissiveness" title="Permissivité">
+               <desc0>Licence très stricte, comme la GPL</desc0>
+               <desc1>Licence modérée entre les deux extrêmes (GPL et BSD), licence duale dépendante du type d'utilisateur (personne, société…) ou de leur activité</desc1>
+               <desc2>Licence très permissive comme BSD et Apache</desc2>
+               <score>0</score>
+               <comment></comment>
+            </element>
+            <element name="protectionagainstproprietaryforks" title="Protection contre des forks commerciaux">
+               <desc0>Licence très permissive comme BSD et Apache</desc0>
+               <desc1>Licence modérée entre les deux extrêmes (GPL et BSD), licence duale dépendante du type d'utilisateur (personne, société…) ou de leur activité</desc1>
+               <desc2>Licence très stricte, comme la GPL</desc2>
+               <score>2</score>
+               <comment></comment>
+            </element>
+         </element>
+      </element>
+      <element name="industrializedsolution" title="Industrialisation">
+         <desc>Niveau d'industrialisation du projet</desc>
+         <element name="independenceofdevelopments" title="Indépendance des développements">
+            <desc0>Développements réalisés à plus de 60% par des employés d'une seule société</desc0>
+            <desc1>Développements réalisés à 60% maximum par des employés d'une seule société</desc1>
+            <desc2>Développements réalisés à 20% maximum par des employés d'une seule société</desc2>
+            <score>0</score>
+            <comment></comment>
+         </element>
+         <element name="services1" title="Services">
+            <desc></desc>
+            <desc0>Pas d'offres de services identifiée</desc0>
+            <desc1>Offre existante mais restreinte géographiquement ou en une seule langue ou fournie par un seul fournisseur</desc1>
+            <desc2>Offre riche : plusieurs fournisseurs ou plusieurs langages</desc2>
+            <score>0</score>
+            <comment></comment>
+         </element>
+         <element name="documentation" title="Documentation">
+            <desc0>Pas de documentation utilisateur</desc0>
+            <desc1>La documentation existe mais est en partie obsolète ou restreinte à une seule langue ou peu détaillée</desc1>
+            <desc2>Documentation à jour, traduite et éventuellement adaptée à différentes cibles de lecteurs (end-user, sysadmin, manager…)</desc2>
+            <score>1</score>
+            <comment></comment>
+         </element>
+         <element name="methodequalite" title="Méthode qualité">
+            <desc></desc>
+            <desc0>Pas de processus de qualité identifié ni d'outils de gestions de bugs</desc0>
+            <desc1>Processus qualité non formalisé ou non outillé ou comportant des outils qui sont très peu utilisés</desc1>
+            <desc2>Utilisation très active d'outils standards (tests unitaires, outils de gestion de build, outils de mesure de qualité du code)</desc2>
+            <score>0</score>
+            <comment></comment>
+         </element>
+      </element>
+      <element name="packaging" title="Packaging">
+         <desc>Packaging pour les différents systèmes d'exploitation</desc>
+         <element name="packagingbsd" title="BSD">
+            <desc></desc>
+            <desc0>Pas de packaging officiel pour la famille BSD</desc0>
+            <desc1>Packaging existant pour quelques distributions de la famille BSD</desc1>
+            <desc2>Packaging complet pour les distributions de la famille BSD suivantes : FreeBSD, OpenBSD, NetBSD et Mac OS X</desc2>
+            <score>1</score>
+            <comment>Mac OS X</comment>
+         </element>
+         <element name="packaginglinux" title="GNU/Linux">
+            <desc></desc>
+            <desc0>Pas de packaging officiel pour les systèmes d'exploitations GNU/Linux</desc0>
+            <desc1>Packaging existant pour quelques distributions GNU/Linux</desc1>
+            <desc2>Packaging complet les systèmes de packaging .deb et .rpm</desc2>
+            <score>1</score>
+            <comment></comment>
+         </element>
+         <element name="unix" title="Unix">
+            <desc></desc>
+            <desc0>Pas de packaging officiel pour les systèmes de la famille Unix</desc0>
+            <desc1>Packaging existant sur quelques systèmes de la famille Unix</desc1>
+            <desc2>Packaging existant sur au moins ces 3 systèmes : AIX, HP-UX, Solaris</desc2>
+            <score>1</score>
+            <comment>Solaris AIX</comment>
+         </element>
+         <element name="packagingwindows" title="Windows">
+            <desc0>Le logiciel n'est pas disponible sur un système Windows.</desc0>
+            <desc1>Le logiciel existe sous forme d'archive tout en un.</desc1>
+            <desc2>Le logiciel dispose d'un installeur.</desc2>
+            <score>1</score>
+            <comment>Toutefois, l'utilisation de RServe sous Windows n'est pas recommandé</comment>
+         </element>
+         <element name="packagingsource" title="Sources">
+            <desc0>L'installation depuis les sources est hasardeuse et risquée</desc0>
+            <desc1>L'installation depuis les sources est difficile ou limité (seulement à un OS, une architecture, la résolution de l'écran...)</desc1>
+            <desc2>L'installation depuis les sources est outillée (vérification des dépencances, verification de l'installation, gestion de build)</desc2>
+            <score>2</score>
+            <comment></comment>
+         </element>
+         <element name="packagingtar" title="Archive compressée">
+            <desc0>Pas d'archive disponible</desc0>
+            <desc1>Archive globale</desc1>
+            <desc2>Archive séparée pour chaque module installable</desc2>
+            <score>1</score>
+            <comment></comment>
+         </element>
+      </element>
+      <element name="exploitability" title="Exploitabilité">
+         <desc>Niveau d'exploitabilité</desc>
+         <element name="easeofuseergonomics" title="Facilité d'utilisation, ergonomie">
+            <desc0>Difficulté d'utilisation, demande une connaissance approfondie des fonctionnalités du logiciel</desc0>
+            <desc1>Ergonomie austère et très technique</desc1>
+            <desc2>Ergonomie élaborée et IHM comprenant des fonctions d'aide</desc2>
+            <score>0</score>
+            <comment>Nécessite le développement des clients à partir des frameworks existants</comment>
+         </element>
+         <element name="administrationmonitoring" title="Administration et supervision">
+            <desc0>Pas de fonctionnalités de contrôle, ni d'administration</desc0>
+            <desc1>Fonctionnalités présentes mais incomplètes ou à améliorer</desc1>
+            <desc2>Fonctionnalités complètes et faciles de contrôle et d'administration. Intégration possible avec des outils tiers (ex : SNMP, syslog…)</desc2>
+            <score>0</score>
+            <comment></comment>
+         </element>
+      </element>
+      <element name="technicaladaptability" title="Adaptabilité">
+         <desc>Adaptabilité technique</desc>
+         <element name="modularity" title="Modularité">
+            <desc0>Logiciel monolithique</desc0>
+            <desc1>Présence de modules haut niveau permettant un premier niveau d'adaptation</desc1>
+            <desc2>Conception modulaire, permettant des adaptations faciles par sélection et/ou création de modules</desc2>
+            <score>0</score>
+            <comment></comment>
+         </element>
+         <element name="codemodification" title="Facilité technique de modification du code existant">
+            <desc0>Tout à la main</desc0>
+            <desc1>Recompilation possible mais complexe, sans outils, ni documentation</desc1>
+            <desc2>Recompilation facile, outillée (ex : make, ANT, Maven…) et documentée</desc2>
+            <score>2</score>
+            <comment></comment>
+         </element>
+         <element name="codeextension" title="Facilité d'extension du code">
+            <desc0>Toute modification demande une recompilation du code</desc0>
+            <desc1>Architecture conçue pour des extensions statiques mais exige une recompilation</desc1>
+            <desc2>Architecture de plugins, conçue pour des extensions dynamiques et sans recompilation</desc2>
+            <score>1</score>
+            <comment></comment>
+         </element>
+      </element>
+   </section>
+   <section name="ID_898580957" title="Accès à R">
+      <element name="ID_1932797381" title="Localisation du code R">
+         <desc0>Les instructions R sont envoyées par le client pour exécution sur le serveur</desc0>
+         <desc1>Le code R peut être stocké coté client comme serveur</desc1>
+         <desc2>Le code R est stocké et exécuté coté serveur</desc2>
+         <desc>Où sont codées les instructions R ?</desc>
+         <comment></comment>
+         <score>0</score>
+      </element>
+      <element name="ID_488611531" title="Formats de sortie">
+         <desc>Filtrages éventuels par le serveur des résultats fournis par R</desc>
+         <desc0>Le serveur est très limité en ce qui concerne les résultats transmis aux clients</desc0>
+         <desc1>Le serveur ne permet pas de récupérer les graphiques</desc1>
+         <desc2>Le serveur permet de récupérer tous les résultas fournis par R (graphiques inclus)</desc2>
+         <comment>Le serveur est capable d'exploiter les graphiques générés par R mais cela nécessite le développement du client</comment>
+         <score>2</score>
+      </element>
+      <element name="ID_1813277669" title="Protocoles">
+         <element name="ID_907541758" title="TCP/IP">
+            <desc0>Pas de support</desc0>
+            <desc1>Support limité ou peu fiable</desc1>
+            <desc2>Support complet</desc2>
+            <comment></comment>
+            <score>2</score>
+         </element>
+         <element name="ID_1640415769" title="SOAP">
+            <desc0>Pas de support</desc0>
+            <desc1>Support limité ou peu fiable</desc1>
+            <desc2>Support complet</desc2>
+            <comment></comment>
+            <score>0</score>
+         </element>
+         <element name="ID_1027743863" title="HTTP">
+            <element name="ID_347298082" title="Support d'Apache">
+               <desc0>Pas de support</desc0>
+               <desc1>Support limité ou peu fiable</desc1>
+               <desc2>Support complet</desc2>
+               <comment></comment>
+               <score>0</score>
+            </element>
+            <element name="ID_692703040" title="Support d'IIS">
+               <desc0>Pas de support</desc0>
+               <desc1>Support limité ou peu fiable</desc1>
+               <desc2>Support complet</desc2>
+               <comment></comment>
+               <score>0</score>
+            </element>
+         </element>
+      </element>
+      <element name="ID_748135463" title="Couverture du language R">
+         <desc0>Couverture des packages de base uniquement</desc0>
+         <desc1>Couverture d'un nombre de packages moyen</desc1>
+         <desc2>Couverture de tout package R</desc2>
+         <desc>Limitations éventuelles aux fonctionnalités offertes par R</desc>
+         <comment></comment>
+         <score>2</score>
+      </element>
+   </section>
+   <section name="ID_439874353" title="Intégration dans le SI">
+      <element name="ID_448002370" title="Sécurité">
+         <element name="ID_859576899" title="Chiffrement des échanges">
+            <desc0>Pas de chiffrement des échanges</desc0>
+            <desc1>Chiffrement faible des échanges</desc1>
+            <desc2>Chiffrement fort des échanges</desc2>
+            <comment>Uniquement au niveau des échanges de données</comment>
+            <score>1</score>
+         </element>
+         <element name="ID_1964479916" title="Gestion des utilisateurs">
+            <desc0>Pas de gestion des utilisateurs</desc0>
+            <desc1>Gestion partielle (ex. Liste d'utilisateurs interne)</desc1>
+            <desc2>Gestion intégrée (ex. Interface LDAP)</desc2>
+            <comment>Sur filesystem</comment>
+            <score>1</score>
+         </element>
+      </element>
+      <element name="ID_1887195472" title="Clients ou exemples d'interface">
+         <element name="ID_700808194" title="C/C++">
+            <desc0>Pas de client ou d'exemple</desc0>
+            <desc1>Client ou exemple défaillant ou peu fonctionnel</desc1>
+            <desc2>Client ou exemple fonctionnel</desc2>
+            <comment>Framework de client C++ 
+Rcli.c</comment>
+            <score>1</score>
+         </element>
+         <element name="ID_1110001994" title="Java">
+            <desc0>Pas de client ou d'exemple</desc0>
+            <desc1>Client ou exemple défaillant ou peu fonctionnel</desc1>
+            <desc2>Client ou exemple fonctionnel</desc2>
+            <comment>REngine Java client (framework)</comment>
+            <score>1</score>
+         </element>
+         <element name="ID_1280616195" title="PHP">
+            <desc0>Pas de client ou d'exemple</desc0>
+            <desc1>Client ou exemple défaillant ou peu fonctionnel</desc1>
+            <desc2>Client ou exemple fonctionnel</desc2>
+            <comment></comment>
+            <score>0</score>
+         </element>
+         <element name="ID_518022136" title="Python">
+            <desc0>Pas de client ou d'exemple</desc0>
+            <desc1>Client ou exemple défaillant ou peu fonctionnel</desc1>
+            <desc2>Client ou exemple fonctionnel</desc2>
+            <comment></comment>
+            <score>0</score>
+         </element>
+      </element>
+      <element name="ID_1359631166" title="Scalabilité">
+         <desc0>Système pas ou peu scalable</desc0>
+         <desc1>Système difficilement scalable</desc1>
+         <desc2>Système facilement scalable</desc2>
+         <comment></comment>
+         <score>1</score>
+      </element>
+   </section>
+   <section name="ID_1258305961" title="Traitements">
+      <element name="ID_711548170" title="Multi threads">
+         <desc0>Pas de gestion de threads</desc0>
+         <desc1>Gestion de threads limités (Nombre / Mémoire...)</desc1>
+         <desc2>Gestion des threads évoluée</desc2>
+         <comment>Source : code source ./src/.svn/text-base/Rserv.c.svn-base
+  THREADED    - results in threaded version of this server, i.e. each
+                 new connection is run is a separate thread. Beware:
+         this approach is not recommended since R does not support
+         real multithreading yet
+</comment>
+         <score>1</score>
+      </element>
+      <element name="ID_1175805984" title="Callback">
+         <desc0>Pas de callback</desc0>
+         <desc1>Callback limité à un seul contexte</desc1>
+         <desc2>Callback souple et configurable</desc2>
+         <desc>Possibilité pour le serveur de contacter le client, à son initiative</desc>
+         <comment>"Rserve provides no callback functionality. Your application could implement callbacks via TCP/IP and the R sockets but it is not a part of Rserve." (source : http://rosuda.org/Rserve/)</comment>
+         <score>0</score>
+      </element>
+      <element name="ID_1621709370" title="Persistance">
+         <desc0>Pas de persistance des données</desc0>
+         <desc1>Persistance des données limitée</desc1>
+         <desc2>Persistance des données complète</desc2>
+         <desc>Possibilité de conserver un contexte entre les appels au serveur (notion de session)</desc>
+         <comment>cf. RSdetach http://cran.r-project.org/web/packages/Rserve/Rserve.pdf page 3</comment>
+         <score>2</score>
+      </element>
+      <element name="ID_631117057" title="Gestion des processus R">
+         <desc1>Fork du processus principal</desc1>
+         <desc2>Mécanisme de Pre fork</desc2>
+         <desc0>Démarrage nouveau processus</desc0>
+         <comment></comment>
+         <score>1</score>
+      </element>
+   </section>
+</document>
