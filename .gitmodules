@@ -1,3 +1,6 @@
 [submodule "Tools/o3s/backend/incoming"]
 	path = Tools/o3s/backend/incoming
 	url = ssh.portaildulibre.fr:/git/QSOS-Incoming.git
+[submodule "Tools/o3s/backend/master"]
+	path = Tools/o3s/backend/master
+	url = git+ssh://ssh.portaildulibre.fr/git/QSOS-Master.git
