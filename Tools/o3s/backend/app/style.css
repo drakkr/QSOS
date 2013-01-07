@@ -1,0 +1,203 @@
+#mainWindow{
+        margin-top: 60px;
+}
+
+/*
+ *  header.php
+ */
+#logout a{
+        color: #3399ff;
+        font-size: 11px;
+}
+#login a{
+        margin-right: -11px;
+        color: white;
+}
+#login a:first-letter{
+        text-transform: uppercase;
+}
+
+/*
+ *  connect.php register.php
+ */
+#connect{
+        text-align: right;
+        float: left;
+        padding-right: 30px;
+}
+
+/*
+ *   Item Git
+ */
+.itemLine{
+        min-height: 15px;
+        font-size: 16px;
+        color: #3c3c9e;
+        background-color: white;
+        padding: 15px 10px 15px 15px;
+        border-top: 1px solid #e8edff;
+}
+.itemLine:hover{
+        background-color: #eff2ff;
+}
+
+.itemLine .name{
+        float: left;
+        width: 200px;
+}
+.itemLine .release{
+        text-align: center;
+        float: left;
+        width: 40px;
+        padding-left: 10px;
+        color: #666666;
+        font-size: 11px;
+        font-weight: bold;
+}
+
+.itemLine .appfamily{
+        padding-left: 10px;
+        float: left;
+        max-width: 150px;
+        font-size: 12px;
+        font-weight: bold;
+}
+.itemLine .certified{
+        text-align: center;
+        float: left;
+        width: 40px;
+        padding-left: 10px;
+        color: #bb9955;
+        font-size: 12px;
+        font-weight: bold;
+        
+}
+.itemLine .info .desc{
+        margin-top: 30px;
+        color: #666666;
+        font-size: 11px;
+        font-weight: bold;
+}
+
+
+.toollist{
+        float: right;
+        cursor: pointer;
+}
+.toollist span{
+        font-size: 14px;
+        padding-right: 5px;
+        padding-left: 5px;
+}
+.toollist span:hover{
+        text-decoration: underline;
+}
+
+.delEval, .delTpl{
+        color: #CC0000;
+
+}
+.delLink:hover{
+        color: #660000;
+}
+
+.download{
+        float: right;
+        margin-top: -20px;
+}
+.breadcrumb li{
+        cursor:  pointer;      
+}
+
+/*
+ *  Logs
+ */
+#logs .alert{
+        cursor:  pointer;
+}
+
+/*
+ *   Index.php
+ */
+.pack{
+        cursor: pointer;
+        font-size: 14px;
+        color: #112255;
+        text-align: center;
+        padding: 5px 20px 0px 20px;
+        height: 100px;
+        width: 182px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        float: left;
+
+}
+.pack:hover{
+        background-color: #e2e2e2;
+}
+.pack .badgeNum{
+        /*color: #5684c3; blue theme*/
+        color: #553311;
+        font-size: 25px;
+        font-weight: bold;
+        padding-bottom: 22px;
+        margin-top: -38px;
+}
+.pack p:first-letter{
+        text-transform: uppercase;
+}
+
+/*
+ *  Settings.php
+ */
+#user_list{
+        text-align: center;
+        width: 100%;
+}
+#user_list #head:first-child{
+        background-color: #e8edff;
+}
+#user_list #head td{
+        font-size: 15px;
+        padding: 0px;
+        background-color: #e8edff;
+}
+#user_list tr{
+        color: #3c3c9e;
+        background-color: white;
+        border-top: 1px solid #e8edff;
+}
+#user_list tr:hover{
+        background-color: #eff2ff;
+}
+#user_list td{
+        padding: 15px 10px 15px 15px;
+        border-right: 1px solid #e8edff;
+        border-left: 1px solid #e8edff;
+}
+#user_list .promote{
+        cursor: pointer;
+}
+
+#add{
+        float: right;
+}
+
+/*
+ *  Upload.php
+ */
+#upload{
+        text-align: center;
+}
+#upload input[type="file"] {
+        background-color:white; 
+        border: 1px solid #e8edff;
+        padding: 0px 40px 0px 5px;
+        cursor:pointer; 
+}
+
+.red{
+        color: #aa0000;
+        font-weight: bold;
+        font-size: 12px;
+}

@@ -1,0 +1,4 @@
+# Ignorer tous les fichiers html
+*.xml
+*.qsos
+
