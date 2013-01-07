@@ -27,7 +27,7 @@
     }
     catch (Exception $e)
     {
-            die('Error 001: Repository initialisation.');
+            die('Error 001: Repository initialisation: '.$e->getMessage());
     }
 
     require('dataconf.php');
