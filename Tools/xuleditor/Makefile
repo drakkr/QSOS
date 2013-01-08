@@ -34,7 +34,7 @@ PREFS=defaults/preferences/qsos-xuled.js
 
 PREFS_XULRUNNER=defaults/preferences/qsos-xuled-xulrunner.js
 
-VERSION=1.1
+VERSION=2.0
 
 ext:
 	rm -f xuleditor-firefox-${VERSION}.xpi

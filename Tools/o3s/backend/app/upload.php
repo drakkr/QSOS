@@ -25,11 +25,6 @@ if (isset($_SESSION['login'])){
     echo '</p>';
     echo '</form>';
     
-//     $re1='.*?';
-//     $re2='(\\.)';
-//     $re3='(qsos)';
-//     $re4='(mm)';
-    
     $login = $_SESSION['login'];
     if (isset($_FILES['fichier'])) {
       include("upload.inc");

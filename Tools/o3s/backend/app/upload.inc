@@ -16,12 +16,6 @@ function upload($fichier, $login) {
             alertError("No file existing");
         }
 
-//         if(file_exists($incoming->getRepoPath() . $name_file)) {
-//             $error = TXT_UPLOAD_ERROR_EXIST;
-//             alertError("Step 2: Upload $name_file [ERROR] : $error");
-// 	    return;
-//         }
-
 	$re1='.*?';
 	$re2='(\\.)';
 	$re3='(qsos)';
@@ -118,8 +112,12 @@ function upload($fichier, $login) {
 	      );
 	    }
 
+	    $req = $bdd->query("SELECT mail FROM users WHERE login='$login'");
+
+	    if ($info = $req->fetch()) $mail = $info['mail'];
+
 	    try {
-	      $incoming->commit("$name_file was $action by $login");
+	      $incoming->commit_author("$name_file was $action by $login", $login, $mail);
 	    } catch (Exception $e) {
 	      //Hack: Git seems to return an empty error via proc_close (cf; lib/Git.php class line 210) when file's content is not modified
 	      if ($e->getMessage()) alertError($e->getMessage());

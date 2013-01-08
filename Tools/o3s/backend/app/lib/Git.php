@@ -262,6 +262,23 @@ class GitRepo {
 	}
 
 	/**
+	 * Runs a `git commit --author` call
+	 *
+	 * Accepts a commit message string with an author
+	 *
+	 * @access  public
+	 * @param   string  commit message
+	 * @return  string
+	 */	
+	public function commit_author($message = "", $name = "", $email="") {
+		if ($email) {
+		  return $this->run("commit -av -m \"$message\" --author \"$name <$email>\"");
+		} else {
+		  return $this->commit($message);
+		}
+	}
+
+	/**
 	 * Runs a `git clone` call to clone the current repository
 	 * into a different directory
 	 *
