@@ -9,7 +9,8 @@ function upload($fichier, $login) {
         $tmp_file = $fichier['tmp_name'];
         $name_file = $fichier['name'];
 
-	$type_file = array_reverse(explode('.', $name_file))[0];
+	$tmp_array = array_reverse(explode('.', $name_file));
+	$type_file = $tmp_array[0];
 
         if( !is_uploaded_file($tmp_file) ) {
             alertError("No file existing");

@@ -2414,7 +2414,8 @@ fo.write("flashcontent");
       $manifest->appendChild($file);
 
       foreach($tpl_images as $image) {
-	$ext = array_reverse(explode(".", $image))[0];
+	$tmp_array = array_reverse(explode(".", $image));
+	$ext = $tmp_array[0];
 	if ($ext == "jpg") $mime = "image/jpeg"; else $mime = "image/$ext";
 	if ($ext == "wmf") $mime = "";
 	$file = $output_manifest->createElement('manifest:file-entry');
@@ -2599,7 +2600,8 @@ fo.write("flashcontent");
 	  if($author->name != "") $authors .= $author->name.",";
 	}
 	if($authors != "") $authors = " (".rtrim($authors, ",").")";
-	array_push($list, $names[$i]." : ".array_reverse(explode("/",$files[$i]))[0].$authors);
+	$tmp_array = array_reverse(explode("/",$files[$i]));
+	array_push($list, $names[$i]." : ".$tmp_array[0].$authors);
 	$i++;
       }
 
@@ -2860,7 +2862,8 @@ fo.write("flashcontent");
       $manifest->appendChild($file);
 
       foreach($tpl_images as $image) {
-	$ext = array_reverse(explode(".", $image))[0];
+	$tmp_array = array_reverse(explode(".", $image));
+	$ext = $tmp_array[0];
 	if ($ext == "jpg") $mime = "image/jpeg"; else $mime = "image/$ext";
 	if ($ext == "wmf") $mime = "";
 	$file = $output_manifest->createElement('manifest:file-entry');
@@ -3150,7 +3153,8 @@ fo.write("flashcontent");
 	}
 	if($authors != "") $authors = " (".rtrim($authors, ",").")";
       }
-      array_push($list, $names[$i]." : ".array_reverse(explode("/",$files[$i]))[0].$authors);
+	$tmp_array = array_reverse(explode("/",$files[$i]));
+      array_push($list, $names[$i]." : ".$tmp_array[0].$authors);
       $i++;
     }
     $output_text->appendChild(createList($list));

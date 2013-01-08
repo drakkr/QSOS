@@ -10,7 +10,7 @@ function alertError($error) {
   echo "<div class='alert alert-error'>".$error."</div>";
 }
 
-function alertSuccess($error) {
+function alertSuccess($success) {
   echo "<div class='alert alert-success'>".$success."</div>";
 }
 
@@ -31,9 +31,10 @@ if (isset($_SESSION['login'])){
 //     $re4='(mm)';
     
     $login = $_SESSION['login'];
-
-    include("upload.inc");
-    upload($_FILES['fichier'], $login);
+    if (isset($_FILES['fichier'])) {
+      include("upload.inc");
+      upload($_FILES['fichier'], $login);
+    }
 
 } else {
     echo "<div class='alert alert-success'>". TXT_UPLOAD_LOGIN ."</div>";   

@@ -177,7 +177,8 @@ class QSOSTemplate {
     $fields = array("version_entry","language_entry", "authors", "creation_entry", "update_entry");
     $errors = array();
     foreach($fields as $field) {
-      if(!($this->getNodeValue($field))) array_push($errors, explode('_', $field)[0]);
+	$tmp_array = explode('_', $field);
+      if(!($this->getNodeValue($field))) array_push($errors, $tmp_array[0]);
     }
 
     if(count($errors) > 0) return $errors; else return "ok";
