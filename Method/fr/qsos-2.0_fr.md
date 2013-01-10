@@ -1,10 +1,10 @@
 % Méthode de Qualification et de Sélection de logiciels Open Source (QSOS)
-% Laurent Baudrillard; Olivier Pilot; Gonéri Le Bouder; Raphaël Semeteys 
+% Laurent Baudrillard; Olivier Pilot; Gonéri Le Bouder; Philippe-Arnaud Haranger; Raphaël Semeteys 
 % Version 2.0 - 10/01/2013
 
 # TODO
 
-* insérer le titre et le logo 
+* insérer le logo et (le titre : dépends du format d'export)
 * traiter les différents TODO inséres dans le texte
 * utiliser des templates pour : toc, header, footer
 * éventuellement : ajouer un chapitre Legal sur ce que l'on peut et ne peut pas faire...
@@ -98,7 +98,7 @@ Le présent document vise les publics suivants :
 
 Le processus général de QSOS se décompose en plusieurs étapes interdépendantes.
 
-TODO : insérer schéma processus
+![Processus général de QSOS](Images/processus-fr.png)
 
   Étape           Description
 -------------     -----------------
@@ -115,7 +115,7 @@ Le processus général présenté peut être appliqué avec des granularités di
 
 # Étape 1 : Définir
 
-TODO : insérer schéma étape 1
+![Positionnement dans le processus](Images/definir-fr.png)
 
 ## Objectif
 
@@ -141,7 +141,7 @@ Les templates constituant ce référentiel sont composés de critères organisé
 
 La méthode QSOS définit et impose les critères d'évaluation de la maturité d'un projet. 
 
-TODO : insérer schéma critères Maturité.
+![Critères de Maturité du projet](Images/Maturite.png)
 
 Ces critères doivent obligatoirement être utilisés dans toute évaluation QSOS. Ils sont détaillés en annexe du présent document.
 
@@ -179,7 +179,7 @@ Les types de communautés identifiés à ce jour sont :
 
 # Étape 2 : Évaluer
 
-TODO : insérer schéma étape 2
+![Positionnement dans le processus](Images/evaluer-fr.png)
 
 ## Objectif
 
@@ -217,7 +217,7 @@ Il est possible d'appliquer le processus global de manière itérative. Au nivea
 
 # Étape 3 : Qualifier
 
-TODO : insérer schéma étape 3
+![Positionnement dans le processus](Images/qualifier-fr.png)
 
 ## Objectif
 
@@ -252,11 +252,9 @@ Chaque fonctionnalité décrite dans le template d'évaluation est affectée d'u
 
 Ces exigences seront associées à des valeurs de pondération lors de l'étape « Sélectionner », en fonction du mode de sélection retenu.
 
-
-
 # Étape 4 : Sélectionner
 
-TODO : insérer schéma étape 4
+![Positionnement dans le processus](Images/selectionner-fr.png)
 
 ## Objectif
 
@@ -322,7 +320,7 @@ Les figures suivantes illustrent ce qu'il est alors possible d'obtenir en synth�
 
 TODO : Comparaison synthétique selon les axes de plus haut niveau du template d'évaluation.
 
-TODO : Positionnement des logiciels en fonction des notes sur l'axe Maturité et la pondération des axes fonctionnels.
+![Quadrant QSOS : positionnement Maturité / Couverture fonctionelle](Images/quadrant.png)
 
 TODO : Visualisation des évaluations sous forme de tableau (sans les commentaires).
 
@@ -350,7 +348,7 @@ Les templates d'évaluations sont décrits et stockés au format défini et util
 
  Ce format est décrit sur le site officiel du projet (<http://freemind.sourceforge.net>). Il s'agit d'un format XML qui est utilisé par QSOS comme format pivot en ce qui concerne les templates. Les fiches d'évaluations vierges utilisées pour réaliser des analyses QSOS de logiciels sont générées à partir de ce format via des transformation XSL.
 
-TODO : insérer schéma explicatif FreeMind
+![Processus général de QSOS](Images/freemind.png)
 
 Les cartes heuristiques représentant des templates QSOS doivent respecter un formalisme particulier pour pouvoir être transformées en fiches d'évaluation :
 
