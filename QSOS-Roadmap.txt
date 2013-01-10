@@ -7,12 +7,10 @@ TODO :
 - Upload : 
 -- Rejeter les évaluations incomplètes (score, header) ou trop peu commentées (à valider)
 -- Templates : différentier ajout (added) de MAJ (updated) et n'autoriser les MAJ que par le même user (comme avec les évaluations)
-- Git Commit : insérer la bon user/email (depuis BD O3S) dans le commit (git commit --author "$user <$email>"
 
 [QSOS Editor]
 - Onglet "Criteria" : label "Comments" en gras
-- Backporter certains fonctionnalités développées par Tim ou les implementer : 
--- Reverse engineering de template
+- Backporter le Reverse engineering de template de Tim
 
 [Documentation]
 - Meta : versions françaises ET anglaises
