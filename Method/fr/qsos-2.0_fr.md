@@ -1,4 +1,4 @@
-% Méthode de Qualification et de Sélection de logiciels Open Source (QSOS)
+% ![Logo](Images/QSOS.png)
 % Laurent Baudrillard; Olivier Pilot; Gonéri Le Bouder; Philippe-Arnaud Haranger; Raphaël Semeteys 
 % Version 2.0 - 10/01/2013
 
@@ -342,11 +342,11 @@ Ainsi, les principaux objectifs du projet sont les suivants :
 
 ## Formats utilisés
 
-### Templates (.mm)
+### Templates (`.mm`)
 
-Les templates d'évaluations sont décrits et stockés au format défini et utilisé par le logiciel libre FreeMind (extension .mm), destiné à la création de cartes heuristiques (ou mindmaps en anglais). 
+Les templates d'évaluations sont décrits et stockés au format défini et utilisé par le logiciel libre FreeMind (extension `.mm`), destiné à la création de cartes heuristiques (ou mindmaps en anglais). 
 
- Ce format est décrit sur le site officiel du projet (<http://freemind.sourceforge.net>). Il s'agit d'un format XML qui est utilisé par QSOS comme format pivot en ce qui concerne les templates. Les fiches d'évaluations vierges utilisées pour réaliser des analyses QSOS de logiciels sont générées à partir de ce format via des transformation XSL.
+Ce format est décrit sur le site officiel du projet (<http://freemind.sourceforge.net>). Il s'agit d'un format XML qui est utilisé par QSOS comme format pivot en ce qui concerne les templates. Les fiches d'évaluations vierges utilisées pour réaliser des analyses QSOS de logiciels sont générées à partir de ce format via des transformation XSL.
 
 ![Processus général de QSOS](Images/freemind.png)
 
@@ -358,10 +358,10 @@ Les cartes heuristiques représentant des templates QSOS doivent respecter un fo
 
 Le fichier XSL permettant de transformer les templates en fiches d'évaluations est disponible sur le site Web du projet QSOS. FreeMind permet d'appliquer la transformation via le menu « File/Export/Using XSLT... ».
 
-### Évaluations (.qsos)
+### Évaluations (`.qsos`)
 
 Les évaluations sont décrites et stockées dans un format pivot XML spécifique à QSOS. La DTD de ce schéma XML est disponible sur le site Web du projet QSOS. Ce chapitre en décrit les principes de structuration.  
-L'extension des fichiers est .qsos.
+L'extension des fichiers est `.qsos`.
 
 La balise principale est `<document/>`, elle est constituée ainsi :
 
@@ -372,16 +372,41 @@ La balise principale est `<document/>`, elle est constituée ainsi :
     + eux-mêmes composés de critères d'évaluation (`<element/>`) pouvant être imbriqués les uns dans les autres, et des descriptions (`<desc/>`) ;
     
     + dans cet arbre de balises, les critères situés au plus profond de la hiérarchie contiennent les significations liées aux notes 0, 1 et 2 (`<desc0/>`, `<desc1/>` et `<desc2/>`), la note d'évaluation (`<score/>`) ainsi qu'une zone de commentaire pour justifier plus précisément la note (`<comment/>`).
-
-TODO : renvoyer vers le schéma XSD.    
     
 Ci-suit une illustration de cette structuration.
 
 TODO: insérer exemple tronqué
 
+La structure détaillé de ce frormat est décrite au sein d'un schéma XSD, disponible sur le site Web du projet QSOS.
+
 ## Outils proposés
 
-TODO : présenter les outils vi une MAJ du schéma, rester pas trop adhérent des implémentations actuelles.
+Le projet libre QSOS propose également des outils pour dérouler le processus de la méthode et faciliter la collaboration autour des évaluations réalisées.
+
+Le schéma ci-dessous présente et positionne les différents outils existants.
+
+![Processus général de QSOS](Images/outils.png)
+
+### Editeur de templates
+Il s’agit des grilles de couverture fonctionnelle propres à chaque domaine logiciel. Avant de pouvoir réaliser une évaluation d’un logiciel donné, il faut en effet disposer de la grille fonctionnelle adaptée.
+Il existe un éditeur spécifique pour faciliter la saisie et la modification des grilles, il s’agit de “QSOS XUL Template Editor” qui peut être utilisé comme application xulrunner ou comme extension Firefox. Le format XML a été conçu afin de pouvoir aussi être édité facilement à la main. Vous pouvez donc modifier vos fichiers avec un editeur de texte.
+
+Editeurs de fiches
+Plusieurs éditeurs sont disponibles pour réaliser une évaluation QSOS en se basant sur une grille fonctionnelle existante.
+Editeurs 	Technologies d’implémentation 	Commentaires
+QSOS Qt Editor 	Qt/Perl 	Fonctionne uniquement sur Linux et Unix. Téléchargeable ici.
+QSOS XUL Editor 	Mozilla XUL/Javascript 	Existe sous forme d’application xulrunner ou d’extension Firefox
+QSOS Java Editor 	Java 	En cours de finalisation, la version bêta est disponible ici.
+QSOS Ruby Editor 	Ruby 	En cours de développement
+
+O3S
+O3S signifie “Open Source Selection Software”, il s’agit d’une application Web qui permettra de visualiser, pondérer et comparer les fiches QSOS selon le processus décrit dans la méthode. Il permet de visualiser, comparer, exporter les évaluations QSOS au format OpenDocument, ainsi que générer des graphes (au formats PNG ou SVG). Il est disponible ici : http://www.qsos.org/o3s/.
+
+Moteur QSOS
+Le moteur QSOS consiste en une série d’outils pour valider, contrôler et publier les fiches et les grilles QSOS stockées dans le référentiel CVS. Il sont regroupés ici dans le référentiel CVS.
+
+Le référentiel CVS
+Hébergé sur Savannah (la forge de la FSF), il permet de stocker et gérer les versions de la méthode elle même, des grilles fonctionnelles, des évaluations, des outils et des librairies d’accès au format XML qu’ils utilisent (librairies Java, Javascript, Perl et Ruby)..
 
 # Annexe : critères de Maturité QSOS
 
