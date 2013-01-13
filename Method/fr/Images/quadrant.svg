@@ -42,7 +42,7 @@
      inkscape:zoom="1.0603835"
      inkscape:cx="372.04724"
      inkscape:cy="677.0699"
-     inkscape:window-x="-4"
+     inkscape:window-x="-3"
      inkscape:window-y="-3"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg2" />
@@ -152,9 +152,9 @@
   </g>
   <g
      id="g3988"
-     inkscape:export-filename="/home/raph/Documents/Methodes/QSOS/Images/quadrant.png"
-     inkscape:export-xdpi="100"
-     inkscape:export-ydpi="100">
+     inkscape:export-filename="/home/raph/Documents/Methodes/QSOS/QSOS/Method/fr/Images/quadrant.png"
+     inkscape:export-xdpi="119.94418"
+     inkscape:export-ydpi="119.94418">
     <rect
        y="153.63071"
        x="58.469414"
@@ -234,8 +234,8 @@
     </text>
     <a
        xlink:href="show.php?lang=&amp;id[]=OpenNMS-1.6.7_fr.qsos&amp;svg=yes"
-       id="a56"
-       transform="translate(238.12369,448.22355)">
+       transform="translate(238.12369,448.22355)"
+       id="a56">
       <path
          inkscape:connector-curvature="0"
          id="path58"
@@ -252,8 +252,8 @@
     </a>
     <a
        xlink:href="show.php?lang=&amp;id[]=Zabbix-1.4.6_fr.qsos&amp;svg=yes"
-       id="a66"
-       transform="translate(366.72643,327.28888)">
+       transform="translate(366.72643,327.28888)"
+       id="a66">
       <path
          inkscape:connector-curvature="0"
          id="path68"

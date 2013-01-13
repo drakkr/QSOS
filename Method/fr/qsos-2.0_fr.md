@@ -1,10 +1,10 @@
+% Qualification et Sélection de logiciels Open Source (QSOS)
 % ![Logo](Images/QSOS.png)
-% Laurent Baudrillard; Olivier Pilot; Gonéri Le Bouder; Philippe-Arnaud Haranger; Raphaël Semeteys 
-% Version 2.0 - 10/01/2013
+% Version 2.0 - 12/01/2013
 
 # TODO
 
-* insérer le logo et (le titre : dépends du format d'export)
+* insérer le logo et (le titre : dépend du format d'export)
 * traiter les différents TODO inséres dans le texte
 * utiliser des templates pour : toc, header, footer
 * éventuellement : ajouer un chapitre Legal sur ce que l'on peut et ne peut pas faire...
@@ -13,9 +13,9 @@
 
 Copyright © 2004-2013 Atos.
 
- Vous pouvez copier, redistribuer et/ou modifier ce document selon les termes de la Licence de Documentation Libre GNU, Version 1.2 publiée par la Free Software Foundation ; la Section Invariante étant « Manifeste QSOS », le Texte de Première de Couverture étant : « Ce document est disponibles sur <http://www.qsos.org>. », et aucun Texte de Quatrième de Couverture. 
+Vous pouvez copier, redistribuer et/ou modifier ce document selon les termes de la Licence de Documentation Libre GNU, Version 1.2 publiée par la Free Software Foundation ; la Section Invariante étant « Manifeste QSOS », le Texte de Première de Couverture étant : « Ce document est disponibles sur <http://www.qsos.org>. », et aucun Texte de Quatrième de Couverture. 
 
- Une copie de la licence en langue anglaise est consultable sur le site <http://www.gnu.org/copyleft/fdl.html>, une traduction française non officielle est consultable sur le site Web de Wikipedia (<http://fr.wikipedia.org/wiki/FDL>). 
+Une copie de la licence en langue anglaise est consultable sur le site <http://www.gnu.org/copyleft/fdl.html>, une traduction française non officielle est consultable sur le site Web de Wikipedia (<http://fr.wikipedia.org/wiki/FDL>). 
 La licence s'applique également aux documents générés par l'application de la méthode, à savoir les grilles fonctionnelles et les fiches d'évaluation présentées dans la section « Évaluer ».
 
 
@@ -49,7 +49,7 @@ Pour pouvoir répondre sereinement à ce type d'interrogations et ainsi faire un
 
 * de comparer plusieurs logiciels en fonction de besoins formalisés et de critères pondérés pour être à même d'effectuer un choix final.
 
-Ce sont ces différents points qui ont poussé Atos Origin à concevoir et formaliser la méthode de Qualification et de Sélection de logiciels Open Source (QSOS).
+Ce sont ces différents points qui ont poussé Atos à concevoir et formaliser la méthode de Qualification et de Sélection de logiciels Open Source (QSOS).
 
 ## De la nécessité d'une méthode libre
 
@@ -58,22 +58,23 @@ Selon nous, une telle méthode ainsi que les résultats qu'elle génère, se doi
 la possibilité de réutilisation par tous des travaux de qualification et d'évaluation réalisés ;
 la qualité et l'objectivité des documents générés, toujours perfectibles selon les principes de transparence et de revue par les pairs.
 
-A ce titre, Atos Origin, a décidé de placer la méthode QSOS et les documents générés lors de son application (grilles fonctionnelles, fiches d'identité et fiches d'évaluation) sous la licence libre GNU Free Documentation License. 
+A ce titre, Atos a décidé de placer la méthode QSOS et les documents générés lors de son application (templates et fiches d'évaluation) sous la licence libre *GNU Free Documentation License*. Les outils développés pour faciliter l'application de la méthode étant quant à eux distribués selon les termes de la licence *GNU General Public License*.
 
 # Historique des modifications
 
-  Version         Date          Auteurs                 Commentaires
------------   ------------      --------------------    -------------------------------------------------------------------
-   1.0            2004          Raphaël SEMETEYS        Conception et rédaction initiales.
-   1.1            2004          Olivier PILOT           Conception et relecture.
-   1.2            2004          Laurent BAUDRILLARD     Conception et relecture.
-   1.3          17/11/04        Raphaël SEMETEYS	 
-  1.4           23/11/05        Raphaël SEMETEYS        Corrections typographiques, note de licence et de l'historique.
-                                Olivier PILOT           Nouveau logo.
-  1.5           19/01/06        Gonéri LE BOUDER        Passage à LaTeX. Changement de licence vers la GNU FDL.
-                                Raphaël SEMETEYS        Manifeste QSOS.
-  1.6           13/04/06        Gonéri LE BOUDER        Mise à jour de l'axe Maturité des critères.
-  2.0             TODO          Raphaël SEMETEYS        TODO
+  Version         Date       Auteurs                  Commentaires
+-----------   ------------   --------------------     -----------------------------------------
+  1.0           2004         Raphaël Semeteys         Conception et rédaction initiales.
+  1.1           2004         Olivier Pilot            Conception et relecture.
+  1.2           2004         Laurent Baudrillard      Conception et relecture.
+  1.3           17/11/04     Raphaël Semeteys         Première version publique.
+  1.4           23/11/05     Raphaël Semeteys         Note de licence. Historique.
+                             Olivier Pilot            Nouveau logo.
+  1.5           19/01/06     Gonéri Le Bouder         Passage à LaTeX. Licence GNU FDL.
+                             Raphaël Semeteys         Manifeste QSOS.
+  1.6           13/04/06     Gonéri Le Bouder         Mise à jour de l'axe Maturité.
+  2.0           TODO         Raphaël Semeteys         Passage à Markdown. Formats et outils.
+                             Philippe-Arnaud Haranger Mise à jour de l'axe Maturité.
   
 # Introduction
 ## Objet du document
@@ -103,9 +104,9 @@ Le processus général de QSOS se décompose en plusieurs étapes interdépendan
   Étape           Description
 -------------     -----------------
   Définir         Constitution et enrichissement des référentiels utilisés par les autres étapes.
-  Évaluer         Évaluation d'une version de logiciel par rapport aux trois axes de critères suivants : couverture fonctionnelle du logiciel, risques liés à la maturité du projet développent le logiciel (ceci indépendamment de tout contexte utilisateur particulier).
-  Qualifier       Pondération des critères constituant les trois axes en fonction du contexte (besoins de l'utilisateur et/ou stratégie retenue par le prestataire de services).
- Sélectionner     Utilisation du filtre constitué lors de l'étape de qualification pour procéder à des recherches, comparaisons et sélections de produits, basées sur les données des deux premières étapes.
+  Évaluer         Évaluation d'une version de logiciel (couverture fonctionnelle et maturité du projet).
+  Qualifier       Pondération de l'évaluation en fonction du contexte.
+ Sélectionner     Comparaison et sélection de logiciels, basées sur les données des étapes précédentes.
 
 Chacune de ces étapes est détaillée plus loin dans ce document.
  
@@ -316,11 +317,11 @@ Critère critique                0
 
 Les logiciels d'un même domaine peuvent également être comparés entre eux selon les notes pondérées obtenues lors des étapes précédentes.
 
-Les figures suivantes illustrent ce qu'il est alors possible d'obtenir en synthèse.
+Les figures suivantes illustrent ce qu'il est alors possible d'obtenir en synthèse. L'application O3S, présentée plus loin, permet d'exporter les comparaisons dans différent formats (OpenDocument, HTML et SVG).
 
 TODO : Comparaison synthétique selon les axes de plus haut niveau du template d'évaluation.
 
-![Quadrant QSOS : positionnement Maturité / Couverture fonctionelle](Images/quadrant.png)
+![Quadrant QSOS](Images/quadrant.png)
 
 TODO : Visualisation des évaluations sous forme de tableau (sans les commentaires).
 
@@ -340,11 +341,25 @@ Ainsi, les principaux objectifs du projet sont les suivants :
 
 * assister les utilisateurs dans l'utilisation de la méthode via des bonnes pratiques et des espaces de communication.
 
-## Formats utilisés
+## Outils et format utilisés
 
-### Templates (`.mm`)
+Le projet libre QSOS propose également des outils pour dérouler le processus de la méthode et faciliter la collaboration autour des évaluations réalisées, ainsi que des formats de document pour stocker et manipuler les templates et les évaluations.
 
-Les templates d'évaluations sont décrits et stockés au format défini et utilisé par le logiciel libre FreeMind (extension `.mm`), destiné à la création de cartes heuristiques (ou mindmaps en anglais). 
+Le schéma ci-dessous présente et positionne les différents outils et formats existants.
+
+![Outils et formats de QSOS](Images/outils.png)
+
+### Templates
+
+__Outil FreeMind__
+
+Les templates sont des grilles de couverture fonctionnelle propres à chaque domaine logiciel. Avant de pouvoir réaliser une évaluation d’un logiciel donné, il faut donc disposer du template adapté.
+
+Le projet QSOS utilise des cartes heuristiques (ou *mindmap*) pour concevoir et documenter ses templates. Le choix a été fixé sur la solution libre FreeMind (<http://freemind.sourceforge.net>) du fait de sa portabilité et de son format XML permettant la transformation des templates au format `.qsos`, décrit plus bas; via une transormation XSL.
+
+__Format `.mm`__
+
+Les templates d'évaluations sont décrits et stockés au format défini et utilisé par FreeMind (extension `.mm`).
 
 Ce format est décrit sur le site officiel du projet (<http://freemind.sourceforge.net>). Il s'agit d'un format XML qui est utilisé par QSOS comme format pivot en ce qui concerne les templates. Les fiches d'évaluations vierges utilisées pour réaliser des analyses QSOS de logiciels sont générées à partir de ce format via des transformation XSL.
 
@@ -352,15 +367,46 @@ Ce format est décrit sur le site officiel du projet (<http://freemind.sourcefo
 
 Les cartes heuristiques représentant des templates QSOS doivent respecter un formalisme particulier pour pouvoir être transformées en fiches d'évaluation :
 
-. les descriptions des critères doivent être entourées (menu « Format/Bubble » de FreeMind) ;
+1. les descriptions des critères doivent être entourées (menu « Format/Bubble » de FreeMind) ;
 
-. les descriptions des notes 0, 1 et 2.
+2. les descriptions des notes 0, 1 et 2.
 
 Le fichier XSL permettant de transformer les templates en fiches d'évaluations est disponible sur le site Web du projet QSOS. FreeMind permet d'appliquer la transformation via le menu « File/Export/Using XSLT... ».
 
-### Évaluations (`.qsos`)
 
-Les évaluations sont décrites et stockées dans un format pivot XML spécifique à QSOS. La DTD de ce schéma XML est disponible sur le site Web du projet QSOS. Ce chapitre en décrit les principes de structuration.  
+### Evaluations
+
+__Outil XulEditor__
+
+XulEditor est un outil de saisie et de gestion d'évaluations QSOS. Il permet de réaliser les opérations suivantes :
+
+* créer une nouvelle évaluation à partir d'un template au format `.mm` (template local ou provenant du référentiel QSOS) ;
+
+* ouvrir et modifier un éveluation existante (évaluation locale ou provenant du référentiel QSOS) ;
+
+* appliquer une nouvelle version de template à une évaluation (sans perdre les données d'évaluations existantes) ;
+
+* sauvegarder une évaluation (en local ou dans le référentiel QSOS).
+
+XulEditor ne permet donc pas de modifier un template `.mm` et ne manipule que des évaluations au format `.qsos`.
+
+Il s'agit d'une application utilisant la plateforme technologique du projet Mozilla. Elle peut être déployée en tant qu'extention au navigateur Firefox ou en tant qu'application XulRunner. 
+
+Reportez-vous à la documentation d'installation des outils QSOS pour plud de détails : TODO URL de la doc des outils.
+
+__Outil O3S (Open Source Selection Software)__
+
+O3S est application Web permettant de visualiser, pondérer et comparer les évaluations QSOS selon le processus décrit dans la méthode. Elle permet de visualiser, comparer, exporter les évaluations QSOS au format OpenDocument, ainsi que générer des graphes au format SVG. 
+
+Elle est accessible en ligne à l'adresse suivante : <http://www.qsos.org/o3s/>.
+
+Il est également possible d'installer une instance d'O3S locale à votre organisation. Reportez-vous à la documentation d'installation des outils QSOS pour plud de détails : TODO URL de la doc des outils.
+
+TODO : exemples O3S.
+
+__Format `.qsos`__
+
+Les évaluations sont décrites et stockées dans un format pivot XML spécifique à QSOS. Le schéma XML est disponible sur le site Web du projet QSOS. Ce chapitre en décrit les principes de structuration.  
 L'extension des fichiers est `.qsos`.
 
 La balise principale est `<document/>`, elle est constituée ainsi :
@@ -379,37 +425,70 @@ TODO: insérer exemple tronqué
 
 La structure détaillé de ce frormat est décrite au sein d'un schéma XSD, disponible sur le site Web du projet QSOS.
 
-## Outils proposés
+__Moteur et référentiel QSOS__
 
-Le projet libre QSOS propose également des outils pour dérouler le processus de la méthode et faciliter la collaboration autour des évaluations réalisées.
+TODO : mettre à jour en fonction de l'organisation finale des dépôts Git du projet.
 
-Le schéma ci-dessous présente et positionne les différents outils existants.
+Le moteur QSOS consiste en une série d’outils pour valider, contrôler et publier les évaluations et les templates QSOS stockées dans le référentiel.
 
-![Processus général de QSOS](Images/outils.png)
+Le référentiel est décomposé en deux dépôts Git dédiés aux stockage de deux d'évaluations et de templates :
 
-### Editeur de templates
-Il s’agit des grilles de couverture fonctionnelle propres à chaque domaine logiciel. Avant de pouvoir réaliser une évaluation d’un logiciel donné, il faut en effet disposer de la grille fonctionnelle adaptée.
-Il existe un éditeur spécifique pour faciliter la saisie et la modification des grilles, il s’agit de “QSOS XUL Template Editor” qui peut être utilisé comme application xulrunner ou comme extension Firefox. Le format XML a été conçu afin de pouvoir aussi être édité facilement à la main. Vous pouvez donc modifier vos fichiers avec un editeur de texte.
+* le dépôt *Incoming* : réservé à la publication, au partage et à la manipulation d'évaluations et de templates par la communauté, il est accessible par tous via O3S et ne requiert uniquement de créer un compte utilisateur dans l'application ;
 
-Editeurs de fiches
-Plusieurs éditeurs sont disponibles pour réaliser une évaluation QSOS en se basant sur une grille fonctionnelle existante.
-Editeurs 	Technologies d’implémentation 	Commentaires
-QSOS Qt Editor 	Qt/Perl 	Fonctionne uniquement sur Linux et Unix. Téléchargeable ici.
-QSOS XUL Editor 	Mozilla XUL/Javascript 	Existe sous forme d’application xulrunner ou d’extension Firefox
-QSOS Java Editor 	Java 	En cours de finalisation, la version bêta est disponible ici.
-QSOS Ruby Editor 	Ruby 	En cours de développement
+* le dépôt *Master* : dédié au stockage des évaluations et aux templates considérés comme de qualité et ayant été validés par un modérateur de la communauté QSOS.
 
-O3S
-O3S signifie “Open Source Selection Software”, il s’agit d’une application Web qui permettra de visualiser, pondérer et comparer les fiches QSOS selon le processus décrit dans la méthode. Il permet de visualiser, comparer, exporter les évaluations QSOS au format OpenDocument, ainsi que générer des graphes (au formats PNG ou SVG). Il est disponible ici : http://www.qsos.org/o3s/.
+Outre ces deux dépots réservés aux documents produit et utilisé para la méthode QSOS, le projet utilise également un dépôt Git pour le développement de ses outils et un autre pour sa documentation.
 
-Moteur QSOS
-Le moteur QSOS consiste en une série d’outils pour valider, contrôler et publier les fiches et les grilles QSOS stockées dans le référentiel CVS. Il sont regroupés ici dans le référentiel CVS.
+La documentation est écrite au format Markdown (<http://daringfireball.net/projects/markdown/>), utilisé comme format pivot par Pandoc (<http://johnmacfarlane.net/pandoc/>) pour export aux formats PDF et HTML, et part Gitit (<http://gitit.net>) pour le wiki du projet.
 
-Le référentiel CVS
-Hébergé sur Savannah (la forge de la FSF), il permet de stocker et gérer les versions de la méthode elle même, des grilles fonctionnelles, des évaluations, des outils et des librairies d’accès au format XML qu’ils utilisent (librairies Java, Javascript, Perl et Ruby)..
+En synthèse, voici les URLs des différents dépôts Git du projet :
 
-# Annexe : critères de Maturité QSOS
+URL                         Fonction
+-------------------------   ----------------------------------------------------
+QSOS-Tools.git              Outils et formats du projet
+QSOS-Incoming.git           Templates et évaluations en mode bac à sable
+QSOS-Master.git             Templates et évaluations validés par la communauté
+QSOS-Documentation.git      Documentation du projet
+
+## Comment contribuer ?
+
+L'objectif du projet QSOS est de mutualiser l'effort de veille sur les logiciels open source. Il se veux donc résolument communautaire : plus grand est le nombres de contributeurs plus grands sont le nombre, la qualité et l'objectivité des évaluations.
+
+Vous pouvez contribuer au projet de plusieurs manières :
+
+* en créant ou en mettant à jour des templates et des évaluations ;
+
+* en traduisant les templates, les évaluation ou la documentation ;
+
+* en participant au développement des outils du projet ;
+
+* en faisant la promotion de la méthode et du projet.
+
+Consultez le site Web du projet et notamment son wiki (TODO : <http://wiki.qsos.org>) pour plus de détails sur la gouvernance de la communauté QSOS.
+
+# Annexe A : critères de Maturité QSOS
 
 TODO : insérer description des critères de Maturité, le générer en Markdown via XSLT.
 
 L'utilisation de ces critères, regroupés dans une section appelée « Maturité », est obligatoire pour tout template ou toute évaluation QSOS.
+
+# Annexe B : framework DrakkR
+
+QSOS est un sous-projet de l'initiative DrakkR visant à construire un framework libre dédié la gouvernance open source au sein des entreprises et administrations.
+
+Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, DrakkR propose également d'autres méthodes et outils pour mettre en oeuvre une telle gouvernance :
+
+TODO : insérer schéma général DrakkR positionnant les différents sous-projets.
+
+* OSC (Open Source Cartouche) : sous-projet dédié à l'identification unique d'une version d'un logiciel open source ainsi qu'à la gestion des ses metadonnées ;
+
+* ECOS (Evaluation des Coûts liés à l'adoption de logciels Open Source) : sous-projet relatif à l'évaluation et au calcul du coût total de prossession d'un logiciel open source ainsi qu'au retour sur investissement d'une migration ;
+
+* FLOSC (Free/Libre Open Source Complexity) : sous-projet proposant une méthode et un outil d'évaluation de la complexité d'un logiciel open source ;
+
+* SLIC (TODO : ???) : sous-projet dédié à la description formelle des licences open source et de leur compatibilités respectives ;
+
+* SecureIT : sous-projet dédié à la gestion des alertes de sécurité dans les logiciels open source.
+
+Consultez le site Web du projet DrakkR pour plus de détails : <http://www.drakkr.org>.
+   
