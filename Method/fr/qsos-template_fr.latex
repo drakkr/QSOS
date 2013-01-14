@@ -8,6 +8,7 @@
 \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \usepackage[utf8]{inputenc}
+
 $if(euro)$
   \usepackage{eurosym}
 $endif$
@@ -38,7 +39,7 @@ $endif$
 \lhead{}
 \chead{\itshape $title$}
 \rhead{}
-\lfoot{\itshape Document distribué sous licence GNU FDL}
+\lfoot{\itshape Document distribué sous licence FDL}
 \cfoot{}
 \rfoot{\thepage}
 
@@ -136,6 +137,7 @@ $if(lang)$
 $endif$
 $for(header-includes)$
 $header-includes$
+$endfor$
 
 $if(title)$
 \title{$title$}

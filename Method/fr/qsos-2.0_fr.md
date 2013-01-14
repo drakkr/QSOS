@@ -1,11 +1,6 @@
 % Qualification et Sélection de logiciels Open Source (QSOS)
 % ![Logo](Images/QSOS.png)
-% Version 2.0 - 13/01/2013
-
-# TODO
-
-* traiter les différents TODO inséres dans le texte
-* utiliser des templates pour : toc, header, footer
+% Version 2.0 - 14/01/2013
 
 # Note de licence
 
@@ -313,11 +308,9 @@ Les logiciels d'un même domaine peuvent également être comparés entre eux se
 
 Les figures suivantes illustrent ce qu'il est alors possible d'obtenir en synthèse. L'application O3S, présentée plus loin, permet d'exporter les comparaisons dans différent formats (OpenDocument, HTML et SVG).
 
-TODO : Comparaison synthétique selon les axes de plus haut niveau du template d'évaluation.
+![Quadrant QSOS (au format SVG)](Images/quadrant.png)
 
-![Quadrant QSOS](Images/quadrant.png)
-
-TODO : Visualisation des évaluations sous forme de tableau (sans les commentaires).
+![Radar QSOS (au format SVG)](Images/radar.png)
 
 # Le projet QSOS
 
@@ -367,10 +360,11 @@ Les cartes heuristiques représentant des templates QSOS doivent respecter un fo
 
 Le fichier XSL permettant de transformer les templates en fiches d'évaluations est disponible sur le site Web du projet QSOS. FreeMind permet d'appliquer la transformation via le menu « File/Export/Using XSLT... ».
 
-
 ### Evaluations
 
 __Outil XulEditor__
+
+![Vues d'écran de XulEditor](Images/xuleditor.png)
 
 XulEditor est un outil de saisie et de gestion d'évaluations QSOS. Il permet de réaliser les opérations suivantes :
 
@@ -392,11 +386,11 @@ __Outil O3S (Open Source Selection Software)__
 
 O3S est application Web permettant de visualiser, pondérer et comparer les évaluations QSOS selon le processus décrit dans la méthode. Elle permet de visualiser, comparer, exporter les évaluations QSOS au format OpenDocument, ainsi que générer des graphes au format SVG. 
 
+![Export au format OpenDocument Spreadsheet](Images/ods.png)
+
 Elle est accessible en ligne à l'adresse suivante : <http://www.qsos.org/o3s/>.
 
-Il est également possible d'installer une instance d'O3S locale à votre organisation. Reportez-vous à la documentation d'installation des outils QSOS pour plud de détails : TODO URL de la doc des outils.
-
-TODO : exemples O3S.
+Il est également possible d'installer une instance d'O3S locale à votre organisation. Reportez-vous à la documentation d'installation des outils QSOS pour plus de détails : TODO URL de la doc des outils.
 
 __Format `.qsos`__
 
@@ -465,7 +459,7 @@ Ci-suit une illustration de cette structuration :
 </document>
 ~~~
 
- Il s'agit donc d'un arbre XML composé d'un entête (`<header/>`) et de sections (`<section/>`) contenant des éléments (`<element/>`). Les feuilles de cet arbre sont des critères d'évaluation pouvant être notés _0_, _1_ ou _2_.
+Il s'agit donc d'un arbre XML composé d'un entête (`<header/>`) et de sections (`<section/>`) contenant des éléments (`<element/>`). Les feuilles de cet arbre sont des critères d'évaluation pouvant être notés _0_, _1_ ou _2_.
 
 Ce format est utilisé comme pivot par les outils proposé par le projet QSOS pour réaliser des exports dans d'autres formats XML, tels que HTML, SVG ou encore OpenDocument.
 
@@ -649,7 +643,7 @@ TODO : insérer schéma général DrakkR positionnant les différents sous-proje
 
 * FLOSC (Free/Libre Open Source Complexity) : sous-projet proposant une méthode et un outil d'évaluation de la complexité d'un logiciel open source ;
 
-* SLIC (TODO : ???) : sous-projet dédié à la description formelle des licences open source et de leur compatibilités respectives ;
+* SLIC (Software LIcense Comparator) : sous-projet dédié à la description formelle des licences open source et de leur compatibilités respectives ;
 
 * SecureIT : sous-projet dédié à la gestion des alertes de sécurité dans les logiciels open source.
 
