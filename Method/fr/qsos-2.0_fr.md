@@ -55,20 +55,29 @@ A ce titre, Atos a décidé de placer la méthode QSOS et les documents génér�
 
 # Historique des modifications
 
-  Version         Date       Auteurs                  Commentaires
------------   ------------   --------------------     -----------------------------------------
-  1.0           2004         Raphaël Semeteys         Conception et rédaction initiales.
-  1.1           2004         Olivier Pilot            Conception et relecture.
-  1.2           2004         Laurent Baudrillard      Conception et relecture.
-  1.3           17/11/04     Raphaël Semeteys         Première version publique.
-  1.4           23/11/05     Raphaël Semeteys         Note de licence. Historique.
-                             Olivier Pilot            Nouveau logo.
-  1.5           19/01/06     Gonéri Le Bouder         Passage à LaTeX. Licence GNU FDL.
-                             Raphaël Semeteys         Manifeste QSOS.
-  1.6           13/04/06     Gonéri Le Bouder         Mise à jour de l'axe Maturité.
-  2.0           TODO         Raphaël Semeteys         Passage à Markdown. Formats et outils.
-                             Philippe-Arnaud Haranger Mise à jour de l'axe Maturité.
+--------------------------------------------------------------------------------------
+ Version   Date       Auteurs                  Commentaires
+--------- ----------  --------------------     ---------------------------------------
+  1.0      2004       Raphaël Semeteys         Conception et rédaction initiales.
   
+  1.1      2004       Olivier Pilot            Conception et relecture.
+  
+  1.2      2004       Laurent Baudrillard      Conception et relecture.
+  
+  1.3      17/11/04   Raphaël Semeteys         Première version publique.
+  
+  1.4      23/11/05   Raphaël Semeteys         Note de licence. Historique.
+                      Olivier Pilot            Nouveau logo.
+			     
+  1.5      19/01/06   Gonéri Le Bouder         Passage à LaTeX. Licence GNU FDL.
+                      Raphaël Semeteys         Manifeste QSOS.
+			     
+  1.6      13/04/06   Gonéri Le Bouder         Mise à jour de l'axe Maturité.
+  
+  2.0      18/01/13   Raphaël Semeteys         Passage à Markdown. Formats et outils.
+                      Philippe-Arnaud Haranger Mise à jour de l'axe Maturité.
+--------------------------------------------------------------------------------------
+
 # Introduction
 ## Objet du document
 
@@ -94,12 +103,17 @@ Le processus général de QSOS se décompose en plusieurs étapes interdépendan
 
 ![Processus général de QSOS](Images/processus-fr.png)
 
-  Étape           Description
--------------     -----------------
-  Définir         Constitution et enrichissement des référentiels utilisés par les autres étapes.
-  Évaluer         Évaluation d'une version de logiciel (couverture fonctionnelle et maturité du projet).
-  Qualifier       Pondération de l'évaluation en fonction du contexte.
- Sélectionner     Comparaison et sélection de logiciels, basées sur les données des étapes précédentes.
+-----------------------------------------------------------------------------------------------------
+ Étape         Description
+-------------  --------------------------------------------------------------------------------------
+ Définir       Constitution et enrichissement des référentiels utilisés par les autres étapes.
+  
+ Évaluer       Évaluation d'une version de logiciel (couverture fonctionnelle et maturité du projet).
+  
+ Qualifier     Pondération de l'évaluation en fonction du contexte.
+  
+ Sélectionner  Comparaison et sélection de logiciels, basées sur les données des étapes précédentes.
+ ----------------------------------------------------------------------------------------------------
 
 Chacune de ces étapes est détaillée plus loin dans ce document.
  
@@ -380,7 +394,7 @@ XulEditor ne permet donc pas de modifier un template `.mm` et ne manipule que de
 
 Il s'agit d'une application utilisant la plateforme technologique du projet Mozilla. Elle peut être déployée en tant qu'extention au navigateur Firefox ou en tant qu'application XulRunner. 
 
-Reportez-vous à la documentation d'installation des outils QSOS pour plud de détails : TODO URL de la doc des outils.
+Reportez-vous à la documentation d'installation des outils QSOS pour plus de détails : TODO URL de la doc des outils.
 
 __Outil O3S (Open Source Selection Software)__
 
@@ -415,27 +429,27 @@ Ci-suit une illustration de cette structuration :
    <header>
       <authors>
          <author>
-            <name>Nom d'un auteur de l'évaluation ou de son template</name>
+            <name>Nom d'un auteur de l'évaluation</name>
             <email>Email de l'auteur</email>
          </author>
          <!-- Autres <author/> éventuels -->	 
       </authors>
       <dates>
-         <creation>Date de création de l'évaluation</creation>
-         <validation>Date de validation de l'évaluation</validation>
+         <creation>Date de création</creation>
+         <validation>Date de validation</validation>
       </dates>
       <appname>Nom du logiciel</appname>
       <desc>Description rapide du logiciel</desc>
       <release>Version du logiciel</release>
-      <licenseid>Identifiant de la licence principale du logiciel</licenseid>
-      <licensedesc>Nom de la licence principale du logiciel</licensedesc>
+      <licenseid>Identifiant de la licence principale</licenseid>
+      <licensedesc>Nom de la licence principale</licensedesc>
       <url>URL du site Web du logiciel</url>
-      <demourl>URL (si disponible) du site Web de démonstration du logiciel</demourl>
-      <language>Langue utilisée pour l'évaluation, par exemple : en, fr...</language>
-      <qsosappname>Identifiant CPE de la version du logiciel</qsosappname>
+      <demourl>URL du site Web de démonstration</demourl>
+      <language>Langue d'évaluation : en, fr...</language>
+      <qsosappname>Identifiant CPE de la version</qsosappname>
       <qsosformat>Format de QSOS utilisé, ici : 2.0</qsosformat>
-      <qsosspecificformat>Foprmat du template de l'évaluation</qsosspecificformat>
-      <qsosappfamily>Nom du template de l'évaluation</qsosappfamily>
+      <qsosspecificformat>Version du template</qsosspecificformat>
+      <qsosappfamily>Nom du template d'évaluation</qsosappfamily>
    </header>
    <section name="maturity" title="Maturité">
       <!-- <section/> imposée et versionnée par QSOS -->     
@@ -448,8 +462,8 @@ Ci-suit une illustration de cette structuration :
             <desc0>Signification de la note 0</desc0>
             <desc1>Signification de la note 1</desc1>
             <desc2>Signification de la note 2</desc2>
-            <score>Note évaluée sur le critère pour le logiciel : 0, 1 ou 2</score>
-            <comment>Commentaire justifiant plus précisément la note</comment>
+            <score>Notation du critère : 0, 1 ou 2</score>
+            <comment>Commentaire motivant la note</comment>
          </element>
          <!-- Autres <element/> éventuels -->
       </element>
@@ -481,12 +495,17 @@ La documentation est écrite au format Markdown^[<http://daringfireball.net/proj
 
 En synthèse, voici un récapitulatif des différents dépôts Git du projet :
 
-URL                         Fonction
--------------------------   ----------------------------------------------------
-QSOS-Tools.git              Outils et formats du projet
-QSOS-Incoming.git           Templates et évaluations en mode bac à sable
-QSOS-Master.git             Templates et évaluations validés par la communauté
-QSOS-Documentation.git      Documentation du projet
+------------------------------------------------------------------------------
+Dépôt                     Fonction
+------------------------  ----------------------------------------------------
+QSOS-Tools.git            Outils et formats du projet
+
+QSOS-Incoming.git         Templates et évaluations en mode bac à sable
+
+QSOS-Master.git           Templates et évaluations validés par la communauté
+
+QSOS-Documentation.git    Documentation du projet
+------------------------------------------------------------------------------
 
 TODO : mettre à jour en fonction de l'organisation finale des dépôts Git du projet, ajouter le lien vers le serveur Git (GitHub ?).
 
@@ -629,23 +648,23 @@ L'utilisation des critères ci-dessous, regroupés dans une section appelée «�
         .2 : Le processus de modification de code est bien défini, exposé et respecté, basé sur des rôles bien définis
 
 
-# Annexe B : framework DrakkR
+# Annexe B : framework Drakkr
 
-QSOS est un sous-projet de l'initiative DrakkR visant à construire un framework libre dédié la gouvernance open source au sein des entreprises et administrations.
+QSOS est un sous-projet de l'initiative Drakkr visant à construire un framework libre dédié la gouvernance open source au sein des entreprises et administrations.
 
-Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, DrakkR propose également d'autres méthodes et outils pour mettre en oeuvre une telle gouvernance :
+Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, Drakkr propose également d'autres méthodes et outils pour mettre en oeuvre une telle gouvernance.
 
-TODO : insérer schéma général DrakkR positionnant les différents sous-projets.
+![Framework Drakkr](Images/drakkr-orga.png)
 
-* OSC (Open Source Cartouche) : sous-projet dédié à l'identification unique d'une version d'un logiciel open source ainsi qu'à la gestion des ses metadonnées ;
+* __OSC__ (Open Source Cartouche) : sous-projet dédié à l'identification unique d'une version d'un logiciel open source ainsi qu'à la gestion des ses metadonnées ;
 
-* ECOS (Evaluation des Coûts liés à l'adoption de logciels Open Source) : sous-projet relatif à l'évaluation et au calcul du coût total de prossession d'un logiciel open source ainsi qu'au retour sur investissement d'une migration ;
+* __ECOS__ (Evaluation des Coûts liés à l'adoption de logciels Open Source) : sous-projet relatif à l'évaluation et au calcul du coût total de prossession d'un logiciel open source ainsi qu'au retour sur investissement d'une migration ;
 
-* FLOSC (Free/Libre Open Source Complexity) : sous-projet proposant une méthode et un outil d'évaluation de la complexité d'un logiciel open source ;
+* __FLOSC__ (Free/Libre Open Source Complexity) : sous-projet proposant une méthode et un outil d'évaluation de la complexité d'un logiciel open source ;
 
-* SLIC (Software LIcense Comparator) : sous-projet dédié à la description formelle des licences open source et de leur compatibilités respectives ;
+* __SLIC__ (Software LIcense Comparator) : sous-projet dédié à la description formelle des licences open source et de leur compatibilités respectives ;
 
-* SecureIT : sous-projet dédié à la gestion des alertes de sécurité dans les logiciels open source.
+* __SecureIT__ : sous-projet dédié à la gestion des alertes de sécurité dans les logiciels open source.
 
-Consultez le site Web du projet DrakkR pour plus de détails : <http://www.drakkr.org>.
+Consultez le site Web du projet Drakkr pour plus de détails : <http://www.drakkr.org>.
    

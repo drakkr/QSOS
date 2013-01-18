@@ -20,6 +20,7 @@
 
 * Method:
     + Update the text itself
+        + Resize images
     + Translate it in English
 
 * Installation guide(s) of QSOS tools
