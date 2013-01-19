@@ -1,6 +1,6 @@
 % Qualification et Sélection de logiciels Open Source (QSOS)
 % ![Logo](Images/QSOS.png)
-% Version 2.0 - 14/01/2013
+% Version 2.0 - 19/01/2013
 
 # Note de licence
 
@@ -74,7 +74,7 @@ A ce titre, Atos a décidé de placer la méthode QSOS et les documents génér�
 			     
   1.6      13/04/06   Gonéri Le Bouder         Mise à jour de l'axe Maturité.
   
-  2.0      18/01/13   Raphaël Semeteys         Passage à Markdown. Formats et outils.
+  2.0      19/01/13   Raphaël Semeteys         Passage à Markdown. Formats et outils.
                       Philippe-Arnaud Haranger Mise à jour de l'axe Maturité.
 --------------------------------------------------------------------------------------
 
@@ -155,19 +155,38 @@ Ces critères doivent obligatoirement être utilisés dans toute évaluation QSO
 
 Les autres critères d'évaluation sont spécifiques au domaine fonctionnel auquel appartiennent les logiciels évalués.
 
-Consultez le site Web <http://www.qsos.org> pour le détail des templates disponibles ainsi que pour être guidé dans la construction de nouveau templates d'évaluation.
+Consultez le site Web <http://www.qsos.org> pour le détail des templates disponibles ainsi que pour être guidé dans la construction de nouveaux templates d'évaluation.
 
 ## Référentiel des types de Licences
 
-TODO : revoir ce chapitre, ajouter des critères, mettre un tableau à titre indicatif + renvoyer sur le site qsos.org à l'endroit où sont stockés les descriptions de licences.
+Il existe de nombreuses licences libres et open source, ce réfrentiel a pour objectif de les identifier et de les catégoriser selon les axes suivants :
 
-Propriétarisation : le code dérivé peut-il être rendu propriétaire ou doit-il rester libre ?
+* propriétarisation : le code dérivé peut-il être rendu propriétaire ou doit-il rester libre ?
 
-Persistance : l'utilisation du code du logiciel à partir d'un autre module se traduit-il ou non par la nécessité que ce module soit placé sous la même licence ?
+* persistance : l'utilisation du code du logiciel à partir d'un autre module se traduit-il ou non par la nécessité que ce module soit placé sous la même licence ?
 
-Héritage : le code dérivé hérite-il obligatoirement de la licence où est-il possible d'y appliquer des restrictions supplémentaires ?
+* héritage : le code dérivé hérite-il obligatoirement de la licence où est-il possible d'y appliquer des restrictions supplémentaires ?
 
 Le tableau suivant liste les licences les plus souvent utilisées en les comparant par rapport aux critères énoncés plus haut.
+
+Licence                   Propriétarisation    Perstance   Héritage 
+------------------------ ------------------- ------------ ----------
+GNU Public License              Non              Oui         Oui 
+CeCILL                          Non              Oui         Oui 
+LGPL                            Non           Partielle      Oui 
+BSD et dérivées                 Oui              Non         Non 
+Artistic                        Oui              Non         Non 
+MIT                             Oui              Non         Non 
+Apache Software License         Oui              Non         Non 
+Mozilla Public License          Non              Non         Oui 
+Common Public License           Non              Non         Non 
+Academic Free License           Oui              Non         Non 
+PHP License                     Oui              Non         Non 
+Open Software License           Non              Non         Non 
+Zope Public License             Oui              Non         Non 
+Python SF License               Oui              Non         Non 
+
+ Vous pouvez vous reporter au projet projet __SLIC__^[<http://slic.drakkr.org>] (Software LIcense Comparator) pour une description plus complète et plus formelle des licences libres et open source ainsi que de leur compatibilités respectives.
 
 Il convient de noter qu'un même logiciel peut être assujetti à plusieurs licences différentes (y compris propriétaires).
 
@@ -394,7 +413,7 @@ XulEditor ne permet donc pas de modifier un template `.mm` et ne manipule que de
 
 Il s'agit d'une application utilisant la plateforme technologique du projet Mozilla. Elle peut être déployée en tant qu'extention au navigateur Firefox ou en tant qu'application XulRunner. 
 
-Reportez-vous à la documentation d'installation des outils QSOS pour plus de détails : TODO URL de la doc des outils.
+Reportez-vous au site Web du projet QSOS pour plus de détails sur l'installation de XulEditor.
 
 __Outil O3S (Open Source Selection Software)__
 
@@ -404,7 +423,7 @@ O3S est application Web permettant de visualiser, pondérer et comparer les éva
 
 Elle est accessible en ligne à l'adresse suivante : <http://www.qsos.org/o3s/>.
 
-Il est également possible d'installer une instance d'O3S locale à votre organisation. Reportez-vous à la documentation d'installation des outils QSOS pour plus de détails : TODO URL de la doc des outils.
+Il est également possible d'installer une instance d'O3S locale à votre organisation. Reportez-vous au site Web du projet QSOS pour plus de détails sur ce sujet.
 
 __Format `.qsos`__
 
@@ -507,7 +526,7 @@ QSOS-Master.git           Templates et évaluations validés par la communauté
 QSOS-Documentation.git    Documentation du projet
 ------------------------------------------------------------------------------
 
-TODO : mettre à jour en fonction de l'organisation finale des dépôts Git du projet, ajouter le lien vers le serveur Git (GitHub ?).
+Reportez-vous au site Web du projet QSOS pour cloner ces différents dépôts.
 
 ## Comment contribuer ?
 
@@ -523,7 +542,7 @@ Vous pouvez contribuer au projet de plusieurs manières :
 
 * en faisant la promotion de la méthode et du projet.
 
-Consultez le site Web du projet et notamment son wiki (TODO : <http://wiki.qsos.org>) pour plus de détails sur la gouvernance de la communauté QSOS.
+Reportez-vous au site Web du projet QSOS pour plus de détails sur la gouvernance de la communauté QSOS.
 
 # Annexe A : critères de Maturité QSOS
 
