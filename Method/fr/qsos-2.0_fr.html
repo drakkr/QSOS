@@ -44,11 +44,13 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <ul>
 <li><p>Quel logiciel répond le mieux à mes besoins techniques actuels et prévus ?</p></li>
 <li><p>Quel logiciel répond le mieux à mes besoins fonctionnels actuels et prévus ?</p></li>
-<li><p>Voici quelques questions que devrait se poser toute entreprise avant de prendre une décision :</p></li>
+<li><p>Voici quelques questions que devrait se poser toute entreprise avant de prendre une décision :</p>
+<ul>
 <li><p>Quelle est la pérennité du logiciel ? Quels sont les risques de Forks ? Comment les anticiper et les gérer ?</p></li>
 <li><p>Quel est le niveau de stabilité auquel s'attendre ? Comment gérer les dysfonctionnements ?</p></li>
 <li><p>Quel est le niveau de support requis et disponible sur le logiciel ?</p></li>
 <li><p>Est-il possible d'influer sur le logiciel (ajout de nouvelles fonctionnalités ou de fonctionnalités spécifiques) ?</p></li>
+</ul></li>
 </ul>
 <p>Pour pouvoir répondre sereinement à ce type d'interrogations et ainsi faire un choix éclairé en maîtrisant les risques, il est impératif de disposer d'une méthode offrant la possibilité :</p>
 <ul>
@@ -58,7 +60,10 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <p>Ce sont ces différents points qui ont poussé Atos à concevoir et formaliser la méthode de Qualification et de Sélection de logiciels Open Source (QSOS).</p>
 <h2 id="de-la-nécessité-dune-méthode-libre">De la nécessité d'une méthode libre</h2>
 <p>Selon nous, une telle méthode ainsi que les résultats qu'elle génère, se doivent d'être mis à disposition de tous selon une licence libre. En effet, seule une telle licence est à même de garantir la promotion du mouvement open source, via notamment :</p>
-<p>la possibilité de réutilisation par tous des travaux de qualification et d'évaluation réalisés ; la qualité et l'objectivité des documents générés, toujours perfectibles selon les principes de transparence et de revue par les pairs.</p>
+<ul>
+<li>la possibilité de réutilisation par tous des travaux de qualification et d'évaluation réalisés ;</li>
+<li>la qualité et l'objectivité des documents générés, toujours perfectibles selon les principes de transparence et de revue par les pairs.</li>
+</ul>
 <p>A ce titre, Atos a décidé de placer la méthode QSOS et les documents générés lors de son application (templates et fiches d'évaluation) sous la licence libre <em>GNU Free Documentation License</em>. Les outils développés pour faciliter l'application de la méthode étant quant à eux distribués selon les termes de la licence <em>GNU General Public License</em>.</p>
 <h1 id="historique-des-modifications">Historique des modifications</h1>
 <table>
@@ -324,7 +329,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <h2 id="evaluation-dune-version-de-logiciel">Evaluation d'une version de logiciel</h2>
 <p>Chaque version d'un logiciel est décrite dans une fiche d'évaluation. Cette fiche comporte, outre l'identification du logiciel et de sa version, des informations une description et une analse détaillées des fonctionnalités offertes.</p>
 <h3 id="templates-dévaluation">Templates d'évaluation</h3>
-<p>Les évaluations QSOS sont réalisées à partir de templates qui décrivent les différents critères d'analyse ainsi que leur structuration. Les critères d'évaluation de la Maturité du projet développant un logiciel sont imposés et décrit plus loin. Ils sont complétés par des critères décrivant les fonctionnalités attendues du type de logiciel évalué.</p>
+<p>Les évaluations QSOS sont réalisées à partir de templates qui décrivent les différents critères d'analyse ainsi que leur structuration. Les critères d'évaluation de la maturité du projet développant un logiciel sont imposés et décrit plus loin. Ils sont complétés par des critères décrivant les fonctionnalités attendues du type de logiciel évalué.</p>
 <h3 id="notation">Notation</h3>
 <p>Les critères sont notés de 0 à 2.</p>
 <p>Les templates d'évaluation contiennent les significations des trois notes 0, 1 et 2 des critères à évaluer. Au niveau de la couverture fonctionnelle, la règle de notation est généralement la suivante :</p>
@@ -440,7 +445,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Critère non pertinent</td>
+<td align="left">Critère critique</td>
 <td align="center">3</td>
 </tr>
 <tr class="even">
@@ -448,7 +453,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <td align="center">1</td>
 </tr>
 <tr class="odd">
-<td align="left">Critère critique</td>
+<td align="left">Critère non pertinent</td>
 <td align="center">0</td>
 </tr>
 </tbody>
@@ -464,7 +469,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </div>
 <h1 id="le-projet-qsos">Le projet QSOS</h1>
 <h2 id="un-projet-libre-et-communautaire">Un projet libre et communautaire</h2>
-<p>Outre le fait de prposer un méthode, QSOS constitue un projet libre et communautaire voué à la veille technologique collaborative sur les logiciels open source.</p>
+<p>Outre le fait de proposer un méthode, QSOS constitue un projet libre et communautaire voué à la veille technologique collaborative sur les logiciels open source.</p>
 <p>Ainsi, les principaux objectifs du projet sont les suivants :</p>
 <ul>
 <li><p>gérer les évolutions de la méthode et du format de stockage des fiches d'évaluations ;</p></li>
@@ -585,8 +590,8 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li><p>le dépôt <em>Incoming</em> : réservé à la publication, au partage et à la manipulation d'évaluations et de templates par la communauté, il est accessible par tous via O3S et ne requiert uniquement de créer un compte utilisateur dans l'application ;</p></li>
 <li><p>le dépôt <em>Master</em> : dédié au stockage des évaluations et aux templates considérés comme de qualité et ayant été validés par un modérateur de la communauté QSOS.</p></li>
 </ul>
-<p>Outre ces deux dépots réservés aux documents produit et utilisé para la méthode QSOS, le projet utilise également un dépôt Git pour le développement de ses outils et un autre pour sa documentation.</p>
-<p>La documentation est écrite au format Markdown<sup><a href="#fn3" class="footnoteRef" id="fnref3">3</a></sup>, utilisé comme format pivot par Pandoc<sup><a href="#fn4" class="footnoteRef" id="fnref4">4</a></sup> pour export aux formats PDF et HTML, et part Gitit<sup><a href="#fn5" class="footnoteRef" id="fnref5">5</a></sup> pour le wiki du projet.</p>
+<p>Outre ces deux dépôts réservés aux documents produits et utilisés par la méthode QSOS, le projet utilise également un dépôt Git pour le développement de ses outils et un autre pour sa documentation.</p>
+<p>La documentation est écrite au format Markdown<sup><a href="#fn3" class="footnoteRef" id="fnref3">3</a></sup>, utilisé comme format pivot par Pandoc<sup><a href="#fn4" class="footnoteRef" id="fnref4">4</a></sup> pour export aux formats PDF et HTML, et par Gitit<sup><a href="#fn5" class="footnoteRef" id="fnref5">5</a></sup> pour le wiki du projet.</p>
 <p>En synthèse, voici un récapitulatif des différents dépôts Git du projet :</p>
 <table>
 <col width="33%"></col>
@@ -618,7 +623,7 @@ code > span.er { color: #ff0000; font-weight: bold; }
 </table>
 <p>Reportez-vous au site Web du projet QSOS pour cloner ces différents dépôts.</p>
 <h2 id="comment-contribuer">Comment contribuer ?</h2>
-<p>L'objectif du projet QSOS est de mutualiser l'effort de veille sur les logiciels open source. Il se veux donc résolument communautaire : plus grand est le nombres de contributeurs plus grands sont le nombre, la qualité et l'objectivité des évaluations.</p>
+<p>L'objectif du projet QSOS est de mutualiser l'effort de veille sur les logiciels open source. Il se veut donc résolument communautaire : plus grand est le nombres de contributeurs plus grands sont le nombre, la qualité et l'objectivité des évaluations.</p>
 <p>Vous pouvez contribuer au projet de plusieurs manières :</p>
 <ul>
 <li><p>en créant ou en mettant à jour des templates et des évaluations ;</p></li>
@@ -633,78 +638,110 @@ code > span.er { color: #ff0000; font-weight: bold; }
 <li>Patrimoine : Historique et patrimoine du projet
 <ul>
 <li><p>Age du projet :</p>
-<p>.0 : Inférieur à trois mois</p>
-<p>.1 : Entre trois mois et trois ans</p>
-.2 : Supérieur à trois ans</li>
+<ul>
+<li><p>0 : Inférieur à trois mois</p></li>
+<li><p>1 : Entre trois mois et trois ans</p></li>
+<li>2 : Supérieur à trois ans</li>
+</ul></li>
 <li><p>Historique :</p>
-<p>.0 : Le logiciel connaît de nombreux problèmes qui peuvent être rédhibitoires</p>
-<p>.1 : Pas de problèmes majeurs, ni de crise ou historique inconnu</p>
-.2 : Bon historique de gestion de projet et de crise</li>
+<ul>
+<li><p>0 : Le logiciel connaît de nombreux problèmes qui peuvent être rédhibitoires</p></li>
+<li><p>1 : Pas de problèmes majeurs, ni de crise ou historique inconnu</p></li>
+<li>2 : Bon historique de gestion de projet et de crise</li>
+</ul></li>
 <li><p>Equipe de développement :</p>
-<p>.0 : Très peu de développeurs identifiés ou développeur unique</p>
-<p>.1 : Quelques développeurs actifs</p>
-.2 : Equipe de développement importante et identifiée</li>
+<ul>
+<li><p>0 : Très peu de développeurs identifiés ou développeur unique</p></li>
+<li><p>1 : Quelques développeurs actifs</p></li>
+<li>2 : Equipe de développement importante et identifiée</li>
+</ul></li>
 <li><p>Popularité :</p>
-<p>.0 : Très peu d'utilisateurs identifiés</p>
-<p>.1 : Usage décelable</p>
-.2 : Nombreux utilisateurs et références</li>
+<ul>
+<li><p>0 : Très peu d'utilisateurs identifiés</p></li>
+<li><p>1 : Usage décelable</p></li>
+<li>2 : Nombreux utilisateurs et références</li>
+</ul></li>
 </ul></li>
 <li>Activité : Activité du et autour du projet
 <ul>
 <li><p>Communauté des contributeurs :</p>
-<p>.0 : Pas de communauté ou de réelle activité (forum, liste de diffusion…)</p>
-<p>.1 : Communauté existante avec une activité notable</p>
-.2 : Communauté forte : grosse activité sur les forums, de nombreux contributeurs et défenseurs</li>
+<ul>
+<li><p>0 : Pas de communauté ou de réelle activité (forum, liste de diffusion…)</p></li>
+<li><p>1 : Communauté existante avec une activité notable</p></li>
+<li>2 : Communauté forte : grosse activité sur les forums, de nombreux contributeurs et défenseurs</li>
+</ul></li>
 <li><p>Activité autour des bugs :</p>
-<p>.0 : Réactivité faible sur le forum ou sur la liste de diffusion, ou rien au sujet des corrections de bugs dans les notes de versions</p>
-<p>.1 : Activité détectable mais sans processus clairement exposé, temps de résolution long</p>
-.2 : Forte réactivité, basée sur des rôles et des assignations de tâches</li>
+<ul>
+<li><p>0 : Réactivité faible sur le forum ou sur la liste de diffusion, ou rien au sujet des corrections de bugs dans les notes de versions</p></li>
+<li><p>1 : Activité détectable mais sans processus clairement exposé, temps de résolution long</p></li>
+<li>2 : Forte réactivité, basée sur des rôles et des assignations de tâches</li>
+</ul></li>
 <li><p>Activité autour des fonctionnalités :</p>
-<p>.0 : Pas ou peu de nouvelles fonctionnalités</p>
-<p>.1 : Évolution du produit conduite par une équipe dédiée ou par des utilisateurs, mais sans processus clairement exposé</p>
-.2 : Les requêtes pour les nouvelles fonctionnalités sont clairement outillées, feuille de route disponible</li>
+<ul>
+<li><p>0 : Pas ou peu de nouvelles fonctionnalités</p></li>
+<li><p>1 : Évolution du produit conduite par une équipe dédiée ou par des utilisateurs, mais sans processus clairement exposé</p></li>
+<li>2 : Les requêtes pour les nouvelles fonctionnalités sont clairement outillées, feuille de route disponible</li>
+</ul></li>
 <li><p>Activité sur les releases/versions :</p>
-<p>.0 : Très faible activité que ce soit sur les versions de production ou de développement (alpha, beta)</p>
-<p>.1 : Activité que ce soit sur les versions de production ou de développement (alpha, beta), avec des versions correctives mineures fréquentes</p>
-.2 : Activité importante avec des versions correctives fréquentes et des versions majeures planifiées liées aux prévisions de la feuille de route</li>
+<ul>
+<li><p>0 : Très faible activité que ce soit sur les versions de production ou de développement (alpha, beta)</p></li>
+<li><p>1 : Activité que ce soit sur les versions de production ou de développement (alpha, beta), avec des versions correctives mineures fréquentes</p></li>
+<li>2 : Activité importante avec des versions correctives fréquentes et des versions majeures planifiées liées aux prévisions de la feuille de route</li>
+</ul></li>
 </ul></li>
 <li>Gouvernance : Stratégie du projet
 <ul>
 <li><p>Détenteur des droits :</p>
-<p>.0 : Les droits sont détenus par quelques individus ou entités commerciales</p>
-<p>.1 : Les droits sont détenus par de nombreux individus de façon homogène</p>
-.2 : Les droits sont détenus par une entité légale, une fondation dans laquelle la communauté a confiance (ex: FSF, Apache, ObjectWeb)</li>
+<ul>
+<li><p>0 : Les droits sont détenus par quelques individus ou entités commerciales</p></li>
+<li><p>1 : Les droits sont détenus par de nombreux individus de façon homogène</p></li>
+<li>2 : Les droits sont détenus par une entité légale, une fondation dans laquelle la communauté a confiance (ex: FSF, Apache, ObjectWeb)</li>
+</ul></li>
 <li><p>Feuille de route :</p>
-<p>.0 : Pas de feuille de route publiée</p>
-<p>.1 : Feuille de route sans planning</p>
-.2 : Feuille de route versionnée, avec planning et mesures de retard</li>
+<ul>
+<li><p>0 : Pas de feuille de route publiée</p></li>
+<li><p>1 : Feuille de route sans planning</p></li>
+<li>2 : Feuille de route versionnée, avec planning et mesures de retard</li>
+</ul></li>
 <li><p>Pilotage du projet :</p>
-<p>.0 : Pas de pilotage clair du projet</p>
-<p>.1 : Pilotage dicté par un seul individu ou une entité commerciale</p>
-.2 : Indépendance forte de l'équipe de développement, droits détenus par une entité reconnue</li>
+<ul>
+<li><p>0 : Pas de pilotage clair du projet</p></li>
+<li><p>1 : Pilotage dicté par un seul individu ou une entité commerciale</p></li>
+<li>2 : Indépendance forte de l'équipe de développement, droits détenus par une entité reconnue</li>
+</ul></li>
 <li><p>Mode de distribution :</p>
-<p>.0 : Existence d'une distribution commerciale ou propriétaire ou distribution libre limitée fonctionnellement</p>
-<p>.1 : Sous-partie du logiciel disponible sous licence propriétaire (Coeur / Greffons...)</p>
-.2 : Distribution totalement ouverte et libre</li>
+<ul>
+<li><p>0 : Existence d'une distribution commerciale ou propriétaire ou distribution libre limitée fonctionnellement</p></li>
+<li><p>1 : Sous-partie du logiciel disponible sous licence propriétaire (Coeur / Greffons...)</p></li>
+<li>2 : Distribution totalement ouverte et libre</li>
+</ul></li>
 </ul></li>
 <li>Industrialisation : Niveau d'industrialisation du projet
 <ul>
 <li><p>Services : Offres de services (Support, Formation, Audit...)</p>
-<p>.0 : Pas d'offre de service identifiée</p>
-<p>.1 : Offre existante mais restreinte géographiquement ou en une seule langue ou fournie par un seul fournisseur ou sans garantie</p>
-.2 : Offre riche, plusieurs fournisseurs, avec des garanties de résultats</li>
+<ul>
+<li><p>0 : Pas d'offre de service identifiée</p></li>
+<li><p>1 : Offre existante mais restreinte géographiquement ou en une seule langue ou fournie par un seul fournisseur ou sans garantie</p></li>
+<li>2 : Offre riche, plusieurs fournisseurs, avec des garanties de résultats</li>
+</ul></li>
 <li><p>Documentation :</p>
-<p>.0 : Pas de documentation utilisateur</p>
-<p>.1 : La documentation existe mais est en partie obsolète ou restreinte à une seule langue ou peu détaillée</p>
-.2 : Documentation à jour, traduite et éventuellement adaptée à différentes cibles de lecteurs (enduser, sysadmin, manager...)</li>
+<ul>
+<li><p>0 : Pas de documentation utilisateur</p></li>
+<li><p>1 : La documentation existe mais est en partie obsolète ou restreinte à une seule langue ou peu détaillée</p></li>
+<li>2 : Documentation à jour, traduite et éventuellement adaptée à différentes cibles de lecteurs (enduser, sysadmin, manager...)</li>
+</ul></li>
 <li><p>Méthode qualité : Processus et méthode qualité</p>
-<p>.0 : Pas de processus qualité identifié</p>
-<p>.1 : Processus qualité existant, mais non formalisé ou non outillé</p>
-.2 : Processus qualité basé sur l'utilisation d'outils et de méthodologies standards</li>
+<ul>
+<li><p>0 : Pas de processus qualité identifié</p></li>
+<li><p>1 : Processus qualité existant, mais non formalisé ou non outillé</p></li>
+<li>2 : Processus qualité basé sur l'utilisation d'outils et de méthodologies standards</li>
+</ul></li>
 <li><p>Modification du code :</p>
-<p>.0 : Pas de moyen pratique de proposer des modifications de code</p>
-<p>.1 : Des outils sont fournis pour accéder et modifier le code (ex : CVS, SVN) mais ne sont pas vraiment utilisés pour développer le produit</p>
-<p>.2 : Le processus de modification de code est bien défini, exposé et respecté, basé sur des rôles bien définis</p></li>
+<ul>
+<li><p>0 : Pas de moyen pratique de proposer des modifications de code</p></li>
+<li><p>1 : Des outils sont fournis pour accéder et modifier le code (ex : CVS, SVN) mais ne sont pas vraiment utilisés pour développer le produit</p></li>
+<li><p>2 : Le processus de modification de code est bien défini, exposé et respecté, basé sur des rôles bien définis</p></li>
+</ul></li>
 </ul></li>
 </ul>
 <h1 id="annexe-b-framework-drakkr">Annexe B : framework Drakkr</h1>

@@ -28,13 +28,13 @@ En plus des questions « naturelles » comme :
 
 * Voici quelques questions que devrait se poser toute entreprise avant de prendre une décision :
 
-* Quelle est la pérennité du logiciel ? Quels sont les risques de Forks ? Comment les anticiper et les gérer ?
+    + Quelle est la pérennité du logiciel ? Quels sont les risques de Forks ? Comment les anticiper et les gérer ?
 
-* Quel est le niveau de stabilité auquel s'attendre ? Comment gérer les dysfonctionnements ?
+    + Quel est le niveau de stabilité auquel s'attendre ? Comment gérer les dysfonctionnements ?
 
-* Quel est le niveau de support requis et disponible sur le logiciel ?
+    + Quel est le niveau de support requis et disponible sur le logiciel ?
 
-* Est-il possible d'influer sur le logiciel (ajout de nouvelles fonctionnalités ou de fonctionnalités spécifiques) ?
+    + Est-il possible d'influer sur le logiciel (ajout de nouvelles fonctionnalités ou de fonctionnalités spécifiques) ?
 
 Pour pouvoir répondre sereinement à ce type d'interrogations et ainsi faire un choix éclairé en maîtrisant les risques, il est impératif de disposer d'une méthode offrant la possibilité :
 
@@ -48,8 +48,8 @@ Ce sont ces différents points qui ont poussé Atos à concevoir et formaliser l
 
 Selon nous, une telle méthode ainsi que les résultats qu'elle génère, se doivent d'être mis à disposition de tous selon une licence libre. En effet, seule une telle licence est à même de garantir la promotion du mouvement open source, via notamment :
 
-la possibilité de réutilisation par tous des travaux de qualification et d'évaluation réalisés ;
-la qualité et l'objectivité des documents générés, toujours perfectibles selon les principes de transparence et de revue par les pairs.
+* la possibilité de réutilisation par tous des travaux de qualification et d'évaluation réalisés ;
+* la qualité et l'objectivité des documents générés, toujours perfectibles selon les principes de transparence et de revue par les pairs.
 
 A ce titre, Atos a décidé de placer la méthode QSOS et les documents générés lors de son application (templates et fiches d'évaluation) sous la licence libre *GNU Free Documentation License*. Les outils développés pour faciliter l'application de la méthode étant quant à eux distribués selon les termes de la licence *GNU General Public License*.
 
@@ -113,7 +113,7 @@ Le processus général de QSOS se décompose en plusieurs étapes interdépendan
  Qualifier     Pondération de l'évaluation en fonction du contexte.
   
  Sélectionner  Comparaison et sélection de logiciels, basées sur les données des étapes précédentes.
- ----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
 
 Chacune de ces étapes est détaillée plus loin dans ce document.
  
@@ -220,7 +220,7 @@ Chaque version d'un logiciel est décrite dans une fiche d'évaluation. Cette fi
 
 ### Templates d'évaluation
 
-Les évaluations QSOS sont réalisées à partir de templates qui décrivent les différents critères d'analyse ainsi que leur structuration. Les critères d'évaluation de la Maturité du projet développant un logiciel sont imposés et décrit plus loin. Ils sont complétés par des critères décrivant les fonctionnalités attendues du type de logiciel évalué.
+Les évaluations QSOS sont réalisées à partir de templates qui décrivent les différents critères d'analyse ainsi que leur structuration. Les critères d'évaluation de la maturité du projet développant un logiciel sont imposés et décrit plus loin. Ils sont complétés par des critères décrivant les fonctionnalités attendues du type de logiciel évalué.
 
 ### Notation
 
@@ -302,7 +302,7 @@ La sélection stricte se base sur un processus d'élimination directe dès qu'un
 * élimination des logiciels dont les critères de maturité ne satisfont pas aux pertinences définies par ou avec l'utilisateur :
 
     + la note d'un critère pertinent doit être au moins égale à 1 ;
-    
+ 
     + la note d'un critère critique doit être au moins égale à 2.
 
 Cette méthode est très sélective et peut, en fonction du niveau d'exigence de l'utilisateur, ne retourner aucun logiciel éligible.
@@ -331,9 +331,9 @@ La valeur de pondération se base sur le degré de pertinence de chaque critère
 
 Niveau d'exigence              Pondération
 ---------------------------- ---------------
-Critère non pertinent           3
+Critère critique                3
 Critère pertinent               1
-Critère critique                0
+Critère non pertinent           0
 
 ### Comparaison
 
@@ -349,7 +349,7 @@ Les figures suivantes illustrent ce qu'il est alors possible d'obtenir en synth�
 
 ## Un projet libre et communautaire
 
-Outre le fait de prposer un méthode, QSOS constitue un projet libre et communautaire voué à la veille technologique collaborative sur les logiciels open source.
+Outre le fait de proposer un méthode, QSOS constitue un projet libre et communautaire voué à la veille technologique collaborative sur les logiciels open source.
 
 Ainsi, les principaux objectifs du projet sont les suivants :
 
@@ -508,9 +508,9 @@ Le référentiel est décomposé en deux dépôts Git dédiés aux stockage de d
 
 * le dépôt *Master* : dédié au stockage des évaluations et aux templates considérés comme de qualité et ayant été validés par un modérateur de la communauté QSOS.
 
-Outre ces deux dépots réservés aux documents produit et utilisé para la méthode QSOS, le projet utilise également un dépôt Git pour le développement de ses outils et un autre pour sa documentation.
+Outre ces deux dépôts réservés aux documents produits et utilisés par la méthode QSOS, le projet utilise également un dépôt Git pour le développement de ses outils et un autre pour sa documentation.
 
-La documentation est écrite au format Markdown^[<http://daringfireball.net/projects/markdown/>], utilisé comme format pivot par Pandoc^[<http://johnmacfarlane.net/pandoc/>] pour export aux formats PDF et HTML, et part Gitit^[<http://gitit.net>] pour le wiki du projet.
+La documentation est écrite au format Markdown^[<http://daringfireball.net/projects/markdown/>], utilisé comme format pivot par Pandoc^[<http://johnmacfarlane.net/pandoc/>] pour export aux formats PDF et HTML, et par Gitit^[<http://gitit.net>] pour le wiki du projet.
 
 En synthèse, voici un récapitulatif des différents dépôts Git du projet :
 
@@ -530,7 +530,7 @@ Reportez-vous au site Web du projet QSOS pour cloner ces différents dépôts.
 
 ## Comment contribuer ?
 
-L'objectif du projet QSOS est de mutualiser l'effort de veille sur les logiciels open source. Il se veux donc résolument communautaire : plus grand est le nombres de contributeurs plus grands sont le nombre, la qualité et l'objectivité des évaluations.
+L'objectif du projet QSOS est de mutualiser l'effort de veille sur les logiciels open source. Il se veut donc résolument communautaire : plus grand est le nombres de contributeurs plus grands sont le nombre, la qualité et l'objectivité des évaluations.
 
 Vous pouvez contribuer au projet de plusieurs manières :
 
@@ -552,119 +552,119 @@ L'utilisation des critères ci-dessous, regroupés dans une section appelée «�
 * Patrimoine : Historique et patrimoine du projet
     + Age du projet : 
 
-        .0 : Inférieur à trois mois
+        - 0 :  Inférieur à trois mois
 
-        .1 : Entre trois mois et trois ans
+        - 1 :  Entre trois mois et trois ans
 
-        .2 : Supérieur à trois ans
+        - 2 :  Supérieur à trois ans
     + Historique : 
 
-        .0 : Le logiciel connaît de nombreux problèmes qui peuvent être rédhibitoires
+        - 0 :  Le logiciel connaît de nombreux problèmes qui peuvent être rédhibitoires
 
-        .1 : Pas de problèmes majeurs, ni de crise ou historique inconnu
+        - 1 :  Pas de problèmes majeurs, ni de crise ou historique inconnu
 
-        .2 : Bon historique de gestion de projet et de crise
+        - 2 :  Bon historique de gestion de projet et de crise
     + Equipe de développement : 
 
-        .0 : Très peu de développeurs identifiés ou développeur unique
+        - 0 :  Très peu de développeurs identifiés ou développeur unique
 
-        .1 : Quelques développeurs actifs
+        - 1 :  Quelques développeurs actifs
 
-        .2 : Equipe de développement importante et identifiée
+        - 2 :  Equipe de développement importante et identifiée
     + Popularité : 
 
-        .0 : Très peu d'utilisateurs identifiés
+        - 0 :  Très peu d'utilisateurs identifiés
 
-        .1 : Usage décelable
+        - 1 :  Usage décelable
 
-        .2 : Nombreux utilisateurs et références
+        - 2 :  Nombreux utilisateurs et références
 * Activité : Activité du et autour du projet
     + Communauté des contributeurs : 
 
-        .0 : Pas de communauté ou de réelle activité (forum, liste de diffusion…)
+        - 0 :  Pas de communauté ou de réelle activité (forum, liste de diffusion…)
 
-        .1 : Communauté existante avec une activité notable
+        - 1 :  Communauté existante avec une activité notable
 
-        .2 : Communauté forte : grosse activité sur les forums, de nombreux contributeurs et défenseurs
+        - 2 :  Communauté forte : grosse activité sur les forums, de nombreux contributeurs et défenseurs
     + Activité autour des bugs : 
 
-        .0 : Réactivité faible sur le forum ou sur la liste de diffusion, ou rien au sujet des corrections de bugs dans les notes de versions
+        - 0 :  Réactivité faible sur le forum ou sur la liste de diffusion, ou rien au sujet des corrections de bugs dans les notes de versions
 
-        .1 : Activité détectable mais sans processus clairement exposé, temps de résolution long
+        - 1 :  Activité détectable mais sans processus clairement exposé, temps de résolution long
 
-        .2 : Forte réactivité, basée sur des rôles et des assignations de tâches
+        - 2 :  Forte réactivité, basée sur des rôles et des assignations de tâches
     + Activité autour des fonctionnalités : 
 
-        .0 : Pas ou peu de nouvelles fonctionnalités
+        - 0 :  Pas ou peu de nouvelles fonctionnalités
 
-        .1 : Évolution du produit conduite par une équipe dédiée ou par des utilisateurs, mais sans processus clairement exposé
+        - 1 :  Évolution du produit conduite par une équipe dédiée ou par des utilisateurs, mais sans processus clairement exposé
 
-        .2 : Les requêtes pour les nouvelles fonctionnalités sont clairement outillées, feuille de route disponible
+        - 2 :  Les requêtes pour les nouvelles fonctionnalités sont clairement outillées, feuille de route disponible
     + Activité sur les releases/versions : 
 
-        .0 : Très faible activité que ce soit sur les versions de production ou de développement (alpha, beta)
+        - 0 :  Très faible activité que ce soit sur les versions de production ou de développement (alpha, beta)
 
-        .1 : Activité que ce soit sur les versions de production ou de développement (alpha, beta), avec des versions correctives mineures fréquentes
+        - 1 :  Activité que ce soit sur les versions de production ou de développement (alpha, beta), avec des versions correctives mineures fréquentes
 
-        .2 : Activité importante avec des versions correctives fréquentes et des versions majeures planifiées liées aux prévisions de la feuille de route
+        - 2 :  Activité importante avec des versions correctives fréquentes et des versions majeures planifiées liées aux prévisions de la feuille de route
 * Gouvernance : Stratégie du projet
     + Détenteur des droits : 
 
-        .0 : Les droits sont détenus par quelques individus ou entités commerciales
+        - 0 :  Les droits sont détenus par quelques individus ou entités commerciales
 
-        .1 : Les droits sont détenus par de nombreux individus de façon homogène
+        - 1 :  Les droits sont détenus par de nombreux individus de façon homogène
 
-        .2 : Les droits sont détenus par une entité légale, une fondation dans laquelle la communauté a confiance (ex: FSF, Apache, ObjectWeb)
+        - 2 :  Les droits sont détenus par une entité légale, une fondation dans laquelle la communauté a confiance (ex: FSF, Apache, ObjectWeb)
     + Feuille de route : 
 
-        .0 : Pas de feuille de route publiée
+        - 0 :  Pas de feuille de route publiée
 
-        .1 : Feuille de route sans planning
+        - 1 :  Feuille de route sans planning
 
-        .2 : Feuille de route versionnée, avec planning et mesures de retard
+        - 2 :  Feuille de route versionnée, avec planning et mesures de retard
     + Pilotage du projet : 
 
-        .0 : Pas de pilotage clair du projet
+        - 0 :  Pas de pilotage clair du projet
 
-        .1 : Pilotage dicté par un seul individu ou une entité commerciale
+        - 1 :  Pilotage dicté par un seul individu ou une entité commerciale
 
-        .2 : Indépendance forte de l'équipe de développement, droits détenus par une entité reconnue
+        - 2 :  Indépendance forte de l'équipe de développement, droits détenus par une entité reconnue
     + Mode de distribution : 
 
-        .0 : Existence d'une distribution commerciale ou propriétaire ou distribution libre limitée fonctionnellement
+        - 0 :  Existence d'une distribution commerciale ou propriétaire ou distribution libre limitée fonctionnellement
 
-        .1 : Sous-partie du logiciel disponible sous licence propriétaire (Coeur / Greffons...)
+        - 1 :  Sous-partie du logiciel disponible sous licence propriétaire (Coeur / Greffons...)
 
-        .2 : Distribution totalement ouverte et libre
+        - 2 :  Distribution totalement ouverte et libre
 * Industrialisation : Niveau d'industrialisation du projet
     + Services : Offres de services (Support, Formation, Audit...)
 
-        .0 : Pas d'offre de service identifiée
+        - 0 :  Pas d'offre de service identifiée
 
-        .1 : Offre existante mais restreinte géographiquement ou en une seule langue ou fournie par un seul fournisseur ou sans garantie
+        - 1 :  Offre existante mais restreinte géographiquement ou en une seule langue ou fournie par un seul fournisseur ou sans garantie
 
-        .2 : Offre riche, plusieurs fournisseurs, avec des garanties de résultats
+        - 2 :  Offre riche, plusieurs fournisseurs, avec des garanties de résultats
     + Documentation : 
 
-        .0 : Pas de documentation utilisateur
+        - 0 :  Pas de documentation utilisateur
 
-        .1 : La documentation existe mais est en partie obsolète ou restreinte à une seule langue ou peu détaillée
+        - 1 :  La documentation existe mais est en partie obsolète ou restreinte à une seule langue ou peu détaillée
 
-        .2 : Documentation à jour, traduite et éventuellement adaptée à différentes cibles de lecteurs (enduser, sysadmin, manager...)
+        - 2 :  Documentation à jour, traduite et éventuellement adaptée à différentes cibles de lecteurs (enduser, sysadmin, manager...)
     + Méthode qualité : Processus et méthode qualité
 
-        .0 : Pas de processus qualité identifié
+        - 0 :  Pas de processus qualité identifié
 
-        .1 : Processus qualité existant, mais non formalisé ou non outillé
+        - 1 :  Processus qualité existant, mais non formalisé ou non outillé
 
-        .2 : Processus qualité basé sur l'utilisation d'outils et de méthodologies standards
+        - 2 :  Processus qualité basé sur l'utilisation d'outils et de méthodologies standards
     + Modification du code : 
 
-        .0 : Pas de moyen pratique de proposer des modifications de code
+        - 0 :  Pas de moyen pratique de proposer des modifications de code
 
-        .1 : Des outils sont fournis pour accéder et modifier le code (ex : CVS, SVN) mais ne sont pas vraiment utilisés pour développer le produit
+        - 1 :  Des outils sont fournis pour accéder et modifier le code (ex : CVS, SVN) mais ne sont pas vraiment utilisés pour développer le produit
 
-        .2 : Le processus de modification de code est bien défini, exposé et respecté, basé sur des rôles bien définis
+        - 2 :  Le processus de modification de code est bien défini, exposé et respecté, basé sur des rôles bien définis
 
 
 # Annexe B : framework Drakkr
@@ -686,4 +686,4 @@ Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, Dr
 * __SecureIT__ : sous-projet dédié à la gestion des alertes de sécurité dans les logiciels open source.
 
 Consultez le site Web du projet Drakkr pour plus de détails : <http://www.drakkr.org>.
-   
+
