@@ -4,7 +4,7 @@
          xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
   <RDF:Description RDF:about="urn:mozilla:install-manifest"
                    em:id="xuleditor@qsos.org"
-                   em:version="1.1"
+                   em:version="2.0"
                    em:type="2"
                    em:name="QSOS XUL Editor"
                    em:description="An editor for QSOS evaluations of open source software"
@@ -19,5 +19,5 @@
   <RDF:Description RDF:about="rdf:#$zNYy83"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="3.0"
-                   em:maxVersion="6.*" />
+                   em:maxVersion="18.*" />
 </RDF:RDF>

@@ -133,21 +133,16 @@ function navigate(link) {
   var prefManager = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefBranch);
   var mode = prefManager.getCharPref("extensions.qsos-xuled.mode");
   
-  if (mode == "ext") {
-    document
-      .getElementById("content")
-      .webNavigation
-      .loadURI(link, 0, null, null, null);
-  } else {
-    var uri = Components
-      .classes["@mozilla.org/network/simple-uri;1"]
-      .getService(Components.interfaces.nsIURI);
+  //TODO: open link in Firefox when mode == "ext"
+  var uri = Components
+    .classes["@mozilla.org/network/simple-uri;1"]
+    .getService(Components.interfaces.nsIURI);
 
-    uri.spec = link;
+  uri.spec = link;
 
-    Components
-      .classes["@mozilla.org/uriloader/external-protocol-service;1"]
-      .getService(Components.interfaces.nsIExternalProtocolService)
-      .loadUrl(uri);
-  }
+  Components
+    .classes["@mozilla.org/uriloader/external-protocol-service;1"]
+    .getService(Components.interfaces.nsIExternalProtocolService)
+    .loadUrl(uri);
+  
 }  
