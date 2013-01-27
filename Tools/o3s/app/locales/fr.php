@@ -30,7 +30,7 @@ $msg['g_license_notice'] = "Le contenu de cette page est soumis à la  <a href='
 //Step 1 (index.php)
 $msg['s1_title'] = "Sélectionner la langue et le domaine logiciel";
 $msg['s1_table_title'] = "Domaines logiciels";
-$msg['s1_table_templateversion'] = "Versions de grille";
+$msg['s1_table_templateversion'] = "Versions de template";
 $msg['s1_table_nbeval'] = "Evaluations disponibles";
 $msg['s1_search'] = "ou effectuer une recherche par mots-clés";
 $msg['s1_button'] = "Chercher";
@@ -66,9 +66,9 @@ $msg['s3_table_view'] = "Visualiser";
 $msg['s3_format_html'] = "HTML";
 $msg['s3_format_xml'] = "XML";
 $msg['s3_format_freemind'] = "MM";
-$msg['s3_template'] = "Grille";
-$msg['s3_set_weights'] = "Pondérer la grille";
-$msg['s3_show_mindmap'] = "Visualiser la grille";
+$msg['s3_template'] = "Template";
+$msg['s3_set_weights'] = "Pondérer le template";
+$msg['s3_show_mindmap'] = "Visualiser le template";
 $msg['s3_compare'] = "Comparatif";
 $msg['s3_export'] = "Export OpenDocument";
 $msg['s3_export_all'] = "Tous";

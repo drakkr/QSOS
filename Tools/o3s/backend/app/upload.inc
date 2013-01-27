@@ -80,12 +80,11 @@ function upload($fichier, $login) {
 	    $metadata["comments_commented"] = $myDoc->getcountkey("element[comment != '']");
 	    $metadata["comments_notcommented"] = $myDoc->getcountkey("element[comment = '']");
 
-	    $tuple_info = $bdd->query("SELECT id, uploader FROM evaluations WHERE repo='incoming' AND qsosappname = '" . $metadata['qsosappname']
-	      . "' AND evaluations.release  = '" . $metadata['release'] . "' AND language = '" . $metadata['language'] . "'");
+	    $tuple_info = $bdd->query("SELECT evaluations.id, uploader, mail FROM evaluations, users WHERE uploader = login AND repo='incoming' AND qsosappname = '" . $metadata['qsosappname'] . "' AND evaluations.release  = '" . $metadata['release'] . "' AND language = '" . $metadata['language'] . "'");
 
 	    if ($info = $tuple_info->fetch()) {
 		if($info['uploader'] != $login) {
-		  alertError(TXT_UPLOAD_ERROR_ALREADY.$info['uploader']);	      
+		  alertError(TXT_UPLOAD_ERROR_ALREADY.$info['uploader']." (".$info['mail'].")");	      
 		  unlink($file);
 		  return;
 		} else {
@@ -103,12 +102,12 @@ function upload($fichier, $login) {
 
 	    if ($action == "updated") {
 	      $req = $bdd->exec(
-		"UPDATE evaluations SET qsosappfamily='$qsosappfamily', qsosspecificformat='$metadata[qsosformat]', appname='$metadata[appname]', file='$name_file', licensedesc='$metadata[licensedesc]', creation='$metadata[creation]', validation='$metadata[validation]', sections='$metadata[sections]', criteria='$metadata[criteria_total]', criteria_scorable='$metadata[criteria_scorable]', criteria_scored='$metadata[criteria_scored]', criteria_notscored='$metadata[criteria_notscored]', comments='$metadata[comments_total]', criteria_commented='$metadata[comments_commented]', criteria_notcommented='$metadata[comments_notcommented]', repo='incoming' WHERE id=$info[id];"
+		"UPDATE evaluations SET qsosappfamily='$qsosappfamily', qsosspecificformat='$metadata[qsosspecificformat]', appname='$metadata[appname]', file='$name_file', licensedesc='$metadata[licensedesc]', creation='$metadata[creation]', validation='$metadata[validation]', sections='$metadata[sections]', criteria='$metadata[criteria_total]', criteria_scorable='$metadata[criteria_scorable]', criteria_scored='$metadata[criteria_scored]', criteria_notscored='$metadata[criteria_notscored]', comments='$metadata[comments_total]', criteria_commented='$metadata[comments_commented]', criteria_notcommented='$metadata[comments_notcommented]', repo='incoming' WHERE id=$info[id];"
 	      );
 	    } else {
 	      $req = $bdd->exec(
 		"INSERT INTO evaluations(qsosappfamily, qsosspecificformat, qsosappname, evaluations.release, appname, language, file, licensedesc, creation, validation, sections, criteria, criteria_scorable, criteria_scored, criteria_notscored, comments, criteria_commented, criteria_notcommented, uploader, repo)
-		  VALUES('$qsosappfamily', '$metadata[qsosformat]', '$metadata[qsosappname]', '$metadata[release]', '$metadata[appname]', '$metadata[language]', '$name_file', '$metadata[licensedesc]', '$metadata[creation]', '$metadata[validation]', '$metadata[sections]', '$metadata[criteria_total]', '$metadata[criteria_scorable]', '$metadata[criteria_scored]', '$metadata[criteria_notscored]', '$metadata[comments_total]', '$metadata[comments_commented]', '$metadata[comments_notcommented]', '$login', 'incoming');"
+		  VALUES('$qsosappfamily', '$metadata[qsosspecififormat]', '$metadata[qsosappname]', '$metadata[release]', '$metadata[appname]', '$metadata[language]', '$name_file', '$metadata[licensedesc]', '$metadata[creation]', '$metadata[validation]', '$metadata[sections]', '$metadata[criteria_total]', '$metadata[criteria_scorable]', '$metadata[criteria_scored]', '$metadata[criteria_notscored]', '$metadata[comments_total]', '$metadata[comments_commented]', '$metadata[comments_notcommented]', '$login', 'incoming');"
 	      );
 	    }
 

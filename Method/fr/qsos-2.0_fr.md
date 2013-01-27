@@ -383,7 +383,7 @@ Les templates d'évaluations sont décrits et stockés au format défini et util
 
 Ce format est décrit sur le site officiel du projet. Il s'agit d'un format XML qui est utilisé par QSOS comme format pivot en ce qui concerne les templates. Les fiches d'évaluations vierges utilisées pour réaliser des analyses QSOS de logiciels sont générées à partir de ce format via des transformation XSL.
 
-![Processus général de QSOS](Images/freemind.png)
+![Formalisme de description des critères](Images/freemind.png)
 
 Les cartes heuristiques représentant des templates QSOS doivent respecter un formalisme particulier pour pouvoir être transformées en fiches d'évaluation :
 

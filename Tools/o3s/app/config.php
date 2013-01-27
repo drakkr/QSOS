@@ -24,7 +24,7 @@
 **
 */
 //Local and web paths to QSOS sheets and templates
-$git = "incoming";
+$git = "master";
 $repo = "../backend/$git/";
 
 $url = "http://localhost/local/o3s/";
