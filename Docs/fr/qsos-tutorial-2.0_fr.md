@@ -14,7 +14,7 @@ Vous pouvez copier, redistribuer et/ou modifier ce document selon les termes de 
 ---------------------------------------------------------------------------
  Version   Date       Auteurs           Commentaires
 --------- ----------  ----------------- -----------------------------------
-  2.0      26/01/13   Raphaël Semeteys  Conception et rédaction initiales.
+  2.0      28/01/13   Raphaël Semeteys  Conception et rédaction initiales.
 --------------------------------------- -----------------------------------
 
 # Introduction
@@ -27,23 +27,23 @@ Ainsi ce tutoriel est constitué d'un ensemble de cas d'usage auxquels vous pouv
 
 ## Généralités sur les templates
 
-Un template définit la structure ou la grille d'analyse d'une évaluation QSOS, il est constitué de critères répartie sous forme d'arbre selon plusieurs axes. 
+Un template définit la structure ou la grille d'analyse d'une évaluation QSOS, il est constitué de critères répartis sous forme d'arbre selon plusieurs axes. 
 
-L'axe intitulé _Maturité_ est imposé par la méthode QSOS. 
+Les axe intitulés _Maturité_ et _Metadata_ sont imposés par la méthode QSOS. 
 
 ![Axe _Maturité_ imposé aux templates](Images/template-maturity_fr.png)
 
-Il s'agit donc d'un ensemble organisé de critères systématiquement utilisé pour évaluer la maturité du logiciel et du projet en charge de son développement. Et ce, quel que soit le logiciel ou le type de logiciel concernés. Pour le détail des critères composant l'axe _Maturité_, consultez la méthode QSOS elle-même. Ainsi, même si vous modifiez cet axe dans votre template, ces modifications seront écrasées pour garantir sa conformité avec la méthode.
+L'axe _Maturité_  est un ensemble organisé de critères systématiquement utilisé pour évaluer la maturité du logiciel et du projet en charge de son développement. Et ce, quel que soit le logiciel ou le type de logiciel concernés. Pour le détail des critères composant l'axe _Maturité_, consultez la méthode QSOS elle-même. Ainsi, même si vous modifiez cet axe dans votre template, ces modifications seront écrasées pour garantir sa conformité avec la méthode.
 
-Un template comporte également un deuxième axe obligatoire, nommé _Medatata_ et décrit plus loin au chapitre [Modifier l'axe _Metadata_](#modifier-laxe-metadata).
+L'axe _Medatata_ est décrit plus loin au chapitre [Modifier l'axe _Metadata_](#modifier-laxe-metadata).
 
-Il est réservé à la gestion d'un ensemble d'informations propres au template lui-même, telles que ses auteurs, sa version, sa date de création, sa dernière date de modification ou encore sa langue.
+Il est réservé à la gestion d'un ensemble d'informations propres au template lui-même (métadonnées), telles que ses auteurs, sa version, sa date de création, sa dernière date de modification ou encore sa langue.
 
 ## Créer un nouveau template
 
 ### Installer FreeMind
 
-Le logiciel libre FreeMind est utilisé pour créer et modifier les templates sous forme de cartes heuristiques (ou _MindMaps_). Il s'agit d'un logiciel développé an langage Java et donc utilisable sur un grand nombre de plates-formes. Prière de vous reporter à la documentation officielle du projet^[<http://freemind.sourceforge.net/wiki/index.php/Documentation>] pour le détail de son installation.
+Le logiciel libre FreeMind est utilisé pour créer et modifier les templates sous forme de cartes heuristiques (ou _MindMaps_). Il s'agit d'un logiciel développé en Java et donc utilisable sur un grand nombre de plates-formes. Prière de vous reporter à la documentation officielle du projet^[<http://freemind.sourceforge.net/wiki/index.php/Documentation>] pour le détail de son installation.
 
 Attention cependant, la version minimale de FreeMind requise par QSOS est 0.9.0.
 
@@ -267,7 +267,7 @@ Et dans tous les cas, avant de modifier votre évaluation, _XulEditor_ vous dema
 
 Notez qu'il n'est pas interdit d'appliquer un template de version plus ancienne que le template actuellement utilisé.
 
-## Visualiser une comparaison en mode Web
+## Visualiser une évaluation en mode Web
 
 L'application Web O3S permet, entre autres possibilités de visualiser les évaluations du référentiel QSOS en mode Web. Cette application offre de nombreuses autres fonctionnalités, liées aux comparaisons QSOS. Reportez-vous au chapitre [Gérer les comparaisons](#gérer-les-comparaisons) pour une description plus détaillée d'O3S.
 
@@ -421,9 +421,9 @@ L'application O3S permet de visualiser votre comparaison selon un formalisme app
 
 Il s'agit du positionnement des différentes évaluations que vous avez sélectionnées selon deux axes :
 
-* couverture fonctionnelle : la valeur utilisée en abscisse est la moyenne pondérée de l'ensemble des critères du templates hormis ceux du nœud _Maturité_ imposé par la méthode QSOS ;
+* _Couverture fonctionnelle_ : la valeur utilisée en abscisse est la moyenne pondérée de l'ensemble des critères du templates hormis ceux du nœud _Maturité_ imposé par la méthode QSOS ;
 
-* Maturité : la valeur utilisée en ordonnée est celle du nœud _Maturité_ imposé par la méthode QSOS.
+* _Maturité_ : la valeur utilisée en ordonnée est celle du nœud _Maturité_ imposé par la méthode QSOS.
 
 Les ellipses correspondant aux logiciels évalués sont des zones cliquables qui vous redirige vers la visualisation du détail de chaque évaluation.
 
@@ -453,11 +453,11 @@ Vous pouvez sauvegarder le résultat en tant que fichier `.ods` sur votre disque
 
 La feuille de calcul exportée comporte plusieurs onglets :
 
-* Accueil : page de garde du document présentant les métadonnées de la comparaison et de son export ODS (date, version de template, présentations des onglets et note de licence) ;
+* _Accueil_ : page de garde du document présentant les métadonnées de la comparaison et de son export ODS (date, version de template, présentations des onglets et note de licence) ;
 
-* Synthèse : onglet synthétisant la comparaison en termes de scores et permettant de modifier la pondération des critères ;
+* _Synthèse_ : onglet synthétisant la comparaison en termes de scores et permettant de modifier la pondération des critères ;
 
-* Critères : explication des critères utilisés pour la comparaison, basée sur les données du template ;
+* _Critères_ : explication des critères utilisés pour la comparaison, basée sur les données du template ;
 
 * un onglet par logiciel évalué : présentant le détail de l'évaluation (métadonnées, scores et commentaires).
 
@@ -501,17 +501,17 @@ Vous pouvez sauvegarder le résultat en tant que fichier `.odt` sur votre disque
 
 Le rapport est composé de différents chapitres : 
 
-* Introduction : chapitre présentant rapidement l'objet du document ainsi que la méthode QSOS et contenant du texte à compléter ;
+* _Introduction_ : chapitre présentant rapidement l'objet du document ainsi que la méthode QSOS et contenant du texte à compléter ;
 
-* Template d'analyse utilisé : présentation du template (cartes heuristiques FreeMind et texte explicatif pour chacun des axes principaux du template) ;
+* _Template d'analyse utilisé_ : présentation du template (cartes heuristiques FreeMind et texte explicatif pour chacun des axes principaux du template) ;
 
-* Solutions identifiées : présentation du périmètre de l'étude comparative et, pour chaque évaluation, détail de l'analyse réalisée (présentation du projet, cartes heuristiques et texte à compléter pour chacun des axes principaux de l'évaluation) ;
+* _Solutions identifiées_ : présentation du périmètre de l'étude comparative et, pour chaque évaluation, détail de l'analyse réalisée (présentation du projet, cartes heuristiques et texte à compléter pour chacun des axes principaux de l'évaluation) ;
 
-* Synthèse : comparaison de ces différentes solutions (graphiques de type radar et texte à compléter pour chacun des axes principaux de l'évaluation, quadrant QSOS et texte à compléter) ;
+* _Synthèse_ : comparaison de ces différentes solutions (graphiques de type radar et texte à compléter pour chacun des axes principaux de l'évaluation, quadrant QSOS et texte à compléter) ;
 
-* Annexes : présentation un peu plus détaillée de la méthode QSOS ;
+* _Annexes_ : présentation un peu plus détaillée de la méthode QSOS ;
 
-* Crédits : citation des auteurs des évaluations utilisées pour générer le squelette du document.
+* _Crédits_ : citation des auteurs des évaluations utilisées pour générer le squelette du document.
 
 Il s'agit d'un squelette pouvant être utilisé pour produire un document final en saisissant votre analyse et votre synthèse dans les zones de texte à compléter. Elle sont repérée dans le document via un format de type _Stabylo_.
 
