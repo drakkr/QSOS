@@ -1,6 +1,6 @@
 % Tutoriel QSOS
 % ![Logo](../../Method/fr/Images/QSOS.png)
-% Version 2.0 - 26/01/2013
+% Version 2.0 - 28/01/2013
 
 # Note de licence
 
@@ -497,9 +497,9 @@ Depuis la page de gestion de votre comparaison, un clic sur le bouton _Export OD
 
 Vous pouvez sauvegarder le résultat en tant que fichier `.odt` sur votre disque dur.
 
-![Présentation exportée par O3S](Images/o3s-odt_fr.png)
+![Rapport exporté par O3S](Images/o3s-odt_fr.png)
 
-La présentation est composée de différents chapitres : 
+Le rapport est composé de différents chapitres : 
 
 * Introduction : chapitre présentant rapidement l'objet du document ainsi que la méthode QSOS et contenant du texte à compléter ;
 
