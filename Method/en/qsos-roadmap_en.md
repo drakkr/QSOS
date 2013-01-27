@@ -1,6 +1,6 @@
 % QSOS Roadmap
 % ![Logo](Images/QSOS.png)
-% Last update: 13/01/2013
+% Last update: 28/01/2013
 
 # QSOS XML Format
 
@@ -16,8 +16,6 @@
 # QSOS Repositories
 
 * Repositories could be navigated with language filters
-
-* Create QSOS repositories on GitHub
 
 # O3S
 

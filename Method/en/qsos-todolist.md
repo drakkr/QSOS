@@ -8,6 +8,8 @@
     + Reject incomplete evaluations (score, header) or not with not enoughr comments
     + Templates: differentiate additions from update and allow uodates only by the same user
 
+* Create QSOS repositories on GitHub
+
 # XulEditor
 
 * _Criteria_ Tab: label _Comments_ should be in bold font
@@ -27,9 +29,10 @@
     + XulEditor: document installation as a xulrunner application (`xulrunner -install-app /path/to/xuleditor/`) and ideally make `.exe`, `.rpm` and `.deb` packages
     + O3S
 
-* QSOS Starting Guide
-    + Merge with current wiki
-    + Make a complete demo of the QSOS lifecycle
+* QSOS Tutorial
+    + Review french version
+    + Translate in english
+    + Investigate ways to split/merge in several smaller edocs (better for Gitit export)
 
 * QSOS Maintainer Guide
     + Impacts of a QSOS format modification (XSD, XSLT, tools)
