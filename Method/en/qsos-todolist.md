@@ -24,6 +24,7 @@
     + Update the text itself
         + Resize images
     + Translate it in English
+    + Split in smaller files for Gitit publication and modify makefile to merge them in one document
 
 * Installation guide(s) of QSOS tools
     + XulEditor: document installation as a xulrunner application (`xulrunner -install-app /path/to/xuleditor/`) and ideally make `.exe`, `.rpm` and `.deb` packages
@@ -32,7 +33,6 @@
 * QSOS Tutorial
     + Review french version
     + Translate in english
-    + Investigate ways to split/merge in several smaller edocs (better for Gitit export)
 
 * QSOS Maintainer Guide
     + Impacts of a QSOS format modification (XSD, XSLT, tools)
