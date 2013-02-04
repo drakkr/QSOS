@@ -68,7 +68,7 @@ function init() {
 // Get privilege to open windows
 function getPrivilege() {
   try {
-    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    //netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
     return true;
   } catch (e) {
     alert("newFile: Permission to open file denied: " + e.message);

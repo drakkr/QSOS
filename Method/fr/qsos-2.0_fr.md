@@ -26,7 +26,7 @@ En plus des questions « naturelles » comme :
 
 * Quel logiciel répond le mieux à mes besoins fonctionnels actuels et prévus ?
 
-* Voici quelques questions que devrait se poser toute entreprise avant de prendre une décision :
+Voici quelques questions que devrait se poser toute entreprise avant de prendre une décision :
 
     + Quelle est la pérennité du logiciel ? Quels sont les risques de Forks ? Comment les anticiper et les gérer ?
 
@@ -59,21 +59,21 @@ A ce titre, Atos a décidé de placer la méthode QSOS et les documents génér�
  Version   Date       Auteurs                  Commentaires
 --------- ----------  --------------------     ---------------------------------------
   1.0      2004       Raphaël Semeteys         Conception et rédaction initiales.
-  
+
   1.1      2004       Olivier Pilot            Conception et relecture.
-  
+
   1.2      2004       Laurent Baudrillard      Conception et relecture.
-  
+
   1.3      17/11/04   Raphaël Semeteys         Première version publique.
-  
+
   1.4      23/11/05   Raphaël Semeteys         Note de licence. Historique.
                       Olivier Pilot            Nouveau logo.
-			     
+
   1.5      19/01/06   Gonéri Le Bouder         Passage à LaTeX. Licence GNU FDL.
                       Raphaël Semeteys         Manifeste QSOS.
-			     
+
   1.6      13/04/06   Gonéri Le Bouder         Mise à jour de l'axe Maturité.
-  
+
   2.0      19/01/13   Raphaël Semeteys         Passage à Markdown. Formats et outils.
                       Philippe-Arnaud Haranger Mise à jour de l'axe Maturité.
 --------------------------------------------------------------------------------------
@@ -107,11 +107,11 @@ Le processus général de QSOS se décompose en plusieurs étapes interdépendan
  Étape         Description
 -------------  --------------------------------------------------------------------------------------
  Définir       Constitution et enrichissement des référentiels utilisés par les autres étapes.
-  
+
  Évaluer       Évaluation d'une version de logiciel (couverture fonctionnelle et maturité du projet).
-  
+
  Qualifier     Pondération de l'évaluation en fonction du contexte.
-  
+
  Sélectionner  Comparaison et sélection de logiciels, basées sur les données des étapes précédentes.
 -----------------------------------------------------------------------------------------------------
 
@@ -145,9 +145,9 @@ Les templates constituant ce référentiel sont composés de critères organisé
 
 * analyse de la maturité du projet en charge du développement du logiciel ;
 
-* analyse de de la couverture fonctionnelle du logiciel.
+* analyse de la couverture fonctionnelle du logiciel.
 
-La méthode QSOS définit et impose les critères d'évaluation de la maturité d'un projet. 
+La méthode QSOS définit et impose les critères d'évaluation de la maturité d'un projet.
 
 ![Critères de Maturité du projet](Images/Maturite.png)
 
@@ -159,7 +159,7 @@ Consultez le site Web <http://www.qsos.org> pour le détail des templates dispon
 
 ## Référentiel des types de Licences
 
-Il existe de nombreuses licences libres et open source, ce réfrentiel a pour objectif de les identifier et de les catégoriser selon les axes suivants :
+Il existe de nombreuses licences libres et open source, ce référentiel a pour objectif de les identifier et de les catégoriser selon les axes suivants :
 
 * propriétarisation : le code dérivé peut-il être rendu propriétaire ou doit-il rester libre ?
 
@@ -169,24 +169,24 @@ Il existe de nombreuses licences libres et open source, ce réfrentiel a pour ob
 
 Le tableau suivant liste les licences les plus souvent utilisées en les comparant par rapport aux critères énoncés plus haut.
 
-Licence                   Propriétarisation    Perstance   Héritage 
------------------------- ------------------- ------------ ----------
-GNU Public License              Non              Oui         Oui 
-CeCILL                          Non              Oui         Oui 
-LGPL                            Non           Partielle      Oui 
-BSD et dérivées                 Oui              Non         Non 
-Artistic                        Oui              Non         Non 
-MIT                             Oui              Non         Non 
-Apache Software License         Oui              Non         Non 
-Mozilla Public License          Non              Non         Oui 
-Common Public License           Non              Non         Non 
-Academic Free License           Oui              Non         Non 
-PHP License                     Oui              Non         Non 
-Open Software License           Non              Non         Non 
-Zope Public License             Oui              Non         Non 
-Python SF License               Oui              Non         Non 
+Licence                   Propriétarisation    Persistance   Héritage
+------------------------ ------------------- -------------- ----------
+GNU Public License              Non              Oui         Oui
+CeCILL                          Non              Oui         Oui
+LGPL                            Non           Partielle      Oui
+BSD et dérivées                 Oui              Non         Non
+Artistic                        Oui              Non         Non
+MIT                             Oui              Non         Non
+Apache Software License         Oui              Non         Non
+Mozilla Public License          Non              Non         Oui
+Common Public License           Non              Non         Non
+Academic Free License           Oui              Non         Non
+PHP License                     Oui              Non         Non
+Open Software License           Non              Non         Non
+Zope Public License             Oui              Non         Non
+Python SF License               Oui              Non         Non
 
- Vous pouvez vous reporter au projet projet __SLIC__^[<http://slic.drakkr.org>] (Software LIcense Comparator) pour une description plus complète et plus formelle des licences libres et open source ainsi que de leur compatibilités respectives.
+ Vous pouvez vous reporter au projet _SLIC_^[<http://slic.drakkr.org>] (Software LIcense Comparator) pour une description plus complète et plus formelle des licences libres et open source ainsi que de leur compatibilités respectives.
 
 Il convient de noter qu'un même logiciel peut être assujetti à plusieurs licences différentes (y compris propriétaires).
 
@@ -214,9 +214,9 @@ L'objectif de cette étape est de procéder à l'évaluation des logiciels Open 
 
 Ce travail d'évaluation est insérable dans une démarche plus large de veille technologique qui n'est pas décrite ici dans sa globalité.
 
-## Evaluation d'une version de logiciel
+## Évaluation d'une version de logiciel
 
-Chaque version d'un logiciel est décrite dans une fiche d'évaluation. Cette fiche comporte, outre l'identification du logiciel et de sa version, des informations une description et une analse détaillées des fonctionnalités offertes.
+Chaque version d'un logiciel est décrite dans une fiche d'évaluation. Cette fiche comporte, outre l'identification du logiciel et de sa version, des informations une description et une analyse détaillées des fonctionnalités offertes.
 
 ### Templates d'évaluation
 
@@ -361,7 +361,7 @@ Ainsi, les principaux objectifs du projet sont les suivants :
 
 * assister les utilisateurs dans l'utilisation de la méthode via des bonnes pratiques et des espaces de communication.
 
-## Outils et format utilisés
+## Outils et formats utilisés
 
 Le projet libre QSOS propose également des outils pour dérouler le processus de la méthode et faciliter la collaboration autour des évaluations réalisées, ainsi que des formats de document pour stocker et manipuler les templates et les évaluations.
 
@@ -375,7 +375,7 @@ __Outil FreeMind__
 
 Les templates sont des grilles de couverture fonctionnelle propres à chaque domaine logiciel. Avant de pouvoir réaliser une évaluation d’un logiciel donné, il faut donc disposer du template adapté.
 
-Le projet QSOS utilise des cartes heuristiques (ou *mindmap*) pour concevoir et documenter ses templates. Le choix a été fixé sur la solution libre FreeMind^[<http://freemind.sourceforge.net>] du fait de sa portabilité et de son format XML permettant la transformation des templates au format `.qsos`, décrit plus bas, via une transormation XSL.
+Le projet QSOS utilise des cartes heuristiques (ou *mindmap*) pour concevoir et documenter ses templates. Le choix a été fixé sur la solution libre FreeMind^[<http://freemind.sourceforge.net>] du fait de sa portabilité et de son format XML permettant la transformation des templates au format `.qsos`, décrit plus bas, via une transformation XSL.
 
 __Format `.mm`__
 
@@ -387,13 +387,13 @@ Ce format est décrit sur le site officiel du projet. Il s'agit d'un format XML 
 
 Les cartes heuristiques représentant des templates QSOS doivent respecter un formalisme particulier pour pouvoir être transformées en fiches d'évaluation :
 
-1. les descriptions des critères doivent être entourées (menu « Format/Bubble » de FreeMind) ;
+1. les descriptions des critères doivent être entourées (menu « Mise en forme/Bulle » de FreeMind) ;
 
 2. les descriptions des notes 0, 1 et 2.
 
-Le fichier XSL permettant de transformer les templates en fiches d'évaluations est disponible sur le site Web du projet QSOS. FreeMind permet d'appliquer la transformation via le menu « File/Export/Using XSLT... ».
+Le fichier XSL permettant de transformer les templates en fiches d'évaluations est disponible sur le site Web du projet QSOS. FreeMind permet d'appliquer la transformation via le menu « Fichier/Exporter/En utilisant une XSLT... ».
 
-### Evaluations
+### Évaluations
 
 __Outil XulEditor__
 
@@ -403,7 +403,7 @@ XulEditor est un outil de saisie et de gestion d'évaluations QSOS. Il permet de
 
 * créer une nouvelle évaluation à partir d'un template au format `.mm` (template local ou provenant du référentiel QSOS) ;
 
-* ouvrir et modifier un éveluation existante (évaluation locale ou provenant du référentiel QSOS) ;
+* ouvrir et modifier un évaluation existante (évaluation locale ou provenant du référentiel QSOS) ;
 
 * appliquer une nouvelle version de template à une évaluation (sans perdre les données d'évaluations existantes) ;
 
@@ -411,7 +411,7 @@ XulEditor est un outil de saisie et de gestion d'évaluations QSOS. Il permet de
 
 XulEditor ne permet donc pas de modifier un template `.mm` et ne manipule que des évaluations au format `.qsos`.
 
-Il s'agit d'une application utilisant la plateforme technologique du projet Mozilla. Elle peut être déployée en tant qu'extention au navigateur Firefox ou en tant qu'application XulRunner. 
+Il s'agit d'une application utilisant la plateforme technologique du projet Mozilla. Elle peut être déployée en tant qu'extension au navigateur Firefox ou en tant qu'application XulRunner.
 
 Reportez-vous au site Web du projet QSOS pour plus de détails sur l'installation de XulEditor.
 
@@ -437,9 +437,9 @@ La balise principale est `<document/>`, elle est constituée ainsi :
 * un ou plusieurs axes (`<section/>`) de critères d'évaluation :
 
     + eux-mêmes composés de critères d'évaluation (`<element/>`) pouvant être imbriqués les uns dans les autres, et des descriptions (`<desc/>`) ;
-    
+
     + dans cet arbre de balises, les critères situés au plus profond de la hiérarchie contiennent les significations liées aux notes 0, 1 et 2 (`<desc0/>`, `<desc1/>` et `<desc2/>`), la note d'évaluation (`<score/>`) ainsi qu'une zone de commentaire pour justifier plus précisément la note (`<comment/>`).
-    
+
 Ci-suit une illustration de cette structuration :
 
 ~~~ {.xml}
@@ -504,7 +504,7 @@ Le moteur QSOS consiste en une série d’outils pour valider, contrôler et pub
 
 Le référentiel est décomposé en deux dépôts Git dédiés aux stockage de deux d'évaluations et de templates :
 
-* le dépôt *Incoming* : réservé à la publication, au partage et à la manipulation d'évaluations et de templates par la communauté, il est accessible par tous via O3S et ne requiert uniquement de créer un compte utilisateur dans l'application ;
+* le dépôt *Incoming* : réservé à la publication, au partage et à la manipulation d'évaluations et de templates par la communauté, il est accessible par tous via O3S et requiert uniquement la création d'un compte utilisateur dans l'application ;
 
 * le dépôt *Master* : dédié au stockage des évaluations et aux templates considérés comme de qualité et ayant été validés par un modérateur de la communauté QSOS.
 
@@ -675,9 +675,9 @@ Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, Dr
 
 ![Framework Drakkr](Images/drakkr-orga.png)
 
-* __OSC__ (Open Source Cartouche) : sous-projet dédié à l'identification unique d'une version d'un logiciel open source ainsi qu'à la gestion des ses metadonnées ;
+* __OSC__ (Open Source Cartouche) : sous-projet dédié à l'identification unique d'une version d'un logiciel open source ainsi qu'à la gestion des ses métadonnées ;
 
-* __ECOS__ (Evaluation des Coûts liés à l'adoption de logciels Open Source) : sous-projet relatif à l'évaluation et au calcul du coût total de prossession d'un logiciel open source ainsi qu'au retour sur investissement d'une migration ;
+* __ECOS__ (Évaluation des Coûts liés à l'adoption de logiciels Open Source) : sous-projet relatif à l'évaluation et au calcul du coût total de possession d'un logiciel open source ainsi qu'au retour sur investissement d'une migration ;
 
 * __FLOSC__ (Free/Libre Open Source Complexity) : sous-projet proposant une méthode et un outil d'évaluation de la complexité d'un logiciel open source ;
 
@@ -686,4 +686,3 @@ Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, Dr
 * __SecureIT__ : sous-projet dédié à la gestion des alertes de sécurité dans les logiciels open source.
 
 Consultez le site Web du projet Drakkr pour plus de détails : <http://www.drakkr.org>.
-

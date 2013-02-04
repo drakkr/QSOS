@@ -29,7 +29,7 @@ var backend;
 //Connection to QSOS backend and generation of the tree view
 function init() {
   try {
-    netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    //netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
   } catch (e) {
     alert("newFile: Permission to open file denied: " + e.message);
     return false;
