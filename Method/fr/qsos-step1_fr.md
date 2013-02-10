@@ -50,7 +50,7 @@ Licence                   Propriétarisation    Persistance   Héritage
 ------------------------ ------------------- -------------- ----------
 GNU Public License              Non              Oui         Oui
 CeCILL                          Non              Oui         Oui
-LGPL                            Non           Partielle      Oui
+LGPL                            Non            Partielle     Oui
 BSD et dérivées                 Oui              Non         Non
 Artistic                        Oui              Non         Non
 MIT                             Oui              Non         Non
@@ -63,7 +63,7 @@ Open Software License           Non              Non         Non
 Zope Public License             Oui              Non         Non
 Python SF License               Oui              Non         Non
 
- Vous pouvez vous reporter au projet _SLIC_^[<http://slic.drakkr.org>] (Software LIcense Comparator) pour une description plus complète et plus formelle des licences libres et open source ainsi que de leur compatibilités respectives.
+Vous pouvez vous reporter au projet _SLIC_^[<http://slic.drakkr.org>] (Software LIcense Comparator) pour une description plus complète et plus formelle des licences libres et open source ainsi que de leur compatibilités respectives.
 
 Il convient de noter qu'un même logiciel peut être assujetti à plusieurs licences différentes (y compris propriétaires).
 

@@ -1,142 +1,198 @@
-# Annexe A : critères de Maturité QSOS
+# Le projet QSOS
 
-L'utilisation des critères ci-dessous, regroupés dans une section appelée « Maturité », est obligatoire pour tout template ou toute évaluation QSOS au format 2.0.
-<!--- Generate this list by applying the /Tools/o3s/formats/xml/xslt/evaluation-template-markdown.xsl transformation to QSOS/QSOS/Method/[language]/criteria-maturity_[language].xml --->
+## Un projet libre et communautaire
 
-* Patrimoine : Historique et patrimoine du projet
-    + Age du projet : 
+Outre le fait de proposer un méthode, QSOS constitue un projet libre et communautaire voué à la veille technologique collaborative sur les logiciels open source.
 
-        - 0 :  Inférieur à trois mois
+Ainsi, les principaux objectifs du projet sont les suivants :
 
-        - 1 :  Entre trois mois et trois ans
+* gérer les évolutions de la méthode et du format de stockage des fiches d'évaluations ;
 
-        - 2 :  Supérieur à trois ans
-    + Historique : 
+* centraliser les référentiels et notamment le stockage des templates, des fiches d'identité et des fiches d'évaluations ;
 
-        - 0 :  Le logiciel connaît de nombreux problèmes qui peuvent être rédhibitoires
+* fournir des outils pour faciliter l'application de la méthode QSOS ;
 
-        - 1 :  Pas de problèmes majeurs, ni de crise ou historique inconnu
+* assister les utilisateurs dans l'utilisation de la méthode via des bonnes pratiques et des espaces de communication.
 
-        - 2 :  Bon historique de gestion de projet et de crise
-    + Equipe de développement : 
+## Outils et formats utilisés
 
-        - 0 :  Très peu de développeurs identifiés ou développeur unique
+Le projet libre QSOS propose également des outils pour dérouler le processus de la méthode et faciliter la collaboration autour des évaluations réalisées, ainsi que des formats de document pour stocker et manipuler les templates et les évaluations.
 
-        - 1 :  Quelques développeurs actifs
+Le schéma ci-dessous présente et positionne les différents outils et formats existants.
 
-        - 2 :  Equipe de développement importante et identifiée
-    + Popularité : 
+![Outils et formats de QSOS](Images/outils.png)
 
-        - 0 :  Très peu d'utilisateurs identifiés
+### Templates
 
-        - 1 :  Usage décelable
+__Outil FreeMind__
 
-        - 2 :  Nombreux utilisateurs et références
-* Activité : Activité du et autour du projet
-    + Communauté des contributeurs : 
+Les templates sont des grilles de couverture fonctionnelle propres à chaque domaine logiciel. Avant de pouvoir réaliser une évaluation d’un logiciel donné, il faut donc disposer du template adapté.
 
-        - 0 :  Pas de communauté ou de réelle activité (forum, liste de diffusion…)
+Le projet QSOS utilise des cartes heuristiques (ou *mindmap*) pour concevoir et documenter ses templates. Le choix a été fixé sur la solution libre FreeMind^[<http://freemind.sourceforge.net>] du fait de sa portabilité et de son format XML permettant la transformation des templates au format `.qsos`, décrit plus bas, via une transformation XSL.
 
-        - 1 :  Communauté existante avec une activité notable
+__Format `.mm`__
 
-        - 2 :  Communauté forte : grosse activité sur les forums, de nombreux contributeurs et défenseurs
-    + Activité autour des bugs : 
+Les templates d'évaluations sont décrits et stockés au format défini et utilisé par FreeMind (extension `.mm`).
 
-        - 0 :  Réactivité faible sur le forum ou sur la liste de diffusion, ou rien au sujet des corrections de bugs dans les notes de versions
+Ce format est décrit sur le site officiel du projet. Il s'agit d'un format XML qui est utilisé par QSOS comme format pivot en ce qui concerne les templates. Les fiches d'évaluations vierges utilisées pour réaliser des analyses QSOS de logiciels sont générées à partir de ce format via des transformation XSL.
 
-        - 1 :  Activité détectable mais sans processus clairement exposé, temps de résolution long
+![Formalisme de description des critères](Images/freemind.png)
 
-        - 2 :  Forte réactivité, basée sur des rôles et des assignations de tâches
-    + Activité autour des fonctionnalités : 
+Les cartes heuristiques représentant des templates QSOS doivent respecter un formalisme particulier pour pouvoir être transformées en fiches d'évaluation :
 
-        - 0 :  Pas ou peu de nouvelles fonctionnalités
+1. les descriptions des critères doivent être entourées (menu « Mise en forme/Bulle » de FreeMind) ;
 
-        - 1 :  Évolution du produit conduite par une équipe dédiée ou par des utilisateurs, mais sans processus clairement exposé
+2. les descriptions des notes 0, 1 et 2. (il manque quelque chose non?)
 
-        - 2 :  Les requêtes pour les nouvelles fonctionnalités sont clairement outillées, feuille de route disponible
-    + Activité sur les releases/versions : 
+Le fichier XSL permettant de transformer les templates en fiches d'évaluations est disponible sur le site Web du projet QSOS. FreeMind permet d'appliquer la transformation via le menu « Fichier/Exporter/En utilisant une XSLT... ».
 
-        - 0 :  Très faible activité que ce soit sur les versions de production ou de développement (alpha, beta)
+### Évaluations
 
-        - 1 :  Activité que ce soit sur les versions de production ou de développement (alpha, beta), avec des versions correctives mineures fréquentes
+__Outil XulEditor__
 
-        - 2 :  Activité importante avec des versions correctives fréquentes et des versions majeures planifiées liées aux prévisions de la feuille de route
-* Gouvernance : Stratégie du projet
-    + Détenteur des droits : 
+![Vues d'écran de XulEditor](Images/xuleditor.png)
 
-        - 0 :  Les droits sont détenus par quelques individus ou entités commerciales
+XulEditor est un outil de saisie et de gestion d'évaluations QSOS. Il permet de réaliser les opérations suivantes :
 
-        - 1 :  Les droits sont détenus par de nombreux individus de façon homogène
+* créer une nouvelle évaluation à partir d'un template au format `.mm` (template local ou provenant du référentiel QSOS) ;
 
-        - 2 :  Les droits sont détenus par une entité légale, une fondation dans laquelle la communauté a confiance (ex: FSF, Apache, ObjectWeb)
-    + Feuille de route : 
+* ouvrir et modifier un évaluation existante (évaluation locale ou provenant du référentiel QSOS) ;
 
-        - 0 :  Pas de feuille de route publiée
+* appliquer une nouvelle version de template à une évaluation (sans perdre les données d'évaluations existantes) ;
 
-        - 1 :  Feuille de route sans planning
+* sauvegarder une évaluation (en local ou dans le référentiel QSOS).
 
-        - 2 :  Feuille de route versionnée, avec planning et mesures de retard
-    + Pilotage du projet : 
+XulEditor ne permet donc pas de modifier un template `.mm` et ne manipule que des évaluations au format `.qsos`.
 
-        - 0 :  Pas de pilotage clair du projet
+Il s'agit d'une application utilisant la plateforme technologique du projet Mozilla. Elle peut être déployée en tant qu'extension au navigateur Firefox ou en tant qu'application XulRunner. 
 
-        - 1 :  Pilotage dicté par un seul individu ou une entité commerciale
+Reportez-vous au site Web du projet QSOS pour plus de détails sur l'installation de XulEditor.
 
-        - 2 :  Indépendance forte de l'équipe de développement, droits détenus par une entité reconnue
-    + Mode de distribution : 
+__Outil O3S (Open Source Selection Software)__
 
-        - 0 :  Existence d'une distribution commerciale ou propriétaire ou distribution libre limitée fonctionnellement
+O3S est application Web permettant de visualiser, pondérer et comparer les évaluations QSOS selon le processus décrit dans la méthode. Elle permet de visualiser, comparer, exporter les évaluations QSOS au format OpenDocument, ainsi que générer des graphes au format SVG. 
 
-        - 1 :  Sous-partie du logiciel disponible sous licence propriétaire (Coeur / Greffons...)
+![Export au format OpenDocument Spreadsheet](Images/ods.png)
 
-        - 2 :  Distribution totalement ouverte et libre
-* Industrialisation : Niveau d'industrialisation du projet
-    + Services : Offres de services (Support, Formation, Audit...)
+Elle est accessible en ligne à l'adresse suivante : <http://www.qsos.org/o3s/>.
 
-        - 0 :  Pas d'offre de service identifiée
+Il est également possible d'installer une instance d'O3S locale à votre organisation. Reportez-vous au site Web du projet QSOS pour plus de détails sur ce sujet.
 
-        - 1 :  Offre existante mais restreinte géographiquement ou en une seule langue ou fournie par un seul fournisseur ou sans garantie
+__Format `.qsos`__
 
-        - 2 :  Offre riche, plusieurs fournisseurs, avec des garanties de résultats
-    + Documentation : 
+Les évaluations sont décrites et stockées dans un format pivot XML spécifique à QSOS. Le schéma XML est disponible sur le site Web du projet QSOS. Ce chapitre en décrit les principes de structuration.  
+L'extension des fichiers est `.qsos`.
 
-        - 0 :  Pas de documentation utilisateur
+La balise principale est `<document/>`, elle est constituée ainsi :
 
-        - 1 :  La documentation existe mais est en partie obsolète ou restreinte à une seule langue ou peu détaillée
+* un entête `<header/>` contenant les métadonnées liées de la fiche d'évaluation (auteurs de l'évaluation, langue, template utilisé, versions de QSOS et du template, dates de création et de validation...) ;
 
-        - 2 :  Documentation à jour, traduite et éventuellement adaptée à différentes cibles de lecteurs (enduser, sysadmin, manager...)
-    + Méthode qualité : Processus et méthode qualité
+* un ou plusieurs axes (`<section/>`) de critères d'évaluation :
 
-        - 0 :  Pas de processus qualité identifié
+    + eux-mêmes composés de critères d'évaluation (`<element/>`) pouvant être imbriqués les uns dans les autres, et des descriptions (`<desc/>`) ;
+    
+    + dans cet arbre de balises, les critères situés au plus profond de la hiérarchie contiennent les significations liées aux notes 0, 1 et 2 (`<desc0/>`, `<desc1/>` et `<desc2/>`), la note d'évaluation (`<score/>`) ainsi qu'une zone de commentaire pour justifier plus précisément la note (`<comment/>`).
+    
+Ci-suit une illustration de cette structuration :
 
-        - 1 :  Processus qualité existant, mais non formalisé ou non outillé
+~~~ {.xml}
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+   <header>
+      <authors>
+         <author>
+            <name>Nom d'un auteur de l'évaluation</name>
+            <email>Email de l'auteur</email>
+         </author>
+         <!-- Autres <author/> éventuels -->	 
+      </authors>
+      <dates>
+         <creation>Date de création</creation>
+         <validation>Date de validation</validation>
+      </dates>
+      <appname>Nom du logiciel</appname>
+      <desc>Description rapide du logiciel</desc>
+      <release>Version du logiciel</release>
+      <licenseid>Identifiant de la licence principale</licenseid>
+      <licensedesc>Nom de la licence principale</licensedesc>
+      <url>URL du site Web du logiciel</url>
+      <demourl>URL du site Web de démonstration</demourl>
+      <language>Langue d'évaluation : en, fr...</language>
+      <qsosappname>Identifiant CPE de la version</qsosappname>
+      <qsosformat>Format de QSOS utilisé, ici : 2.0</qsosformat>
+      <qsosspecificformat>Version du template</qsosspecificformat>
+      <qsosappfamily>Nom du template d'évaluation</qsosappfamily>
+   </header>
+   <section name="maturity" title="Maturité">
+      <!-- <section/> imposée et versionnée par QSOS -->     
+   </section>     
+   <section name="Identifiant-unique-1" title="Nom de la section">
+      <element name="Identifiant-unique-2" title="Nom du critère">
+         <desc>Description du critère</desc>
+         <element name="Identifiant-unique-3" title="Nom du sous-critère">
+         <desc>Description du sous-critère</desc>
+            <desc0>Signification de la note 0</desc0>
+            <desc1>Signification de la note 1</desc1>
+            <desc2>Signification de la note 2</desc2>
+            <score>Notation du critère : 0, 1 ou 2</score>
+            <comment>Commentaire motivant la note</comment>
+         </element>
+         <!-- Autres <element/> éventuels -->
+      </element>
+      <!-- Autres <element/> éventuels -->
+   </section>
+   <!-- Autres <section/> éventuelles -->
+</document>
+~~~
 
-        - 2 :  Processus qualité basé sur l'utilisation d'outils et de méthodologies standards
-    + Modification du code : 
+Il s'agit donc d'un arbre XML composé d'un entête (`<header/>`) et de sections (`<section/>`) contenant des éléments (`<element/>`). Les feuilles de cet arbre sont des critères d'évaluation pouvant être notés _0_, _1_ ou _2_.
 
-        - 0 :  Pas de moyen pratique de proposer des modifications de code
+Ce format est utilisé comme pivot par les outils proposé par le projet QSOS pour réaliser des exports dans d'autres formats XML, tels que HTML, SVG ou encore OpenDocument.
 
-        - 1 :  Des outils sont fournis pour accéder et modifier le code (ex : CVS, SVN) mais ne sont pas vraiment utilisés pour développer le produit
+La structure détaillée de ce format est décrite au sein d'un schéma XSD, disponible sur le site Web du projet QSOS.
 
-        - 2 :  Le processus de modification de code est bien défini, exposé et respecté, basé sur des rôles bien définis
+__Moteur et référentiel QSOS__
 
+Le moteur QSOS consiste en une série d’outils pour valider, contrôler et publier les évaluations et les templates QSOS stockées dans le référentiel.
 
-# Annexe B : framework Drakkr
+Le référentiel est décomposé en deux dépôts Git dédiés aux stockage de deux d'évaluations et de templates :
 
-QSOS est un sous-projet de l'initiative Drakkr visant à construire un framework libre dédié la gouvernance open source au sein des entreprises et administrations.
+* le dépôt *Incoming* : réservé à la publication, au partage et à la manipulation d'évaluations et de templates par la communauté, il est accessible par tous via O3S et requiert uniquement la création d'un compte utilisateur dans l'application ;
 
-Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, Drakkr propose également d'autres méthodes et outils pour mettre en oeuvre une telle gouvernance.
+* le dépôt *Master* : dédié au stockage des évaluations et aux templates considérés comme de qualité et ayant été validés par un modérateur de la communauté QSOS.
 
-![Framework Drakkr](Images/drakkr-orga.png)
+Outre ces deux dépôts réservés aux documents produits et utilisés par la méthode QSOS, le projet utilise également un dépôt Git pour le développement de ses outils et un autre pour sa documentation.
 
-* __OSC__ (Open Source Cartouche) : sous-projet dédié à l'identification unique d'une version d'un logiciel open source ainsi qu'à la gestion des ses métadonnées ;
+La documentation est écrite au format Markdown^[<http://daringfireball.net/projects/markdown/>], utilisé comme format pivot par Pandoc^[<http://johnmacfarlane.net/pandoc/>] pour export aux formats PDF et HTML, et par Gitit^[<http://gitit.net>] pour le wiki du projet.
 
-* __ECOS__ (Évaluation des Coûts liés à l'adoption de logiciels Open Source) : sous-projet relatif à l'évaluation et au calcul du coût total de possession d'un logiciel open source ainsi qu'au retour sur investissement d'une migration ;
+En synthèse, voici un récapitulatif des différents dépôts Git du projet :
 
-* __FLOSC__ (Free/Libre Open Source Complexity) : sous-projet proposant une méthode et un outil d'évaluation de la complexité d'un logiciel open source ;
+------------------------------------------------------------------------------
+Dépôt                     Fonction
+------------------------  ----------------------------------------------------
+QSOS.git                  Outils et formats du projet
 
-* __SLIC__ (Software LIcense Comparator) : sous-projet dédié à la description formelle des licences open source et de leur compatibilités respectives ;
+QSOS-Incoming.git         Templates et évaluations en mode bac à sable
 
-* __SecureIT__ : sous-projet dédié à la gestion des alertes de sécurité dans les logiciels open source.
+QSOS-Master.git           Templates et évaluations validés par la communauté
 
-Consultez le site Web du projet Drakkr pour plus de détails : <http://www.drakkr.org>.
+Drakkr.git                Documentation de QSOS et des autres projets Drakkr^[Consultez l'annexe B pour plus de détails sur le framework Drakkr]
+------------------------------------------------------------------------------
+
+Reportez-vous au site Web du projet QSOS pour cloner ces différents dépôts.
+
+## Comment contribuer ?
+
+L'objectif du projet QSOS est de mutualiser l'effort de veille sur les logiciels open source. Il se veut donc résolument communautaire : plus grand est le nombres de contributeurs plus grands sont le nombre, la qualité et l'objectivité des évaluations.
+
+Vous pouvez contribuer au projet de plusieurs manières :
+
+* en créant ou en mettant à jour des templates et des évaluations ;
+
+* en traduisant les templates, les évaluation ou la documentation ;
+
+* en participant au développement des outils du projet ;
+
+* en faisant la promotion de la méthode et du projet.
+
+Reportez-vous au site Web du projet QSOS pour plus de détails sur la gouvernance de la communauté QSOS.
