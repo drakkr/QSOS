@@ -1,6 +1,6 @@
 % Tutoriel QSOS
 % ![Logo](../../../Method/fr/Images/QSOS.png)
-% Version 2.0 - 28/01/2013
+% Version 2.0 - 13/02/2013
 
 # Note de licence
 
@@ -14,6 +14,6 @@ Vous pouvez copier, redistribuer et/ou modifier ce document selon les termes de 
 ---------------------------------------------------------------------------
  Version   Date       Auteurs           Commentaires
 --------- ----------  ----------------- -----------------------------------
-  2.0      28/01/13   Raphaël Semeteys  Conception et rédaction initiales.
+  2.0      13/02/13   Raphaël Semeteys  Conception et rédaction initiales.
 --------------------------------------- -----------------------------------
 

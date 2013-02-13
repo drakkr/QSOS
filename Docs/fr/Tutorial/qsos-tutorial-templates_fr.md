@@ -2,7 +2,7 @@
 
 ## Généralités sur les templates
 
-Un template définit la structure ou la grille d'analyse d'une évaluation QSOS, il est constitué de critères répartis sous forme d'arbre selon plusieurs axes. 
+Un template définit la structure ou la grille d'analyse d'une évaluation QSOS. Il est constitué de critères répartis sous forme d'arbre selon plusieurs axes. 
 
 Les axe intitulés _Maturité_ et _Metadata_ sont imposés par la méthode QSOS. 
 
@@ -26,7 +26,7 @@ Attention cependant, la version minimale de FreeMind requise par QSOS est 0.9.0.
 
 Pour créer un nouveau template, il vous faut absolument partir de la souche correspondant à votre langue. 
 
-Ces souches respectent la convention de nommage suivante : `bootsrap_[langue].mm`. Ainsi, la souche française est `bootsrap_fr.mm`.
+Ces souches respectent la convention de nommage suivante : `bootstrap_[langue].mm`. Ainsi, la souche française est `bootstrap_fr.mm`.
 
 Elles sont publiées sur le site officiel du projet QSOS, à l'adresse suivante : __TODO__.
 
@@ -36,7 +36,7 @@ Une fois la souche téléchargée, ouvrez le document `.mm` avec FreeMind. Vous 
 
 Pour ajouter de nouveaux axes d'évaluation à votre template, il vous suffit d'ajouter et organiser des nœuds de manière hiérarchique, tout en respectant impérativement le formalisme suivant :
 
-* un nœud intermédiaire permet d'organiser et hiérarchiser vos critères, outre son titre, vous pouvez préciser sa description détaillée via un sous-nœud mis au format _Bubble_.
+* un nœud intermédiaire permet d'organiser et hiérarchiser vos critères, outre son titre, vous pouvez préciser sa description détaillée via un sous-nœud mis au format _Bulle_.
 
 ![Format _Bubble_ pour la description d'un nœud](Images/template-bubble_fr.png)
 
@@ -48,7 +48,7 @@ Pour ajouter de nouveaux axes d'évaluation à votre template, il vous suffit d'
 
 ![Formalisme de description des critères](Images/template-icons_fr.png)
 
-Libre à vous de créer et organiser les critères d'évaluation propres à une famille de logiciel. Le nœud principal de votre template doit être nommé selon cette famille, c'est ce nom qui identifie le template de manière unique.
+Libre à vous de créer et d'organiser les critères d'évaluation propres à une famille de logiciel. Le nœud principal de votre template doit être nommé selon cette famille, c'est ce nom qui identifie le template de manière unique.
 
 ![Préciser le nom du template](Images/template-name_fr.png)
 
@@ -88,7 +88,7 @@ Ceci nécessite de disposer d'un compte sur l'application O3S. Si vous n'en poss
 
 À partir de ce moment, votre template est utilisable par la communauté pour créer de nouvelles évaluations. Reportez-vous au chapitre [Créer une nouvelle évaluation](#créer-une-nouvelle-évaluation).
 
-Le template est automatiquement stocké dans le dépôt _Incoming_ du référentiel QSOS. Si il est considéré de bonne qualité, il sera validé par la communauté et déplacé dans le dépôt _Master_.
+Le template est automatiquement stocké dans le dépôt _Incoming_ du référentiel QSOS. S'il est considéré de bonne qualité, il sera validé par la communauté et déplacé dans le dépôt _Master_.
 
 Pour contribuer une nouvelle version de votre template, procédez de la même manière (en vérifiant de bien incrémenter la valeur du nœud _version_ de l'axe _Metadata_).
 
@@ -96,7 +96,7 @@ Pour contribuer une nouvelle version de votre template, procédez de la même ma
 
 Les templates déjà existants sont stockés dans le référentiel communautaire de QSOS. Ils sont regroupés dans deux dépôts Git distincts :
 
-* le dépôt *Incoming* : réservé à la publication, au partage et à la manipulation d'évaluations et de templates par la communauté, il est accessible par tous via O3S et ne requiert uniquement de créer un compte utilisateur dans l'application ;
+* le dépôt *Incoming* : réservé à la publication, au partage et à la manipulation d'évaluations et de templates par la communauté. Il est accessible par tous via O3S et seule la création d'un compte utilisateur dans l'application est nécessaire ;
 
 * le dépôt *Master* : dédié au stockage des évaluations et aux templates considérés comme de qualité et ayant été validés par un modérateur de la communauté QSOS.
 

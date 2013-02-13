@@ -1,6 +1,6 @@
 # Gérer les comparaisons
 
-La méthode QSOS a été conçue pour comparer différents de logiciels de même type, de manière à être à même de réaliser un choix. Cette comparaison entre évaluations de même template intègre le contexte de l'utilisateur sous la forme de pondérations pouvant être appliquées aux différents critères du template.
+La méthode QSOS a été conçue pour comparer différents logiciels de même type, de manière à être à même de réaliser un choix judicieux. Cette comparaison entre évaluations de même template intègre le contexte de l'utilisateur sous la forme de pondérations pouvant être appliquées aux différents critères du template.
 
 L'application Web O3S permet de réaliser des pondérations, des comparaisons et de les exporter dans différents formats.
 
@@ -162,7 +162,7 @@ La présentation est composée de différents types de slides :
 
 * des slides relatifs au périmètre de l'étude comparative réalisée : liste des solutions analysées, présentation du template d'analyse (cartes heuristiques FreeMind et texte explicatif pour chacun des axes principaux du template) ;
 
-* pour chaque solution analysée, des slides détaillant sont l'analyse (présentation du projet, cartes heuristiques et texte à compléter pour chacun des axes principaux de l'évaluation) ;
+* pour chaque solution analysée, des slides détaillant son analyse (présentation du projet, cartes heuristiques et texte à compléter pour chacun des axes principaux de l'évaluation) ;
 
 * des slides relatifs à la comparaison de ces différentes solutions (graphiques de type radar et texte à compléter pour chacun des axes principaux de l'évaluation, quadrant QSOS et texte à compléter) ;
 
@@ -194,7 +194,7 @@ Le rapport est composé de différents chapitres :
 
 * _Crédits_ : citation des auteurs des évaluations utilisées pour générer le squelette du document.
 
-Il s'agit d'un squelette pouvant être utilisé pour produire un document final en saisissant votre analyse et votre synthèse dans les zones de texte à compléter. Elle sont repérée dans le document via un format de type _Stabylo_.
+Il s'agit d'un squelette pouvant être utilisé pour produire un document final en saisissant votre analyse et votre synthèse dans les zones de texte à compléter. Elle sont repérée dans le document via un format de type _surligné_.
 
 Notez, qu'afin de garantir l'aspect communautaire de l'effort fourni pour réaliser ce document d'export (création et modification du template, création et modification des évaluations, développement et maintenance des outils _XulEditor_ et O3S), ce dernier vous est distribué par le projet QSOS selon les termes de la licence _GNU Free Documentation License_. 
 

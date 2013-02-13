@@ -20,7 +20,7 @@ Si le premier mode d'installation est plus simple, le deuxième offre l'avantage
 
 #### Installer _XulEditor_ en tant qu'extension Firefox  
 
-Il vous suffit d'ouvrir le fichier d'installation^[<http://www.qsos.org/tools/xuleditor-firefox-2.0.xpi>] depuis votre navigateur Firefox^[Au moment de la rédaction de ce tutoriel, la version la plus à jour de _XulEditor_ est la 2.0, pensez à installer la version la plus à jour au moment où vous lisez ce tutoriel.].
+Il vous suffit d'ouvrir le fichier d'installation^[<http://www.qsos.org/tools/xuleditor-firefox-2.0.xpi>] depuis votre navigateur Firefox^[Au moment de la rédaction de ce tutoriel, la version la plus à jour de _XulEditor_ est la 2.0. Pensez à installer la version la plus à jour au moment où vous lisez ce tutoriel.].
 
 Une fois l'extension installée, elle peut être lancée à partir du menu « _Outils/Editeur QSOS_ » du navigateur _Firefox_.
 
@@ -30,7 +30,7 @@ Pour pouvoir utiliser _XulEditor_ en tant qu'application autonome vous devez avo
 
 Récupérez ensuite l'archive de l'application^[<http://www.qsos.org/tools/xuleditor-application-2.0.zip>] et décompressez là où vous le désirez.
 
-L'application _XulEditor_ peut ensuite être lancé via les scripts `xuleditor` ou `xuleditor.bat`en fonction de votre système d'exploitation.
+L'application _XulEditor_ peut ensuite être lancé via les scripts `xuleditor` ou `xuleditor.bat` en fonction de votre système d'exploitation.
 
 ### Utiliser _XulEditor_
 
@@ -46,7 +46,7 @@ Vous pouvez filtrer les templates du référentiel en fonction du dépôt concer
 
 Une fois le template sélectionné, vous pouvez alors commencer à saisir votre évaluation en complétant les champs des différents onglets.
 
-L'onglet _Général_ contient les informations relatives à logiciel évalué (nom, version, licence principale, etc.) et à l'évaluation elle-même (template, auteurs).
+L'onglet _Général_ contient les informations relatives au logiciel évalué (nom, version, licence principale, etc.) et à l'évaluation elle-même (template, auteurs).
 
 ![Onglet _Général_ de _XulEditor_](Images/xuleditor-tab-general_fr.png)
 
@@ -60,13 +60,13 @@ L'onglet _Critères_ vous permet de naviguer dans l'arbre des critères d'évalu
 
 ![Onglet _Critères_ de _XulEditor_](Images/xuleditor-tab-criteria_fr.png)
 
-Pensez à motiver vos scores dans le champ _Commentaires_ cela rend votre évaluation plus pertinente, plus utile et ainsi augmente ses chances d'être rapidement validée par la communauté QSOS.
+Pensez à motiver vos scores dans le champ _Commentaires_. Cela rend votre évaluation plus pertinente, plus utile et augmente ainsi ses chances d'être rapidement validée par la communauté QSOS.
 
 L'onglet _Graphe_ permet de naviguer de manière graphique dans l'arbre des critères, sous forme de radar où vous pouvez cliquer sur les nœuds pour en voir les sous-critères ou naviguer via le fil d'Ariane.
 
 ![Onglet _Graphe_ de _XulEditor_](Images/xuleditor-tab-graph_fr.png)
 
-Les critères colorés en rouge sont ceux n'ayant pas encore été évalués. Cela vous permet de rapidement identifier où compléter votre évaluation.
+Les critères colorés en rouge sont ceux n'ayant pas encore été évalués. Cela vous permet de rapidement identifier les éléments manquants pour compléter votre évaluation.
 
 ### Sauvegarder une évaluation
 
@@ -102,7 +102,7 @@ Depuis l'onglet _Fichier_, cliquez sur le bouton _Evaluation distante_. Vous pou
 
 Une fois l'évaluation sélectionnée, vous pouvez alors la manipuler et la modifier dans _XulEditor_.
 
-Vous ne pouvez écraser une évaluation qui n'est pas la vôtre, le référentiel ne l'autorise pas mais vous indique qui est l'utilisateur qui a contribué l'évaluation. Vous pouvez alors le contacter.
+Vous ne pouvez écraser une évaluation qui n'est pas la vôtre. Le référentiel ne l'autorise pas mais vous indique qui est l'utilisateur qui a contribué l'évaluation. Vous pouvez alors le contacter.
 
 ![Tentative d'écrasement d'une évaluation](Images/xuleditor-writeremote-error_fr.png)
 
@@ -110,7 +110,7 @@ Si jamais vous n'arrivez pas à contacter cet utilisateur ou que vous restez san
 
 ## Appliquer une nouvelle version de template
 
-_XulEditor_ vous permet de mettre à jour le template utilisé par une évaluation, cela permet d'injecter des évolutions apportées au niveau du template mais aussi de faciliter la traduction de l'évaluation (en appliquant un template déjà traduit).
+_XulEditor_ vous permet de mettre à jour le template utilisé par une évaluation. Cela permet d'injecter des évolutions apportées au niveau du template mais aussi de faciliter la traduction de l'évaluation (en appliquant un template déjà traduit).
 
 Pour réaliser cette opération, vous devez tout d'abord ouvrir l'évaluation à mettre à jour (boutons _Evaluation locale_ ou _Evaluation distante_ de l'onglet _Fichier_). Sélectionnez ensuite la nouvelle version de template à appliquer, qu'elle provienne de votre disque dur (bouton _Template local_) ou du référentiel QSOS. C'est ce dernier cas qui est décrit ici.
 
@@ -128,7 +128,7 @@ Si vous sélectionnez un template de type différent de celui initialement utili
 
 Si le nouveau template est dans une langue différente de celle du template initial, _XulEditor_ vous demande confirmation avant de modifier votre évaluation.
 
-![Demande de confirmation si le template est de langue différente](Images/xuleditor-template-confirm_fr.png)
+![Demande de confirmation de la modification](Images/xuleditor-template-confirm_fr.png)
 
 Et dans tous les cas, avant de modifier votre évaluation, _XulEditor_ vous demande confirmation.
 
@@ -136,7 +136,7 @@ Notez qu'il n'est pas interdit d'appliquer un template de version plus ancienne 
 
 ## Visualiser une évaluation en mode Web
 
-L'application Web O3S permet, entre autres possibilités de visualiser les évaluations du référentiel QSOS en mode Web. Cette application offre de nombreuses autres fonctionnalités, liées aux comparaisons QSOS. Reportez-vous au chapitre [Gérer les comparaisons](#gérer-les-comparaisons) pour une description plus détaillée d'O3S.
+L'application Web O3S permet, entre autres possibilités, de visualiser les évaluations du référentiel QSOS en mode Web. Cette application offre de nombreuses autres fonctionnalités, liées aux comparaisons QSOS. Reportez-vous au chapitre [Gérer les comparaisons](#gérer-les-comparaisons) pour une description plus détaillée d'O3S.
 
 Considérons ici que vous avez navigué dans O3S jusqu'à l'évaluation que vous désirer visualiser en mode Web. 
 
@@ -180,7 +180,7 @@ Cette page vous permet de réaliser les actions suivantes :
 
 * sauvegarder le fichier `.mm` sur votre dur, en cliquant sur le titre de la carte heuristique.
 
-Bien qu'il s'agisse d'un fichier au format FreeMind, notez bien que vous ne visualisez et sauvegardez pas un template QSOS mais bien une représentation sous forme de carte heuristique d'une évaluation. 
+Bien qu'il s'agisse d'un fichier au format FreeMind, notez bien que vous ne visualisez pas et ne sauvegardez pas un template QSOS mais bien une représentation sous forme de carte heuristique d'une évaluation. 
 
 Notez que ce type de visualisation requiert que votre navigateur support le format Flash.
 
