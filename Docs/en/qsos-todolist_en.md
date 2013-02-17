@@ -1,6 +1,6 @@
 % QSOS TODO list
 % ![Logo](Images/QSOS.png)
-% Last update: 13/01/2013
+% Last update: 18/02/2013
 
 # QSOS Backend
 
@@ -21,30 +21,18 @@
 * Meta: most of documentation should be in English, some of it in French also
 
 * Method:
-    + Update the text itself
-        + Resize images
+    + Resize images
     + Translate it in English
-    + Split in smaller files for Gitit publication and modify makefile to merge them in one document
 
 * Installation guide(s) of QSOS tools
     + XulEditor: document installation as a xulrunner application (`xulrunner -install-app /path/to/xuleditor/`) and ideally make `.exe`, `.rpm` and `.deb` packages
     + O3S
 
 * QSOS Tutorial
-    + Review french version
-    + Translate in english
+    + Translate in English
 
 * QSOS Maintainer Guide
-    + Impacts of a QSOS format modification (XSD, XSLT, tools)
-    + Impacts of the Maturity axis of criteria (XML documents of reference: `criteria-maturity_*.xml`, XulEditor's external and internal XSLT, template bootstraping, method itself)
-    + How the project manages version; method, formats, documentation, templates, evaluations...
-
-* QSOS translation and localization guide (only in English)
-    + Translation of the method, XML files (`criteria-maturity_*.xml`, XSLT)
-    + Translation of tools gui (O3S, XulEditor)
-    + Add a new supported language in tools (O3S, XulEditor)
-    + Documentation and website
-    + Translate templates and evaluations (try to do some automation here? Google translate?)
+    + Finish redaction
 
 * FAQ, Tips and Tricks, Best pratices...
     + Common probems: template -> evaluation (errors, `I have to Maturity sections`, lost metadata...), Remote Save (XSD errors, encoding, credentials...)

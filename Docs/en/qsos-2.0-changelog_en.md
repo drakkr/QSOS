@@ -1,6 +1,6 @@
 % QSOS 2.0 Changelog
 % ![Logo](Images/QSOS.png)
-% Last update: 13/01/2013
+% Last update: 18/02/2013
 
 # QSOS Formats
 * XSD for QSOS format
@@ -23,3 +23,11 @@
 * Better GUI internationalization, icluding evaluations filtering on language
 * Evaluations can now be visualized in HTML and Freemind format
 * Comparisons can now be visualized on a QSOS Quadrant and also be exported to OpenDocument formats (ODS, ODP and ODT)
+
+# Documentation
+* New format and mechanism adopted
+    + QSOS documentation is now written in Markdown/Pandoc syntax
+    + Two export format are used: PDF and Gitit wiki pages
+    + Export documents are built with `make`
+* QSOS Method migrated to Markdown/Pandoc
+* New document: QSOS Tutorial
