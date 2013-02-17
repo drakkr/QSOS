@@ -26,7 +26,7 @@ Attention cependant, la version minimale de FreeMind requise par QSOS est 0.9.0.
 
 Pour créer un nouveau template, il vous faut absolument partir de la souche correspondant à votre langue. 
 
-Ces souches respectent la convention de nommage suivante : `bootstrap_[langue].mm`. Ainsi, la souche française est `bootstrap_fr.mm`.
+Ces souches respectent la convention de nommage suivante : `template_[langue].mm`. Ainsi, la souche française est `template_fr.mm`.
 
 Elles sont publiées sur le site officiel du projet QSOS, à l'adresse suivante : __TODO__.
 
