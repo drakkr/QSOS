@@ -1,2 +1,4 @@
 # Ignore PDF files
 **/*.pdf
+# Ignore exports
+**/dist/

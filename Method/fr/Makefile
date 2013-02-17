@@ -1,12 +1,46 @@
 # Makefile for QSOS documentation
 
-all: doc-odt doc-pdf doc-html
+DOC=qsos
 
-doc-odt:
-	pandoc --toc -o qsos-2.0_fr.odt qsos-head_fr.md qsos-manifesto_fr.md qsos-changelog_fr.md qsos-intro_fr.md qsos-process_fr.md qsos-step1_fr.md qsos-step2_fr.md qsos-step3_fr.md qsos-step4_fr.md qsos-community_fr.md qsos-appendixA_fr.md qsos-appendixB_fr.md
+VERSION=2.0
+
+LANG=fr
+
+TITLE=Méthode de Qualification et Sélection de logiciels Open Source (QSOS)
+
+#List of edocs to be included in Gitit export
+PAGES=qsos-intro_$(LANG).md qsos-process_$(LANG).md qsos-step1_$(LANG).md qsos-step2_$(LANG).md qsos-step3_$(LANG).md qsos-step4_$(LANG).md qsos-community_$(LANG).md qsos-appendixA_$(LANG).md
+
+#List of edocs to be included in other exports
+CHAPTERS=qsos-head_$(LANG).md qsos-manifesto_$(LANG).md qsos-changelog_$(LANG).md  $(PAGES) qsos-appendixB_$(LANG).md
+
+DOCNAME=$(DOC)-$(VERSION)_$(LANG)
 
 doc-pdf:
-	pandoc -N --toc --template=qsos-template_fr.latex --variable lang=french -o qsos-2.0_fr.pdf qsos-head_fr.md qsos-manifesto_fr.md qsos-changelog_fr.md qsos-intro_fr.md qsos-process_fr.md qsos-step1_fr.md qsos-step2_fr.md qsos-step3_fr.md qsos-step4_fr.md qsos-community_fr.md qsos-appendixA_fr.md qsos-appendixB_fr.md
+	mkdir -p dist
+	pandoc -N --toc --template=qsos-template_$(LANG).latex --variable lang=french -o dist/$(DOCNAME).pdf $(CHAPTERS)
+
+doc-odt:
+	mkdir -p dist
+	pandoc --toc -o dist/$(DOCNAME).odt $(CHAPTERS)
 
 doc-html:
-	pandoc --self-contained -o qsos-2.0_fr.html qsos-head_fr.md qsos-manifesto_fr.md qsos-changelog_fr.md qsos-intro_fr.md qsos-process_fr.md qsos-step1_fr.md qsos-step2_fr.md qsos-step3_fr.md qsos-step4_fr.md qsos-community_fr.md qsos-appendixA_fr.md qsos-appendixB_fr.md
+	mkdir -p dist
+	pandoc --self-contained -o dist/$(DOCNAME).html $(CHAPTERS)
+
+gitit:
+	mkdir -p dist
+	cp -R Images dist/.
+	#Create summary Gitit page
+	echo '---' > dist/$(DOCNAME).page
+	echo 'title: $(TITLE)' >> dist/$(DOCNAME).page
+	echo '...' >> dist/$(DOCNAME).page
+	echo -e '\n' >> dist/$(DOCNAME).page
+
+	$(foreach PAGE, $(PAGES), echo -e "[$(subst # ,,$(shell head -1 $(PAGE)))]($(basename $(PAGE))) \n" >> dist/$(DOCNAME).page ;)
+
+	#Create Gitit pages with titles
+	$(foreach PAGE, $(PAGES), echo -e "---\ntitle: $(subst # ,,$(shell head -1 $(PAGE)))\n...\n" > dist/$(basename $(PAGE)).page ; cat $(PAGE) >> dist/$(basename $(PAGE)).page ;)
+
+clean:
+	rm -Rf dist/
