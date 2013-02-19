@@ -8,7 +8,27 @@ Copyright © 2013 Atos.
 
 Permission is granted to copy, distribute and/or modify this document under the terms the GNU Free Documentation License v1.2 published by the Free Software Foundation with no Invariant section, no Front-Cover Texts, and no Back-Cover Texts.
 
-A copy of the license is available on this page <http://www.gnu.org/copyleft/fdl.html>.
+A copy of the license is available at <http://www.gnu.org/copyleft/fdl.html>.
+
+# Changelog
+
+---------------------------------------------------------------------------
+ Version   Date       Auteurs           Commentaires
+--------- ----------  ----------------- -----------------------------------
+  2.0      18/02/13   Raphaël Semeteys  Initial version.
+--------------------------------------- -----------------------------------
+
+# Introduction
+
+This document aims to give directions and guidance regrading maintenance of the QSOS project itself. We do not consider here maintenance of data components like QSOS templates or evaluation which are managed in the dedicated Git repositories _QSOS-Master.git_ and _QSOS-Incomming.git_. 
+
+Components discussed here are called core components and are managed in the _QSOS.git_: 
+
+* Documentation related to the QSOS project itself: method, tutorial, roadmap...
+
+* QSOS formats and related XML documents like XSD schemas, XSL transformations...
+
+* Tools developped to help use the QSOS method, manipulate its formats and manage data components.
 
 # Version naming convention
 
@@ -18,21 +38,37 @@ Versions of QSOS core components (documents, formats and tools) follow the X.Y p
 
 * Y is a number representing a minor subversion of the major version.
 
-Majors versions are generally set by the QSOS format itself (`.qsos file format`) since major changes in this format implies modification of almost every other component of the project.
+Majors versions are generally set by the QSOS format itself (`.qsos` file format) since major changes on this format imply modification of almost every other component of the project.
 
 So the rule is that when the QSOS format changes its major version, every other component should also change to this new major version.
 
 Impacts of a minor version is generally restricted to a specific component. Therefore QSOS components don't necesseraly share minor versions.
 
-# Modification of QSOS components
+# The QSOS.git repository
 
-TODO: 
+As explained before, QSOS.git should not be mistaking with repositories for QSOS data components. Its purpose is to store and manage maintenance of QSOS core components.
 
-* Explain difference between QSOS core components and QSOS data (templates, evaluations and comparisons)
-* Introduce QSOS.git and explain its structure (and differences with QSOS-Master.git and QSOS-Incomming.git)
-* Give links to actual repository (on GitHub ?)
+![QSOS.git structure](Images/qsos-git-repo.png)
 
-## Modification of QSOS documents
+The QSOS.git repository is structured like this:
+
+* Docs: folder for QSOS documentation, split by language.
+
+* Method: folder containing the QSOS method itself, split by language.
+
+* Tools: folder for QSOS tools and format.
+
+TODO: Give links to actual repository (on GitHub ?)
+
+# Modification of QSOS core components
+
+## Modification of QSOS method and documents
+
+In QSOS, documents are considered like source code. They are coded in Markdown^[<http://daringfireball.net/projects/markdown/> with Pandoc extensions] syntax, exported by Pandoc^[<http://johnmacfarlane.net/pandoc/>] in several formats and built by Make^[<http://www.gnu.org/software/make/>]. 
+
+The source documents are called _edocs_ (because _edoc_ is juste like _code_, when you read from right to left).
+
+Let's use the QSOS method itself to illustrate how to manipulate edocs.
 
 TODO:
 
@@ -57,7 +93,7 @@ TODO:
 * Briefly introduce Mozilla's technical platform and redirect to appropriate links
 * Detail how to build and publish a new version of XulEditor (Makefile, packaging, publication on the Web)
 
-# Impact of some modifications
+# Impact analysis of some modifications
 
 ## Modification of the QSOS method
 
@@ -73,15 +109,15 @@ TODO:
 
 # Translation and localization
 
-QSOS has been designed as a international project. Therefore everything is in place to ease its tranbslation a a new language.
+QSOS has been designed as a international project. Therefore everything is in place to ease its translation in a new language.
 
-This section will guide you through the different artifacts to be translated and the appropriate techniques. Since a good example is often better than a lot of theory, let's consider translateing QSOS in English.
+This section will guide you through the different components to be translated and the related techniques. Since a good example is often better than a lot of theory, let's consider translateing QSOS in English.
 
 ## Prerequisites
 
-You need to determine what is the ISO 639-1^[<http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>] language code to use. In our example it is _en_.
+You need to determine what ISO 639-1^[<http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>] language code to use. In our example it is _en_.
 
-For some translation techniques you'll also need thie ISO 3166-1 country code^[<http://en.wikipedia.org/wiki/ISO_3166-1>]. In our exemple let'es use _US_, which gives us a full localization name of _en-US_.
+For some translation techniques you'll also need the ISO 3166-1 country code^[<http://en.wikipedia.org/wiki/ISO_3166-1>]. In our exemple let's use _US_, which gives us a full localization name of _en-US_.
 
 These codes will be used to identify the English translation files.
 
@@ -103,13 +139,13 @@ Here is how to proceed to create a new translation:
 
 * Tanslate the LaTeX template (here _qsos-template_en.latex_): you probably only need to translate line 42.
 
-* Adapt the _Makefile_  file to reference your translated files, you probably only need to translate the _LANG_ and _TITLE_ parameters.
+* Adapt the _Makefile_  file to reference your translated files, you probably only need to modify the _LANG_ and _TITLE_ parameters.
 
-You should now be able to export your traslanted version of the method in PDF and Gitit formats with `make`.
+You should now be able to export your translated version of the method in PDF and Gitit formats with `make`.
 
 ## Translation of other QSOS documents
 
-Proceed as explained above for the Method to translate the other QSOS documents, for instance:
+Proceed as explained above for the Method to translate other QSOS documents, for instance:
 
 * QSOS Tutorial: in _Docs/_en_/Tutorial_ folder.
 
@@ -117,7 +153,7 @@ Proceed as explained above for the Method to translate the other QSOS documents,
 
 ## Translation of QSOS website
 
-QSOS Website is based on the Drakkr^[Visit <http://www.drakkr.org> for further details] project Web infrastructure. It is based on two systems:
+QSOS Website is based on the Drakkr^[Visit <http://www.drakkr.org> for further details] project Web infrastructure:
 
 * Dynamic pages: based on the open source Content Management System _WordPress_^[<http://wordpress.org>].
 
@@ -137,7 +173,7 @@ TODO: complete with repo structure and description on how to export edocs as pag
 
 ### Template bootstraps
 
-The bootstap templates to create new QSOS template are stored in the QSOS.git repository, in the _Tools/o3s/formats/xml/template_ folder. Duplicated an existinf `.mm` file and rename it appopriatly (here _template_en.mm_).
+The bootstraps to create new QSOS templates are stored in the QSOS.git repository, in the _Tools/o3s/formats/xml/template_ folder. Duplicated an existinf `.mm` file and rename it appopriatly (here _template_en.mm_).
 
 Use FreeMind^[<http://freemind.sourceforge.net>] to open and translate your file:
 
