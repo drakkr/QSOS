@@ -2,15 +2,6 @@
 <RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
          xmlns:NC="http://home.netscape.com/NC-rdf#"
          xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <RDF:Description RDF:about="rdf:#$PNYy83"
-                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
-                   em:minVersion="3.5"
-                   em:maxVersion="6.*"
-                   em:updateLink="http://www.qsos.org/tools/xuleditor-firefox-1.1.xpi"
-                   em:updateHash="sha1:c34e8e315985b046d997703fa570ae0d7a35cb11" />
-  <RDF:Seq RDF:about="rdf:#$LNYy83">
-    <RDF:li RDF:resource="rdf:#$MNYy83"/>
-  </RDF:Seq>
   <RDF:Description RDF:about="urn:mozilla:extension:xuleditor@qsos.org"
                    em:version="1.1"
                    em:updateLink="http://www.qsos.org/tools/xuleditor-firefox-1.1.xpi"
@@ -22,4 +13,13 @@
                    em:version="1.1">
     <em:targetApplication RDF:resource="rdf:#$PNYy83"/>
   </RDF:Description>
+  <RDF:Seq RDF:about="rdf:#$LNYy83">
+    <RDF:li RDF:resource="rdf:#$MNYy83"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf:#$PNYy83"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="3.5"
+                   em:maxVersion="6.*"
+                   em:updateLink="http://www.qsos.org/tools/xuleditor-firefox-1.1.xpi"
+                   em:updateHash="sha1:c34e8e315985b046d997703fa570ae0d7a35cb11" />
 </RDF:RDF>
