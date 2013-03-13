@@ -11,4 +11,4 @@ Vous pouvez copier, redistribuer et/ou modifier ce document selon les termes de 
 Une copie de la licence en langue anglaise est consultable sur le site <http://www.gnu.org/copyleft/fdl.html>, une traduction française non officielle est consultable sur le site Web de Wikipedia (<http://fr.wikipedia.org/wiki/FDL>). 
 La licence s'applique également aux documents générés par l'application de la méthode, à savoir les grilles fonctionnelles et les fiches d'évaluation présentées dans la section « Évaluer ».
 
-L'edoc source de cet export est disponible à l'adresse suivante : <https://github.com/drakkr/QSOS/tree/master/Method/fr>
+L'edoc^[<http://semeteys.org/wiki/edoc>] source de cet export est disponible à l'adresse suivante : <https://github.com/drakkr/QSOS/tree/master/Method/fr>.
