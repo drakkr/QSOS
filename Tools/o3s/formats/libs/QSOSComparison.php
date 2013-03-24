@@ -51,8 +51,8 @@ class QSOSComparison {
     //$this->subtitle = "";
     $this->criteria = $criteria; //Used for Radar navigation
 
-    include("../../app/config.php");
-    include("../../app/lang.php");
+    include("../app/config.php");
+    include("../app/lang.php");
     $this->lang = $lang;
     $this->msg = $msg;
     $this->temp = $temp;
@@ -192,7 +192,7 @@ class QSOSComparison {
   }
 
   function exportFreeMind($id, $flash=false) {
-    include("../../app/config.php");
+    include("../app/config.php");
 
     $IdDB = mysql_connect($db_host ,$db_user, $db_pwd);
     mysql_select_db($db_db);
