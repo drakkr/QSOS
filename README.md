@@ -1,4 +1,4 @@
-![Logo](Method/en/Images/QSOS.png)
+![Logo](Method/fr/Images/QSOS-small.png)
 
 QSOS repository (Method, Formats, Tools)
 
