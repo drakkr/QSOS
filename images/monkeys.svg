@@ -5999,7 +5999,7 @@
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient2553-2-9"
-       id="radialGradient4462"
+       id="radialGradient4475"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(1,0,0,3.385709,-27.52953,-756.5478)"
        cx="308.68488"
@@ -6010,7 +6010,7 @@
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient2553-2-6"
-       id="radialGradient4464"
+       id="radialGradient4477"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(1,0,0,3.385709,-27.52953,-756.5478)"
        cx="308.68488"
@@ -6021,9 +6021,95 @@
     <radialGradient
        inkscape:collect="always"
        xlink:href="#linearGradient2553-2"
-       id="radialGradient4466"
+       id="radialGradient4483"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(1,0,0,3.385709,-27.52953,-756.5478)"
+       cx="308.68488"
+       cy="317.48871"
+       fx="308.68488"
+       fy="317.48871"
+       r="1.779955" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2049-9"
+       id="linearGradient4611"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.163179,0,0,0.795529,-44.7853,39.04212)"
+       x1="514.43646"
+       y1="539.92297"
+       x2="375.60913"
+       y2="104.11205" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient8457-7"
+       id="linearGradient4613"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.163179,0,0,0.795529,39.06212,-56.46157)"
+       x1="678.24976"
+       y1="492.60547"
+       x2="184.31172"
+       y2="379.40228" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2553-2"
+       id="radialGradient4615"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,3.124938,-27.52953,-698.0498)"
+       cx="304.43842"
+       cy="328.92148"
+       fx="304.43842"
+       fy="328.92148"
+       r="5.5339451" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2553-2"
+       id="radialGradient4617"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,3.385709,-27.52953,-756.5478)"
+       cx="308.68488"
+       cy="317.48871"
+       fx="308.68488"
+       fy="317.48871"
+       r="1.779955" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2553-2"
+       id="radialGradient4619"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,3.385709,0,-757.4358)"
+       cx="308.68488"
+       cy="317.48871"
+       fx="308.68488"
+       fy="317.48871"
+       r="1.779955" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2553-2"
+       id="radialGradient4621"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,3.385709,0,-757.4358)"
+       cx="308.68488"
+       cy="317.48871"
+       fx="308.68488"
+       fy="317.48871"
+       r="1.779955" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2553-2"
+       id="radialGradient4623"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,3.385709,0,-757.4358)"
+       cx="308.68488"
+       cy="317.48871"
+       fx="308.68488"
+       fy="317.48871"
+       r="1.779955" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient2553-2"
+       id="radialGradient4625"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,3.385709,0,-757.4358)"
        cx="308.68488"
        cy="317.48871"
        fx="308.68488"
@@ -6040,9 +6126,9 @@
      objecttolerance="10"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.82"
+     inkscape:zoom="1.75"
      inkscape:cx="375"
-     inkscape:cy="728.03799"
+     inkscape:cy="902.17768"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -6068,8 +6154,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <g
-       id="g10481"
-       transform="matrix(0.60968634,0,0,0.60968634,-12.773385,133.48115)"
+       id="g4627"
        inkscape:export-filename="/home/raph/Drakkr/QSOS/gh-pages/QSOS/images/monkey-iwazaru-learn.png"
        inkscape:export-xdpi="100"
        inkscape:export-ydpi="100">
@@ -6077,9 +6162,9 @@
          inkscape:transform-center-y="119.74829"
          inkscape:transform-center-x="110.17485"
          id="g2102-5"
-         transform="matrix(0.25124811,-0.30293072,0.30293072,0.25124811,-50.183845,234.96059)">
+         transform="matrix(0.11809517,-0.16074578,0.14238775,0.13332116,25.849604,134.97788)">
         <rect
-           style="fill:url(#linearGradient10609);fill-opacity:1;stroke:url(#linearGradient10611);stroke-width:1.971995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker-start:none;marker-mid:none;marker-end:none;visibility:visible"
+           style="fill:url(#linearGradient4611);fill-opacity:1;stroke:url(#linearGradient4613);stroke-width:1.971995;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker-start:none;marker-mid:none;marker-end:none;visibility:visible"
            id="rect1288-3"
            width="545.75372"
            height="105.23499"
@@ -6095,12 +6180,12 @@
              id="g1944-9">
             <path
                inkscape:connector-curvature="0"
-               style="fill:url(#radialGradient10613);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+               style="fill:url(#radialGradient4615);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
                d="m 273.37494,314.51631 7.06789,30.58647"
                id="path2382-5" />
             <path
                inkscape:connector-curvature="0"
-               style="fill:url(#radialGradient4466);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+               style="fill:url(#radialGradient4617);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
                d="m 280.17539,313.15036 1.95991,10.45282"
                id="path2384-5"
                inkscape:tile-w="3.5599100"
@@ -6110,7 +6195,7 @@
             <use
                height="744.09448"
                width="1052.3622"
-               style="fill:url(#radialGradient10617);fill-opacity:1"
+               style="fill:url(#radialGradient4619);fill-opacity:1"
                x="0"
                y="0"
                inkscape:tiled-clone-of="#path2384-5"
@@ -6119,7 +6204,7 @@
             <use
                height="744.09448"
                width="1052.3622"
-               style="fill:url(#radialGradient10619);fill-opacity:1"
+               style="fill:url(#radialGradient4621);fill-opacity:1"
                x="0"
                y="0"
                inkscape:tiled-clone-of="#path2384-5"
@@ -6129,7 +6214,7 @@
             <use
                height="744.09448"
                width="1052.3622"
-               style="fill:url(#radialGradient10621);fill-opacity:1"
+               style="fill:url(#radialGradient4623);fill-opacity:1"
                x="0"
                y="0"
                inkscape:tiled-clone-of="#path2384-5"
@@ -6139,7 +6224,7 @@
             <use
                height="744.09448"
                width="1052.3622"
-               style="fill:url(#radialGradient10623);fill-opacity:1"
+               style="fill:url(#radialGradient4625);fill-opacity:1"
                x="0"
                y="0"
                inkscape:tiled-clone-of="#path2384-5"
@@ -6647,6 +6732,7 @@
         </g>
       </g>
       <g
+         transform="matrix(0.47003405,0,0,0.53063547,50.009149,9.728028)"
          id="g10201">
         <g
            id="g4514"
@@ -6907,22 +6993,22 @@
         </g>
       </g>
       <text
-         transform="matrix(0.66281571,-0.74878257,0.74878257,0.66281571,0,0)"
+         transform="matrix(0.62382003,-0.7955898,0.70472916,0.70424906,0,0)"
          sodipodi:linespacing="125%"
          id="text10055"
-         y="196.207"
-         x="57.681183"
-         style="font-size:40.98764038px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#864318;fill-opacity:1;stroke:#864318;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Arial;-inkscape-font-specification:Arial"
+         y="143.64799"
+         x="55.55994"
+         style="font-size:20.46990013px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#864318;fill-opacity:1;stroke:#864318;stroke-width:0.24970821;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Arial;-inkscape-font-specification:Arial"
          xml:space="preserve"><tspan
-           y="196.207"
-           x="57.681183"
-           style="font-size:28.69134903px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#864318;fill-opacity:1;stroke:#864318;stroke-width:0.5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Arial;-inkscape-font-specification:Arial"
+           y="143.64799"
+           x="55.55994"
+           style="font-size:14.3289299px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#864318;fill-opacity:1;stroke:#864318;stroke-width:0.24970821;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Arial;-inkscape-font-specification:Arial"
            id="tspan10059"
            sodipodi:role="line">LEARN</tspan></text>
     </g>
     <g
        id="g10625"
-       transform="matrix(0.60968634,0,0,0.60968634,5.8146132,133.48115)"
+       transform="matrix(0.47003405,0,0,0.53063547,64.339455,9.728028)"
        inkscape:export-filename="/home/raph/Drakkr/QSOS/gh-pages/QSOS/images/monkey-kikazaru-use.png"
        inkscape:export-xdpi="100"
        inkscape:export-ydpi="100">
@@ -6953,7 +7039,7 @@
                id="path2382-5-6" />
             <path
                inkscape:connector-curvature="0"
-               style="fill:url(#radialGradient4464);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+               style="fill:url(#radialGradient4477);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
                d="m 280.17539,313.15036 1.95991,10.45282"
                id="path2384-5-8"
                inkscape:tile-w="3.5599100"
@@ -7755,7 +7841,7 @@
     </g>
     <g
        id="g10765"
-       transform="matrix(0.60968634,0,0,0.60968634,16.223892,133.48115)"
+       transform="matrix(0.47003405,0,0,0.53063547,72.364426,9.728028)"
        inkscape:export-filename="/home/raph/Drakkr/QSOS/gh-pages/QSOS/images/monkey-mizaru-share.png"
        inkscape:export-xdpi="100"
        inkscape:export-ydpi="100">
@@ -7793,7 +7879,7 @@
                  inkscape:tile-w="3.5599100"
                  id="path2384-5-7"
                  d="m 280.17539,313.15036 1.95991,10.45282"
-                 style="fill:url(#radialGradient4462);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
+                 style="fill:url(#radialGradient4475);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.60000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1"
                  inkscape:connector-curvature="0" />
               <use
                  id="use6736-5-5"

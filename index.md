@@ -24,10 +24,18 @@ Jump directly to the _Open Source Selection Software_ portal (O3S):
 </ul>
 
 ### But... what is QSOS anyway?
-
+  
 QSOS is a free project aiming to mutualize and capitalize technological watch on open source components and projects.
 
 It is part of the [drakkr](http://www.drakkr.org) framework for open source governance.
+
+<br/>  
+<div>
+  <a href="Method.html"> <img src="/images/monkey-iwazaru-learn.png"/> </a> 
+  <a href="Tools.html"> <img src="/images/monkey-kikazaru-use.png"/> </a> 
+  <a href="Community.html"> <img src="/images/monkey-mizaru-share.png"/> </a>  
+</div>
+<br/>  
 
 It is composed of:
 
