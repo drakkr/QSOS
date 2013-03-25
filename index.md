@@ -31,9 +31,9 @@ It is part of the [drakkr](http://www.drakkr.org) framework for open source gove
 
 <br/>  
 <div>
-  <a href="Method.html"> <img src="/images/monkey-iwazaru-learn.png"/> </a> 
-  <a href="Tools.html"> <img src="/images/monkey-kikazaru-use.png"/> </a> 
-  <a href="Community.html"> <img src="/images/monkey-mizaru-share.png"/> </a>  
+  <a href="Method.html"> <img src="images/monkey-iwazaru-learn.png"/> </a> 
+  <a href="Tools.html"> <img src="images/monkey-kikazaru-use.png"/> </a> 
+  <a href="Community.html"> <img src="images/monkey-mizaru-share.png"/> </a>  
 </div>
 <br/>  
 
