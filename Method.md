@@ -17,7 +17,7 @@ If you actually want to read the method, you can:
 
 * [Consult]() it online in the Drakkr edoc repository
 
-* [Download]() it in PDF export format
+* [Download]() it in an exported format (PDF)
 
 ### Proposed process
 
