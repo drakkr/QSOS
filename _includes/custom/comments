@@ -30,7 +30,7 @@
 	}
 
 	var result =
-	    'http://juvia.local/api/show_topic.js' +
+	    'http://juvia.qsos.org/api/show_topic.js' +
 	    '?_c=' + window._juviaRequestCounter +
 	    '&' + makeQueryString(options);
 	window._juviaRequestCounter++;
