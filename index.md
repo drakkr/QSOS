@@ -11,9 +11,9 @@ tagline: Qualification and Selection of Opensource Software
 
 Jump directly to the _Open Source Selection Software_ portal (O3S):
 
-* [Master](http://o3s.qsos.org/master/): official instance (validated by the QSOS community)
+* [Master](http://master.qsos.org): official instance (validated by the QSOS community)
 
-* [Incoming](http://o3s.qsos.org/icoming/): sandbox instance (everybody can contribute evaluations)
+* [Incoming](http://incoming.qsos.org): sandbox instance (everybody can contribute evaluations)
 
 ### Recent news
 

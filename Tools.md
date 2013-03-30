@@ -75,9 +75,9 @@ Check the [QSOS tutorial]() for more details.
 
 The _Open Source Selection Software_ connects on both QSOS repositories to allow creation of personalized comparisons:
 
-* Official instance: <http://o3s.qsos.org/master/>
+* Official instance: <http://master.qsos.org>
 
-* Sandbox instance: <http://o3s.qsos.org/incoming/>
+* Sandbox instance: <http://incoming.qsos.org>
 
 Once a comparison has been created it can be exported in several formats:
 
