@@ -7,6 +7,8 @@ tagline: Qualification and Selection of Opensource Software
 
 ![QSOS logo](https://raw.github.com/drakkr/QSOS/master/Method/fr/Images/QSOS-small.png)
 
+<a href="https://github.com/drakkr/QSOS/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
 ### Impatient?
 
 Jump directly to the _Open Source Selection Software_ portal (O3S):
