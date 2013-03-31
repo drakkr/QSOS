@@ -1012,7 +1012,10 @@
          inkscape:export-ydpi="100.00549">
         <g
            id="g3803"
-           transform="matrix(0.6307664,0,0,0.6307664,18.095396,38.774028)">
+           transform="matrix(0.6307664,0,0,0.6307664,18.095396,38.774028)"
+           inkscape:export-filename="/home/raph/Drakkr/QSOS/master/QSOS/Method/en/Images/tools.png"
+           inkscape:export-xdpi="100"
+           inkscape:export-ydpi="100">
           <path
              inkscape:connector-curvature="0"
              style="fill:#d82a2a"
