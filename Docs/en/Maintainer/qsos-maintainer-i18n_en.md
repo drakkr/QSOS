@@ -1,14 +1,14 @@
 # Translation and localization
 
-QSOS has been designed as a international project. Therefore everything is in place to ease its translation in a new language.
+QSOS has been designed as an international project. Therefore everything is in place to ease its translation into a new language.
 
-This section will guide you through the different components to be translated and the related techniques. Since a good example is often better than a lot of theory, let's consider translateing QSOS in English.
+This section will guide you through the different components to be translated and the related techniques. Since a good example is often better than a lot of theory, let's consider translating QSOS into English.
 
 ## Prerequisites
 
 You need to determine what ISO 639-1^[<http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes>] language code to use. In our example it is _en_.
 
-For some translation techniques you'll also need the ISO 3166-1 country code^[<http://en.wikipedia.org/wiki/ISO_3166-1>]. In our exemple let's use _US_, which gives us a full localization name of _en-US_.
+For some translation techniques you'll also need the ISO 3166-1 country code^[<http://en.wikipedia.org/wiki/ISO_3166-1>]. In our example let's use _US_, which gives us a full localization name of _en-US_.
 
 These codes will be used to identify the English translation files.
 
@@ -18,7 +18,7 @@ The source files of the QSOS method are stored in the QSOS.git repository, in th
 
 Here is how to proceed to create a new translation: 
 
-* Create a new subfolder with the language code name (here _en_) and copy the content of an existing translation.
+* Create a new sub-folder with the language code name (here _en_) and copy the content of an existing translation.
 
 * Rename all files to integrate the language code name (i.e. _Method/fr/qsos-head_fr.md_ becomes _Method/en/qsos-head_en.md_ and so on).
 
@@ -26,9 +26,9 @@ Here is how to proceed to create a new translation:
 
 * Translate the XML file describing the QSOS Maturity section (here _criteria-maturity_en.xml_)
 
-* Translate contents  of the `.md` files, do not forget to reference your translated images. You can apply the _/Tools/o3s/formats/xml/xslt/evaluation-template-markdown.xsl_ transformation to the pevious XML file to generate part of the _qsos-appendixA_en.md_ file.
+* Translate contents  of the `.md` files, do not forget to reference your translated images. You can apply the _/Tools/o3s/formats/xml/xslt/evaluation-template-markdown.xsl_ transformation to the previous XML file to generate part of the _qsos-appendixA_en.md_ file.
 
-* Tanslate the LaTeX template (here _qsos-template_en.latex_): you probably only need to translate line 42.
+* Translate the LaTeX template (here _qsos-template_en.latex_): you probably only need to translate line 42.
 
 * Adapt the _Makefile_  file to reference your translated files, you probably only need to modify the _LANG_ and _TITLE_ parameters.
 
@@ -46,7 +46,7 @@ Proceed as explained above for the Method to translate other QSOS documents, for
 
 ### Template bootstraps
 
-The bootstraps to create new QSOS templates are stored in the QSOS.git repository, in the _Tools/o3s/formats/xml/template_ folder. Duplicated an existinf `.mm` file and rename it appopriatly (here _template_en.mm_).
+The bootstraps to create new QSOS templates are stored in the QSOS.git repository, in the _Tools/o3s/formats/xml/template_ folder. Duplicated an existing `.mm` file and rename it appropriately (here _template_en.mm_).
 
 Use FreeMind^[<http://freemind.sourceforge.net>] to open and translate your file:
 
@@ -76,7 +76,7 @@ Here are the files you have to translate in O3S:
 
     - _lang/en.php_: translate the `TXT_*` constants.
 
-    - _conf.php_: add a`elseif (strstr($lang[0], 'en'))` instruction block to point to the translation file (here `lang/en.php`).
+    - _conf.php_: add a `elseif (strstr($lang[0], 'en'))` instruction block to point to the translation file (here `lang/en.php`).
 
 ### Translation of XulEditor
 
@@ -84,7 +84,7 @@ Here are the files you have to translate in O3S:
 
     - Create a new folder for your translation, using its full localization name (here _en-US_).
 
-    - Copy thete contents of an existing translation.
+    - Copy the content of an existing translation.
 
     - In all `*.dtd` files: translate attribute values of `<!ENTITY/>` elements. 
 

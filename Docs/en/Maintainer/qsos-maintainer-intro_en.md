@@ -8,7 +8,7 @@ Components discussed here are called core components and are managed in the _QSO
 
 * QSOS formats and related XML documents like XSD schemas, XSL transformations...
 
-* Tools developped to help use the QSOS method, manipulate its formats and manage data components.
+* Tools developed to help use the QSOS method, manipulate its formats and manage data components.
 
 # Version naming convention
 
@@ -22,7 +22,7 @@ Majors versions are generally set by the QSOS format itself (`.qsos` file format
 
 So the rule is that when the QSOS format changes its major version, every other component should also change to this new major version.
 
-Impacts of a minor version is generally restricted to a specific component. Therefore QSOS components don't necesseraly share minor versions.
+Impacts of a minor version is generally restricted to a specific component. Therefore QSOS components don't necessarily share minor versions.
 
 # The QSOS.git repository
 

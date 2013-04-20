@@ -1,11 +1,11 @@
 % QSOS Roadmap
 % ![Logo](Images/QSOS.png)
-% Last update: 28/01/2013
+% Last update: 2013-01-28
 
 # QSOS XML Format
 
 * Add a _highlight_ attribute [_true_|_false_] to the `<comment/>` tags
-    + Used to identified perticular comments to be included in ODP and ODT exports
+    + Used to identified particular comments to be included in ODP and ODT exports
 
 * Add a `<source/>` tag to `<element/>` to detail source(s) used to score the criteria
 
@@ -23,7 +23,7 @@
 
 * Automatically add the CPE Id (<http://cpe.mitre.org>) in the `<qsosappname/>` tag via a call to OSC Web Service
 
-* Implement syncrhonization with local instances of 03S (Git + database)
+* Implement synchronization with local instances of 03S (Git + database)
 
 # XulEditor
 
