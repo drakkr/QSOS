@@ -50,7 +50,7 @@ L'onglet _Général_ contient les informations relatives au logiciel évalué (n
 
 ![Onglet _Général_ de _XulEditor_](Images/xuleditor-tab-general_fr.png)
 
-Vous remarquez que le nom et la version du template utilisés pour l'évaluation apparaissen mais ne peuvent être modifiés. Pour plus de détail sur comment mettre à jour le template d'une évaluation existante, reportez-vous au chapitre [Appliquer une nouvelle version de template](#appliquer-une-nouvelle-version-de-template).
+Vous remarquez que le nom et la version du template utilisés pour l'évaluation apparaissent mais ne peuvent être modifiés. Pour plus de détail sur comment mettre à jour le template d'une évaluation existante, reportez-vous au chapitre [Appliquer une nouvelle version de template](#appliquer-une-nouvelle-version-de-template).
 
 L'onglet _Critères_ vous permet de naviguer dans l'arbre des critères d'évaluation et de les évaluer :
 
@@ -70,7 +70,7 @@ Les critères colorés en rouge sont ceux n'ayant pas encore été évalués. Ce
 
 ### Sauvegarder une évaluation
 
-Depuis l'onglet _Fichier_ de _XulEditor_ vous pouvez sauvegarder votre évaluation sur votre disque dur (bouton _Enregister en local_) pour éventuellement l'éditer plus tard (bouton _Evaluation locale_).
+Depuis l'onglet _Fichier_ de _XulEditor_ vous pouvez sauvegarder votre évaluation sur votre disque dur (bouton _Enregistrer en local_) pour éventuellement l'éditer plus tard (bouton _Evaluation locale_).
 
 ### Contribuer une évaluation
 
