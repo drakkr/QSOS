@@ -19,7 +19,7 @@
 
   1.6      2006-04-13 Gonéri Le Bouder         Update of the Maturity section.
 
-  2.0      2012-01-19 Raphaël Semeteys         Switch to Markdown. Formats and tools.
+  2.0      2013-01-19 Raphaël Semeteys         Switch to Markdown. Formats and tools.
                       Philippe-Arnaud Haranger Update of the Maturity section.
 
   2.0      2013-02-27 Thomas Moreau            Translation into English.
