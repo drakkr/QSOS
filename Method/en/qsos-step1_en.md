@@ -77,6 +77,6 @@ So far, the type of identified communities are:
 
 * developers organization : a group a developers using a software lifecycle management system formalized and respected, based on roles (developers, validator, delivery manager...) and meritocracy ;
 
-* legal entity : a legal entity, often a non for-profit, manage the community and the sponsorship and hold the copyrights.
+* legal entity : a legal entity, often a non for-profit, manages the community and the sponsorship and holds the copyrights.
 
-* Commercial entity : a commercial entity employs the core developers of the project and get revenue from the sale of services or commercial version of the software.
+* Commercial entity : a commercial entity employs the core developers of the project and gets revenue from the sale of services or commercial version of the software.

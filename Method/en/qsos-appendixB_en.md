@@ -8,9 +8,9 @@ In addition to QSOS, dedicated to the evaluation of the complexity of the free a
 
 * __OSC__ (Open Source Cartouche) : sub-project dedicated to the unique identification of a version of a piece of open source software and the management of its metadata ;
 
-* __ECOS__ (Evaluation of the Costs linked to Open Source) : sub-project regarding the evaluation and the calculation of the total cost of ownership of a piece of open source software as well as the return of investment of a migration ;
+* __ECOS__ (Evaluation of the Costs linked to Open Source) : sub-project regarding the evaluation and the calculation of the Total Cost of Ownership of a piece of open source software as well as the Return Of Investment of a migration ;
 
-* __FLOSC__ (Free/Libre Open Source Complexity) : sub-project providing method and tools to evaluate intrisic complexity of open source components ;
+* __FLOSC__ (Free/Libre Open Source Complexity) : sub-project providing method and tools to evaluate intrinsic complexity of open source components ;
 
 * __SLIC__ (Software LIcense Comparator) : sub-project dedicated to the formal description of open source licenses and its relative compatibilities ;
 
