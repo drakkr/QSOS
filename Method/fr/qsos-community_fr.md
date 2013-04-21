@@ -42,7 +42,7 @@ Les cartes heuristiques représentant des templates QSOS doivent respecter un fo
 
 1. les descriptions des critères doivent être entourées (menu « Mise en forme/Bulle » de FreeMind) ;
 
-2. les descriptions des notes 0, 1 et 2. (il manque quelque chose non?)
+2. les descriptions des notes 0, 1 et 2.
 
 Le fichier XSL permettant de transformer les templates en fiches d'évaluations est disponible sur le site Web du projet QSOS. FreeMind permet d'appliquer la transformation via le menu « Fichier/Exporter/En utilisant une XSLT... ».
 
