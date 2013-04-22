@@ -18,7 +18,7 @@ DOCNAME=$(DOC)-$(VERSION)_$(LANG)
 
 doc-pdf:
 	mkdir -p dist
-	pandoc -N --toc --template=../../../Method/fr/qsos-template_$(LANG).latex --variable lang=french -o dist/$(DOCNAME).pdf $(CHAPTERS)
+	pandoc -N --toc --template=../../../Method/$(LANG)/qsos-template_$(LANG).latex --variable lang=french -o dist/$(DOCNAME).pdf $(CHAPTERS)
 
 doc-odt:
 	mkdir -p dist
