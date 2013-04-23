@@ -12,13 +12,13 @@ TITLE=QSOS Maintainer Guide
 PAGES=qsos-maintainer-intro_$(LANG).md qsos-maintainer-edoc_$(LANG).md qsos-maintainer-tools_$(LANG).md qsos-maintainer-impacts_$(LANG).md qsos-maintainer-web_$(LANG).md qsos-maintainer-i18n_$(LANG).md
 
 #List of edocs to be included in other exports
-CHAPTERS=qsos-maintainer-head_$(LANG).md qsos-maintainer-changelog_$(LANG).md $(PAGES) qsos-maintainer-drakkr_en.md
+CHAPTERS=qsos-maintainer-head_$(LANG).md qsos-maintainer-changelog_$(LANG).md $(PAGES) qsos-maintainer-drakkr_$(LANG).md
 
 DOCNAME=$(DOC)-$(VERSION)_$(LANG)
 
 doc-pdf:
 	mkdir -p dist
-	pandoc -N --toc --template=../../../Method/en/qsos-template_$(LANG).latex -o dist/$(DOCNAME).pdf $(CHAPTERS)
+	pandoc -N --toc --template=../../../Method/$(LANG)/qsos-template_$(LANG).latex -o dist/$(DOCNAME).pdf $(CHAPTERS)
 
 doc-odt:
 	mkdir -p dist
