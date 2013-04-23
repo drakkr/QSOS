@@ -87,7 +87,7 @@ The file extension is `.qsos`.
 
 The main tag is `<document/>`, it contains :
 
-* a header `<header/>` containing the metadata related to the evaluation (author, language, used template, QSOS version, template version, creation date, validation date...) ;
+* a header `<header/>` containing the metadata related to the evaluation (author, language, used template, QSOS version, template version, date of creation, date of validation...) ;
 
 * one or several sections (`<section/>`) :
 
@@ -109,8 +109,8 @@ An example of the structure is below :
          <!-- Other <author/>  -->	 
       </authors>
       <dates>
-         <creation>Creation date</creation>
-         <validation>Validation date</validation>
+         <creation>Date of Creation</creation>
+         <validation>Date of Validation</validation>
       </dates>
       <appname>Application/software name</appname>
       <desc>short description of the software</desc>
