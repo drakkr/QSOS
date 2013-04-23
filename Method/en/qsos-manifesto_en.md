@@ -1,6 +1,6 @@
 # QSOS Manifesto
 
-##  Of the need of a method
+##  About the need of a method
 
 From a company point of view, choosing to opt for a piece of software as part of its information system, that piece of software being open or closed source, is based on the analysis of the needs and constraints (technical, functional and strategic) and matching the piece of software with the requirements.
 
@@ -32,7 +32,7 @@ To serenely answer these questions and make an informed decision while managing 
 
 Those different points led Atos to design and formalize the method of Qualification and Selection of Open Source software (QSOS).
 
-##  Of the need of a free method
+##  About the need of a free method
 
 In our opinion, such a method must be distributed to anyone under a free license. Only such a license is indeed able to guarantee the promotion of the free and Open Source movement, through :
 
