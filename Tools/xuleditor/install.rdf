@@ -19,5 +19,5 @@
   <RDF:Description RDF:about="rdf:#$zNYy83"
                    em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
                    em:minVersion="3.0"
-                   em:maxVersion="18.*" />
+                   em:maxVersion="21.*" />
 </RDF:RDF>

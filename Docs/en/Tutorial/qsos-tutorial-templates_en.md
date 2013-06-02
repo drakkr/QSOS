@@ -28,7 +28,7 @@ To create a new template, you need absolutely to start from the blank template i
 
 These blank templates respect the following naming convention: `template_[language].mm`. The English blank template is then `template_en.mm`.
 
-The blank templates are available on the official website of the QSOS project at this address : __TODO__.
+The blank templates are available on the official website of the QSOS project at this address : <http://backend.qsos.org>.
 
 ### Adding evaluation sections
 

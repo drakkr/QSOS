@@ -32,8 +32,6 @@ The Git repositories are split in two:
 
 * QSOS-Master: repository for contributions validated by the QSOS project. Only users with the _moderator_ status can upgrade a template of an evaluation from QSOS-Incoming into QSOS-Master when he estimates that its quality and objectivity are sufficient enough.
 
-TODO: Links to the QSOS-Master.git and QSOS-Incoming.git repositories.
-
 The QSOS Backend is a Web application, stored in the QSOS.git repository in the _Tools/o3s/backend/app_ folder. The database schema, shared with O3S Frontend, is stored in _Tools/o3s/create_db.sql_. 
 
 This application is built with the following open source technologies:

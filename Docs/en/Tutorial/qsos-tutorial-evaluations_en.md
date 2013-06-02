@@ -78,7 +78,7 @@ In the _Files_ tab of _XulEditor_, you can save you evaluation on your hard driv
 
 When you consider your evaluation is complete - at least for a first version, you can then propose it to the QSOS community.
 
-There are two ways to do it. The first is, like with templates, to connect to the O3S application^[TODO : <http://o3s.qsos.org/backend/app/upload.php>]. 
+There are two ways to do it. The first is, like with templates, to connect to the QSOS backend^[<http://backend.qsos.org>]. 
 
 ![Uploading an evaluation to the QSOS reference](Images/o3s-upload-eval_en.png)
 

@@ -76,7 +76,7 @@ Depuis l'onglet _Fichier_ de _XulEditor_ vous pouvez sauvegarder votre évaluati
 
 Lorsque vous considérez que votre évaluation est complète - au moins pour une première version, vous pouvez alors la proposer à la communauté QSOS. 
 
-Deux méthodes sont possibles. La première est, de manière similaire aux templates, de vous connectez à l'application 03S^[TODO : <http://o3s.qsos.org/backend/app/upload.php>]. 
+Deux méthodes sont possibles. La première est, de manière similaire aux templates, de vous connectez au backend QSOS^[<http://backend.qsos.org>]. 
 
 ![Envoi de l'évaluation dans le référentiel QSOS](Images/o3s-upload-eval_fr.png)
 

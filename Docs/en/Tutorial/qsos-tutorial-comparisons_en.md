@@ -7,9 +7,9 @@ The O3S web application allows to make weightings, comparisons and to export the
 
 Two versions of O3S are available, each is connected to one of the two repositories of the QSOS reference :
 
-* the official version^[TODO : <http://o3s.qsos.org/master/>], connected to the _Master_ repository ;
+* the official version^[<http://master.o3s.qsos.org/master/>], connected to the _Master_ repository ;
 
-* the sandbox version^[TODO : <http://o3s.qsos.org/incoming/>], connected to the _Incoming_ repository.
+* the sandbox version^[<http://incoming.o3s.qsos.org/incoming/>], connected to the _Incoming_ repository.
 
 ## Creating a new comparison
 

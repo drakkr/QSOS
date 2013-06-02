@@ -28,7 +28,7 @@ Pour créer un nouveau template, il vous faut absolument partir de la souche cor
 
 Ces souches respectent la convention de nommage suivante : `template_[langue].mm`. Ainsi, la souche française est `template_fr.mm`.
 
-Elles sont publiées sur le site officiel du projet QSOS, à l'adresse suivante : __TODO__.
+Elles sont publiées sur le site officiel du projet QSOS, à l'adresse suivante : <http://backend.qsos.org>.
 
 ### Ajouter des axes d'évaluation
 
