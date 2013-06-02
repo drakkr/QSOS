@@ -1,9 +1,9 @@
 pref("toolkit.defaultChromeURI", "chrome://qsos-xuled/content/editor.xul");
 pref("extensions.qsos-xuled.mode", "xulrunner");
-pref("extensions.qsos-xuled.backend", "http://localhost/local/o3s/backend/");
-pref("extensions.qsos-xuled.loadremote-tpl", "app/loadremote.php?tpl=yes");
-pref("extensions.qsos-xuled.loadremote", "app/loadremote.php");
-pref("extensions.qsos-xuled.saveremote", "app/writeremote.php");
-pref("extensions.qsos-xuled.register", "app/register.php");
+pref("extensions.qsos-xuled.backend", "http://backend.qsos.org/");
+pref("extensions.qsos-xuled.loadremote-tpl", "loadremote.php?tpl=yes");
+pref("extensions.qsos-xuled.loadremote", "loadremote.php");
+pref("extensions.qsos-xuled.saveremote", "writeremote.php");
+pref("extensions.qsos-xuled.register", "register.php");
 pref("extensions.qsos-xuled.login", "");
 pref("extensions.qsos-xuled.pass", "");
