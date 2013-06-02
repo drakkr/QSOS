@@ -13,7 +13,7 @@ QSOS provides a detailed tutorial that you can:
 
 * [Consult]() online in the Drakkr edoc repository
 
-* [Download]() in PDF export format
+* Download in PDF export format: [French](http://backend.qsos.org/download/qsos-tutorial-2.0_fr.pdf)
 
 ### Brief overview
 
@@ -45,9 +45,9 @@ Although you can edit `.qsos` XML files with any text editor, QSOS provides a sp
 
 QSOS Editor comes in two flavors:
 
-* A Firefox [extention]()
+* A Firefox [extention](http://backend.qsos.org/download/xuleditor-firefox-2.0.xpi)
 
-* A standalone [application]()
+* A standalone [application](http://backend.qsos.org/download/xuleditor-application-2.0.zip)
 
 Furthermore this tool is connected to the QSOS backend and thus allows transparent bootstrap, download, update and upload of evaluations. 
 

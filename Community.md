@@ -11,11 +11,11 @@ QSOS is a community-based project: _the more we are, the better we are watching_
 
 So __join us__ in our effort to help people adopt open source software. You can contribute in many different ways, for instance:
 
-* __Update__ an existing evaluation or template (check the [QSOS Tutorial]() to see how to so so)
+* __Update__ an existing evaluation or template (check the [QSOS Tutorial](http://backend.qsos.org/download/qsos-tutorial-2.0_fr.pdf) to see how to so so... in French ;))
 
-* __Create__ a brand new template and/or evaluation (check the very same [tutorial]())
+* __Create__ a brand new template and/or evaluation (check the very same [tutorial](http://backend.qsos.org/download/qsos-tutorial-2.0_fr.pdf))
 
-* Be such a nice and frequent contributor that you'll be granted __commit__ right in the QSOS _Master_ backend ([this one]())
+* Be such a nice and frequent contributor that you'll be granted __commit__ right in the QSOS _Master_ backend ([this one](http://master.o3s.qsos.org/))
 
 * Help on __code__ or [__edoc__](http://www.semeteys.org/wiki/edoc) (fork the GitHub repository: <https://github.com/drakkr/qsos/>)
 
