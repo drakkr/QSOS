@@ -1,24 +1,24 @@
-# Makefile for QSOS Tutorial
+# Makefile for QSOS documentation
 
-DOC=qsos-tutorial
+DOC=qsos
 
 VERSION=2.0
 
-LANG=fr
+LANG=en
 
-TITLE=Tutoriel QSOS
+TITLE=Method of Qualification and Selection of Open Source software (QSOS)
 
 #List of edocs to be included in Gitit export
-PAGES=qsos-tutorial-intro_$(LANG).md qsos-tutorial-templates_$(LANG).md qsos-tutorial-evaluations_$(LANG).md qsos-tutorial-comparisons_$(LANG).md
+PAGES=qsos-intro_$(LANG).md qsos-process_$(LANG).md qsos-step1_$(LANG).md qsos-step2_$(LANG).md qsos-step3_$(LANG).md qsos-step4_$(LANG).md qsos-community_$(LANG).md qsos-appendixA_$(LANG).md
 
 #List of edocs to be included in other exports
-CHAPTERS=qsos-tutorial-head_$(LANG).md $(PAGES) qsos-tutorial-drakkr_$(LANG).md
+CHAPTERS=qsos-head_$(LANG).md qsos-manifesto_$(LANG).md qsos-changelog_$(LANG).md  $(PAGES) qsos-appendixB_$(LANG).md
 
 DOCNAME=$(DOC)-$(VERSION)_$(LANG)
 
 doc-pdf:
 	mkdir -p dist
-	pandoc -N --toc --template=../../../Method/$(LANG)/qsos-template_$(LANG).latex --variable lang=french -o dist/$(DOCNAME).pdf $(CHAPTERS)
+	pandoc -N --toc --template=qsos-template_$(LANG).latex --variable lang=english -o dist/$(DOCNAME).pdf $(CHAPTERS)
 
 doc-odt:
 	mkdir -p dist

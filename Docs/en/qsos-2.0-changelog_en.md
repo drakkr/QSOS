@@ -1,6 +1,6 @@
 % QSOS 2.0 Changelog
 % ![Logo](Images/QSOS.png)
-% Last update: 18/02/2013
+% Last update: 2013-02-18
 
 # QSOS Formats
 * XSD for QSOS format
@@ -20,7 +20,7 @@
 
 # 03S
 * 03S connects to a QSOS repository by configuration
-* Better GUI internationalization, icluding evaluations filtering on language
+* Better GUI internationalization, including evaluations filtering on language
 * Evaluations can now be visualized in HTML and Freemind format
 * Comparisons can now be visualized on a QSOS Quadrant and also be exported to OpenDocument formats (ODS, ODP and ODT)
 

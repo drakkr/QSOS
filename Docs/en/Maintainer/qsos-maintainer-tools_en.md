@@ -4,7 +4,7 @@ All QSOS tools are distributed under the terms of the _GNU General Public Licens
 
 ### Modification of O3S
 
-O3S (Open Source Selection Sofware) source code is stored in the _Tools/o3s_ folder of the QSOS.git repository.
+O3S (Open Source Selection Software) source code is stored in the _Tools/o3s_ folder of the QSOS.git repository.
 
 ![O3S global architecture](Images/o3S-architecture.png)
 
@@ -12,31 +12,31 @@ O3S is composed of several components:
 
 * Git repositories: for storage and version management of QSOS templates and evaluations.
 
-* QSOS Backend: Web application in charge of the Git repositories management and synchronisation with a central database.
+* QSOS Backend: Web application in charge of the Git repositories management and synchronization with a central database.
 
 * O3S Frontends: Web applications implementing the _Qualify_ and _Select_ of the QSOS method, based on the QSOS backend.
 
 #### Git repositories and QSOS Backend
 
-Git has been selected to store and manage version of QSOS templates and evaluations. For more convinience the MySQL database of the QSOS Backend also contains some metadata regarding theses templates and evaluations. Therefore both Git repositories and central database need to always be synchronized.
+Git has been selected to store and manage version of QSOS templates and evaluations. For more convenience the MySQL database of the QSOS Backend also contains some metadata regarding theses templates and evaluations. Therefore both Git repositories and central database need to always be synchronized.
 
 To ensure that coherence, one never directly pushes in the Git repositories. Templates and evaluations __must__ be added through the QSOS Backend which pushes in the Git repositories as well as writes into the central database.
 
 The Git repositories are split in two:
 
-* QSOS-Incoming: repository for contributions from users with an account on the QSOS Backend. Anybody can create an account and then contribute to this repository. They only limitations imposed by the QSOS Backend are the following ones:
+* QSOS-Incoming: repository for contributions from users with an account on the QSOS Backend. Anybody can create an account and then contribute to this repository. The only limitations imposed by the QSOS Backend are the following ones:
 
     + Contributions must be proper QSOS evaluations or templates, compliance with XSD schemas is verified.
 
-    + Only the original contributor of an evaluation can overwrite it. If another user tries to contribue an evaluation on the same software and the same version, he will be given an error message with contact information of the original contributor.
+    + Only the original contributor of an evaluation can overwrite it. If another user tries to contribute an evaluation on the same software and the same version, he will be given an error message with contact information of the original contributor.
 
-* QSOS-Master: repository for contrbutions validated by the QSOS project. Only users with the _moderator_ status can upgrade a template of an evaluation from QSOS-Incoming into QSOS-Master when he estimates that its quality and objectivity are sufficient enough.
+* QSOS-Master: repository for contributions validated by the QSOS project. Only users with the _moderator_ status can upgrade a template of an evaluation from QSOS-Incoming into QSOS-Master when he estimates that its quality and objectivity are sufficient enough.
 
 TODO: Links to the QSOS-Master.git and QSOS-Incoming.git repositories.
 
-The QSOS Backend is a Web application, stored in the QSOS.git repository in the _Tools/o3s/backend/app_ folder. The database schema, qhared with O3S Frontend, is stored in _Tools/o3s/create_db.sql_. 
+The QSOS Backend is a Web application, stored in the QSOS.git repository in the _Tools/o3s/backend/app_ folder. The database schema, shared with O3S Frontend, is stored in _Tools/o3s/create_db.sql_. 
 
-This application is built with the following oepn source technologies:
+This application is built with the following open source technologies:
 
 * Server side:
 
@@ -62,7 +62,7 @@ The source code is stored in the QSOS.git repository in the _Tools/o3s/app_ fold
 
 They are as many instances as there are repositories for templates and evaluation. The repository to which an instance is connected is defined the Frontend _config.php_ file.
 
-This application is built with the following oepn source technologies:
+This application is built with the following open source technologies:
 
 * Server side:
 
@@ -84,7 +84,7 @@ This application is built with the following oepn source technologies:
 
 We've seen that O3S Frontends and the QSOS Backend share the same database. It is the principal interface between the two Web applications. 
 
-An O3S Frontend doesn't kwnow about Git and only accesses in read mode to the database and the backend's filesystem where QSOS templates and evaluations are stored by Git.
+An O3S Frontend doesn't know about Git and only accesses in read mode to the database and the backend's filesystem where QSOS templates and evaluations are stored by Git.
 
 The two application also have separated configuration files, allowing multiple deployment scenarios.
 
@@ -98,7 +98,7 @@ XulEditor is the tool used to create and modify QSOS evaluations. It can also be
 
 XulEditor is named after the main technology used for its GUI: XUL, from the Mozilla project. The Mozilla technological platform was chosen for the following reasons:
 
-* Portability: Mozilla technologies are ported on evry main operating systems.
+* Portability: Mozilla technologies are ported on every main operating systems.
 
 * Flexibility: XulEditor can be deployed and used whether as a Firefox extension or as a standalone application, with the exact same code base.
 
@@ -122,7 +122,7 @@ When you intend to release a new version of XulEditor, you need to do some packa
 
 * install.rdf: parameters to install XulEditor on the Mozilla platform.
 
-* Changes: do not forget to log the changes of the  new version.
+* Changes: do not forget to log the changes of the new version.
 
 Let's look at the _application.ini_ file:
 
@@ -213,7 +213,7 @@ Here are some noticeable points:
 
 * You need to change the _VERSION_ parameter when you package a new version of XulEditor.
 
-* The _LOCALE_ ans _SKIN_ parameters list files related to internationalisation and GUI decoration.
+* The _LOCALE_ ans _SKIN_ parameters list files related to internationalization and GUI decoration.
 
 * For the standalone application:
 
@@ -221,9 +221,9 @@ Here are some noticeable points:
 
     + The _APPSRC_ parameter lists source files (XUL and JavaScript) composing the application.
 
-    + The _PREFS_XULRUNNER_ parameter define the prefernce file specific to the application.
+    + The _PREFS_XULRUNNER_ parameter define the preference file specific to the application.
 
-    + The _app_ target builds the application based on preceeding parameters, and generates a `.zip` files
+    + The _app_ target builds the application based on preceding parameters, and generates a `.zip` files
 
 * For the standalone extension:
 
@@ -231,18 +231,18 @@ Here are some noticeable points:
 
     + The _EXTSRC_ parameter lists source files (XUL and JavaScript) composing the application.
 
-    + The _PREFS_ parameter define the prefernce file specific to the application.
+    + The _PREFS_ parameter define the preference file specific to the application.
 
-    + The _ext_ target builds the application based on preceeding parameters, and generates a `.ini` files
+    + The _ext_ target builds the application based on preceding parameters, and generates a `.ini` files
 
 #### Releasing Xuleditor
 
-Once XulEditor packages are generated you still need to actually release them to the QSOS community using the Mozilla update system. To do so, you need to fulfill Mozilla security requirement end therefore to sign your extention.
+Once XulEditor packages are generated you still need to actually release them to the QSOS community using the Mozilla update system. To do so, you need to fulfill Mozilla security requirement end therefore to sign your extension.
 
 The XulEditor Firefox extension is signed with help of the McCoy^[<https://developer.mozilla.org/en/docs/McCoy>] tool. You'll need the _xuleditor@qsos.org_ RSA key to do so. If you don't have it... well you should question yourself about being a QSOS maintainer!
 
 ![Use of McCoy](Images/McCoy.png)
 
-When you're done with McCoy and your actual role in the QSOS project, evrything is ready for your new version to be released: you just signed _xuleditor-update.rdf_ in the name of the QSOS community. 
+When you're done with McCoy and your actual role in the QSOS project, everything is ready for your new version to be released: you just signed _xuleditor-update.rdf_ in the name of the QSOS community. 
 
 Push the file into the Git repository and also to the QSOS website. Users of old XulEditor versions will now be notified of the new one.

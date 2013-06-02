@@ -10,7 +10,7 @@ L'objectif de cette étape est de définir un ensemble d'éléments traduisant l
 
 ### Filtre sur l'identité
 
-Un premier niveau de filtrage peut être posé au niveau des données relatives à l'identité des logiciels. Il peut s'agir, par exemple, de ne considérer que les logiciels d'un type donné du référentiel, ou n'état distribué selon les termes d'un licence donnée.
+Un premier niveau de filtrage peut être posé au niveau des données relatives à l'identité des logiciels. Il peut s'agir, par exemple, de ne considérer que les logiciels d'un type donné du référentiel, ou n'étant distribué que selon les termes d'un licence donnée.
 
 ### Filtre sur la maturité du projet
 Le degré de pertinence de chaque critère de maturité est positionné en fonction du contexte :

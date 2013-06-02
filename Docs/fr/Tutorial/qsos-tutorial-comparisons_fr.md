@@ -16,7 +16,7 @@ Connectez-vous à l'instance d'O3S que vous désirez. La liste des évaluations 
 
 ![Page d'accueil d'O3S](Images/o3s-index_fr.png)
 
-Sélectionnez le domaine logiciel qui vous intéresse. La liste des évaluations réalisées avec la version du template que vous avec sélectionnée vous est présentée.
+Sélectionnez le domaine logiciel qui vous intéresse. La liste des évaluations réalisées avec la version du template que vous avez sélectionnée vous est présentée.
 
 ![Page de gestion de votre comparaison](Images/o3s-list-evaluations_fr.png)
 
@@ -102,7 +102,7 @@ L'application O3S permet de visualiser votre comparaison selon un formalisme app
 
 Il s'agit du positionnement des différentes évaluations que vous avez sélectionnées selon deux axes :
 
-* _Couverture fonctionnelle_ : la valeur utilisée en abscisse est la moyenne pondérée de l'ensemble des critères du templates hormis ceux du nœud _Maturité_ imposé par la méthode QSOS ;
+* _Couverture fonctionnelle_ : la valeur utilisée en abscisse est la moyenne pondérée de l'ensemble des critères du template hormis ceux du nœud _Maturité_ imposé par la méthode QSOS ;
 
 * _Maturité_ : la valeur utilisée en ordonnée est celle du nœud _Maturité_ imposé par la méthode QSOS.
 
@@ -126,7 +126,7 @@ Depuis la page de gestion de votre comparaison, vous pouvez l'exporter aux forma
 
 ### Exporter au format ODS
 
-Depuis la page de gestion de votre comparaison, un clic sur le bouton _Export ODS_ déclenche la génération de  l'export de votre comparaison au format _OpenDocument Spreadsheet_.
+Depuis la page de gestion de votre comparaison, un clic sur le bouton _Export ODS_ déclenche la génération de l'export de votre comparaison au format _OpenDocument Spreadsheet_.
 
 Vous pouvez sauvegarder le résultat en tant que fichier `.ods` sur votre disque dur.
 

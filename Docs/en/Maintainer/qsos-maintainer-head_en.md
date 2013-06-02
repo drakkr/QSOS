@@ -1,6 +1,6 @@
 % QSOS Maintainer Guide
 % ![Logo](../../../Method/en/Images/QSOS.png)
-% Version 2.0 - 05/03/2013
+% Version 2.0 - 2013-03-05
 
 # License
 
@@ -10,6 +10,6 @@ Permission is granted to copy, distribute and/or modify this document under the 
 
 A copy of the license is available at <http://www.gnu.org/copyleft/fdl.html>.
 
-The source of this document is available at thi URL: 
+The source of this document is available at this URL: 
 
 <https://github.com/drakkr/QSOS/tree/master/Docs/en/Maintainer>.

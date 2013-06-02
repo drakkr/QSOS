@@ -2,7 +2,7 @@
 
 QSOS est un sous-projet de l'initiative Drakkr visant à construire un framework libre dédié la gouvernance open source au sein des entreprises et administrations.
 
-Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, Drakkr propose également d'autres méthodes et outils pour mettre en oeuvre une telle gouvernance.
+Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, Drakkr propose également d'autres méthodes et outils pour mettre en œuvre une telle gouvernance.
 
 ![Framework Drakkr](Images/drakkr-orga.png)
 

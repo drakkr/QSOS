@@ -10,7 +10,7 @@ QSOS Website is based on the Drakkr^[Visit <http://www.drakkr.org> for further d
 
 Jekyll Bootstrap is a lean blogging framework where content is authored in HTML and/or Markdown. It is based on the _Jekyll_^[<http://jekyllrb.com>] framework, used by [GitHub Pages](http://pages.github.com/).
 
-QSOS static website is hosted by GitHub. It means that it's contents are managed in a dedicated branch of the Git repository: [gh-pages](https://github.com/drakkr/QSOS/tree/gh-pages). 
+QSOS static website is hosted by GitHub. It means that its content is managed in a dedicated branch of the Git repository: [gh-pages](https://github.com/drakkr/QSOS/tree/gh-pages). 
 
 When something new is pushed in this branch, GitHub will use Jekyll to regenerate the QSOS static website.
 

@@ -4,9 +4,9 @@ DOC=qsos-tutorial
 
 VERSION=2.0
 
-LANG=fr
+LANG=en
 
-TITLE=Tutoriel QSOS
+TITLE=QSOS Tutorial
 
 #List of edocs to be included in Gitit export
 PAGES=qsos-tutorial-intro_$(LANG).md qsos-tutorial-templates_$(LANG).md qsos-tutorial-evaluations_$(LANG).md qsos-tutorial-comparisons_$(LANG).md
@@ -18,7 +18,7 @@ DOCNAME=$(DOC)-$(VERSION)_$(LANG)
 
 doc-pdf:
 	mkdir -p dist
-	pandoc -N --toc --template=../../../Method/$(LANG)/qsos-template_$(LANG).latex --variable lang=french -o dist/$(DOCNAME).pdf $(CHAPTERS)
+	pandoc -N --toc --template=../../../Method/$(LANG)/qsos-template_$(LANG).latex --variable lang=english -o dist/$(DOCNAME).pdf $(CHAPTERS)
 
 doc-odt:
 	mkdir -p dist
