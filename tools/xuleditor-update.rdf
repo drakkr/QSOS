@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<RDF:RDF xmlns:em="http://www.mozilla.org/2004/em-rdf#"
+         xmlns:NC="http://home.netscape.com/NC-rdf#"
+         xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <RDF:Description RDF:about="urn:mozilla:extension:xuleditor@qsos.org"
+                   em:version="2.0"
+                   em:updateLink="http://backend.qsos.org/download/xuleditor-firefox-2.0.xpi"
+                   em:updateHash="sha1:c34e8e315985b046d997703fa570ae0d7a35cb11"
+                   em:signature="MIGTMA0GCSqGSIb3DQEBDQUAA4GBAIJYS6J8wLQrcCq0cF9k3tAUcD5tVAgEzcTSra12izbq4ymZOSfMr5Ck3X3mh8VEk7hz640pD92zmiq8W2rPQVDHdQB2E2zwDuzl1Bht3XeSMux25plDr+tuY5bBA2RzTLwgD1hhMOPE9nd/TRLeLlsc5G48QRlTDOt5ARZF9UiY">
+    <em:updates RDF:resource="rdf:#$LNYy83"/>
+  </RDF:Description>
+  <RDF:Description RDF:about="rdf:#$PNYy83"
+                   em:id="{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
+                   em:minVersion="3.5"
+                   em:maxVersion="21.*"
+                   em:updateLink="http://backend.qsos.org/download/xuleditor-firefox-2.0.xpi"
+                   em:updateHash="sha1:c34e8e315985b046d997703fa570ae0d7a35cb11" />
+  <RDF:Seq RDF:about="rdf:#$LNYy83">
+    <RDF:li RDF:resource="rdf:#$MNYy83"/>
+  </RDF:Seq>
+  <RDF:Description RDF:about="rdf:#$MNYy83"
+                   em:version="2.0">
+    <em:targetApplication RDF:resource="rdf:#$PNYy83"/>
+  </RDF:Description>
+</RDF:RDF>
