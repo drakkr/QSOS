@@ -18,7 +18,7 @@
 * Evaluations can be send and saved in the remote QSOS repositories, this requires authentication
 * Evaluations can be resynchronized with local or remote templates
 
-# 03S
+# O3S
 * 03S connects to a QSOS repository by configuration
 * Better GUI internationalization, including evaluations filtering on language
 * Evaluations can now be visualized in HTML and Freemind format
