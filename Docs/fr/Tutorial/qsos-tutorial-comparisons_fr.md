@@ -6,9 +6,9 @@ L'application Web O3S permet de réaliser des pondérations, des comparaisons et
 
 O3S existe en deux versions, chacune connectée sur l'un des deux dépôts du référentiel QSOS :
 
-* la version officielle^[TODO : <http://o3s.qsos.org/master/>], connectée au dépôt _Master_ ;
+* la version officielle^[<http://master.o3s.qsos.org/master/>], connectée au dépôt _Master_ ;
 
-* la version « bac à sable »^[TODO : <http://o3s.qsos.org/incoming/>].
+* la version « bac à sable »^[<http://incoming.o3s.qsos.org/incoming/>].
 
 ## Créer une nouvelle comparaison
 
