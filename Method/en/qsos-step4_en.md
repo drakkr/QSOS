@@ -1,6 +1,6 @@
 # Step 4 : Select
 
-![Position in the process](Images/selectionner-en.png)
+![Position in the process](Images/select-en.png)
 
 ## Purpose
 

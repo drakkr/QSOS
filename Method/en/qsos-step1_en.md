@@ -1,6 +1,6 @@
 # Step 1 : Define
 
-![Position in the process](Images/definir-en.png)
+![Position in the process](Images/define-en.png)
 
 ## Purpose
 
@@ -26,7 +26,7 @@ The templates of this reference is composed of hierarchical criteria, grouped by
 
 The QSOS method defines and imposes the maturity criteria of a project.
 
-![Maturity criteria of a project](Images/Maturite.png)
+![Maturity criteria of a project](Images/Maturity.png)
 
 These criteria must be used in every single QSOS evaluation. They are detailed in the appendix of this document.
 

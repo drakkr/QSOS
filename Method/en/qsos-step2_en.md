@@ -1,6 +1,6 @@
 # Step 2 : Evaluate
 
-![Position in the process](Images/evaluer-en.png)
+![Position in the process](Images/evaluate-en.png)
 
 ## Purpose
 

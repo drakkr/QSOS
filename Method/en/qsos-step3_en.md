@@ -1,6 +1,6 @@
 # Step 3 : Qualify
 
-![Position in the process](Images/qualifier-en.png)
+![Position in the process](Images/qualify-en.png)
 
 ## Purpose
 

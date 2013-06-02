@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="100%"
+   height="100%"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="quadrant.svg">
+  <metadata
+     id="metadata76">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1145"
+     id="namedview74"
+     showgrid="false"
+     inkscape:zoom="1.0603835"
+     inkscape:cx="372.04724"
+     inkscape:cy="677.0699"
+     inkscape:window-x="-3"
+     inkscape:window-y="-3"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4">
+    <linearGradient
+       id="gradientBase">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop7" />
+      <stop
+         style="stop-color:#a7e5e5;stop-opacity:1;"
+         offset="1"
+         id="stop9" />
+    </linearGradient>
+    <marker
+       orient="270"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Mend"
+       style="overflow:visible;">
+      <path
+         style="font-size:12;stroke-width:0.6"
+         d="M 8,4 L -2,0 L 8,-4 C 6.9,-2 7,2 8,4 z"
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         id="path12" />
+    </marker>
+    <marker
+       orient="0"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow2Lend"
+       style="overflow:visible;">
+      <path
+         style="font-size:12;stroke-width:0.6"
+         d="M 8,4 L -2,0 L 8,-4 C 6.9,-2 7,2 8,4 z"
+         transform="scale(0.6) rotate(180) translate(1,0)"
+         id="path15" />
+    </marker>
+    <linearGradient
+       xlink:href="#gradientBase"
+       id="gradient"
+       gradientUnits="userSpaceOnUse"
+       x1="280"
+       y1="157"
+       x2="280"
+       y2="487"
+       gradientTransform="translate(-2,-28)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gradientBase"
+       id="linearGradient3080"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2,-28)"
+       x1="280"
+       y1="157"
+       x2="280"
+       y2="487" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gradientBase"
+       id="linearGradient3108"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-2,-28)"
+       x1="280"
+       y1="157"
+       x2="280"
+       y2="487" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gradientBase"
+       id="linearGradient3135"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(98,172)"
+       x1="280"
+       y1="157"
+       x2="280"
+       y2="487" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gradientBase"
+       id="linearGradient3165"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(98,172)"
+       x1="280"
+       y1="157"
+       x2="280"
+       y2="487" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gradientBase"
+       id="linearGradient3190"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(98,172)"
+       x1="280"
+       y1="157"
+       x2="280"
+       y2="487" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#gradientBase"
+       id="linearGradient3038"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(98,172)"
+       x1="280"
+       y1="157"
+       x2="280"
+       y2="487" />
+  </defs>
+  <g
+     id="g44"
+     transform="translate(453.30973,308.04306)">
+    <a
+       xlink:href="show.php?lang=&amp;id[]=Nagios-3.2.0_fr.qsos&amp;svg=yes"
+       id="a46" />
+  </g>
+  <g
+     id="g3041"
+     inkscape:export-filename="/home/raph/Drakkr/QSOS/master/QSOS/Method/en/Images/quadrant.png"
+     inkscape:export-xdpi="100"
+     inkscape:export-ydpi="100">
+    <rect
+       y="153.63071"
+       x="58.469414"
+       height="418.71646"
+       width="587.52332"
+       id="rect3192"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    <rect
+       style="fill:url(#linearGradient3038);fill-opacity:1;stroke:#868686;stroke-width:3;stroke-opacity:1"
+       width="500"
+       height="340"
+       x="100"
+       y="200"
+       ry="0"
+       id="rect24" />
+    <rect
+       style="fill:none;stroke:#868686;stroke-width:3;stroke-dasharray:6, 6"
+       width="500"
+       height="170"
+       x="100"
+       y="200"
+       ry="0"
+       id="rect26" />
+    <rect
+       style="fill:none;stroke:#868686;stroke-width:3;stroke-dasharray:6, 6"
+       width="250"
+       height="340"
+       x="100"
+       y="200"
+       ry="0"
+       id="rect28" />
+    <text
+       y="58"
+       x="-80"
+       id="text32"
+       transform="matrix(0,-1,1,0,0,0)">
+      <tspan
+         id="tspan34"
+         x="-398"
+         y="86"
+         style="font-size:14px;font-family:Bitstream Vera Sans">Maturity</tspan>
+    </text>
+    <text
+       y="88"
+       x="84"
+       id="text36">
+      <tspan
+         id="tspan38"
+         x="280"
+         y="559"
+         style="font-size:14px;font-family:Bitstream Vera Sans">Functional coverage</tspan>
+    </text>
+    <path
+       inkscape:connector-curvature="0"
+       id="path40"
+       style="fill-opacity:0.75;stroke:#000000;stroke-width:3;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+       d="m 100,540 c 528,0 528,0 528,0" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path42"
+       style="fill-opacity:0.75;stroke:#000000;stroke-width:3;stroke-opacity:1;marker-end:url(#Arrow2Mend)"
+       d="m 100,540 c 0,-370 0,-370 0,-370" />
+    <path
+       style="fill:#fcdea2;fill-opacity:0.5;stroke:#000000;stroke-width:2;stroke-opacity:1"
+       d="m 396.30973,308.04306 a 57,21 0 1 1 114,0 57,21 0 0 1 -114,0 z"
+       id="path48"
+       inkscape:connector-curvature="0" />
+    <text
+       y="308.04306"
+       x="453.30972"
+       id="text50">
+      <tspan
+         style="font-size:10px;text-anchor:middle;font-family:Bitstream Vera Sans"
+         y="310.74307"
+         x="453.30972"
+         id="tspan52">Component C</tspan>
+    </text>
+    <a
+       xlink:href="show.php?lang=&amp;id[]=Zabbix-1.4.6_fr.qsos&amp;svg=yes"
+       id="a66"
+       transform="translate(366.72643,327.28888)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path68"
+         d="M -57,0 A 57,21 0 1 1 57,0 57,21 0 1 1 -57,0 z"
+         style="fill:#fcdea2;fill-opacity:0.5;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+      <text
+         id="text70">
+        <tspan
+           id="tspan72"
+           x="0"
+           y="2.7"
+           style="font-size:10px;text-anchor:middle;font-family:Bitstream Vera Sans">Component A</tspan>
+      </text>
+    </a>
+    <a
+       xlink:href="show.php?lang=&amp;id[]=OpenNMS-1.6.7_fr.qsos&amp;svg=yes"
+       id="a56"
+       transform="translate(238.12369,448.22355)">
+      <path
+         inkscape:connector-curvature="0"
+         id="path58"
+         d="M -57,0 A 57,21 0 1 1 57,0 57,21 0 1 1 -57,0 z"
+         style="fill:#fcdea2;fill-opacity:0.5;stroke:#000000;stroke-width:2;stroke-opacity:1" />
+      <text
+         id="text60">
+        <tspan
+           id="tspan62"
+           x="0"
+           y="2.7"
+           style="font-size:10px;text-anchor:middle;font-family:Bitstream Vera Sans">Component B</tspan>
+      </text>
+    </a>
+  </g>
+</svg>

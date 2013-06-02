@@ -4,7 +4,7 @@
 
 The general approach of the QSOS Method is composed of four interdependent steps.
 
-![General approach of QSOS](Images/processus-en.png)
+![General approach of QSOS](Images/process-small_en.png)
 
 -----------------------------------------------------------------------------------------------------
  Step           Description
