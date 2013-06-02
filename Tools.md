@@ -65,6 +65,8 @@ The backend manages the two QSOS repositories:
 
 Everybody can send a template or an evaluation into the _Incoming_ repository, wheter trough the backend's Web interface or directly  via the QSOS Editor.
 
+It is available here: <http://backend.qsos.org>.
+
 Only allowed members of the QSOS community can then move templates and evaluations from the _Incoming_ repository to the _Master_ repository.
 
 Check the [QSOS tutorial]() for more details.
@@ -75,9 +77,9 @@ Check the [QSOS tutorial]() for more details.
 
 The _Open Source Selection Software_ connects on both QSOS repositories to allow creation of personalized comparisons:
 
-* Official instance: <http://master.qsos.org>
+* Official instance: <http://master.o3s.qsos.org>
 
-* Sandbox instance: <http://incoming.qsos.org>
+* Sandbox instance: <http://incoming.o3s..qsos.org>
 
 Once a comparison has been created it can be exported in several formats:
 
