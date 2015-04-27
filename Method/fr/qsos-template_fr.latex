@@ -78,6 +78,7 @@ $if(fancy-enums)$
 \usepackage{enumerate}
 $endif$
 $if(tables)$
+\usepackage{longtable}
 \usepackage{ctable}
 \usepackage{float} % provides the H option for float placement
 $endif$
