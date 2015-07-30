@@ -27,12 +27,6 @@
 $git = "master";
 $repo = "../backend/$git/";
 
-$url = "http://localhost/local/o3s/";
-$sheet_web = "$url/o3s/backend/$git/";
-$template = "template";
-$template_web = "$url/backend/$git/";
-$delim = "/";
-
 //Path to jpgraph library (for PNG graphs)
 $jpgraph_path = "$base/app/libs/jpgraph/";
 
