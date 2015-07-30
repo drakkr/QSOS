@@ -1,18 +1,74 @@
 # O3S installation
 
-## Prerequsites
+## Prerequisites
 
-* PHP 5 with XSL support (Debian : apt-get install php5-xsl)
+* Web server (Apache)
+* PHP 5 with modules GD, XML with XSL support, mysql
+* Mysql
 * Java 6 (for Freemind)
 * Get QSOS source code: `git clone https://github.com/drakkr/QSOS.git`
+
+### Centos7 prerequisites
+
+* Add repository for php 5.5 if you want
+```
+wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm
+yum install -y remi-release-7.rpm
+# Edit /etc/yum.repos.d/remi.repo to enable remi-php55 repository
+```
+
+* Install and configuration
+```
+yum install -y httpd php php-gd php-xml php-mysql mariadb-server
+systemctl enable httpd
+systemctl start httpd
+systemctl enable mariadb
+systemctl start mariadb
+```
+
+* Disable firewalld if you want 
+```
+systemctl stop firewalld
+systemctl disable firewalld
+```
+
+* Disable selinux if you want
+```
+vim /etc/sysconfig/selinux
+reboot
+```
+
+### Debian prerequisites
+
+```
+apt-get install apache2 php5 php5-gd php5-xsl php5-mysql mysql-server
+```
 
 ## QSOS backend
 
 The source code is in `Tools/o3s/backend`.
 
 Create an o3s database in MySQL by using the `Tools/o3s/create_db.sql`script.
+```
+cd /var/www/html/QSOS.git/Tools/o3s
+mysql < create_db.sql
+```
 
 Point the website to the `app` directory (i.e. http://backend.qsos.org).
+
+```
+#/etc/httpd/conf.d/qsos.conf
+<VirtualHost *:80>
+        ServerName backend.qsos.org
+        ErrorLog logs/error_log
+        TransferLog logs/access_log
+        CustomLog logs/access_log combined
+        LogLevel warn
+        DocumentRoot /var/www/html/Tools/
+        DirectoryIndex index.php index.html
+        Options Indexes
+</VirtualHost>
+```
 
 Edit the `dataconf.php` file to connect to the database.
 
@@ -42,7 +98,9 @@ And also in the `incoming` directory:
 
 Symlink the Git repositories in the `app` directory: `ln -s ../master/` and `ln -s ../incoming/`
 
-Make sur your webserver is owner of the `backend` directory : `chown -R www-data:www-data backend`
+Make sur your webserver is owner of the `backend` directory :
+* Debian : `chown -R www-data:www-data backend`
+* CentOs/RedHat : `chown -R apache:apache backend`
 
 That's it. Your QSOS backend should be accessible online.
 
