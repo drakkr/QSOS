@@ -46,6 +46,9 @@ $template = "default";
 $default_lang = "fr"; //Default locale
 $supported_lang = array('fr', 'en'); //Supported locale
 
+//Use flashplayer to show MindMap 
+$use_flash_mm=true;
+
 $db_host = "localhost";
 $db_user = "root";
 $db_pwd = "osiris";

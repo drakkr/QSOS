@@ -46,7 +46,7 @@ echo "</center>\n";
 
 include('../formats/libs/QSOSComparison.php');
 $myComp = new QSOSComparison(array($id), $name);
-$myComp->exportFreeMind($id, true);
+$myComp->exportFreeMind($id, $use_flash_mm);
 
 echo "/<body>\n";
 echo "</html>\n";
