@@ -141,5 +141,5 @@ Mettre les droits du serveur web sur le répertoire `Tools` :
 
 Créer le lien symbolique du répertoire `backend` dans le répertoire `Tools/o3s/app` : `cd Tools/o3s/app && ln -s ../backend/`
 
-Si vous voulez une deuxième instance d'o3s, et le connecter à un autre dépôt (i.e. http://incoming.o3s.qsos.org), vous devrez déployer uen deuxième fois o3s. C'est pas génial, on le sait...
+Si vous voulez une deuxième instance d'o3s, et le connecter à un autre dépôt (i.e. http://incoming.o3s.qsos.org), vous devrez déployer une deuxième fois un frontal o3s. C'est pas génial, on le sait...
 
