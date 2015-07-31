@@ -224,7 +224,7 @@ class QSOSComparison {
       if (!$flash) {
 	//MM (FreeMind) file is transformed to PNG files
 	exec("java -cp freemind/lib/freemind.jar freemind.view.mindmapview.IndependantMapViewCreator 'images/$basename.mm' 'images/$basename.png'");
-	echo "<img src='images/$file.png'/>";
+	echo "<img src='images/$basename.png'/>";
       } else {
 	echo '<script type="text/javascript" src="mindmap/flashobject.js"></script>
 <p style="text-align:center; font-weight:bold"><a href="images/'.$basename.'.mm">Evaluation '.$basename.'.mm</a></p>
