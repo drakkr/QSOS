@@ -132,7 +132,7 @@ $db_pwd = "";
 $db_db = "o3s";
 ```
 
-Upload and unzip Freemind (binary package) in the `Tools/o3s/app/freemind` directory (http://sourceforge.net/projects/freemind/files/freemind/1.0.1/freemind-bin-max-1.0.1.zip). 
+Upload and unzip Freemind (binary package) in the `Tools/o3s/app/freemind` directory (i.e. http://sourceforge.net/projects/freemind/files/freemind/1.0.1/freemind-bin-max-1.0.1.zip). 
 
 Make your webserver owner of `Tools` :
 * Debian : `chown -R www-data:www-data Tools`
