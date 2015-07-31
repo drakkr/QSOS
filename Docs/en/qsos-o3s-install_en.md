@@ -48,7 +48,7 @@ apt-get install apache2 php5 php5-gd php5-xsl php5-mysql mysql-server
 
 The source code is in `/var/www/html/Tools/o3s/backend`.
 
-Create an o3s database in MySQL by using the `Tools/o3s/create_db.sql`script.
+Create an o3s database in MySQL by using the `Tools/o3s/create_db.sql` script.
 ```
 cd /var/www/html/Tools/o3s
 mysql < create_db.sql
