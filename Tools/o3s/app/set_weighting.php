@@ -65,7 +65,7 @@ function checkWeight(field) {
   if (isNaN(field.value)) {
     var oldValue = field.value;
     field.value = "1";
-    alert(oldValue + "<? echo $msg['s2_err_weight']; ?>");
+    alert(oldValue + "<?php echo $msg['s2_err_weight']; ?>");
     field.focus();
   }
 }
@@ -88,7 +88,7 @@ function back() {
 function upload() {
   var file = document.getElementById("weighting");
   if (file.value == "") {
-    alert("<? echo $msg['s2_err_no_file']; ?>");
+    alert("<?php echo $msg['s2_err_no_file']; ?>");
     return;
   }
   myForm.action = "set_weighting.php";
