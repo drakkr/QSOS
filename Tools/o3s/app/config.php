@@ -27,9 +27,6 @@
 $git = "master";
 $repo = "../backend/$git/";
 
-//Path to jpgraph library (for PNG graphs)
-$jpgraph_path = "$base/app/libs/jpgraph/";
-
 //Temp directory, with trailing slash
 $temp = "/tmp/";
 

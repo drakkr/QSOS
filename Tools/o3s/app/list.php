@@ -66,7 +66,7 @@ function submitForm() {
     myForm.action = "show.php";
     myForm.submit();
   } else {
-    alert("<? echo $msg['s3_err_js_no_file']; ?>");
+    alert("<?php echo $msg['s3_err_js_no_file']; ?>");
   }
 }
 
@@ -80,7 +80,7 @@ function exportODS() {
     myForm.action = "exportODS.php";
     myForm.submit();
   } else {
-    alert("<? echo $msg['s3_err_js_no_file']; ?>");
+    alert("<?php echo $msg['s3_err_js_no_file']; ?>");
   }
 }
 
@@ -89,7 +89,7 @@ function exportODP() {
     myForm.action = "exportODP.php";
     myForm.submit();
   } else {
-    alert("<? echo $msg['s3_err_js_no_file']; ?>");
+    alert("<?php echo $msg['s3_err_js_no_file']; ?>");
   }
 }
 
@@ -98,7 +98,7 @@ function exportODT() {
     myForm.action = "exportODT.php";
     myForm.submit();
   } else {
-    alert("<? echo $msg['s3_err_js_no_file']; ?>");
+    alert("<?php echo $msg['s3_err_js_no_file']; ?>");
   }
 }
 
@@ -107,7 +107,7 @@ function showGraph() {
     myForm.action = "radar.php";
     myForm.submit();
   } else {
-    alert("<? echo $msg['s3_err_js_no_file']; ?>");
+    alert("<?php echo $msg['s3_err_js_no_file']; ?>");
   }
 }
 
@@ -116,7 +116,7 @@ function showQuadrant() {
     myForm.action = "quadrant.php";
     myForm.submit();
   } else {
-    alert("<? echo $msg['s3_err_js_no_file']; ?>");
+    alert("<?php echo $msg['s3_err_js_no_file']; ?>");
   }
 }
 
