@@ -16,6 +16,9 @@ CHAPTERS=qsos-tutorial-head_$(LANG).md $(PAGES) qsos-tutorial-drakkr_$(LANG).md
 
 DOCNAME=$(DOC)-$(VERSION)_$(LANG)
 
+debian-install:
+	@echo "You can run this : apt-get install pandoc texlive-latex-base texlive-fonts-recommended texlive-latex-recommended texlive-lang-french texlive-latex-extra texlive-bibtex-extra texlive-humanities"
+
 doc-pdf:
 	mkdir -p dist
 	pandoc -N --toc --template=../../../Method/$(LANG)/qsos-template_$(LANG).latex --variable lang=french -o dist/$(DOCNAME).pdf $(CHAPTERS)
