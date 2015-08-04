@@ -36,13 +36,13 @@ The _XulEditor_ can then be launched via the scripts `xuleditor` or `xuleditor.b
 
 ### Using _XulEditor_
 
-![_Files_ tab of _XulEditor_](Images/xuleditor-tab-file_en.png)
+![_Files_ tab of _XulEditor_](../Images/xuleditor-tab-file_en.png)
 
 In the _Files_ tab, you can create a new evaluation from a template coming from either your hard drive or from the QSOS reference. The second case is detailed hereafter.
 
 In order to do that, click on the _Remote template_ button and browse the QSOS templates reference.
 
-![Browsing the QSOS templates reference](Images/xuleditor-remote-template_en.png)
+![Browsing the QSOS templates reference](../Images/xuleditor-remote-template_en.png)
 
 You can filter the templates of the reference by the repository (_Master_ or _Incoming_) and by language.
 
@@ -50,7 +50,7 @@ Once the template is selected, you can the start entering your evaluation by com
 
 The _General_ tab contains information relating to the evaluated software (name, version, main license, etc.) and to the evaluation itself (template, authors).
 
-![_General_ tab of _XulEditor_](Images/xuleditor-tab-general_en.png)
+![_General_ tab of _XulEditor_](../Images/xuleditor-tab-general_en.png)
 
 You see that the name and the version of the template used for this evaluation are displayed but cannot be modified. For more details on how to update the template of an existing evaluation, read the chapter [Applying a new version of a template](#applying-a-new-version-of-a-template).
 
@@ -60,13 +60,13 @@ The _criteria_ tab allows you to browse in the tree of the criteria and to evalu
 
 * by giving the reason and the source of the score.
 
-![_Criteria_ tab of _XulEditor_](Images/xuleditor-tab-criteria_en.png)
+![_Criteria_ tab of _XulEditor_](../Images/xuleditor-tab-criteria_en.png)
 
 Please give a reason of the score in the _Comments_ field. It will make your evaluation more relevant, more useful and increases its chances to be approved by the QSOS community.
 
 The _Chart_ tab allows you to browse in the tree of criteria as a radar chart where you can click on the sections to see the sub-criteria or browse via the breadcrumbs.
 
-![_Chart_ tab of _XulEditor_](Images/xuleditor-tab-graph_en.png)
+![_Chart_ tab of _XulEditor_](../Images/xuleditor-tab-graph_en.png)
 
 The criteria colored in red are those that have not been evaluated yet. It allows you to quickly identify the missing parts to complete your evaluation.
 
@@ -80,15 +80,15 @@ When you consider your evaluation is complete - at least for a first version, yo
 
 There are two ways to do it. The first is, like with templates, to connect to the QSOS backend^[<http://backend.qsos.org>]. 
 
-![Uploading an evaluation to the QSOS reference](Images/o3s-upload-eval_en.png)
+![Uploading an evaluation to the QSOS reference](../Images/o3s-upload-eval_en.png)
 
 This requires an account on O3S. If you don't have one, create one on the same website.
 
 If you already have an O3S account, you can also save your evaluation directly on the QSOS reference with _XulEditor_, via the _Save remotely_ in the _Files_ tab.
 
-![Saving on the QSOS reference with _XulEditor_](Images/xuleditor-save-remote_en.png)
+![Saving on the QSOS reference with _XulEditor_](../Images/xuleditor-save-remote_en.png)
 
-![Visible timeline of your contribution in O3S](Images/o3s-timeline_en.png)
+![Visible timeline of your contribution in O3S](../Images/o3s-timeline_en.png)
 
 From this point, your evaluation is visible by the community in the _Incoming_ repository of the QSOS reference. If it is considered as complete and objective, it will be approved by the community and moved to the _Master_ repository.
 
@@ -100,13 +100,13 @@ _XulEditor_ allows you to modify a QSOS evaluation coming either from your hard 
 
 In the _Files_ tab, click on the _Remote evaluation_. You can then browse in the QSOS reference by filtering the evaluations by the type of software, the repository (_Master_ or _Incoming_) and the language.
 
-![Browsing the QSOS evaluations reference](Images/xuleditor-remote-evaluation_en.png)
+![Browsing the QSOS evaluations reference](../Images/xuleditor-remote-evaluation_en.png)
 
 Once the evaluation is selected, you can then manipulate it and modify it in _XulEditor_.
 
 You cannot overwrite an evaluation that is not yours. The reference doesn't allow this but it will tell you who contributed this evaluation. You can contact her then.
 
-![Evaluation Overwrite attempt](Images/xuleditor-writeremote-error_en.png)
+![Evaluation Overwrite attempt](../Images/xuleditor-writeremote-error_en.png)
 
 If you can't contact this user or she hasn't replied, contact one of the QSOS moderators who will arbitrate and unlock the situation.
 TODO : add the moderators' mailing list.
@@ -119,19 +119,19 @@ To do that, you first have to open the evaluation that you want to update (_Loca
 
 The _Remote template_ allows you to browse the QSOS templates reference.
 
-![Browsing the QSOS templates reference](Images/xuleditor-remote-template_en.png)
+![Browsing the QSOS templates reference](../Images/xuleditor-remote-template_en.png)
 
 You can filter the templates of the reference by repository (_Master_ or _Incoming_) and by language.
 
-![Error while applying a wrong type of template](Images/xuleditor-template-error_en.png)
+![Error while applying a wrong type of template](../Images/xuleditor-template-error_en.png)
 
 If you select a template that has a different type from the initial one's, _XulEditor_ prevent you to apply it and displays an error message.
 
-![Confirmation request if the template is in another language](Images/xuleditor-template-lang_en.png)
+![Confirmation request if the template is in another language](../Images/xuleditor-template-lang_en.png)
 
 If the new template is in a different language from the initial one's, _XulEditor_ requests a confirmation before modifying your evaluation.
 
-![Confirmation request of the modification](Images/xuleditor-template-confirm_en.png)
+![Confirmation request of the modification](../Images/xuleditor-template-confirm_en.png)
 
 And in every case, before modifying your evaluation, _XulEditor_ requests a confirmation.
 
@@ -143,7 +143,7 @@ The O3S web application allows, among other things, to visualize the evaluation 
 
 Let's consider that you have browsed 03S to the evaluation you want to visualize in web mode.
 
-![O3S Homepage](Images/o3s-evaluation_en.png)
+![O3S Homepage](../Images/o3s-evaluation_en.png)
 
 03S provides three evaluation visualization formats :
 
@@ -157,7 +157,7 @@ Let's consider that you have browsed 03S to the evaluation you want to visualize
 
 When you select this mode of visualization in 03S, and you have Firefox with the _XulEditor_ extension, the evaluation is opened directly in the editor.
 
-![Visualization in XML format](Images/o3s-evaluation-xml_en.png)
+![Visualization in XML format](../Images/o3s-evaluation-xml_en.png)
 
 In every case, the XML file is also displayed by your browser.
 
@@ -171,7 +171,7 @@ This page allows to fold and unfold branches of the tree of criteria to ease rea
 
 When you select this mode of visualization in O3S, the evaluation is displayed in your browser as a mindmap in FreeMind format (`.mm`).
 
-![Visualization in FreeMind format](Images/o3s-freemind-evaluation_en.png)
+![Visualization in FreeMind format](../Images/o3s-freemind-evaluation_en.png)
 
 This page allows you to take the following actions :
 

@@ -34,13 +34,13 @@ L'application _XulEditor_ peut ensuite être lancé via les scripts `xuleditor` 
 
 ### Utiliser _XulEditor_
 
-![Onglet _Fichiers_ de _XulEditor_](Images/xuleditor-tab-file_fr.png)
+![Onglet _Fichiers_ de _XulEditor_](../Images/xuleditor-tab-file_fr.png)
 
 Depuis l'onglet _Fichier_, vous pouvez créer une nouvelle évaluation à partir d'un template provenant soit de votre disque dur, soit du référentiel QSOS. C'est ce deuxième cas qui est détaillé ici.
 
 Pour ce faire, cliquez sur le bouton _Template distant_ et naviguez dans le référentiel des templates QSOS.
 
-![Navigation dans le référentiel des templates QSOS](Images/xuleditor-remote-template_fr.png)
+![Navigation dans le référentiel des templates QSOS](../Images/xuleditor-remote-template_fr.png)
 
 Vous pouvez filtrer les templates du référentiel en fonction du dépôt concerné (_Master_ ou _Incoming_) et de la langue.
 
@@ -48,7 +48,7 @@ Une fois le template sélectionné, vous pouvez alors commencer à saisir votre 
 
 L'onglet _Général_ contient les informations relatives au logiciel évalué (nom, version, licence principale, etc.) et à l'évaluation elle-même (template, auteurs).
 
-![Onglet _Général_ de _XulEditor_](Images/xuleditor-tab-general_fr.png)
+![Onglet _Général_ de _XulEditor_](../Images/xuleditor-tab-general_fr.png)
 
 Vous remarquez que le nom et la version du template utilisés pour l'évaluation apparaissent mais ne peuvent être modifiés. Pour plus de détail sur comment mettre à jour le template d'une évaluation existante, reportez-vous au chapitre [Appliquer une nouvelle version de template](#appliquer-une-nouvelle-version-de-template).
 
@@ -58,13 +58,13 @@ L'onglet _Critères_ vous permet de naviguer dans l'arbre des critères d'évalu
 
 * en précisant la raison et la source de votre notation.
 
-![Onglet _Critères_ de _XulEditor_](Images/xuleditor-tab-criteria_fr.png)
+![Onglet _Critères_ de _XulEditor_](../Images/xuleditor-tab-criteria_fr.png)
 
 Pensez à motiver vos scores dans le champ _Commentaires_. Cela rend votre évaluation plus pertinente, plus utile et augmente ainsi ses chances d'être rapidement validée par la communauté QSOS.
 
 L'onglet _Graphe_ permet de naviguer de manière graphique dans l'arbre des critères, sous forme de radar où vous pouvez cliquer sur les nœuds pour en voir les sous-critères ou naviguer via le fil d'Ariane.
 
-![Onglet _Graphe_ de _XulEditor_](Images/xuleditor-tab-graph_fr.png)
+![Onglet _Graphe_ de _XulEditor_](../Images/xuleditor-tab-graph_fr.png)
 
 Les critères colorés en rouge sont ceux n'ayant pas encore été évalués. Cela vous permet de rapidement identifier les éléments manquants pour compléter votre évaluation.
 
@@ -78,15 +78,15 @@ Lorsque vous considérez que votre évaluation est complète - au moins pour une
 
 Deux méthodes sont possibles. La première est, de manière similaire aux templates, de vous connectez au backend QSOS^[<http://backend.qsos.org>]. 
 
-![Envoi de l'évaluation dans le référentiel QSOS](Images/o3s-upload-eval_fr.png)
+![Envoi de l'évaluation dans le référentiel QSOS](../Images/o3s-upload-eval_fr.png)
 
 Ceci nécessite de disposer d'un compte sur l'application O3S. Si vous n'en possédez pas encore, créez en sur ce même site Web.
 
 Si vous disposez d'un compte sur 03S, vous pouvez également enregistrer votre évaluation dans le référentiel QSOS directement depuis _XulEditor_, via le bouton _Enregistrer sur le serveur_ de l'onglet _Fichier_.
 
-![Envoi dans le référentiel O3S depuis _XulEditor_](Images/xuleditor-save-remote_fr.png)
+![Envoi dans le référentiel O3S depuis _XulEditor_](../Images/xuleditor-save-remote_fr.png)
 
-![Trace de votre contribution visible dans O3S](Images/o3s-timeline_fr.png)
+![Trace de votre contribution visible dans O3S](../Images/o3s-timeline_fr.png)
 
 À partir de ce moment, votre évaluation est visible de la communauté, dans le dépôt _Incoming_ du référentiel QSOS. Si elle est considérée comme complète et objective, elle sera validée par la communauté et déplacée dans le dépôt _Master_.
 
@@ -98,13 +98,13 @@ _XulEditor_ vous permet de modifier une évaluation QSOS provenant soit de votre
 
 Depuis l'onglet _Fichier_, cliquez sur le bouton _Evaluation distante_. Vous pouvez alors naviguer dans le référentiel QSOS en filtrant les évaluations en fonction du type de logiciel concerné, du dépôt concerné (_Master_ ou _Incoming_) et de la langue.
 
-![Navigation dans le référentiel des évaluations QSOS](Images/xuleditor-remote-evaluation_fr.png)
+![Navigation dans le référentiel des évaluations QSOS](../Images/xuleditor-remote-evaluation_fr.png)
 
 Une fois l'évaluation sélectionnée, vous pouvez alors la manipuler et la modifier dans _XulEditor_.
 
 Vous ne pouvez écraser une évaluation qui n'est pas la vôtre. Le référentiel ne l'autorise pas mais vous indique qui est l'utilisateur qui a contribué l'évaluation. Vous pouvez alors le contacter.
 
-![Tentative d'écrasement d'une évaluation](Images/xuleditor-writeremote-error_fr.png)
+![Tentative d'écrasement d'une évaluation](../Images/xuleditor-writeremote-error_fr.png)
 
 Si jamais vous n'arrivez pas à contacter cet utilisateur ou que vous restez sans retour de sa part, contactez un des validateurs de la communauté qui pourra alors arbitrer et vous débloquer. TODO : ajouter l'adresse de la mailing list des validateurs.
 
@@ -116,19 +116,19 @@ Pour réaliser cette opération, vous devez tout d'abord ouvrir l'évaluation à
 
 Le bouton _Template distant_ vous permet ainsi de naviguez dans le référentiel des templates QSOS.
 
-![Navigation dans le référentiel des templates QSOS](Images/xuleditor-remote-template_fr.png)
+![Navigation dans le référentiel des templates QSOS](../Images/xuleditor-remote-template_fr.png)
 
 Vous pouvez filtrer les templates du référentiel en fonction du dépôt concerné (_Master_ ou _Incoming_) et de la langue.
 
-![Erreur lors de l'application d'un mauvais type de template](Images/xuleditor-template-error_fr.png)
+![Erreur lors de l'application d'un mauvais type de template](../Images/xuleditor-template-error_fr.png)
 
 Si vous sélectionnez un template de type différent de celui initialement utilisé pour réaliser l'évaluation, _XulEditor_ refuse de l'appliquer et vous affiche un message d'erreur. 
 
-![Demande de confirmation si le template est de langue différente](Images/xuleditor-template-lang_fr.png)
+![Demande de confirmation si le template est de langue différente](../Images/xuleditor-template-lang_fr.png)
 
 Si le nouveau template est dans une langue différente de celle du template initial, _XulEditor_ vous demande confirmation avant de modifier votre évaluation.
 
-![Demande de confirmation de la modification](Images/xuleditor-template-confirm_fr.png)
+![Demande de confirmation de la modification](../Images/xuleditor-template-confirm_fr.png)
 
 Et dans tous les cas, avant de modifier votre évaluation, _XulEditor_ vous demande confirmation.
 
@@ -140,7 +140,7 @@ L'application Web O3S permet, entre autres possibilités, de visualiser les éva
 
 Considérons ici que vous avez navigué dans O3S jusqu'à l'évaluation que vous désirer visualiser en mode Web. 
 
-![Page d'accueil d'O3S](Images/o3s-evaluation_fr.png)
+![Page d'accueil d'O3S](../Images/o3s-evaluation_fr.png)
 
 03S propose trois formats de visualisation d'une évaluation :
 
@@ -154,7 +154,7 @@ Considérons ici que vous avez navigué dans O3S jusqu'à l'évaluation que vous
 
 Lorsque vous sélectionnez dans O3S ce mode de visualisation, que vous utilisez Firefox et que l'extension _XulEditor_ est installée, cette dernière vous propose alors d'ouvrir directement l'évaluation dans l'éditeur.
 
-![Visualisation au format XML](Images/o3s-evaluation-xml_fr.png)
+![Visualisation au format XML](../Images/o3s-evaluation-xml_fr.png)
 
 Dans tous les cas, le fichier XML est également affiché par votre navigateur.
 
@@ -168,7 +168,7 @@ Cette page permet de plier et déplier les branches de l'arbre des critères pou
 
 Lorsque vous sélectionnez dans O3S ce mode de visualisation, l'évaluation est affichée dans votre navigateur sous forme de carte heuristique au format FreeMind (`.mm`).
 
-![Visualisation au format FreeMind](Images/o3s-freemind-evaluation_fr.png)
+![Visualisation au format FreeMind](../Images/o3s-freemind-evaluation_fr.png)
 
 Cette page vous permet de réaliser les actions suivantes :
 

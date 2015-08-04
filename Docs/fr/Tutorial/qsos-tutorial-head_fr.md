@@ -1,5 +1,5 @@
 % Tutoriel QSOS
-% ![Logo](../../../Method/fr/Images/QSOS.png)
+% ![Logo](../Images/QSOS.png)
 % Version 2.0 - 13/02/2013
 
 # Note de licence

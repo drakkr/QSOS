@@ -14,7 +14,7 @@ For instance _qsos-maintainer-guide-head_en.md_:
 
 ~~~{.Mandoc .numberLines}
 % QSOS Maintainer Guide
-% ![Logo](Images/QSOS.png)
+% ![Logo](../Images/QSOS.png)
 % Version 2.0 - 2013-02-18
 
 # License

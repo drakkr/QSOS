@@ -4,7 +4,7 @@ QSOS est un sous-projet de l'initiative Drakkr visant à construire un framework
 
 Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, Drakkr propose également d'autres méthodes et outils pour mettre en œuvre une telle gouvernance.
 
-![Framework Drakkr](Images/drakkr-orga.png)
+![Framework Drakkr](../Images/drakkr-orga.png)
 
 * __OSC__ (Open Source Cartouche) : sous-projet dédié à l'identification unique d'une version d'un logiciel open source ainsi qu'à la gestion de ses métadonnées ;
 

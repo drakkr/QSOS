@@ -4,7 +4,7 @@ QSOS is part of the Drakkr initiative designed for businesses and organization t
 
 The Drakkr processes are split in several dedicated projects, the whole providing a comprehensive and coherent framework.
 
-![Drakkr Framework](../../../Method/en/Images/drakkr-schema_en.png)
+![Drakkr Framework](../Images/drakkr-schema_en.png)
 
 The Drakkr projects are as follows:
 

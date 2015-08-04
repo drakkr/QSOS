@@ -14,11 +14,11 @@ O3S existe en deux versions, chacune connectée sur l'un des deux dépôts du r�
 
 Connectez-vous à l'instance d'O3S que vous désirez. La liste des évaluations de l'instance vous est affichée, filtrée par langue.
 
-![Page d'accueil d'O3S](Images/o3s-index_fr.png)
+![Page d'accueil d'O3S](../Images/o3s-index_fr.png)
 
 Sélectionnez le domaine logiciel qui vous intéresse. La liste des évaluations réalisées avec la version du template que vous avez sélectionnée vous est présentée.
 
-![Page de gestion de votre comparaison](Images/o3s-list-evaluations_fr.png)
+![Page de gestion de votre comparaison](../Images/o3s-list-evaluations_fr.png)
 
 À partir de cette page vous pouvez réaliser un certain nombre d'actions :
 
@@ -36,7 +36,7 @@ Sélectionnez le domaine logiciel qui vous intéresse. La liste des évaluations
 
 Le bouton _Pondérer le template_ vous affiche une page permettant de gérer votre pondération.
 
-![Page de gestion de votre pondération](Images/o3s-weightings_fr.png)
+![Page de gestion de votre pondération](../Images/o3s-weightings_fr.png)
 
 De cette page vous pouvez :
 
@@ -50,7 +50,7 @@ De cette page vous pouvez :
 
 ## Visualiser une comparaison en mode Web
 
-![Boutons de visualisation en mode Web](Images/o3s-buttons-web_fr.png)
+![Boutons de visualisation en mode Web](../Images/o3s-buttons-web_fr.png)
 
 Depuis la page de gestion de votre comparaison, vous pouvez visualiser cette dernière dans votre navigateur selon plusieurs modes :
 
@@ -64,7 +64,7 @@ Depuis la page de gestion de votre comparaison, vous pouvez visualiser cette der
 
 Le bouton _Comparatif en ligne_ déclenche l'affichage d'un tableau comparatif des évaluations que vous avez sélectionnées intégrant votre pondération.
 
-![Visualisation sous forme de tableau comparatif](Images/o3s-comparison-table_fr.png)
+![Visualisation sous forme de tableau comparatif](../Images/o3s-comparison-table_fr.png)
 
 Ce tableau est dynamique, il vous permet de réaliser les actions suivantes :
 
@@ -80,7 +80,7 @@ Ce tableau est dynamique, il vous permet de réaliser les actions suivantes :
 
 Le bouton _Comparatif graphique_ déclenche l'affichage de la comparaison sous la forme d'un graphique de type radar.
 
-![Visualisation sous forme de radar dynamique](Images/o3s-radar_fr.png)
+![Visualisation sous forme de radar dynamique](../Images/o3s-radar_fr.png)
 
 Ce graphique est dynamique, il vous permet de réaliser les actions suivantes :
 
@@ -98,7 +98,7 @@ Vous pouvez enregistrer sur votre disque dur les graphiques SVG affichés par 03
 
 L'application O3S permet de visualiser votre comparaison selon un formalisme appelé quadrant QSOS.
 
-![Visualisation sous forme quadrant QSOS](Images/o3s-quadrant_fr.png)
+![Visualisation sous forme quadrant QSOS](../Images/o3s-quadrant_fr.png)
 
 Il s'agit du positionnement des différentes évaluations que vous avez sélectionnées selon deux axes :
 
@@ -114,7 +114,7 @@ Vous pouvez enregistrer sur votre disque dur le quadrant QSOS en utilisant la fo
 
 ## Exporter une comparaison aux formats OpenDocument
 
-![Boutons d'export aux formats OpenDocuments](Images/o3s-buttons-opendocument_fr.png)
+![Boutons d'export aux formats OpenDocuments](../Images/o3s-buttons-opendocument_fr.png)
 
 Depuis la page de gestion de votre comparaison, vous pouvez l'exporter aux formats OpenDocument suivants :
 
@@ -130,7 +130,7 @@ Depuis la page de gestion de votre comparaison, un clic sur le bouton _Export OD
 
 Vous pouvez sauvegarder le résultat en tant que fichier `.ods` sur votre disque dur.
 
-![Feuille de calcul exportée par O3S](Images/o3s-ods_fr.png)
+![Feuille de calcul exportée par O3S](../Images/o3s-ods_fr.png)
 
 La feuille de calcul exportée comporte plusieurs onglets :
 
@@ -152,7 +152,7 @@ Depuis la page de gestion de votre comparaison, un clic sur le bouton _Export OD
 
 Vous pouvez sauvegarder le résultat en tant que fichier `.odp` sur votre disque dur.
 
-![Présentation exportée par O3S](Images/o3s-odp_fr.png)
+![Présentation exportée par O3S](../Images/o3s-odp_fr.png)
 
 La présentation est composée de différents types de slides :
 
@@ -178,7 +178,7 @@ Depuis la page de gestion de votre comparaison, un clic sur le bouton _Export OD
 
 Vous pouvez sauvegarder le résultat en tant que fichier `.odt` sur votre disque dur.
 
-![Rapport exporté par O3S](Images/o3s-odt_fr.png)
+![Rapport exporté par O3S](../Images/o3s-odt_fr.png)
 
 Le rapport est composé de différents chapitres : 
 

@@ -6,7 +6,7 @@ A template defines the structure or the grid of analysis of a QSOS evaluation. I
 
 The sections titled _Maturity_ and _Metadata_ are imposed by the QSOS method.
 
-![_Maturity_ imposed in templates](Images/template-maturity_en.png)
+![_Maturity_ imposed in templates](../Images/template-maturity_en.png)
 
 The _Maturity_ section is an organized set of criteria unconditionally used to evaluate the maturity of a piece of software and the project in charge of its development, no matter what is the software or type of software. For more details on the criteria belonging to the _Maturity_ section, read the QSOS method itself. Therefore, even if you modify this section in your template, these modifications will be overwritten to guarantee its compliance within the method.
 
@@ -38,7 +38,7 @@ To add new sections to your template, you just need to add and organize new node
 
 * an intermediate node allows to organize your criteria. In addition to the title, you can write a description with a sub-node in the _bubble_ format.
 
-![_Bubble_ format to describe a node](Images/template-bubble_en.png)
+![_Bubble_ format to describe a node](../Images/template-bubble_en.png)
 
 * a final node (a leaf), is an evaluation criterion. It must respect the following conventions :
 
@@ -46,15 +46,15 @@ To add new sections to your template, you just need to add and organize new node
 
     2. the description of the score 0, 1 and 2 must be marked with the appropriate icons.
 
-![Criteria description](Images/template-icons_en.png)
+![Criteria description](../Images/template-icons_en.png)
 
 You're free to create and organize the criteria of an evaluation that are peculiar to a type of software. The main node of your template must be the name of the type of software. This name is the unique identifier of the template.
 
-![Setting the name of the template](Images/template-name_en.png)
+![Setting the name of the template](../Images/template-name_en.png)
 
 ### Modifying the _Metadata_ section
 
-![_Metadata_ section imposed in templates](Images/template-metadata_en.png)
+![_Metadata_ section imposed in templates](../Images/template-metadata_en.png)
 
 Please modify the _Metadata_ of your template by entering the following information :
 
@@ -80,11 +80,11 @@ The FreeMind file of your template is in `.mm` format. You can then save it and 
 
 When you consider the template complete - at least for a first version, you can propose it to the QSOS community. To do that, go to this address : <http://o3s.qsos.org/backend/app/connect.php>. 
 
-![Connection to O3S](Images/o3s-connect_en.png)
+![Connection to O3S](../Images/o3s-connect_en.png)
 
 An O3S account is needed. If you don't have one, create one by clicking on _Sign On_.
 
-![Uploading a template on O3S](Images/o3s-upload_en.png)
+![Uploading a template on O3S](../Images/o3s-upload_en.png)
 
 From then on, your template can be used by the community to create new evaluations. Read the chapter [Creating new evaluation](#creating-new-evaluation).
 
@@ -102,7 +102,7 @@ The existing templates are stored in the QSOS community reference. They are grou
 
 You can browse the two repositories on O3S^[<http://o3s.qsos.org/backend/app/listRepo.php>] and download the templates you want.
 
-![Browsing the templates reference](Images/o3s-list-templates_en.png)
+![Browsing the templates reference](../Images/o3s-list-templates_en.png)
 
 Once you have the template, use _FreeMind_ to modify it. Read the chapter [Creating a new template](#creating-a-new-template) for more details on this topic.
 

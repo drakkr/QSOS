@@ -6,7 +6,7 @@ All QSOS tools are distributed under the terms of the _GNU General Public Licens
 
 O3S (Open Source Selection Software) source code is stored in the _Tools/o3s_ folder of the QSOS.git repository.
 
-![O3S global architecture](Images/o3S-architecture.png)
+![O3S global architecture](../Images/o3S-architecture.png)
 
 O3S is composed of several components:
 
@@ -239,7 +239,7 @@ Once XulEditor packages are generated you still need to actually release them to
 
 The XulEditor Firefox extension is signed with help of the McCoy^[<https://developer.mozilla.org/en/docs/McCoy>] tool. You'll need the _xuleditor@qsos.org_ RSA key to do so. If you don't have it... well you should question yourself about being a QSOS maintainer!
 
-![Use of McCoy](Images/McCoy.png)
+![Use of McCoy](../Images/McCoy.png)
 
 When you're done with McCoy and your actual role in the QSOS project, everything is ready for your new version to be released: you just signed _xuleditor-update.rdf_ in the name of the QSOS community. 
 

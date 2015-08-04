@@ -1,5 +1,5 @@
 % QSOS Tutorial
-% ![Logo](../../../Method/en/Images/QSOS.png)
+% ![Logo](../Images/QSOS.png)
 % Version 2.0 - 2013-02-13
 
 # License

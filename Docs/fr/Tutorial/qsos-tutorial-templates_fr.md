@@ -6,7 +6,7 @@ Un template définit la structure ou la grille d'analyse d'une évaluation QSOS.
 
 Les axe intitulés _Maturité_ et _Metadata_ sont imposés par la méthode QSOS. 
 
-![Axe _Maturité_ imposé aux templates](Images/template-maturity_fr.png)
+![Axe _Maturité_ imposé aux templates](../Images/template-maturity_fr.png)
 
 L'axe _Maturité_  est un ensemble organisé de critères systématiquement utilisé pour évaluer la maturité du logiciel et du projet en charge de son développement. Et ce, quel que soit le logiciel ou le type de logiciel concernés. Pour le détail des critères composant l'axe _Maturité_, consultez la méthode QSOS elle-même. Ainsi, même si vous modifiez cet axe dans votre template, ces modifications seront écrasées pour garantir sa conformité avec la méthode.
 
@@ -38,7 +38,7 @@ Pour ajouter de nouveaux axes d'évaluation à votre template, il vous suffit d'
 
 * un nœud intermédiaire permet d'organiser et hiérarchiser vos critères, outre son titre, vous pouvez préciser sa description détaillée via un sous-nœud mis au format _Bulle_.
 
-![Format _Bubble_ pour la description d'un nœud](Images/template-bubble_fr.png)
+![Format _Bubble_ pour la description d'un nœud](../Images/template-bubble_fr.png)
 
 * un nœud final (donc une feuille), correspond à un critère d'évaluation, il doit respecter les conventions suivantes :
 
@@ -46,15 +46,15 @@ Pour ajouter de nouveaux axes d'évaluation à votre template, il vous suffit d'
 
     2. les descriptions des notes 0, 1 et 2 doivent être repérées via des icônes idoines.
 
-![Formalisme de description des critères](Images/template-icons_fr.png)
+![Formalisme de description des critères](../Images/template-icons_fr.png)
 
 Libre à vous de créer et d'organiser les critères d'évaluation propres à une famille de logiciel. Le nœud principal de votre template doit être nommé selon cette famille, c'est ce nom qui identifie le template de manière unique.
 
-![Préciser le nom du template](Images/template-name_fr.png)
+![Préciser le nom du template](../Images/template-name_fr.png)
 
 ### Modifier l'axe _Metadata_
 
-![Axe _Metadata_ imposé aux templates](Images/template-metadata_fr.png)
+![Axe _Metadata_ imposé aux templates](../Images/template-metadata_fr.png)
 
 Pensez à modifier l'axe _Metadata_ de votre template en précisant les informations suivantes :
 
@@ -80,11 +80,11 @@ Le fichier FreeMind de votre template est au format `.mm`. Vous pouvez donc le s
 
 Lorsque vous considérez que le template est complet - au moins pour une première version, vous pouvez alors le proposer à la communauté QSOS. Pour ce faire, connectez vous à l'adresse suivante : <http://o3s.qsos.org/backend/app/connect.php>. 
 
-![Connexion à O3S](Images/o3s-connect_fr.png)
+![Connexion à O3S](../Images/o3s-connect_fr.png)
 
 Ceci nécessite de disposer d'un compte sur l'application O3S. Si vous n'en possédez pas encore, créez en un en cliquant sur le lien _Sign On_.
 
-![Envoi du template dans le référentiel O3S](Images/o3s-upload_fr.png)
+![Envoi du template dans le référentiel O3S](../Images/o3s-upload_fr.png)
 
 À partir de ce moment, votre template est utilisable par la communauté pour créer de nouvelles évaluations. Reportez-vous au chapitre [Créer une nouvelle évaluation](#créer-une-nouvelle-évaluation).
 
@@ -102,7 +102,7 @@ Les templates déjà existants sont stockés dans le référentiel communautaire
 
 Vous pouvez, en vous connectant à 03S^[<http://o3s.qsos.org/backend/app/listRepo.php>], naviguer dans ces deux dépôts et télécharger les templates de votre choix.
 
-![Navigation dans le référentiel des templates](Images/o3s-list-templates_fr.png)
+![Navigation dans le référentiel des templates](../Images/o3s-list-templates_fr.png)
 
 Une fois un template récupéré, utilisez _FreeMind_ pour le modifier. Reportez-vous au chapitre [Créer un nouveau template](#créer-un-nouveau-template) pour plus de détails sur ce sujet.
 

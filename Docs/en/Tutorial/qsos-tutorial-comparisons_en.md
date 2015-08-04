@@ -15,11 +15,11 @@ Two versions of O3S are available, each is connected to one of the two repositor
 
 Connect to the O3S instance you want. The list of the evaluations of the instance is displayed, filtered by language.
 
-![03S Home page](Images/o3s-index_en.png)
+![03S Home page](../Images/o3s-index_en.png)
 
 Select the domain you're interested in. The list of the evaluations made with the version of the template you selected is displayed.
 
-![Comparison management page](Images/o3s-list-evaluations_en.png)
+![Comparison management page](../Images/o3s-list-evaluations_en.png)
 
 On this page you can take several actions :
 
@@ -37,7 +37,7 @@ On this page you can take several actions :
 
 The _weight the template_ button displays a page allowing you to manage your weighting.
 
-![Comparison weighting management](Images/o3s-weightings_en.png)
+![Comparison weighting management](../Images/o3s-weightings_en.png)
 
 On this page you can :
 
@@ -51,7 +51,7 @@ On this page you can :
 
 ## Visualizing a comparison in web mode
 
-![Visualization buttons in web mode](Images/o3s-buttons-web_en.png)
+![Visualization buttons in web mode](../Images/o3s-buttons-web_en.png)
 
 On your comparison management page, you can visualize it in your browser in several modes :
 
@@ -65,7 +65,7 @@ On your comparison management page, you can visualize it in your browser in seve
 
 The _Online comparison_ button triggers the display of a comparative table of the evaluations that you have selected with your weighting.
 
-![Visualization as a comparative table](Images/o3s-comparison-table_en.png)
+![Visualization as a comparative table](../Images/o3s-comparison-table_en.png)
 
 This table is dynamic. It allows you to take the following actions :
 
@@ -81,7 +81,7 @@ This table is dynamic. It allows you to take the following actions :
 
 The _Comparative chart_ button triggers the display of the comparison as a radar chart.
 
-![Visualization as a dynamic radar chart](Images/o3s-radar_en.png)
+![Visualization as a dynamic radar chart](../Images/o3s-radar_en.png)
 
 This chart is dynamic. It allows you to take the following actions :
 
@@ -99,7 +99,7 @@ You can save the SVG charts on your hard drive by using the save function of you
 
 The O3S application allows to visualize your comparison as a QSOS quadrant.
 
-![Visualization as a QSOS quadrant](Images/o3s-quadrant_en.png)
+![Visualization as a QSOS quadrant](../Images/o3s-quadrant_en.png)
 
 It's the position of the different evaluations that you've selected on two axes :
 
@@ -115,7 +115,7 @@ You can save the QSOS quadrant on your hard drive by using the save function of 
 
 ## Exporting a comparison into OpenDocument formats
 
-![Export into OpenDocument formats button](Images/o3s-buttons-opendocument_en.png)
+![Export into OpenDocument formats button](../Images/o3s-buttons-opendocument_en.png)
 
 On your comparison management page, you can export it into the following OpenDocument formats :
 
@@ -131,7 +131,7 @@ On your comparison management page, a click on the _Export into ODS_ triggers th
 
 You can save the result as an `.ods` file on your hard drive.
 
-![Spreadsheet exported by O3S](Images/o3s-ods_en.png)
+![Spreadsheet exported by O3S](../Images/o3s-ods_en.png)
 
 The exported spreadsheet contains several tabs :
 
@@ -153,7 +153,7 @@ On your comparison management page, a click on the button _Export into ODP_ trig
 
 You can save the result as an `.odp` file on your hard drive.
 
-![Presentation exported by O3S](Images/o3s-odp_en.png)
+![Presentation exported by O3S](../Images/o3s-odp_en.png)
 
 The presentation is composed of different types of slides :
 
@@ -179,7 +179,7 @@ On your comparison management software, a click on the _Export into ODT_ button 
 
 You can save the result as an `.odt` file on your hard drive.
 
-![Report exported by O3S](Images/o3s-odt_en.png)
+![Report exported by O3S](../Images/o3s-odt_en.png)
 
 The report is composed of different chapters :
 
