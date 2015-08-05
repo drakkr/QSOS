@@ -1,5 +1,8 @@
 all:
-	make -C en
-	make -C fr
+	make -C en doc-pdf
+	make -C fr doc-pdf
 
-include Makefile.global
+%:
+	make -C en $@
+	make -C fr $@
+
