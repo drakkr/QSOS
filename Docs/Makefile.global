@@ -2,7 +2,7 @@
 
 doc-pdf:
 	mkdir -p dist
-	pandoc -N --toc --template=../Template/qsos-template_$(LANG).latex --variable lang=$(LANGUAGE) -o dist/$(DOCNAME).pdf $(CHAPTERS)
+	pandoc -N --toc --template=$(TEMPLATE) --variable lang=$(LANGUAGE) -o dist/$(DOCNAME).pdf $(CHAPTERS)
 
 doc-odt:
 	mkdir -p dist

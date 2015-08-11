@@ -18,4 +18,6 @@ CHAPTERS=qsos-maintainer-head_$(LANG).md qsos-maintainer-changelog_$(LANG).md $(
 
 DOCNAME=$(DOC)-$(VERSION)_$(LANG)
 
+TEMPLATE=../Template/qsos-template_$(LANG).latex
+
 include ../../Makefile.global

@@ -18,4 +18,6 @@ CHAPTERS=qsos-tutorial-head_$(LANG).md $(PAGES) qsos-tutorial-drakkr_$(LANG).md
 
 DOCNAME=$(DOC)-$(VERSION)_$(LANG)
 
+TEMPLATE=../Template/qsos-template_$(LANG).latex
+
 include ../../Makefile.global

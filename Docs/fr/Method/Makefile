@@ -18,4 +18,6 @@ CHAPTERS=qsos-head_$(LANG).md qsos-manifesto_$(LANG).md qsos-changelog_$(LANG).m
 
 DOCNAME=$(DOC)-$(VERSION)_$(LANG)
 
+TEMPLATE=../Template/qsos-template_$(LANG).latex
+
 include ../../Makefile.global
