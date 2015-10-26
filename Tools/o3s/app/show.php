@@ -108,13 +108,12 @@ echo "<img src='skins/$skin/o3s-$git.png'/>\n";
 echo "<br/><br/>\n";
 echo "<div style='font-weight: bold'>".$msg['s4_title']."<br/><br/>\n";
 
-$IdDB = mysql_connect($db_host ,$db_user, $db_pwd);
-mysql_select_db($db_db);
+$IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
 
 $query = "SELECT id FROM evaluations WHERE appname <> '' AND language = '$lang'";
-$IdReq = mysql_query($query, $IdDB);
+$IdReq = mysqli_query($IdDB, $query);
 $allIds = array();
-while($row = mysql_fetch_row($IdReq)) {
+while($row = mysqli_fetch_row($IdReq)) {
   array_push($allIds, $row[0]);
 }
 
@@ -122,8 +121,8 @@ $files = array();
 foreach($ids as $id) {
   if (!(in_array($id,$allIds))) die($id.$msg['s4_err_no_id']);
   $query = "SELECT file FROM evaluations WHERE id = \"$id\"";
-  $IdReq = mysql_query($query, $IdDB);
-  $result = mysql_fetch_row($IdReq);
+  $IdReq = mysqli_query($IdDB, $query);
+  $result = mysqli_fetch_row($IdReq);
   array_push($files, $repo.$result[0]);
 }
 

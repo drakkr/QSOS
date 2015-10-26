@@ -134,12 +134,11 @@ echo "<img src='skins/$skin/o3s-$git.png'/>\n";
 echo "<br/><br/>\n";
 
 //Check if family and template version exist
-$IdDB = mysql_connect($db_host ,$db_user, $db_pwd);
-mysql_select_db($db_db);
+$IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
 $query = "SELECT DISTINCT CONCAT(qsosappfamily,qsosspecificformat) FROM evaluations WHERE appname <> '' AND language = '$lang'";
-$IdReq = mysql_query($query, $IdDB);
+$IdReq = mysqli_query($IdDB, $query);
 $familiesFQDN = array();
-while($row = mysql_fetch_row($IdReq)) {
+while($row = mysqli_fetch_row($IdReq)) {
   array_push($familiesFQDN, $row[0]);
 }
 if (!in_array($family.$qsosspecificformat,$familiesFQDN)) 
@@ -169,13 +168,13 @@ echo "<tr class='title'>
 </tr>\n";
 
 $query = "SELECT DISTINCT appname FROM evaluations WHERE qsosappfamily = \"$family\" AND qsosspecificformat = '$qsosspecificformat' ORDER BY appname";
-$IdReq = mysql_query($query, $IdDB);
+$IdReq = mysqli_query($IdDB, $query);
 
-while($appname = mysql_fetch_row($IdReq)) {
+while($appname = mysqli_fetch_row($IdReq)) {
   echo "<tr class='level0'><td colspan='7'>$appname[0]</td></tr>\n";
   $query2 = "SELECT id, e.release, qsosspecificformat, licensedesc,  criteria_scored/criteria_scorable, criteria_commented/comments, file FROM evaluations e WHERE appname = \"$appname[0]\" ORDER BY e.release";
-  $IdReq2 = mysql_query($query2, $IdDB);
-  while($software = mysql_fetch_row($IdReq2)) {
+  $IdReq2 = mysqli_query($IdDB, $query2);
+  while($software = mysqli_fetch_row($IdReq2)) {
     echo "<tr class='level1' 
             onmouseover=\"this.setAttribute('class','highlight')\" 
             onmouseout=\"this.setAttribute('class','level1')\">\n";

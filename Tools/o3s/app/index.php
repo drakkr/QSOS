@@ -57,11 +57,10 @@ echo "<td style='width: 100px; text-align: center'>".$msg['s1_table_templatevers
 echo "<td style='width: 100px; text-align: center'>".$msg['s1_table_nbeval']."</td>\n";
 echo "</tr>\n";
 
-$IdDB = mysql_connect($db_host ,$db_user, $db_pwd);
-mysql_select_db($db_db);
+$IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
 $query = "SELECT qsosappfamily, qsosspecificformat, count(*) FROM evaluations WHERE repo = '$git' AND appname <> '' AND language = '$lang' GROUP BY qsosappfamily, qsosspecificformat ORDER BY qsosappfamily, qsosspecificformat";
-$IdReq = mysql_query($query, $IdDB);
-while($row = mysql_fetch_row($IdReq)) {
+$IdReq = mysqli_query($IdDB, $query);
+while($row = mysqli_fetch_row($IdReq)) {
   $link = "list.php?lang=$lang&family=$row[0]&qsosspecificformat=$row[1]";
   $over0 =  "onmouseover=\"this.setAttribute('class','highlight')\" 
     onmouseout=\"this.setAttribute('class','level0')\"";

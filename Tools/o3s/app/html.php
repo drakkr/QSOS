@@ -26,13 +26,12 @@ $id = $_GET['id'];
 if (!isset($id)) die("No QSOS file to process");
 
 include("config.php");
-$IdDB = mysql_connect($db_host ,$db_user, $db_pwd);
-mysql_select_db($db_db);
+$IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
 
 $query = "SELECT file FROM evaluations WHERE id = \"$id\"";
-$IdReq = mysql_query($query, $IdDB);
+$IdReq = mysqli_query($IdDB, $query);
 
-if ($file = mysql_fetch_row($IdReq)) {
+if ($file = mysqli_fetch_row($IdReq)) {
   # LOAD XML FILE
   $XML = new DOMDocument();
   $XML->load($repo.$file[0]);

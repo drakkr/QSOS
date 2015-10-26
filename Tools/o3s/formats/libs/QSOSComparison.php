@@ -58,13 +58,12 @@ class QSOSComparison {
     $this->temp = $temp;
     $this->template = $template;
 
-    $IdDB = mysql_connect($db_host ,$db_user, $db_pwd);
-    mysql_select_db($db_db);
+    $IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
 
     $query = "SELECT id FROM evaluations WHERE appname <> '' AND language = '$lang'";
-    $IdReq = mysql_query($query, $IdDB);
+    $IdReq = mysqli_query($IdDB, $query);
     $allIds = array();
-    while($row = mysql_fetch_row($IdReq)) {
+    while($row = mysqli_fetch_row($IdReq)) {
       array_push($allIds, $row[0]);
     }
 
@@ -73,8 +72,8 @@ class QSOSComparison {
     foreach($this->ids as $id) {
       if (!(in_array($id,$allIds))) die("<error>Bad Id: $id</error>");
       $query = "SELECT file FROM evaluations WHERE id = \"$id\"";
-      $IdReq = mysql_query($query, $IdDB);
-      $result = mysql_fetch_row($IdReq);
+      $IdReq = mysqli_query($IdDB, $query);
+      $result = mysqli_fetch_row($IdReq);
       array_push($this->files, $repo.$result[0]);
     }
 
@@ -194,13 +193,12 @@ class QSOSComparison {
   function exportFreeMind($id, $flash=false) {
     include("../app/config.php");
 
-    $IdDB = mysql_connect($db_host ,$db_user, $db_pwd);
-    mysql_select_db($db_db);
+    $IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
 
     $query = "SELECT file FROM evaluations WHERE id = \"$id\"";
-    $IdReq = mysql_query($query, $IdDB);
+    $IdReq = mysqli_query($IdDB, $query);
 
-    if ($files = mysql_fetch_row($IdReq)) {
+    if ($files = mysqli_fetch_row($IdReq)) {
       $file = $files[0];
       $basename = basename($file, '.qsos');
       //Transform section in a DOMDocument

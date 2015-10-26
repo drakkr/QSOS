@@ -32,8 +32,7 @@ $family = $_REQUEST['family'];
 $qsosspecificformat = $_REQUEST['qsosspecificformat'];
 if (!isset($family)) die("No QSOS family to process");
 
-$IdDB = mysql_connect($db_host ,$db_user, $db_pwd);
-mysql_select_db($db_db);
+$IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
 
 echo "<html>\n";
 echo "<head>\n";
@@ -47,18 +46,18 @@ echo "<img src='skins/$skin/o3s-$git.png'/>\n";
 echo "<br/><br/>\n";
 
 $query = "SELECT DISTINCT CONCAT(qsosappfamily,qsosspecificformat) FROM evaluations WHERE appname <> '' AND language = '$lang'";
-$IdReq = mysql_query($query, $IdDB);
+$IdReq = mysqli_query($IdDB, $query);
 $familiesFQDN = array();
-while($row = mysql_fetch_row($IdReq)) {
+while($row = mysqli_fetch_row($IdReq)) {
   array_push($familiesFQDN, $row[0]);
 }
 if (!in_array($family.$qsosspecificformat,$familiesFQDN)) 
   die ("$family $qsosspecificformat".$msg['s3_err_no_family']);
 
 $query = "SELECT file FROM evaluations WHERE qsosappfamily = \"$family\" AND qsosspecificformat = '$qsosspecificformat' LIMIT 0,1";
-$IdReq = mysql_query($query, $IdDB);
+$IdReq = mysqli_query($IdDB, $query);
 
-if ($file = mysql_fetch_row($IdReq)) {
+if ($file = mysqli_fetch_row($IdReq)) {
   # LOAD XML FILE
   $XML = new DOMDocument();
   $XML->load($repo.$file[0]);

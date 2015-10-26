@@ -52,11 +52,10 @@ if (! empty($searchstr)) {
            echo '<ul><br/>';
            while (list($fname, $fline) = each ($myresult)) {
 		$name = trim(basename($fname, ".qsos"));
-		$IdDB = mysql_connect($db_host ,$db_user, $db_pwd);
-		mysql_select_db($db_db);
+		$IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
 		$query = "SELECT id FROM evaluations WHERE file='$name' and language='$lang'";
-		$IdReq = mysql_query($query, $IdDB);
-		if ($row = mysql_fetch_row($IdReq)) {
+		$IdReq = mysqli_query($IdDB, $query);
+		if ($row = mysqli_fetch_row($IdReq)) {
 		  $id = $row[0];
 		  echo "<li><a href='show.php?lang=$lang&svg=yes&s=$searchstr&id[]=$id'>$name</a></li>\n";
 		}
