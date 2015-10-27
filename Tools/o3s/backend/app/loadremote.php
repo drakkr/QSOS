@@ -36,7 +36,7 @@ function getListTemplates() {
   global $output;
 
   require('dataconf.php');
-  $tpl_info = $bdd->query("SELECT file, qsosappfamily, qsosspecificformat, language, repo FROM templates ORDER BY qsosappfamily ASC, qsosspecificformat DESC");
+  $tpl_info = $bdd->query("SELECT DISTINCT file, qsosappfamily, qsosspecificformat, language, repo FROM templates ORDER BY qsosappfamily ASC, qsosspecificformat DESC");
 
   $templates = $output->createElement("templates");
 
