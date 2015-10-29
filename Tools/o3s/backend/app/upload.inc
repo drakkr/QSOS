@@ -107,7 +107,7 @@ function upload($fichier, $login) {
 	    } else {
 	      $req = $bdd->exec(
 		"INSERT INTO evaluations(qsosappfamily, qsosspecificformat, qsosappname, evaluations.release, appname, language, file, licensedesc, creation, validation, sections, criteria, criteria_scorable, criteria_scored, criteria_notscored, comments, criteria_commented, criteria_notcommented, uploader, repo)
-		  VALUES('$qsosappfamily', '$metadata[qsosspecififormat]', '$metadata[qsosappname]', '$metadata[release]', '$metadata[appname]', '$metadata[language]', '$name_file', '$metadata[licensedesc]', '$metadata[creation]', '$metadata[validation]', '$metadata[sections]', '$metadata[criteria_total]', '$metadata[criteria_scorable]', '$metadata[criteria_scored]', '$metadata[criteria_notscored]', '$metadata[comments_total]', '$metadata[comments_commented]', '$metadata[comments_notcommented]', '$login', 'incoming');"
+		  VALUES('$qsosappfamily', '$metadata[qsosspecificformat]', '$metadata[qsosappname]', '$metadata[release]', '$metadata[appname]', '$metadata[language]', '$name_file', '$metadata[licensedesc]', '$metadata[creation]', '$metadata[validation]', '$metadata[sections]', '$metadata[criteria_total]', '$metadata[criteria_scorable]', '$metadata[criteria_scored]', '$metadata[criteria_notscored]', '$metadata[comments_total]', '$metadata[comments_commented]', '$metadata[comments_notcommented]', '$login', 'incoming');"
 	      );
 	    }
 
