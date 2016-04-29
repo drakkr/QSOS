@@ -42,6 +42,12 @@
         define('TXT_SETTING_USER', 'Users list');
         define('TXT_SETTING_PROMOTE', 'Promote');
         define('TXT_UPLOAD_ROOT', 'You\'re not an administrator');
+	define('TXT_DBCONF_UNDEF', 'Error: Configuration file not found ');
+	define('TXT_DBTYPE_UNDEF', 'Error: Database type must be defined!');
+	define('TXT_DBNAME_UNDEF', 'Error: Database name must be defined!');
+	define('TXT_DBUSER_UNDEF', 'Error: Database user must be defined!');
+	define('TXT_DBPASS_UNDEF', 'Error: Database password must be defined!');
+	define('TXT_ERROR', 'Error: ');
         /*
          *      Upload
          */

@@ -23,40 +23,25 @@
 ** show.php: show QSOS evaluation(s)
 **
 */
-
-
-require_once("database_pdo.php");
 session_start();
 
 $weights = $_SESSION;
-$is_weighted = "";
-if (isset($_SESSION["nbWeights"])){
-  $is_weighted = $_SESSION["nbWeights"];
-}
-//$is_weighted = $_SESSION["nbWeights"];
+$is_weighted = $_SESSION["nbWeights"];
 
 //Search pattern
+$s = $_REQUEST['s'];
 
-//$s = $_REQUEST['s'];
-$s = "";
-if(isset($_REQUEST['s'])){
- $s = $_REQUEST['s'];
-}
-
-
+require_once("database.php");
 include("config.php");
 include("lang.php");
-/*
- ADDTEST
-*/
-$app = array();
+
 echo "<html>\n";
 echo "<head>\n";
 echo "<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\n";
 echo "<LINK REL=StyleSheet HREF='skins/$skin/o3s.css' TYPE='text/css'/>\n";
 ?>
 <script src="commons.js" language="JavaScript" type="text/javascript"></script>
-
+<script src="search.js" language="JavaScript" type="text/javascript"></script>
 <script>
 var size = 12;
 
@@ -106,16 +91,10 @@ echo "</head>\n";
 include("../formats/libs/QSOSDocument.php");
 
 //Ids of QSOS XML files to be displayed
-$ids = "";
-if(isset($_REQUEST['id'])){
 $ids = $_REQUEST['id'];
-}
 //Are graphs to be generated in SVG?
-$svg = "";
-if(isset($_REQUEST['svg']))
-{
 $svg = $_REQUEST['svg'];
-}
+
 function janitize($text) {
   return str_replace("\n",'',$text);
 }
@@ -131,33 +110,18 @@ echo "<br/><br/>\n";
 echo "<div style='font-weight: bold'>".$msg['s4_title']."<br/><br/>\n";
 
 
-$query = "SELECT id FROM evaluations WHERE appname <> '' AND language = :lang";
-$ar = array(
-":lang" => $lang
-);
-$objectConnect = new Connexion("pgsql");
-$array = $objectConnect->select($query,$ar);
-
-$allIds = array();
-for($i=0;$i<count($array);$i++){
-$allIds[$i] = $array[$i]["id"];
-}
+$DB = new Connexion("pgsql");
+$query  = "SELECT file FROM evaluations WHERE id = :id";
 
 $files = array();
-$i = 0;
 foreach($ids as $id) {
-  if (!(in_array($id,$allIds))) die($id.$msg['s4_err_no_id']);
-  $query  = "SELECT file FROM evaluations WHERE id = :id";
-  $param = array(
-	":id" =>$id 
+  $params = array(
+       ":id" => $id,
   );
-  $result = $objectConnect->select($query,$param);
-  if(isset($result[0]["file"])){
-  //array_push($files[$i], $repo.$result[0]["file"]);
-  $files[$i] = $repo.$result[0]["file"];
-  $i++;
-  } 
-
+  $row = $DB->select($query, $params);
+  if (empty($row))
+     die($id.$msg['s4_err_no_id']);
+  array_push($files, $repo.$row[0]["file"]);
 }
 
 //echo "<form id='myForm' method='POST' action='radar.php'>\n";
@@ -194,23 +158,23 @@ echo "<table>\n";
 echo "<tr width='100%' align='center'><td>\n";
 echo "<a id='comment_selector' href='javascript:hideComments();'>";
 echo "<img id='column' 
-  src='skins/".$skin."/hide-comments.png' 
+  src='skins/$skin/hide-comments.png' 
   border=0 
   onmouseover=\"return escape('Hide/Show comments')\"/>";
 echo "</a>\n";
 echo " <a href='javascript:decreaseFontSize();'>";
-echo "<img src='skins/".$skin."/decrease-font.png' 
+echo "<img src='skins/$skin/decrease-font.png' 
   border=0 
   onmouseover=\"return escape('Decrease font size')\"/>";
 echo "</a>\n";
 echo " <a href='javascript:increaseFontSize();'>";
-echo "<img src='skins/".$skin."/increase-font.png' 
+echo "<img src='skins/$skin/increase-font.png' 
   border=0 
   onmouseover=\"return escape('Increase font size')\"/>";
 echo "</a>\n";
 if (!isset($s)) {
-  echo " <a href='radar.php?lang=".$lang."&".$f."svg=".$svg."'>";
-  echo "<img src='skins/".$skin."/graph.png' 
+  echo " <a href='radar.php?lang=$lang&".$f."svg=$svg'>";
+  echo "<img src='skins/$skin/graph.png' 
     border=0 onmouseover=\"return escape('Show graph')\"/>";
   echo "</a>\n";
 }
@@ -223,7 +187,7 @@ if (isset($s)) {
 } else {
   echo "<input type='button' 
     value='".$msg['s4_button_back']
-    ."' onclick='location.href=\"list.php?lang=".$lang."&family=".$family."&qsosspecificformat=".$qsosspecificformat."&svg=".$svg."\"'><br/><br/>";
+    ."' onclick='location.href=\"list.php?lang=$lang&family=".$family."&qsosspecificformat=$qsosspecificformat&svg=$svg\"'><br/><br/>";
 }
 
 echo "</td></tr>\n";
@@ -231,14 +195,14 @@ echo "</table>\n";
 
 echo "<table id='table' style='font-size: 12pt; table-layout: fixed'>\n";
 echo "<tr class='title' style='width: 250px'>\n";
-echo "<td rowspan='2'><div style='text-align: center'>".$family."</div></td>\n";
+echo "<td rowspan='2'><div style='text-align: center'>$family</div></td>\n";
 echo "<td style='width: 30px' rowspan='2'>";
 if ($is_weighted) {
-  echo "<img src='skins/".$skin."/graph.png' border='' style='cursor: pointer' onclick='submitForm(\"\")'/>";
+  echo "<img src='skins/$skin/graph.png' border='' style='cursor: pointer' onclick='submitForm(\"\")'/>";
 }
 echo "</td>\n";
 for($i=0; $i<$num; $i++) {
-  echo "<td colspan='2'><div style='width: 120px; text-align: center'>".$app[$i]."</div></td>\n";
+  echo "<td colspan='2'><div style='width: 120px; text-align: center'>$app[$i]</div></td>\n";
   echo "<td id='comment' style='width: 300px'>".$msg['s4_comments']."</td>\n";
 }
 echo "</tr>\n";
@@ -278,24 +242,24 @@ function showtree($myDoc, $trees, $depth, $idP, $weights) {
       $idDOM = $idP."-".$idF;
     }
 
-    echo "<tr id='".$idDOM."' 
-      name='".$name."' 
-      class='level".$depth."' 
+    echo "<tr id='$idDOM' 
+      name='$name' 
+      class='level$depth' 
       onmouseover=\"this.setAttribute('class','highlight')\" 
-      onmouseout=\"this.setAttribute('class','level".$depth."')\">\n";
+      onmouseout=\"this.setAttribute('class','level$depth')\">\n";
     if ($subtree) {
-      echo "<td style='width: 250px; text-indent: ".$offset."'>
-        <span onclick=\"collapse(this);\" class='expanded'>".$title."</span>
+      echo "<td style='width: 250px; text-indent: $offset'>
+        <span onclick=\"collapse(this);\" class='expanded'>$title</span>
         </td>\n";
       echo "<td style='width: 30px'>";
       if ($myDoc[0]->hassubelements($name) > 2) {
         if (!isset($s)) {
-          echo "<a href='radar.php?lang=".$lang."&".$f."c=".$name."&svg=".$svg."'><img src='skins/".$skin."/graph.png' border='' style='cursor: pointer'/></a>\n";
+          echo "<a href='radar.php?lang=$lang&".$f."c=$name&svg=$svg'><img src='skins/$skin/graph.png' border='' style='cursor: pointer'/></a>\n";
         }
       }
     } else {
-      echo "<td style='width: 250px; text-indent: ".$offset."'>
-        <span>".$title."</span>
+      echo "<td style='width: 250px; text-indent: $offset'>
+        <span>$title</span>
         </td>\n";
       echo "<td style='width: 30px'></td>\n";;
     }

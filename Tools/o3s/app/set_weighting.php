@@ -1,8 +1,3 @@
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-</head>
-<body>
 <?php
 /*
 **  Copyright (C) 2007--2012 Atos 
@@ -55,12 +50,14 @@ while (list($name, $value) = each($_SESSION)) {
 
 
 $_SESSION["nbWeights"] = count($weights);
-require_once("database_pdo.php");
+
+require_once("database.php");
 include("config.php");
 include("lang.php");
 
 echo "<html>\n";
 echo "<head>\n";
+echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>\n";
 echo "<LINK REL=StyleSheet HREF='skins/$skin/o3s.css' TYPE='text/css'/>\n";
 ?>
 <script src="commons.js" language="JavaScript" type="text/javascript"></script>
@@ -111,42 +108,32 @@ echo "<br/><br/>\n";
 include("../formats/libs/QSOSDocument.php");
 
 //Check if family and template version exist
-$objectConnect = new Connexion("pgsql");
-$query = "SELECT DISTINCT CONCAT(qsosappfamily,qsosspecificformat) as concatenation FROM evaluations WHERE appname <> '' AND language = :lang";
-$ar = array(
-  ":lang" => $lang 
-);
-$arrayresult = $objectConnect->select($query,$ar);
-if(count($arrayresult)==0){
- /* 
-   error you array is empty
-   create log	
- */
-die("error your array is empty");
-}
-$familiesFQDN = array();
-$found = False;
-for($i=0;$i<count($arrayresult);$i++){
-if($arrayresult[$i]["concatenation"]==$family.$qsosspecificformat){
- $found = True;
-}
-$familiesFQDN[$i] = $arrayresult[$i]["concatenation"]; 
-}
-if($found==False){
-   /*
-    Write log 
-   */
-die("$family $qsosspecificformat".$msg['s3_err_no_family']);
-}
+$DB = new Connexion("pgsql");
 
-$query = "SELECT file FROM evaluations WHERE qsosappfamily = :family AND qsosspecificformat = :qsoss LIMIT 0,1";
-$arr = array(
-   ":family" => $family,
-   ":qsoss" => $qsosspecificformat
+$query  = "SELECT COUNT(appname) FROM evaluations";
+$query .= " WHERE appname <> ''";
+$query .= "   AND qsosappfamily = :family";
+$query .= "   AND qsosspecificformat = :format";
+$query .= "   AND language = :lang";
+$params = array(
+ ":family" => $family,
+ ":format" => $qsosspecificformat,
+ ":lang"   => $lang
 );
-$tab = $objectConnect->select($query,$arr);
-$file = $tab[0]["file"];
-$text = "";
+
+$rows = $DB->select($query,$params);
+
+if (! $rows[0]["count"])
+  die ("$family $qsosspecificformat".$msg['s3_err_no_family']);
+
+$query = "SELECT file FROM evaluations";
+$query .= " WHERE qsosappfamily = :family";
+$query .= "   AND qsosspecificformat = :format";
+$query .= "   AND language = :lang";
+$query .= " LIMIT 1";
+
+$rows = $DB->select($query,$params);
+$file = $rows[0]["file"];
 //Upload of weighting file
 if (isset($_FILES['weighting']) && $_FILES['weighting']['tmp_name'] <> "") {
   $weighting = $_FILES['weighting'];
@@ -187,13 +174,13 @@ $familyname = $myDoc->getkey("qsosappfamily");
 echo "<div style='font-weight: bold'>".$msg['s2_title']."<br/><br/></div>\n";
 echo $text;
 echo "<form id='myForm' enctype='multipart/form-data' method='POST' action='set_weighting.php'>\n";
-echo "<input type='hidden' name='lang' value='".$lang."'/>\n";
-echo "<input type='hidden' name='svg' value='".$svg."'/>\n";
-echo "<input type='hidden' name='family' value='".$family."'/>\n";
+echo "<input type='hidden' name='lang' value='$lang'/>\n";
+echo "<input type='hidden' name='svg' value='$svg'/>\n";
+echo "<input type='hidden' name='family' value='$family'/>\n";
 echo "<input type='hidden' name='new' value='true'/>\n";
-echo "<input type='hidden' name='qsosspecificformat' value='".$qsosspecificformat."'/>\n";
+echo "<input type='hidden' name='qsosspecificformat' value='$qsosspecificformat'/>\n";
 echo "<table id='table' style='border-collapse: collapse; font-size: 12pt; table-layout: fixed'>\n";
-echo "<tr class='title' style='width: 400px'><td>".$familyname."</td>\n";
+echo "<tr class='title' style='width: 400px'><td>$familyname</td>\n";
 echo "<td><div style='width: 60px; text-align: center'>"
   .$msg['s2_weight']
   ."</div></td>\n";
@@ -234,21 +221,21 @@ function showtree($myDoc, $tree, $depth, $idP) {
     }
   
     echo "<tr id='$id' 
-      class='level".$depth."' 
+      class='level$depth' 
       onmouseover=\"this.setAttribute('class','highlight')\" 
-      onmouseout=\"this.setAttribute('class','level".$depth."')\">\n";
+      onmouseout=\"this.setAttribute('class','level$depth')\">\n";
     if ($subtree) {
-      echo "<td style='width: 400px; text-indent: ".$offset."'>
-        <span onclick=\"collapse(this);\" class='expanded'>".$title."</span></td>\n";
+      echo "<td style='width: 400px; text-indent: $offset'>
+        <span onclick=\"collapse(this);\" class='expanded'>$title</span></td>\n";
     } else {
-      echo "<td style='width: 400px; text-indent: ".$offset."'>
-        <span>".$title."</span></td>\n";
+      echo "<td style='width: 400px; text-indent: $offset'>
+        <span>$title</span></td>\n";
     }
   
     echo "<td><div style='width: 60px; text-align: center'>\n";
     //If a weighting file has been uploaded use $weights array, if not use default value 1
     echo "<input type='text' 
-      name='".$name."' size='3' style='text-align: center' onblur='checkWeight(this)' 
+      name='$name' size='3' style='text-align: center' onblur='checkWeight(this)' 
       value='".((isset($weights[$name]))?$weights[$name]:1)."'/>\n";
 
     echo "</div></td>\n";
@@ -265,5 +252,3 @@ echo "</center>\n";
 echo "</body>\n";
 echo "</html>\n";
 ?>
-</body>
-</html>

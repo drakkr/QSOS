@@ -1,5 +1,4 @@
 <?php
-require_once("database_pdo.php");
 /*
 **  Copyright (C) 2007-2012 Atos 
 **
@@ -26,21 +25,19 @@ require_once("database_pdo.php");
 $id = $_GET['id'];
 if (!isset($id)) die("No QSOS file to process");
 
+require_once("database.php");
 include("config.php");
 
-$objetConnect = new Connexion("pgsql");
+$DB = new Connexion("pgsql");
 $query = "SELECT file FROM evaluations WHERE id = :id";
-$array = array(
+$params = array(
   ":id" => $id
 );
-$result = $objetConnect->select($query,$array);
-if(0==count($result)){
- echo "Error: no evaluation #$id found in QSOS database!";	
-}else{
-
+$file = $DB->select($query, $params, 1);
+if($file){
   # LOAD XML FILE
   $XML = new DOMDocument();
-  $XML->load($repo.$result[0]["file"]);
+  $XML->load($repo.$file[0]["file"]);
 
   # START XSLT
   $xslt = new XSLTProcessor();
@@ -52,5 +49,7 @@ if(0==count($result)){
 
   #PRINT
   print $xslt->transformToXML($XML);
+} else {
+  print "Error: no evaluation #$id found in QSOS database!";
 }
 ?> 

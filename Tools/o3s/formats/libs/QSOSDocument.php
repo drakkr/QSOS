@@ -25,11 +25,6 @@
 */
 
 //Class representing a QSOS criterion (<section/> or <element/>)
-
-// disable error reporting
-//error_reporting(0);
-
-
 class QSOSCriterion {
 	var $name;
 	var $title;
@@ -51,15 +46,12 @@ class QSOSDocument {
     //$file: filename (or URI) of the QSOS document to load
 	public function __construct($file) {
 		//if (file_exists($file) || (strpos(current(get_headers($file)), "OK"))) {
-		error_log("Error_1 the file in parameter is ---> ".$file." <br/> ");
 		if (file_exists($file)) {
-			error_log("Error_2 in the if ");
 			$this->doc = new DOMDocument();
-			$ret = $this->doc->load($file);
+			$this->doc->load($file);
 			$this->xpath = new DOMXPath($this->doc);
-		        error_log("Error_3 end of if");						
 		} else {
-		error_log("[ERROR] Constructor : file not found (try to see the apache configuration permission)");					return 'Failed to open file '.$file;
+			return 'Failed to open file ' . $file . '(Hint: try to fix webserver user permissions)';
 		}
 	}
 
@@ -74,18 +66,13 @@ class QSOSDocument {
     //$element: name of the XML header tag
     //Returns: the value of a header tag (like appname, release, ...)
 	public function getkey($element) {
-          try{
 		$nodes = $this->xpath->query("//".$element);
 		if ($nodes->length != 0) {
 			return $nodes->item(0)->nodeValue;
 		} else {
 			return "";
 		}
-	}catch(Exception $e){
-	   echo "the error in getkey function is --> ".$e->getMessage();
 	}
-	}
-
 
     //$name: name of the section to return
     //Returns: section in XML format
@@ -179,9 +166,7 @@ class QSOSDocument {
 
     //Returns: tree of QSOSCriterion objects representing the scored criteria of the QSOS document
 	public function getTree() {
-	  try{
 		$tree = array();
-		
 		$sections = $this->xpath->query("//section");
 		foreach ($sections as $section) {
 			$criterion = new QSOSCriterion();
@@ -192,11 +177,6 @@ class QSOSDocument {
 			array_push($tree, $criterion);
 		}
 		return $tree;
-	}catch(Exception $e){
-		echo "the error function getTree is ".$e->getMessage();
-
-	}
-
 	}
 
     //Recursive function
@@ -311,30 +291,23 @@ class QSOSDocument {
     //Returns: the rendered score of the single QSOScriterion in $tree
     //Recursive function
 	public function renderWeightedScore($tree, $weights) {
-		
-		//error_log("The renderWeightedScore tree --> ".print_r($tree));
-		
-                $score = 0;
+		$score = 0;
 		$sum = 0;
 		$totalWeight = 0;
-		//$name = "";
+
 		//[FIXME] desc element with only desc subelement(s) shoul be properly manage
 		if (count($tree) == 0) return "NA";
 
 		for ($i=0; $i < count($tree); $i++) {
 			$name = $tree[$i]->name;
-			
-			if(isset($weights[$name])){	
 			$weight = $weights[$name];
-			}			
-      			if (!isset($weight)) $weight = 1;
+			if (!isset($weight)) $weight = 1;
 			$totalWeight = $totalWeight + $weight;
 			if ($tree[$i]->score == null) {
 				$isRenderable = false;
 			}
 			$sum += round(($tree[$i]->score)*$weight, 2);
-			
-	}
+		}
 
 		if ($totalWeight == 0) return 0;
     $score = round(($sum/$totalWeight), 2);

@@ -39,6 +39,12 @@
         define('TXT_SETTING_USER', 'Liste des utilisateurs');
         define('TXT_SETTING_PROMOTE', 'Promouvoir');
         define('TXT_UPLOAD_ROOT', 'Vous n\'avez pas les droit pour accéder à cette partie du site.');
+	define('TXT_DBCONF_UNDEF', 'Erreur : Impossible de trouver le fichier de configuration ');
+	define('TXT_DBTYPE_UNDEF', 'Erreur : Le type de base de données doit être défini !');
+	define('TXT_DBNAME_UNDEF', 'Erreur : Le nom de la base de données doit être défini !');
+	define('TXT_DBUSER_UNDEF', 'Erreur : L\'utilisateur de la base de données doit être défini !');
+	define('TXT_DBPASS_UNDEF', 'Erreur : Le mot de passe de connexion à la base de données doit être défini !');
+	define('TXT_ERROR', 'Erreur : ');
         /*
          *      Upload.php
          */
