@@ -25,13 +25,22 @@ session_start();
 //Weightings are stored in session
 $weights = $_SESSION;
 //QSOS evaluations to display
+$ids = "";
+if(isset($_REQUEST['id'])){
+  $ids = $_REQUEST['id'];
+}
 $ids = $_REQUEST['id'];
 //Criterion to detail
-$name = $_REQUEST['c'];
+//$name = $_REQUEST['c'];
+$name = "";
+if (isset($_REQUEST['c'])){
+  $name = $_REQUEST['c'];
+}
+// add commentaires 
+
 
 include('../formats/libs/QSOSComparison.php');
 $myComp = new QSOSComparison($ids, $name);
-
 $myComp->showRadar();
 
 ?> 

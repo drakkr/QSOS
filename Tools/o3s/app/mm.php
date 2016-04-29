@@ -24,7 +24,7 @@
 **
 */
 session_start();
-
+error_reporting(0);
 //Weightings are stored in session
 $weights = $_SESSION;
 //QSOS evaluations to display
@@ -35,7 +35,7 @@ include("config.php");
 echo "<html>\n";
 echo "<head>\n";
 echo "<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\n";
-echo "<LINK REL=StyleSheet HREF='skins/$skin/o3s.css' TYPE='text/css'/>\n";
+echo "<LINK REL=StyleSheet HREF='skins/".$skin."/o3s.css' TYPE='text/css'/>\n";
 echo "<title>Evaluation Flash Viewer</title>";
 echo "</head>\n";
 echo "<body>\n";
@@ -45,6 +45,7 @@ echo "<br/><br/>\n";
 echo "</center>\n";
 
 include('../formats/libs/QSOSComparison.php');
+$name = "";
 $myComp = new QSOSComparison(array($id), $name);
 $myComp->exportFreeMind($id, $use_flash_mm);
 

@@ -26,6 +26,7 @@ function doHighlight(bodyText, searchTerm, highlightStartTag, highlightEndTag)
   var lcBodyText = bodyText.toLowerCase();
     
   while (bodyText.length > 0) {
+    alert(lcSearchTerm);
     i = lcBodyText.indexOf(lcSearchTerm, i+1);
     if (i < 0) {
       newText += bodyText;

@@ -46,8 +46,8 @@ $supported_lang = array('fr', 'en'); //Supported locale
 //Use flashplayer to show MindMap 
 $use_flash_mm=true;
 
-$db_host = "localhost";
-$db_user = "root";
-$db_pwd = "osiris";
-$db_db = "o3s";
+$db_host = "dbhost";
+$db_user = "user";
+$db_pwd = "pwd";
+$db_db = "database";
 ?>

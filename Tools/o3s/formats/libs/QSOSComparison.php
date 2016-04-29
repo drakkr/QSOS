@@ -24,7 +24,11 @@
 **
 */
 
+// add disable error report
+//error_reporting(0);
 //Class representing a QSOS comparison
+
+require_once("database_pdo.php");
 class QSOSComparison {
   //var $title; //Title of the comparison
   var $subtitle; //Subtitle of the comparison
@@ -57,41 +61,63 @@ class QSOSComparison {
     $this->msg = $msg;
     $this->temp = $temp;
     $this->template = $template;
-
-    $IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
-
-    $query = "SELECT id FROM evaluations WHERE appname <> '' AND language = '$lang'";
-    $IdReq = mysqli_query($IdDB, $query);
+    
+    $query = "SELECT id FROM evaluations WHERE appname <> '' AND language = :lang";
+    //$IdReq = mysql_query($query, $IdDB);
     $allIds = array();
-    while($row = mysqli_fetch_row($IdReq)) {
-      array_push($allIds, $row[0]);
+    $param = array(
+	":lang" => $lang
+    );
+    
+    $objectConnexion = new Connexion("pgsql");
+    $res =  $objectConnexion->select($query,$param);
+    for($i=0;$i<count($res);$i++){
+	error_log("Error_compare_1 the res --> ".$res[$i]["id"]);
+	$allIds[$i] = $res[$i]["id"];
     }
+    
+    
+    //while($row = mysql_fetch_row($IdReq)) {
+    //  array_push($allIds, $row[0]);
+    //}
 
     //Initialization of QSOS files
     $this->files = array();
     foreach($this->ids as $id) {
       if (!(in_array($id,$allIds))) die("<error>Bad Id: $id</error>");
-      $query = "SELECT file FROM evaluations WHERE id = \"$id\"";
-      $IdReq = mysqli_query($IdDB, $query);
-      $result = mysqli_fetch_row($IdReq);
-      array_push($this->files, $repo.$result[0]);
+     
+      $query = "SELECT file FROM evaluations WHERE id = :id";
+      $arr = array(
+	":id" => $id
+      );
+      $result = $objectConnexion->select($query,$arr);
+      for($i=0;$i<count($result);$i++){
+	error_log("Error_compare_2 the res --> ".$result[$i]["file"]);
+	$this->files[$i]=$result[$i]["file"]; 
+      }
+      
+      
     }
 
     //Initialization of QSOS Documents objects
     include('QSOSDocument.php');
+    include('conf.php');
     $this->docs = array();
     $this->names = array();
+   
     for($i=0; $i<count($this->files); $i++) {
-      $this->docs[$i] = new QSOSDocument($this->files[$i]);
+      error_log("Error_compare_3 the file path --> ".$directory_master.$this->files[$i]);
+      $this->docs[$i] = new QSOSDocument($directory_master.$this->files[$i]);
       $this->names[$i] = $this->docs[$i]->getkey("appname")." ".$this->docs[$i]->getkey("release");
+      // add value of name variable
+      error_log("Error_compare_4 the name variable is ".$this->names[$i]);
     }
-
     $f = "";
     foreach($ids as $id) {
-      $f .= "id[]=$id&";
+      $f .= "id[]=".$id."&";
     }
     $this->f = $f;
-
+    error_log("The f value is ---------> ".$this->f."******");
   }
 
   function setCriteria($criteria) {
@@ -191,39 +217,42 @@ class QSOSComparison {
   }
 
   function exportFreeMind($id, $flash=false) {
+    // inclure le app config (../app/config.php)
     include("../app/config.php");
 
-    $IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
-
-    $query = "SELECT file FROM evaluations WHERE id = \"$id\"";
-    $IdReq = mysqli_query($IdDB, $query);
-
-    if ($files = mysqli_fetch_row($IdReq)) {
-      $file = $files[0];
+    $query = "SELECT file FROM evaluations WHERE id = :id";
+    $objectConnexion = new Connexion();
+    $arr = array(":id" => $id );
+    $files = $objectConnexion->select($query,$arr);
+    if (0!=count($files)) {
+      $file = $files[0]["file"];
+     
       $basename = basename($file, '.qsos');
+     
       //Transform section in a DOMDocument
       $xml = new DOMDocument();
-      $xml->load($repo.$file);
-
-      # START XSLT
+      // the source is $repo.$file
+   
+      $xml->load("../../backend/master/".$file);
+           # START XSLT
       $xslt = new XSLTProcessor();
-
       # IMPORT STYLESHEET
       $XSL = new DOMDocument();
-      $XSL->load("../formats/xml/xslt/evaluation-mm.xsl");
+      
+      $XSL->load("../../formats/xml/xslt/evaluation-mm.xsl");
       $xslt->importStylesheet($XSL);
-
-      $mm = $xslt->transformToXML($xml);
-
-      $file_content = fopen("images/$basename.mm", 'w');
+      $mm = $xslt->transformToXML($xml); 
+      $file_content = fopen("../../app/images/".$basename.".mm", 'w');
       fwrite($file_content, $mm);
+      
       fclose($file_content);   
-
       if (!$flash) {
+	echo "- In IF <br/>";
 	//MM (FreeMind) file is transformed to PNG files
 	exec("java -cp freemind/lib/freemind.jar freemind.view.mindmapview.IndependantMapViewCreator 'images/$basename.mm' 'images/$basename.png'");
 	echo "<img src='images/$basename.png'/>";
       } else {
+
 	echo '<script type="text/javascript" src="mindmap/flashobject.js"></script>
 <p style="text-align:center; font-weight:bold"><a href="images/'.$basename.'.mm">Evaluation '.$basename.'.mm</a></p>
 <div id="flashcontent"> Flash plugin or Javascript are turned off. Activate both  and reload to view the mindmap</div>
@@ -239,7 +268,7 @@ fo.write("flashcontent");
 
       }
     } else {
-      print "Error: no $file found in QSOS database!";
+      print "Error: no ".$file." found in QSOS database!";
     }
   }
 
@@ -249,7 +278,7 @@ fo.write("flashcontent");
 
   function Radar($save, $file='') {
     global $doc, $SCALE, $FONT_SIZE, $dx, $dy, $g, $myDoc, $msg, $lang, $f, $name, $save;
-
+    
     $FONT_SIZE = 12; //$SCALE/10;
     $g;
     $doc = new DOMDocument('1.0');
@@ -259,12 +288,16 @@ fo.write("flashcontent");
     $num = count($this->ids);
     $name = $this->criteria;
     $msg = $this->msg;
+    
+    if (!$save){
+      
+      header("Content-type: image/svg+xml");
+    }
+  
 
-    if (!$save) header("Content-type: image/svg+xml");
 
-    //draw $n equidistant axis
     if (!function_exists('drawAxis')) {
-    function drawAxis($n) {
+      function drawAxis($n) {
       global $SCALE;
 
       drawCircle(0.5*$SCALE);
@@ -296,7 +329,7 @@ fo.write("flashcontent");
     if (!function_exists('drawCircle')) {
     function drawCircle($r) {
       global $dx, $dy, $doc, $g;
-
+      
       $circle = $doc->createElement("circle");
       $circle->setAttribute("cx", $dx);
       $circle->setAttribute("cy", $dy);
@@ -305,6 +338,7 @@ fo.write("flashcontent");
       $circle->setAttribute("stroke", "lightgrey");
       $circle->setAttribute("stroke-width", "1");
       $g->appendChild($circle);
+      
     }}
     
     //draw a line between two points
@@ -518,6 +552,7 @@ fo.write("flashcontent");
     $g->appendChild(drawTitle($name));
     if (!$save) drawNavBar($name);
     //display each software on the graph
+    $weights = "";
     for($i=0; $i<$num; $i++) {
       $g->appendChild(drawPath($myDoc[$i], $name, $i, $weights));
     }
@@ -532,11 +567,11 @@ fo.write("flashcontent");
   }
 
   function showRadar() {
+    
     global $SCALE, $dx, $dy;
     $SCALE = 70;
     $dx = 500;
-    $dy = 300;
-
+    $dy = 300; 
     return $this->Radar(false);
   }
 
@@ -564,6 +599,7 @@ fo.write("flashcontent");
 
     function draw($x,$y,$text,$i,$ellipsis=false) {
       global $output_quadrant, $ids;
+      $lang="";
 
       $g = $output_quadrant->createElement('g');
       $g->setAttribute("transform","translate($x,$y)");
@@ -615,7 +651,7 @@ fo.write("flashcontent");
       $x = $score*500/2;
       $output_quadrant->appendChild(draw($x, $y, $docs[$i]->getkey("appname"), $ids[$i], true));
     }
-
+    $fragment = "";
     //hack to remove XML declaration
     foreach($output_quadrant->childNodes as $node)
 	$fragment .= $output_quadrant->saveXML($node)."\n";
@@ -2017,7 +2053,7 @@ fo.write("flashcontent");
     mkdir($tempdir, 0755);
     $output->save("$tempdir/content.xml");
     $output_settings->save("$tempdir/settings.xml");
-
+     
     copy("export/$template/template_ods.zip", "odf/$odsfile");
 
     include('libs/pclzip.lib.php');

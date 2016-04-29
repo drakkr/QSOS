@@ -21,7 +21,7 @@ if(isset($_POST['inscription'])){
             $data = $sth->fetchAll();
             
             if ($data[0][0] == 0) {
-                $sql = "INSERT INTO users(login, pass_md5, status, mail) VALUES(?, ?, 'user', ?)";
+                $sql = "INSERT INTO users(login, pass_md5, status, mail,contributions) VALUES(?, ?, 'user', ?,0)";
                 $sth = $bdd->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
                 $sth->execute(array($_POST['login'], md5($_POST['pass']), $_POST['mail']));
     

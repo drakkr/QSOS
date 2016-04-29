@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
+require_once("database_pdo.php");
 /*
 **  Copyright (C) 2007-2012 Atos 
 **
@@ -31,12 +33,12 @@ include("lang.php");
 $family = $_REQUEST['family'];
 $qsosspecificformat = $_REQUEST['qsosspecificformat'];
 
-$backURL = "index.php?lang=$lang";
+$backURL = "index.php?lang=".$lang;
 
 echo "<html>\n";
 echo "<head>\n";
 echo "<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\n";
-echo "<LINK REL=StyleSheet HREF='skins/$skin/o3s.css' TYPE='text/css'/>\n";
+echo "<LINK REL=StyleSheet HREF='skins/".$skin."/o3s.css' TYPE='text/css'/>\n";
 ?>
 <script>
 
@@ -134,15 +136,29 @@ echo "<img src='skins/$skin/o3s-$git.png'/>\n";
 echo "<br/><br/>\n";
 
 //Check if family and template version exist
-$IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
-$query = "SELECT DISTINCT CONCAT(qsosappfamily,qsosspecificformat) FROM evaluations WHERE appname <> '' AND language = '$lang'";
-$IdReq = mysqli_query($IdDB, $query);
+
 $familiesFQDN = array();
-while($row = mysqli_fetch_row($IdReq)) {
-  array_push($familiesFQDN, $row[0]);
+$query = "SELECT DISTINCT CONCAT(qsosappfamily,qsosspecificformat) as concatenation  FROM evaluations WHERE appname <> '' AND language =:lang";
+$objectConnect = new Connexion("pgsql");
+$array = array(
+ ":lang" => $lang
+);
+$resultat = $objectConnect->select($query,$array);
+
+if(count($resultat)==0){
+ echo "the array is empty";
+}else{
+$found = False;
+for($i=0;$i<count($resultat);$i++){
+    if($family.$qsosspecificformat==$resultat[$i]["concatenation"]){
+     $found = True;
+    }
+    $familiesFQDN[$i]=$resultat[$i]["concatenation"];
 }
-if (!in_array($family.$qsosspecificformat,$familiesFQDN)) 
-  die ("$family $qsosspecificformat".$msg['s3_err_no_family']);
+
+if($found==False){
+  die("$family $qsosspecificformat".$msg['s3_err_no_family']);
+}
   
 echo "<div style='font-weight: bold'>".$msg['s3_family'].$family."<br/><br/>"
   .$msg['s3_title']."<br/><br/>\n";
@@ -167,35 +183,70 @@ echo "<tr class='title'>
   <td align='center'> ".$msg['s3_format_freemind']." </td>
 </tr>\n";
 
-$query = "SELECT DISTINCT appname FROM evaluations WHERE qsosappfamily = \"$family\" AND qsosspecificformat = '$qsosspecificformat' ORDER BY appname";
-$IdReq = mysqli_query($IdDB, $query);
+/*
+	the variable is $family (:family => $family)
+	the variable is $qsosspecificformat (:qsosspecificformat => $qsosspecificformat)
+*/
+$query = "SELECT DISTINCT appname FROM evaluations WHERE qsosappfamily = :family  AND qsosspecificformat = :qsosspecificformat ORDER BY appname";
+$array = array(
+  ":family"=>$family,
+  ":qsosspecificformat" => $qsosspecificformat
+);
+$result = $objectConnect->select($query,$array);
 
-while($appname = mysqli_fetch_row($IdReq)) {
-  echo "<tr class='level0'><td colspan='7'>$appname[0]</td></tr>\n";
+//$IdReq = mysql_query($query, $IdDB);
+if(0==count($result)){
+ /*
+  Create a log file
+ */
+ die("your array is empty");
+}
+
+for($i=0;$i<count($result);$i++){
+ echo "<tr class='level0'><td colspan='7'>".$result[0]["appname"]."</td></tr>\n";
+/*
   $query2 = "SELECT id, e.release, qsosspecificformat, licensedesc,  criteria_scored/criteria_scorable, criteria_commented/comments, file FROM evaluations e WHERE appname = \"$appname[0]\" ORDER BY e.release";
-  $IdReq2 = mysqli_query($IdDB, $query2);
-  while($software = mysqli_fetch_row($IdReq2)) {
-    echo "<tr class='level1' 
-            onmouseover=\"this.setAttribute('class','highlight')\" 
+  $IdReq2 = mysql_query($query2, $IdDB);
+*/
+ $query2 = "SELECT id, e.release, qsosspecificformat, licensedesc,  criteria_scored/criteria_scorable as div, criteria_commented/comments as div2, file,criteria_scored,criteria_scorable,criteria_commented,comments FROM evaluations e WHERE appname = :app ORDER BY e.release";
+
+$arra = array(
+   ":app" => $result[$i]["appname"]
+);
+$result = $objectConnect->select($query2,$arra);
+
+/*
+if($objectConnect->control($result)==False){
+	/*
+		Write Log
+
+die("Error your query is empty");
+}
+*/
+
+	
+   for($i=0;$i<count($result);$i++){
+     echo "<tr class='level1'
+            onmouseover=\"this.setAttribute('class','highlight')\"
             onmouseout=\"this.setAttribute('class','level1')\">\n";
-    echo "<td align='center'>$software[1]</td>\n";
-    echo "<td align='center'>".ceil($software[4]*100)."% </td>\n";
-    echo "<td align='center'>".ceil($software[5]*100)."% </td>\n";
+    echo "<td align='center'>".$result[$i]["release"]."</td>\n";
+    echo "<td align='center'>".ceil(($result[$i]["criteria_scored"]/$result[$i]["criteria_scorable"]) *100)."% </td>\n";
+    echo "<td align='center'>".ceil(($result[$i]["criteria_commented"]/$result[$i]["comments"])*100)."% </td>\n";
     echo "<td align='center'>
-            <a href='$repo$software[6]'><img src='skins/$skin/xml.png' border='0' title='".$msg['s3_format_xml_tooltip']."'/></a>
+            <a href='".$repo.$result[$i]["file"]."'><img src='skins/".$skin."/xml.png' border='0' title='".$msg['s3_format_xml_tooltip']."'/></a>
             </td>\n";
     echo "<td align='center'>
-            <a href='html.php?id=$software[0]'><img src='skins/$skin/html.png' border='0' title='".$msg['s3_format_html_tooltip']."'/></a>
+            <a href='html.php?id=".$result[$i]["id"]."'><img src='skins/".$skin."/html.png' border='0' title='".$msg['s3_format_html_tooltip']."'/></a>
             </td>\n";
     echo "<td align='center'>
-            <a href='mm.php?lang=$lang&id=$software[0]'><img src='skins/$skin/freemind.png' border='0' title='".$msg['s3_format_freemind_tooltip']."'/></a>
+            <a href='mm.php?lang=".$lang."&id=".$result[$i]["id"]."'><img src='skins/".$skin."/freemind.png' border='0' title='".$msg['s3_format_freemind_tooltip']."'/></a>
             </td>\n";
     echo "<td align='center' class='html'>
             <!--span class='logo_html'/-->
-            <input type='checkbox' class='logo_html' name='id[]' value='$software[0]'>
+            <input type='checkbox' class='logo_html' name='id[]' value='".$result[$i]["id"]."'>
             </td></tr>\n";
-  }
-}
+    }
+
 echo "<tr><td colspan=6></td><td style='text-align: center'>".$msg['s3_export_all']." <input type='checkbox' id='all' onclick='clickAll()'></td></tr>";
 echo "</table><br/>";
 echo $msg['s3_template']."</br>";
@@ -221,4 +272,6 @@ echo "</form></div>\n";
 echo "</center>\n";
 echo "</body>\n";
 echo "</html>\n";
+}
+}
 ?>

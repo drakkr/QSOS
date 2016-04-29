@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors',1);
+require_once('database_pdo.php');
 /*
 **  Copyright (C) 2007-2012 Atos 
 **
@@ -28,7 +30,6 @@ $_SESSION = array();
 include("config.php");
 include("lang.php");
 $$lang = 'checked';
-
 echo "<html>\n";
 echo "<head>\n";
 echo "<meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\n";
@@ -44,8 +45,9 @@ echo "<br/><br/>\n";
 echo "<div style='font-weight: bold'>".$msg['s1_title']."<br/><br/></div>\n";
 
 echo "<div>";
+$checked="";
 foreach($supported_lang as $l) {
-  $checked = $$l;
+  $checked = $l;
   echo "<input type='radio' onclick=\"changeLang('$l')\" $checked/> $l";
 }
 echo "<br/><br/></div>";
@@ -57,21 +59,29 @@ echo "<td style='width: 100px; text-align: center'>".$msg['s1_table_templatevers
 echo "<td style='width: 100px; text-align: center'>".$msg['s1_table_nbeval']."</td>\n";
 echo "</tr>\n";
 
-$IdDB = mysqli_connect($db_host ,$db_user, $db_pwd, $db_db);
-$query = "SELECT qsosappfamily, qsosspecificformat, count(*) FROM evaluations WHERE repo = '$git' AND appname <> '' AND language = '$lang' GROUP BY qsosappfamily, qsosspecificformat ORDER BY qsosappfamily, qsosspecificformat";
-$IdReq = mysqli_query($IdDB, $query);
-while($row = mysqli_fetch_row($IdReq)) {
-  $link = "list.php?lang=$lang&family=$row[0]&qsosspecificformat=$row[1]";
-  $over0 =  "onmouseover=\"this.setAttribute('class','highlight')\" 
+
+$query = "SELECT qsosappfamily, qsosspecificformat, count(*) as nb FROM evaluations WHERE repo = :git AND appname <> '' AND language = :lang GROUP BY qsosappfamily, qsosspecificformat ORDER BY qsosappfamily, qsosspecificformat";
+$array = array(
+ ":git" => $git,
+ ":lang" => $lang
+);
+$over0 = "";
+$over1 = "";
+$objectConnect = new Connexion("pgsql");
+$row= $objectConnect->select($query,$array);
+for($i=0;$i<count($row);$i++){
+$link = "list.php?lang=".$lang."&family=".$row[$i]["qsosappfamily"]."&qsosspecificformat=".$row[$i]["qsosspecificformat"];
+  $over0 =  "onmouseover=\"this.setAttribute('class','highlight')\
     onmouseout=\"this.setAttribute('class','level0')\"";
-  $over1 =  "onmouseover=\"this.setAttribute('class','highlight')\" 
+  $over1 =  "onmouseover=\"this.setAttribute('class','highlight')\"
     onmouseout=\"this.setAttribute('class','level1')\"";
   echo "<tr>\n";
-  echo "<td class='level0' $over0><a href='$link'><b>$row[0]</b></a</td>\n";
-  echo "<td align='center' class='level1' style='width: 100px; text-align: center' $over1><a href='$link'>$row[1]</a</td>\n";
-  echo "<td align='center' class='level1' style='width: 1O0px; text-align: center' $over1><a href='$link'>$row[2]</a></td>\n";
+  echo "<td class='level0' '".$over0."'><a href='".$link."'><b>".$row[$i]['qsosappfamily']."</b></a</td>\n";
+  echo "<td align='center' class='level1' style='width: 100px; text-align: center' '".$over1."'><a href='$link'>".$row[$i]['qsosspecificformat']."</a</td>\n";
+  echo "<td align='center' class='level1' style='width: 1O0px; text-align: center' ".$over1."><a href='".$link."'>".$row[$i]['nb']."</a></td>\n";
   echo "</tr>\n";
 }
+
 
 echo "</table>\n";
 
