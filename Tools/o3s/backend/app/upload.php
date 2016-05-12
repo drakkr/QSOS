@@ -6,14 +6,6 @@
 
 <?php
 
-function alertError($error) {
-  echo "<div class='alert alert-error'>".$error."</div>";
-}
-
-function alertSuccess($success) {
-  echo "<div class='alert alert-success'>".$success."</div>";
-}
-
 if (isset($_SESSION['login'])){
     
     //Print the upload form

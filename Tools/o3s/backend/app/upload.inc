@@ -1,6 +1,14 @@
 <?php
 
-function upload($fichier, $login) {   
+function alertError($error) {
+  echo "<div class='alert alert-error'>".$error."</div>";
+}
+
+function alertSuccess($success) {
+  echo "<div class='alert alert-success'>".$success."</div>";
+}
+
+function upload($fichier, $login=NULL, $check=true) {   
   global $incoming, $master, $lang, $bdd;
 
     if(isset($fichier)){
@@ -12,7 +20,7 @@ function upload($fichier, $login) {
 	$tmp_array = array_reverse(explode('.', $name_file));
 	$type_file = $tmp_array[0];
 
-        if( !is_uploaded_file($tmp_file) ) {
+        if( $check && !is_uploaded_file($tmp_file) ) {
             alertError("No file existing");
         }
 
@@ -21,7 +29,7 @@ function upload($fichier, $login) {
 	$re3='(qsos)';
 	$re4='(mm)';
         
-        if(!(preg_match_all ("/".$re1.$re2.$re3."/is", $name_file, $matches)) && !(preg_match_all ("/".$re1.$re2.$re4."/is", $name_file, $matches))){
+        if($check && !(preg_match_all ("/".$re1.$re2.$re3."/is", $name_file, $matches)) && !(preg_match_all ("/".$re1.$re2.$re4."/is", $name_file, $matches))){
             $error = TXT_UPLOAD_ERROR_TYPE;
             alertError("Step 3: Upload $name_file [ERROR] : $error");
 	    exit();
@@ -32,7 +40,7 @@ function upload($fichier, $login) {
             alertError("Step 4: Upload $name_file [ERROR] : $error");
 	    exit();
         }
-        else if( !move_uploaded_file($tmp_file, $content_dir . $name_file) ) {
+        else if( $check && !move_uploaded_file($tmp_file, $content_dir . $name_file) ) {
             $error = TXT_UPLOAD_ERROR_MOVE;
             alertError("Step 5: Upload $name_file [ERROR] : $error");
 	    exit();
@@ -42,7 +50,7 @@ function upload($fichier, $login) {
 
 	if(is_file($file) && $type_file == "qsos") {
 
-	  include("../../formats/libs/QSOSDocument.php");
+	  include_once("../../formats/libs/QSOSDocument.php");
 	
 	  $myDoc = new QSOSDocument($file);
 	  $name_file = $myDoc->getFileName();

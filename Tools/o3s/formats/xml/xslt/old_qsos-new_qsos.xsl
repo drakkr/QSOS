@@ -21,7 +21,7 @@
       <xsl:apply-templates select="url"/>
       <xsl:apply-templates select="demourl"/>
       <xsl:apply-templates select="language"/>
-      <xsl:apply-templates select="qsosappname"/>
+      <qsosappname><xsl:value-of select="/document/header/qsosappname"/></qsosappname>
       <qsosformat>2.0</qsosformat>
       <xsl:apply-templates select="qsosspecificformat"/>
       <xsl:apply-templates select="qsosappfamily"/>
