@@ -168,7 +168,7 @@ function upload($fichier, $login) {
 	    $update = $myTpl->getTemplateModificationDate();
 
 	    $req = $bdd->exec(
-	      "INSERT INTO templates(qsosappfamily, qsosspecificformat, language, file, creation, templates.update, uploader, repo)
+	      "INSERT INTO templates(qsosappfamily, qsosspecificformat, language, file, creation, update, uploader, repo)
 		VALUES('$qsosappfamily', '$qsosspecificformat', '$language', '$name_file', '$creation', '$update', '$login', 'incoming');"
 	    );
 
