@@ -7,7 +7,7 @@
           <xsl:value-of select="document/header/appname"/>&#160;
           <xsl:value-of select="document/header/release"/>
         </title>
-        <link rel="stylesheet" type="text/css" href="../formats/xml/xslt/evaluation-xhtml.css"/>
+        <link rel="stylesheet" type="text/css" href="formats/xml/xslt/evaluation-xhtml.css"/>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <script>
    	function expand(div) {
