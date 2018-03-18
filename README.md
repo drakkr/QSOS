@@ -6,4 +6,4 @@ QSOS (Qualification and Selection of Open source Software): project providing me
 
 Visit <http://www.qsos.org>
 
-QSOS is part of the [Drakkr](http://www.drakkr.org) open framework.
+QSOS is part of the [Drakkr](http://drakkr.github.io) open framework.
