@@ -13,7 +13,7 @@ QSOS provides a detailed tutorial that you can:
 
 * [Consult]() online in the Drakkr edoc repository
 
-* Download in PDF export format: [French](http://backend.qsos.org/download/qsos-tutorial-2.0_fr.pdf)
+* Download in PDF export format: [English](http://dist.qsos.org/qsos-tutorial-2.0_en.pdf), [French](http://dist.qsos.org/qsos-tutorial-2.0_fr.pdf)
 
 ### Brief overview
 
@@ -35,7 +35,7 @@ QSOS templates and evaluations are formatted in XML. The following tools are ava
 
 Since [Freemind](http://freemind.sourceforge.net/) file format is XML based and it wonderfully helps designing trees, QSOS adopted it to create its own templates. In order to be compliant with QSOS evaluations, this `.mm` format is overloaded just a little bit.
 
-Check the [QSOS tutorial]() for more details.
+Check the [QSOS tutorial](http://dist.qsos.org/qsos-tutorial-2.0_en.pdf) for more details.
 
 ### QSOS Editor for _evaluations_
 
@@ -51,7 +51,7 @@ QSOS Editor comes in two flavors:
 
 Furthermore this tool is connected to the QSOS backend and thus allows transparent bootstrap, download, update and upload of evaluations. 
 
-Check the [QSOS tutorial]() for more details.
+Check the [QSOS tutorial](http://dist.qsos.org/qsos-tutorial-2.0_en.pdf) for more details.
 
 ### QSOS Backend for both
 
@@ -69,7 +69,7 @@ It is available here: <http://backend.qsos.org>.
 
 Only allowed members of the QSOS community can then move templates and evaluations from the _Incoming_ repository to the _Master_ repository.
 
-Check the [QSOS tutorial]() for more details.
+Check the [QSOS tutorial](http://dist.qsos.org/qsos-tutorial-2.0_en.pdf) for more details.
 
 ### O3S for _comparisons_ 
 
@@ -93,4 +93,4 @@ Once a comparison has been created it can be exported in several formats:
 
     * Slideshows skeletons (`.odp`)
 
-Check the [QSOS tutorial]() for more details.
+Check the [QSOS tutorial](http://dist.qsos.org/qsos-tutorial-2.0_en.pdf) for more details.
