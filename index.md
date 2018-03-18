@@ -29,7 +29,7 @@ Jump directly to the _Open Source Selection Software_ portal (O3S):
   
 QSOS is a free project aiming to mutualize and capitalize technological watch on open source components and projects.
 
-It is part of the [drakkr](http://www.drakkr.org) framework for open source governance.
+It is part of the [drakkr](http://drakkr.github.io) framework for open source governance.
 
 <br/>  
 <div>
