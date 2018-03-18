@@ -31,7 +31,7 @@ QSOS templates and evaluations are formatted in XML. The following tools are ava
 
 ### Freemind for _templates_
 
-![Template in Freemind](https://raw.githubusercontent.com/drakkr/QSOS/master/Docs/en/Images/tools.png)
+![Template in Freemind](https://raw.githubusercontent.com/drakkr/QSOS/master/Docs/fr/Images/template-name_fr.png)
 
 Since [Freemind](http://freemind.sourceforge.net/) file format is XML based and it wonderfully helps designing trees, QSOS adopted it to create its own templates. In order to be compliant with QSOS evaluations, this `.mm` format is overloaded just a little bit.
 
