@@ -17,7 +17,7 @@ If you actually want to read the method, you can:
 
 * [Consult]() it online in the Drakkr edoc repository
 
-* Download in PDF export format: [English](http://backend.qsos.org/download/qsos-2.0_en.pdf), [French](http://backend.qsos.org/download/qsos-2.0_fr.pdf)
+* Download in PDF export format: [English](http://dist.qsos.org/qsos-2.0_en.pdf), [French](http://dist.qsos.org/qsos-2.0_fr.pdf)
 
 ### Proposed process
 
