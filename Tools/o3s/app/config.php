@@ -25,7 +25,7 @@
 */
 //Local and web paths to QSOS sheets and templates
 $git = "master";
-$repo = "../backend/$git/";
+$repo = "backend/$git/";
 
 //Temp directory, with trailing slash
 $temp = "/tmp/";
