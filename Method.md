@@ -15,7 +15,7 @@ This method is distributed the terms of the [GNU Free Documentation License](htt
 
 If you actually want to read the method, you can:
 
-* [Consult]() it online in the Drakkr edoc repository
+* [Consult](http://edoc.qsos.org) it online in the QSOS edoc repository
 
 * Download in PDF export format: [English](http://dist.qsos.org/qsos-2.0_en.pdf), [French](http://dist.qsos.org/qsos-2.0_fr.pdf)
 
