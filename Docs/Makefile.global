@@ -26,6 +26,17 @@ gitit:
 	#Create Gitit pages with titles
 	$(foreach PAGE, $(PAGES), echo -e "---\ntitle: $(subst # ,,$(shell head -1 $(PAGE)))\n...\n" > dist/$(basename $(PAGE)).page ; cat $(PAGE) >> dist/$(basename $(PAGE)).page ;)
 
+onepage:
+	mkdir -p dist
+	
+	#Create summary Gitit page
+	echo '---' > dist/$(DOCNAME).md
+	echo 'title: $(TITLE)' >> dist/$(DOCNAME).md
+	echo '...' >> dist/$(DOCNAME).md
+	echo '\n' >> dist/$(DOCNAME).md
+	
+	$(foreach CHAPTER, $(CHAPTERS), echo "\n" >> dist/$(DOCNAME).md ; cat $(CHAPTER) >> dist/$(DOCNAME).md;)
+
 clean:
 	rm -Rf dist/
 
