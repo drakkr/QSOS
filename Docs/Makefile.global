@@ -36,7 +36,7 @@ onepage:
 	echo '\n' >> dist/$(DOCNAME).md
 	
 	$(foreach CHAPTER, $(CHAPTERS), echo "\n" >> dist/$(DOCNAME).md ; cat $(CHAPTER) >> dist/$(DOCNAME).md;)
-	
+
 clean:
 	rm -Rf dist/
 
