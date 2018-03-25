@@ -16,4 +16,4 @@ In addition to QSOS, dedicated to the assessment of the free and open source sof
 
 * __SecureIT__ : sub-project dedicated to the management of security notifications in open source software.
 
-Visit the web site of the project to go further : <http://www.drakkr.org>.
+Visit the web site of the project to go further : <http://drakkr.github.io>.
