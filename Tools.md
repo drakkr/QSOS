@@ -11,7 +11,7 @@ group: navigation
 
 QSOS provides a detailed tutorial that you can:
 
-* [Consult]() online in the Drakkr edoc repository
+* [Consult](http://edoc.qsos.org) online in the QSOS edoc repository
 
 * Download in PDF export format: [English](http://dist.qsos.org/qsos-tutorial-2.0_en.pdf), [French](http://dist.qsos.org/qsos-tutorial-2.0_fr.pdf)
 
