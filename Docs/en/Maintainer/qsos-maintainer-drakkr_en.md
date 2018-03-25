@@ -20,4 +20,4 @@ The Drakkr projects are as follows:
 
 * __SecureIT__: project related to the management of security alerts in open source components.
 
-For further details please consult Drakkr website: <http://www.drakkr.org>.
+For further details please consult Drakkr website: http://drakkr.github.io>.
