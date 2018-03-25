@@ -45,9 +45,9 @@ Although you can edit `.qsos` XML files with any text editor, QSOS provides a sp
 
 QSOS Editor comes in two flavors:
 
-* A Firefox [extention](http://backend.qsos.org/download/xuleditor-firefox-2.0.xpi)
+* A Firefox [extension](http://dist.qsos.org/xuleditor-firefox-2.0.xpi): [legacy](https://support.mozilla.org/en-US/kb/frequently-asked-questions-firefox-addon) since Firefox 57 :(
 
-* A standalone [application](http://backend.qsos.org/download/xuleditor-application-2.0.zip)
+* A standalone [application](http://dist.qsos.org/xuleditor-application-2.0.zip): follow [install guide](http://dist.qsos.org/qsos-install-2.0_en.pdf) to run it on top of Mozilla xulrunner
 
 Furthermore this tool is connected to the QSOS backend and thus allows transparent bootstrap, download, update and upload of evaluations. 
 
@@ -79,7 +79,7 @@ The _Open Source Selection Software_ connects on both QSOS repositories to allow
 
 * Official instance: <http://master.o3s.qsos.org>
 
-* Sandbox instance: <http://incoming.o3s..qsos.org>
+* Sandbox instance: <http://incoming.o3s.qsos.org>
 
 Once a comparison has been created it can be exported in several formats:
 
