@@ -16,4 +16,4 @@ Outre QSOS, lié à l'adoption et à la veille sur les logiciels open source, Dr
 
 * __SecureIT__ : sous-projet dédié à la gestion des alertes de sécurité dans les logiciels open source.
 
-Consultez le site Web du projet Drakkr pour plus de détails : <http://www.drakkr.org>.
+Consultez le site Web du projet Drakkr pour plus de détails : <http://drakkr.github.io>.
