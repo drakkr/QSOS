@@ -7,6 +7,11 @@ group: navigation
 ---
 {% include JB/setup %}
 
+![QSOS logo](https://raw.github.com/drakkr/QSOS/master/Docs/fr/Images/QSOS-small.png){: .center-image }
+
+<a href="https://github.com/drakkr/QSOS/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+
+
 QSOS is a community-based project: _the more we are, the better we are watching_!
 
 So __join us__ in our effort to help people adopt open source software. You can contribute in many different ways, for instance:
@@ -21,4 +26,4 @@ So __join us__ in our effort to help people adopt open source software. You can 
 
 * __Advocate__ QSOS to people you know (padawans, coworkers, customers, friends...) or not (blog readers, conference attendees, magazine buyers, @followers... !)
 
-* Any other creative way you'll find (sell/give T-shirts, make QSOS tatoos, have QSOS parties, mix all this in one event...)
+* Any other creative way you'll find (sell/give T-shirts, make QSOS tattoos, have QSOS parties, mix all this in one event...)
