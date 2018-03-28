@@ -17,19 +17,19 @@ It is part of the [drakkr](http://drakkr.github.io) framework for open source go
 
 <br/>  
 <div style="text-align: center;">
-  <a href="Method.html"> <img src="images/monkey-iwazaru-learn.png"/> </a> 
-  <a href="Tools.html"> <img src="images/monkey-kikazaru-use.png"/> </a> 
-  <a href="Community.html"> <img src="images/monkey-mizaru-share.png"/> </a>  
+  <a href="/method"> <img src="images/monkey-iwazaru-learn.png"/> </a> 
+  <a href="/tools"> <img src="images/monkey-kikazaru-use.png"/> </a> 
+  <a href="/community"> <img src="images/monkey-mizaru-share.png"/> </a>  
 </div>
 <br/>  
 
 It is composed of:
 
-* A formal [method](/Method.html) describing a workflow to evaluate open source components and related projects
+* A formal [method](/method) describing a workflow to evaluate open source components and related projects
 
-* A set of [tools](/Tools.html) to help apply the QSOS workflow on templates, evaluations and comparisons
+* A set of [tools](/tools) to help apply the QSOS workflow on templates, evaluations and comparisons
 
-* A [community](/Community.html) developping and maintaining these templates, evaluations and tools
+* A [community](/community) developping and maintaining these templates, evaluations and tools
 
 ### Impatient?
 

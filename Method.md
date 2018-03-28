@@ -4,6 +4,7 @@ title: "Method"
 description: "QSOS method"
 tagline: Learn!
 group: navigation
+permalink: /method
 ---
 {% include JB/setup %}
 

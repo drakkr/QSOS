@@ -4,6 +4,7 @@ title: "Community"
 description: "QSOS community and processes"
 tagline: Share!
 group: navigation
+permalink: /community
 ---
 {% include JB/setup %}
 
