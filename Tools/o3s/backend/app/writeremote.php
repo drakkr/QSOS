@@ -29,15 +29,15 @@ require("conf.php");
 $errors = null;
 $successes = null;
 
-function alertError($error) {
-  global $errors;
-  $errors .= $error."\n";
-}
-
-function alertSuccess($success) {
-  global $successes;
-  $successes .= $success."\n";
-}
+//function alertError($error) {
+//  global $errors;
+//  $errors .= $error."\n";
+//}
+//
+//function alertSuccess($success) {
+//  global $successes;
+//  $successes .= $success."\n";
+//}
 
 if ((isset($_POST['login']) && !empty($_POST['login'])) && (isset($_POST['pass']) && !empty($_POST['pass']))) { 
   $login = $_POST['login'];
