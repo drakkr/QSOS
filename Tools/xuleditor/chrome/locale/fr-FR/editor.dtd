@@ -1,5 +1,5 @@
 <!--
- **  Copyright (C) 2006-2013 Atos
+ **  Copyright (C) 2006-2018 Atos
  **
  **  Authors: Raphael Semeteys <raphael.semeteys@atos.net>
  **           Timothée Ravier <timothee.romain.ravier@gmail.com>
@@ -88,12 +88,12 @@
 <!ENTITY xuleditorCredits "Crédits">
 <!ENTITY xuleditorAuthors "Auteurs :">
 <!ENTITY xuleditorAuthorName1 "Raphael Semeteys">
-<!ENTITY xuleditorAuthorEmail1 "raphael.semeteys@atos.net">
+<!ENTITY xuleditorAuthorEmail1 "raphael.semeteys@gmail.com">
 <!ENTITY xuleditorAuthorName2 "Timothée Ravier">
 <!ENTITY xuleditorAuthorEmail2 "timothee.romain.ravier@gmail.com">
 <!ENTITY iconsetAuthors "Icones réalisées par Oxygen Team (KDE) :">
 <!ENTITY iconsetUrl "http://www.oxygen-icons.org">
 <!ENTITY sourceCode "Code source disponible à l'adresse :">
-<!ENTITY sourceCodeUrl "http://savannah.nongnu.org/projects/qsos">
+<!ENTITY sourceCodeUrl "https://github.com/drakkr/QSOS/">
 <!ENTITY project "Informations complémentaires sur la méthode QSOS :">
 <!ENTITY projectUrl "http://www.qsos.org">
