@@ -100,7 +100,7 @@ Les templates déjà existants sont stockés dans le référentiel communautaire
 
 * le dépôt *Master* : dédié au stockage des évaluations et aux templates considérés comme de qualité et ayant été validés par un modérateur de la communauté QSOS.
 
-Vous pouvez, en vous connectant à 03S^[<http://o3s.qsos.org/backend/app/listRepo.php>], naviguer dans ces deux dépôts et télécharger les templates de votre choix.
+Vous pouvez, en vous connectant [backend](http://backend.qsos.org/listRepo.php) O3S, naviguer dans ces deux dépôts et télécharger les templates de votre choix.
 
 ![Navigation dans le référentiel des templates](../Images/o3s-list-templates_fr.png)
 

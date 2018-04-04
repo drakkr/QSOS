@@ -100,7 +100,7 @@ The existing templates are stored in the QSOS community reference. They are grou
 
 * the *Master* repository : dedicated to the storage of the evaluations and template that are considered good quality elements and are approved by the moderators of the QSOS community.
 
-You can browse the two repositories on O3S^[<http://o3s.qsos.org/backend/app/listRepo.php>] and download the templates you want.
+You can browse the two repositories on the O3S [backend](http://backend.qsos.org/listRepo.php) and download the templates you want.
 
 ![Browsing the templates reference](../Images/o3s-list-templates_en.png)
 
