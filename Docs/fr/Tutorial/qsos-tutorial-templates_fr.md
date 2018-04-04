@@ -106,3 +106,14 @@ Vous pouvez, en vous connectant à 03S^[<http://o3s.qsos.org/backend/app/listRep
 
 Une fois un template récupéré, utilisez _FreeMind_ pour le modifier. Reportez-vous au chapitre [Créer un nouveau template](#créer-un-nouveau-template) pour plus de détails sur ce sujet.
 
+## Régénérer un template depuis une évaluation existante
+
+Il est possible de régénérer une souche de template en appliquant une transformation XSL à une évaluation existante.
+Le fichier `eval-to-template.xsl` est stocké sur [GitHub](https://raw.githubusercontent.com/drakkr/QSOS/master/Tools/o3s/formats/xml/xslt/eval-to-template.xsl).
+
+Pour appliquer la transformation XSL sous Linux, la commande `xsltproc` est requise (`apt get install xsltproc` pour l'installer sous Debian) :
+
+	xsltproc eval-to-template.xsl existing_valuation.qsos > template.mm
+
+Reste ensuite à éditer le fichier `.mm` avec _FreeMind_ pour compléter ou mettre à jour, si nécessaire, l'axe _Metadata_.
+Si l'évaluation existante est dans un format `.qsos` antérieur à la version 2, accepter la proposition de _FreeMind_ de mettre à jour le format du fichier `template.mm` généré. 

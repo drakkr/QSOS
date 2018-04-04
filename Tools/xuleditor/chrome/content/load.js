@@ -183,7 +183,7 @@ function doOK() {
   var file = evalTree.view.getItemAtIndex(evalTree.currentIndex).firstChild.firstChild.getAttribute("id");
   var repo = document.getElementById("listrepo").selectedItem.value;
   
-  var url = backend+repo+"/"+file;
+  var url = backend+"/download.php?file="+file;
 
   //Call window opener callback function
   window.arguments[1](url);

@@ -5,7 +5,7 @@
                 <xsl:element name="map">
                         <xsl:attribute name="version">0.9.0</xsl:attribute>
                         <xsl:element name="node">
-                                <xsl:attribute name="ID"><xsl:value-of select="header/qsosappfamily"/></xsl:attribute>
+                                <xsl:attribute name="ID">type</xsl:attribute>
                                 <xsl:attribute name="TEXT"><xsl:value-of select="header/qsosappfamily"/></xsl:attribute>
                                 <font NAME="SansSerif" BOLD="true" SIZE="12"/>
 				<node ID="metadata" TEXT="Metadata">
