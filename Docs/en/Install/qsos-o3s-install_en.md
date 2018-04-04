@@ -85,6 +85,8 @@ In the `Tools/o3s/backend/master` directory:
 ```
 git init
 git commit -a -m "Master init"  --allow-empty
+git config user.email "you@example.com"
+git config user.name "Your Name"
 ```
 
 And also in the `Tools/o3s/backend/incoming` directory:
@@ -92,6 +94,8 @@ And also in the `Tools/o3s/backend/incoming` directory:
 ```
 git init
 git commit -a -m "Incoming init"  --allow-empty
+git config user.email "you@example.com"
+git config user.name "Your Name"
 ```
 
 
