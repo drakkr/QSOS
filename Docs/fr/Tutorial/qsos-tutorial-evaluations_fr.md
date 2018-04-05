@@ -184,3 +184,16 @@ Bien qu'il s'agisse d'un fichier au format FreeMind, notez bien que vous ne visu
 
 Notez que ce type de visualisation requiert que votre navigateur support le format Flash.
 
+## Migrer des evaluations du format 1.0 au format 2.0
+
+### Migration d'un fichier unique
+Une transformation XSL doit être appliquée, elle est disponible sur [GitHub](https://raw.githubusercontent.com/drakkr/QSOS/master/Tools/o3s/formats/xml/xslt/old_qsos-new_qsos.xsl) :
+
+    xsltproc old_qsos-new_qsos.xsl MonEvalFormat1.0.qsos > MonEvalFormat2.0.qsos
+
+### Scripts de migration et d'import de masse
+
+Les scripts de migration et d'import suivants sont disponibles sur GitHub:
+
+- [init.sh](https://raw.githubusercontent.com/drakkr/QSOS/master/Tools/o3s/init.sh): réinitialise le backend O3S (database, Git et fichiers), à utiliser avec précaution donc!
+- [old_qsos-new_qsos.sh](https://raw.githubusercontent.com/drakkr/QSOS/master/Tools/o3s/old_qsos-new_qsos.sh): met à jour d'anciennes évaluations QSOS (du format 1.0 au format 2.0) puis les importe et les valide au sein du backend O3S, les fichiers d'import doivent être stockés dans `app/backend/app/upload`
