@@ -91,8 +91,6 @@ function upload($fichier, $login=NULL, $check=true) {
                 $metadata["comments_commented"] = $myDoc->getcountkey("element[comment != '']");
                 $metadata["comments_notcommented"] = $myDoc->getcountkey("element[comment = '']");
                 
-                echo("SELECT evaluations.id, uploader, mail FROM evaluations, users WHERE evaluations.uploader = users.login AND repo='incoming' AND qsosappname = '" . $metadata['qsosappname'] . "' AND evaluations.release  = '" . $metadata['release'] . "' AND language = '" . $metadata['language'] . "'");
-                
                 $tuple_info = $bdd->query("SELECT evaluations.id, uploader, mail FROM evaluations, users WHERE evaluations.uploader = users.login AND repo='incoming' AND qsosappname = '" . $metadata['qsosappname'] . "' AND evaluations.release  = '" . $metadata['release'] . "' AND language = '" . $metadata['language'] . "'");
 
                 if ($info = $tuple_info->fetch()) {
