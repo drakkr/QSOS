@@ -1,6 +1,6 @@
 # Managing evaluations
 
-## Overview of the evaluations
+## Overview
 
 A QSOS evaluation is based on a template of a given version, it inherits the structure and the description of the criteria from. It is a file in `.qsos` format that is manipulated via the _XulEditor_ tool (see [Installing _XulEditor_](#installing-xuleditor)).
 
@@ -187,3 +187,17 @@ Although it's a file in FreeMind format, please note that you do not visualize a
 
 Please note that this type of visualization requires that your browser supports Flash.
 
+## Migrating evaluations from format 1.0 to format 2.0
+
+### Single file migration
+
+An XSL transformation has to be applied, it is located on [GitHub](https://raw.githubusercontent.com/drakkr/QSOS/master/Tools/o3s/formats/xml/xslt/old_qsos-new_qsos.xsl):
+
+    xsltproc old_qsos-new_qsos.xsl MyEvalFormat1.0.qsos > MyEvalFormat2.0.qsos
+
+### Mass migration and import scripts
+
+The following migration scripts are on GitHub:
+
+- [init.sh](https://raw.githubusercontent.com/drakkr/QSOS/master/Tools/o3s/init.sh): reinitializes the O3S backend (database, Git and files), use with caution!
+- [old_qsos-new_qsos.sh](https://raw.githubusercontent.com/drakkr/QSOS/master/Tools/o3s/old_qsos-new_qsos.sh): upgrades old QSOS files (format 1.0 to 2.0) import and validate them into O3S backend, files are to be put into `app/backend/app/upload`
